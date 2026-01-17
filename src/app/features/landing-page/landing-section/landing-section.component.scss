@@ -1,0 +1,20 @@
+article {
+  width: 100%;
+  background-color: green;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  app-header {
+    width: 100%;
+    display: block;
+  }
+ app-footer {
+    display: block;
+    width: 100%;
+    margin-top: auto; // Schiebt ihn nach unten
+    align-self: stretch; // Zwingt ihn auf 100% Breite, trotz align-items: center
+  }
+}

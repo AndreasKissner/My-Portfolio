@@ -1,0 +1,18 @@
+section {
+  background-color: violet;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; // Zwingt Kinder (wie den Footer) auf volle Breite
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  app-landing-article {
+    width: 98%;
+    max-width: 120rem;
+    display: block;
+    align-self: center; // Hält den Article in der Mitte bei 98%
+  }
+
+}
