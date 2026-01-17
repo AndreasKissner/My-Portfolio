@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { LandingSectionComponent } from '../landing-section/landing-section.component';
 
 
@@ -9,4 +9,5 @@ import { LandingSectionComponent } from '../landing-section/landing-section.comp
   styleUrl: './landing-container.component.scss',
 })
 export class LandingContainerComponent {
+  isLast = input<boolean>(false);
 }

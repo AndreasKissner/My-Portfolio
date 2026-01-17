@@ -8,4 +8,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+   app-landing-container {
+    display: flex; // Macht die Sektion selbst zur Flexbox
+    flex-direction: column;
+    width: 100%;
+  }
 }

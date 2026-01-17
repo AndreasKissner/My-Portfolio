@@ -1,3 +1,9 @@
+:host {
+    display: flex; // Macht die Sektion selbst zur Flexbox
+    flex-direction: column;
+    width: 100%;
+}
+
 section {
   background-color: violet;
   width: 100%;
@@ -8,9 +14,15 @@ section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 
-  app-landing-article {
+  app-landing-section {
     width: 98%;
     max-width: 120rem;
+    app-landing-section {
+    width: 100%;       // Nutzt den Platz bis zum Maximum
+    max-width: 120rem; // Hier ist dein Content-Begrenzer (ca. 1920px)
+    display: block;
+    // padding: 0 2rem; // Optional: Kleiner Abstand am Rand für mobile Geräte
+  }
     display: block;
     align-self: center; // Hält den Article in der Mitte bei 98%
   }
