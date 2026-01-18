@@ -1,0 +1,43 @@
+@use "variables" as v;
+
+@mixin main-container {
+  width: 100%;
+  max-width: 1920px; // Hier deine Wunschbreite (1440px oder 1920px)
+  margin: 0 auto;
+ /*  padding: 0 24px;   */ // Abstand für Mobile
+}
+
+@mixin metallic-gradient($base-color) {
+  // Wir berechnen automatisch eine hellere Nuance für den "Flair"
+  $light-flare: lighten($base-color, 8%);
+  $dark-edge: darken($base-color, 6%);
+
+  background: radial-gradient(
+    circle at 30% 40%, 
+    $light-flare 0%, 
+    $base-color 60%, 
+    $dark-edge 100%
+  );
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg, 
+      rgba(255, 255, 255, 0.05) 0%, 
+      rgba(255, 255, 255, 0) 50%
+    );
+    pointer-events: none; // Damit man durch das Overlay klicken kann
+  }
+}
+
+// Wir nennen es "mobile", weil 576px oft die Grenze für Handys ist.
+@mixin mobileHeader {
+  @media (max-width: 576px) {
+    @content; // Hier wird später dein Code (wie display: none) "hineinkopiert"
+  }
+}

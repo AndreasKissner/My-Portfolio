@@ -1,3 +1,10 @@
+:host   {
+    width: 98%;
+    max-width: 120rem;
+    display: block;
+    align-self: center; 
+}
+
 section {
   width: 100%;
   background-color: green;
@@ -6,15 +13,4 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  app-header {
-    width: 100%;
-    display: block;
-  }
- app-footer {
-    display: block;
-    width: 100%;
-    margin-top: auto; // Schiebt ihn nach unten
-    align-self: stretch; // Zwingt ihn auf 100% Breite, trotz align-items: center
-  }
 }

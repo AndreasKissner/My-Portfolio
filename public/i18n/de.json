@@ -1,0 +1,23 @@
+{
+  "ABOUT": {
+    "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.",
+    "LOGIC_TEXT": "Für mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.",
+
+    "FUTURE": "Lass uns gemeinsam die digitale Welt gestalten und etwas wahrhaft Außergewöhnliches erschaffen.",
+    
+    "MORE_INFOS": "Mehr",
+    "ABOUT_TITLE":"ÜBER MICH"
+  },
+
+  "SKILL":{
+
+    "SKILL_TITLE":"Kernkompetenzen",
+    
+    "COMPETENCE": "Ich habe in meinen Projekten vielfältige Frontend-Technologien eingesetzt – sowohl für statische als auch dynamische Websites. Dabei habe ich responsive Layouts umgesetzt, Datenvisualisierungen entwickelt und besondere Werte auf User Experience gelegt.",
+
+    "OVERLAY_TITLE":"Suchen Sie einen anderen SKILL ?",
+
+    "OVERLAY_INTERESSE" :"Kontaktieren Sie mich gerne. Ich bin motiviert, mein bestehendes Wissen weiter auszubauen und Neues zu lernen."
+
+  }
+}

@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'QuickFont';
+  src: url('/assets/fonts/quick.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpaceFont';
+  src: url('/assets/fonts/space.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
