@@ -1,1 +1,36 @@
-<p>hero-header-nav works!</p>
+<div class="burger-icon" id="burger-icons" [class.open]="isMenuOpen()" (click)="toggleMenu()">
+  <span [style.background-color]="burgerColor()"></span>
+  <span [style.background-color]="burgerColor()"></span>
+  <span [style.background-color]="burgerColor()"></span>
+</div>
+
+<div class="menu-overlay" [class.active]="isMenuOpen()">
+  <div class="menu-content">
+    <div class="menu-header">
+      <h2>Menu</h2>
+      <button class="close-btn" (click)="onClose()">
+        <img src="assets/img/icons/xClose/xclose.svg" class="close-default" alt="Schließen" />
+        <img src="assets/img/icons/xClose/xclosered.svg" class="close-active" alt="Schließen Rot" />
+      </button>
+    </div>
+
+    <nav class="menu-links">
+      <a href="#about" (click)="onClose()"> <span class="icon-sun"></span> About Me </a>
+      <a href="#skillset" (click)="onClose()"> <span class="icon-sun"></span> Skillset </a>
+      <a href="#portfolio" (click)="onClose()"> <span class="icon-sun"></span> Portfolio </a>
+      <a href="#references" (click)="onClose()"> <span class="icon-sun"></span> References </a>
+      <a href="#contact" (click)="onClose()"> <span class="icon-sun"></span> Contact me </a>
+    </nav>
+
+    <app-header-social-btn
+      class="social-mobile"
+      [gitSrc]="navGitSrc()"
+      [gitSrcHover]="navGitSrcHover()"
+      [linkedInSrc]="navLinkedInSrc()"
+      [linkedInSrcHover]="navLinkedInSrcHover()"
+      [mailSrc]="navMailSrc()"
+      [mailSrcHover]="navMailSrcHover()"
+    >
+    </app-header-social-btn>
+  </div>
+</div>

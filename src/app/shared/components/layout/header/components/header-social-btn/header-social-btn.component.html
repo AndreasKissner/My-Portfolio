@@ -1,1 +1,37 @@
-<p>header-social-btn works!</p>
+<div class="social-btn-container">
+
+  <a href="https://github.com/AndreasKissner" class="social-link" target="_blank"
+     (mouseenter)="gitHover.set(true)" (mouseleave)="gitHover.set(false)">
+    @if (gitHover()) {
+      <img [src]="gitSrcHover()" class="img-desktop" alt="Git">
+    } @else {
+      <img [src]="gitSrc()" class="img-desktop" alt="Git">
+    }
+
+    <img [src]="gitSrc()" class="img-mobile black" alt="Git">
+    <img [src]="gitSrcHover()" class="img-mobile orange-mobile" alt="Git">
+  </a>
+
+  <a href="https://www.linkedin.com/in/andreas-kissner-53557b347/" class="social-link" target="_blank"
+     (mouseenter)="linkedInHover.set(true)" (mouseleave)="linkedInHover.set(false)">
+    @if (linkedInHover()) {
+      <img [src]="linkedInSrcHover()" class="img-desktop" alt="LinkedIn">
+    } @else {
+      <img [src]="linkedInSrc()" class="img-desktop" alt="LinkedIn">
+    }
+    <img [src]="linkedInSrc()" class="img-mobile black" alt="LinkedIn">
+    <img [src]="linkedInSrcHover()" class="img-mobile orange-mobile" alt="LinkedIn">
+  </a>
+
+  <a href="#contact" class="social-link"
+     (mouseenter)="mailHover.set(true)" (mouseleave)="mailHover.set(false)">
+    @if (mailHover()) {
+      <img [src]="mailSrcHover()" class="img-desktop" alt="Mail"> 
+    } @else {
+      <img [src]="mailSrc()" class="img-desktop" alt="Mail">
+    }
+    <img [src]="mailSrc()" class="img-mobile black" alt="Mail">
+    <img [src]="mailSrcHover()" class="img-mobile orange-mobile" alt="Mail">
+  </a>
+
+</div>

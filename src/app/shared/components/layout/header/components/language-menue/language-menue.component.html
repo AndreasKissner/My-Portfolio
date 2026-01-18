@@ -1,0 +1,23 @@
+<section class="language-icons">
+  @if (isGerman) {
+    <a (click)="toggleLanguage()" class="icon-de" style="cursor: pointer" aria-label="Switch to English">
+      <img
+        #deIcon
+        [src]="isDark() ? 'assets/img/icons/iconTransBlack/deBlack.svg' : 'assets/img/icons/iconsTransWhite/deBtnWhite.svg'"
+        (mouseenter)="deIcon.src = isDark() ? 'assets/img/icons/iconTransBlack/deBlackOrange.svg' : 'assets/img/icons/iconsTransWhite/deBtnOrange.svg'"
+        (mouseleave)="deIcon.src = isDark() ? 'assets/img/icons/iconTransBlack/deBlack.svg' : 'assets/img/icons/iconsTransWhite/deBtnWhite.svg'"
+        alt="German Language Icon"
+      />
+    </a>
+  } @else {  
+    <a (click)="toggleLanguage()" class="icon-en" style="cursor: pointer" aria-label="Auf Deutsch umstellen">
+      <img
+        #enIcon
+        [src]="isDark() ? 'assets/img/icons/iconTransBlack/enBlack.svg' : 'assets/img/icons/iconsTransWhite/enBtnWhite.svg'"
+        (mouseenter)="enIcon.src = isDark() ? 'assets/img/icons/iconTransBlack/enBlackOrange.svg' : 'assets/img/icons/iconsTransWhite/enBtnOrange.svg'"
+        (mouseleave)="enIcon.src = isDark() ? 'assets/img/icons/iconTransBlack/enBlack.svg' : 'assets/img/icons/iconsTransWhite/enBtnWhite.svg'"
+        alt="English Language Icon"
+      />
+    </a>
+  }
+</section>
