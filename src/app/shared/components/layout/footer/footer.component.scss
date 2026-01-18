@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    width: 100%;
+    margin-top: auto; 
+    align-self: stretch; 
+     scroll-snap-align: end; 
+}
+
+
+
+footer {
+  min-height: 5rem;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

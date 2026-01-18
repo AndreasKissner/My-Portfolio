@@ -1,0 +1,30 @@
+<header>
+@if (showSocialButtons()) {
+    <div class="header-left">
+      <app-header-social-btn
+        [gitSrc]="headerGitSrc()"
+        [gitSrcHover]="headerGitSrcHover()"
+        [linkedInSrc]="headerLinkedInSrc()"
+        [linkedInSrcHover]="headerLinkedInSrcHover()"
+        [mailSrc]="headerMailSrc()"
+        [mailSrcHover]="headerMailSrcHover()"
+      ></app-header-social-btn>
+    </div>
+  }
+
+ <app-logo-name [color]="textColor()"></app-logo-name>
+
+  <nav aria-label="Hauptnavigation">
+    <app-language-menue [isDark]="textColor() === 'black'"></app-language-menue>
+
+    <app-hero-header-nav
+    [burgerColor]="textColor()"
+      [navGitSrc]="'assets/img/icons/socialBtn/gitblack.svg'"
+      [navGitSrcHover]="'assets/img/icons/socialBtn/gitOrange.svg'"
+      [navLinkedInSrc]="'assets/img/icons/socialBtn/linkedinblack.svg'"
+      [navLinkedInSrcHover]="'assets/img/icons/socialBtn/linkedinOrange.svg'"
+      [navMailSrc]="'assets/img/icons/socialBtn/emailblack.svg'"
+      [navMailSrcHover]="'assets/img/icons/socialBtn/mailOrange.svg'"
+    ></app-hero-header-nav>
+  </nav>
+</header>

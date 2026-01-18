@@ -10,7 +10,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "type": "component",
+          "skipTests": true
         }
       },
       "root": "",
@@ -31,7 +33,12 @@
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
+            }
           },
           "configurations": {
             "production": {
