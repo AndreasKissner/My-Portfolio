@@ -11,14 +11,15 @@ body {
 
 @font-face {
   font-family: 'QuickFont';
-  src: url('/assets/fonts/quick.ttf') format('truetype');
+  /* ../ springt aus dem src-Ordner raus, um in den public-Ordner zu kommen */
+  src: url('../public/assets/fonts/quick.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SpaceFont';
-  src: url('/assets/fonts/space.ttf') format('truetype');
+  src: url('../public/assets/fonts/space.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

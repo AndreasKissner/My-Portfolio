@@ -1,52 +1,65 @@
+@use 'style-varibles/mixins' as m;
+
 .social-btn-container {
-  display: flex;        
-  flex-direction: row;  
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 15px;         
+  gap: 15px;
+}
+
+/* MOBILE FIRST (Default) */
+.img-desktop {
+  display: none !important;
 }
 
 .social-link {
   display: inline-flex;
   text-decoration: none;
-}
 
-.img-desktop {
-  display: block;
-  width: 40px;
-  height: 40px;
-}
+  .img-mobile.black {
+    display: block !important;
+    visibility: visible !important;
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 1 !important;
+  }
 
-.img-mobile {
-  display: none !important;
-}
-
-@media screen and (max-width: 576px) {
-  .img-desktop {
+  .img-mobile.orange-mobile {
     display: none !important;
   }
 
-  .social-link {
- 
+  &:active {
     .img-mobile.black {
-      display: block !important;    
-      visibility: visible !important;
-      width: 30px !important;
-      height: 30px !important;
-      opacity: 1 !important;
+      display: none !important;
     }
 
     .img-mobile.orange-mobile {
-      display: none;
+      display: block !important;
+      width: 28px !important;
+      height: 28px !important;
+    }
+  }
+}
+
+/* DESKTOP ab 576px */
+@include m.respond-sm {
+  .img-desktop {
+    display: block !important;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* WICHTIG: gleiche Spezifität wie Mobile-Regeln */
+  .social-link {
+    .img-mobile.black,
+    .img-mobile.orange-mobile {
+      display: none !important;
     }
 
     &:active {
-      .black { 
-        display: none !important; 
-      }
-      .orange-mobile {
-        display: block !important;
-        width: 28px !important; 
-        height: 28px !important;
+      .img-mobile.black,
+      .img-mobile.orange-mobile {
+        display: none !important;
       }
     }
   }

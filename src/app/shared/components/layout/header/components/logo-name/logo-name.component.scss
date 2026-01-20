@@ -1,32 +1,31 @@
 @use 'style-varibles/variables' as v;
 @use 'style-varibles/colors' as c;
-
+@use 'style-varibles/mixins' as m;
 @use 'style-varibles/fonts' as f;
 
 .name-middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: 10px; 
+    
+  //390
+   @include m.respond-xsm {
+   left: 8px
+  }
+
   img {
-    width: 100px;
+    width: 50px;
   }
 
   span {
     font-family: f.$font-second;
-    font-size: 55px;
+    font-size: 32px;
     font-weight: 900;
     color: c.$titleName-white;
   }
 }
 
-@media screen and (max-width: 576px) {
-  .name-middle {
-           position: relative;
-        left: -52px;
-        top: -3px;
-        span{
-           font-size: 24px;
-        }
-  }
-}
+
 
