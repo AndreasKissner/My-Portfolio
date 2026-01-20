@@ -68,32 +68,39 @@
   border: 3px solid #2d2d2d;
   border-radius: 4px;
   padding: 20px 20px;
-  margin-top: 20px;
-  margin-right: 60px;
   transform: translateX(120%);
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex;
   flex-direction: column;
-  @media(max-width:770px){
-        margin-top: 6px;
-    margin-right: 23px;
-  }
-} 
 
-::ng-deep .social-mobile {
-  display: none !important;
+  // MOBILE default (war vorher in max-width:770px)
+  margin-top: 6px;
+  margin-right: 23px;
+
+  // DESKTOP ab 768px
+  @include m.respond-mid {
+    margin-top: 20px;
+    margin-right: 47px;
+  }
 }
 
-@media screen and (max-width: 576px) {
+/* SOCIAL BUTTONS im Menu (mobile-first) */
+::ng-deep .social-mobile {
+  // MOBILE default: sichtbar
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-top: 20px !important;
+  width: 100% !important;
+
+  * {
+    visibility: visible !important;
+  }
+}
+
+// ab 576px ausblenden (Desktop)
+@include m.respond-sm {
   ::ng-deep .social-mobile {
-    display: flex !important;    
-    justify-content: flex-start !important;    
-    margin-top: 20px !important;           
-    width: 100% !important;
-    
-    * {
-      visibility: visible !important;
-    }
+    display: none !important;
   }
 }
 
@@ -109,40 +116,43 @@
     font-size: 1.8rem;
     margin: 0;
   }
-.close-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative; 
 
-  img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.2s ease; 
-  }
+  .close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-  .close-active {
-    display: none; 
-  }
-
-  .close-default {
-    display: block; 
-  }
-
-  &:active {
-    transform: scale(0.9); 
-    .close-default {
-      display: none !important; 
+    img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.2s ease;
     }
+
     .close-active {
-      display: block !important; 
+      display: none;
+    }
+
+    .close-default {
+      display: block;
+    }
+
+    &:active {
+      transform: scale(0.9);
+
+      .close-default {
+        display: none !important;
+      }
+
+      .close-active {
+        display: block !important;
+      }
     }
   }
-}
 }
 
 .menu-links {
@@ -176,12 +186,12 @@
       color: #7ba2b1;
 
       .icon-sun {
-        width: 20px; 
-        opacity: 1; 
-        margin-right: 12px; 
+        width: 20px;
+        opacity: 1;
+        margin-right: 12px;
 
         &:hover .icon-sun {
-          transform: rotate(45deg); 
+          transform: rotate(45deg);
         }
       }
     }

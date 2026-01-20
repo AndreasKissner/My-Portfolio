@@ -4,8 +4,10 @@
   <span [style.background-color]="burgerColor()"></span>
 </div>
 
-<div class="menu-overlay" [class.active]="isMenuOpen()">
-  <div class="menu-content">
+<div class="menu-overlay" [class.active]="isMenuOpen()" (click)="onClose()">
+  
+  <div class="menu-content" (click)="$event.stopPropagation()">
+    
     <div class="menu-header">
       <h2>Menu</h2>
       <button class="close-btn" (click)="onClose()">

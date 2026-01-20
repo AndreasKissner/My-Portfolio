@@ -1,6 +1,47 @@
 $max-width-content: 192px; 
-$breakpoint-mobile: 768px;
+/* $breakpoint-mobile: 768px; */
 $padding-0-10: 0 10px;
-/* style-varibles/_variables.scss */
+$layout-max-width: 1580px;
 
+/* Media Quaries */
+$screen-xs: 320px;
+$screen-xsm360: 360px;
+$screen-xsm: 390px;
+$screen-sm: 576px;   
+$screen-mid: 768px;  
+$screen-normal: 992px;
+$screen-large: 1200px; 
+$screen-xl: 1400px; 
+$screen-xxl:1600px;
+$screen-xxxl:1920px; 
+// Media Max
+$screen-Max:567px;
+
+
+
+/* Header */
+$header-height: 88px;
+$header-gap: 15px;
+$header-left-gap: 15px;
+$header-nav-gap: 20px;
+
+$social-icon-size: 30px;
+$transition-fast: 0.2s ease;
+$hover-scale: scale(1.1);
+$header-nav-margin-right: 20px;
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+$screen-small: 576px;
+$screen-mid: 768px;
+$screen-normal: 992px;
+$screen-large: 1200px;
 

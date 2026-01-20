@@ -12,7 +12,7 @@ export class HeroHeaderNavComponent {
 
   // signaö für die Linien-Farbe
   burgerColor = input<string>('white');
-  // Hier nehmen wir die Daten vom Header an
+
   navGitSrc = input<string>('assets/img/icons/socialBtn/git.svg');
   navGitSrcHover = input<string>('assets/img/icons/socialBtn/gitOrange.svg');
 
@@ -22,15 +22,18 @@ export class HeroHeaderNavComponent {
   navMailSrc = input<string>('assets/img/icons/socialBtn/mail.svg');
   navMailSrcHover = input<string>('assets/img/icons/socialBtn/mailOrange.svg');
 
-  // 1. Die Variable als Writable Signal definieren
-isMenuOpen = signal(false);
 
-toggleMenu() {
-  // Wir setzen den Wert einfach auf das Gegenteil vom aktuellen Wert
-  this.isMenuOpen.set(!this.isMenuOpen());
-}
+  isMenuOpen = signal(false);
 
-onClose() {
-  this.isMenuOpen.set(false);
-}
+  toggleMenu() {
+
+    this.isMenuOpen.set(!this.isMenuOpen());
+  }
+
+  onClose() {
+    this.isMenuOpen.set(false);
+  }
+  handleContentClick(event: MouseEvent) {
+    event.stopPropagation();
+  }
 }
