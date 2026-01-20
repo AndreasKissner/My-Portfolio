@@ -1,9 +1,44 @@
-
 <main>
-<app-landing-container>Hero</app-landing-container>
-<app-landing-container>About</app-landing-container>
-<app-landing-container>Skill</app-landing-container>
-<app-landing-container>3</app-landing-container>
-<app-landing-container>3</app-landing-container>
-<app-landing-container [isLast]="true"></app-landing-container>
+  <div class="outer-container" id="hero">
+    <section class="inner-section">
+      <app-header></app-header>
+      <app-hero></app-hero>
+    </section>
+  </div>
+
+  <div class="outer-container" id="about">
+    <section class="inner-section">
+      <app-header></app-header>
+      <app-about></app-about>
+    </section>
+  </div>
+
+  <div class="outer-container" id="skills">
+    <section class="inner-section">
+      <app-header></app-header>
+      <app-skill></app-skill>
+    </section>
+  </div>
+
+  <div class="outer-container" id="portfolio">
+    <section class="inner-section">
+      <app-header></app-header>
+      <app-portfolio></app-portfolio>
+    </section>
+  </div>
+
+  <div class="outer-container" id="references">
+    <section class="inner-section">
+      <app-header></app-header>
+      <app-reference></app-reference>
+    </section>
+  </div>
+
+  <div class="outer-container" id="contact">
+    <section class="inner-section">
+      <app-header></app-header>
+      <app-contact></app-contact>
+        <app-footer></app-footer>
+    </section>
+  </div>
 </main>

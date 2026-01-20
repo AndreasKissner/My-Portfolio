@@ -1,6 +1,11 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+
+
 main {
   width: 100%;
-  background-color: red;
+  background-color: red; // Kannst du später zu c.$dark-blue oder ähnlichem ändern
   height: 100vh;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
@@ -8,4 +13,31 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+// Die Logik vom alten Landing-Container (Vollbild & Snap)
+.outer-container {
+  width: 100%;
+  height: 100vh; 
+  flex-shrink: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.inner-section {
+  width: 98%;
+  max-width: 120rem;
+  background-color: c.$dark-blue;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  
+  // Stellt sicher, dass der Hero/About Content den Platz nutzt
+  app-hero, app-about, app-skill, app-portfolio, app-reference, app-contact {
+    flex: 1;
+    display: block;
+  }
 }

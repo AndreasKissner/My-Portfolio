@@ -4,13 +4,11 @@
 @use 'style-varibles/fonts' as f;
 
 .name-middle {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include m.flex(flex-start,center);
     position: relative;
+    gap: 5px;
     left: 10px; 
     
-  //390
    @include m.respond-xsm {
    left: 8px
   }
