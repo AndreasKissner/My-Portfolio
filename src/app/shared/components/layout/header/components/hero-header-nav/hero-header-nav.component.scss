@@ -1,6 +1,7 @@
 @use 'style-varibles/variables' as v;
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
 
 .burger-icon {
   width: 30px;
@@ -40,19 +41,18 @@
   right: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
+  background: c.$bg-overlay;
   z-index: 1000;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  @include m.flex(flex-end, flex-start);
+
   visibility: hidden;
-  opacity: 0;
+  /*   opacity: 0; */
   transition: all 0.2s ease-in-out;
   pointer-events: none;
 
   &.active {
     visibility: visible;
-    opacity: 1;
+    /*  opacity: 1; */
     pointer-events: all;
 
     .menu-content {
@@ -64,40 +64,34 @@
 .menu-content {
   width: 230px;
   height: auto;
-  background-color: #fdfdf0;
-  border: 3px solid #2d2d2d;
-  border-radius: 4px;
+  background-color: c.$light-beige;
+  border: 1px solid c.$skill-black;
+  border-radius: 1px;
   padding: 20px 20px;
   transform: translateX(120%);
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
-
-  // MOBILE default (war vorher in max-width:770px)
   margin-top: 6px;
   margin-right: 23px;
 
-  // DESKTOP ab 768px
   @include m.respond-mid {
-    margin-top: 20px;
+    margin-top: v.$spacing-margin-top;
     margin-right: 47px;
   }
 }
 
 /* SOCIAL BUTTONS im Menu (mobile-first) */
 ::ng-deep .social-mobile {
-  // MOBILE default: sichtbar
   display: flex !important;
   justify-content: flex-start !important;
-  margin-top: 20px !important;
+  margin-top: v.$spacing-margin-top !important;
   width: 100% !important;
-
-  * {
+  /*  * {
     visibility: visible !important;
-  }
+  } */
 }
 
-// ab 576px ausblenden (Desktop)
 @include m.respond-sm {
   ::ng-deep .social-mobile {
     display: none !important;
@@ -105,15 +99,13 @@
 }
 
 .menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include m.flex(space-between, center);
   margin-bottom: 5px;
 
   h2 {
-    font-family: 'Inter', sans-serif;
-    color: #7ba2b1;
-    font-size: 1.8rem;
+    font-family: f.$font-second;
+    color: c.$dark-blue;
+    font-size: 2rem;
     margin: 0;
   }
 
@@ -125,6 +117,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include m.flex();
     position: relative;
 
     img {
@@ -162,7 +155,7 @@
 
   a {
     text-decoration: none;
-    color: #2d2d2d;
+    color: c.$skill-black;
     font-size: 1.2rem;
     font-weight: 600;
     display: flex;
@@ -173,12 +166,12 @@
       display: inline-block;
       background-image: url('/assets/img/icons/profilBg/profil-bg-1.webp');
       background-size: contain;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat; 
       width: 0;
       height: 20px;
-      opacity: 0;
+    /*   opacity: 0;  */
       margin-right: 0;
-      transition: all 0.250s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.25s ease-in-out;
     }
 
     &:hover,
@@ -187,7 +180,7 @@
 
       .icon-sun {
         width: 20px;
-        opacity: 1;
+       /*  opacity: 1; */
         margin-right: 12px;
 
         &:hover .icon-sun {
