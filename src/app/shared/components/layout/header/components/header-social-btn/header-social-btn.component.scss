@@ -7,7 +7,6 @@
   gap: 15px;
 }
 
-/* MOBILE FIRST (Default) */
 .img-desktop {
   display: none !important;
 }
@@ -18,10 +17,10 @@
 
   .img-mobile.black {
     display: block !important;
-    visibility: visible !important;
+  /*   visibility: visible !important; */
     width: 30px !important;
     height: 30px !important;
-    opacity: 1 !important;
+   /*  opacity: 1 !important; */
   }
 
   .img-mobile.orange-mobile {
@@ -41,7 +40,6 @@
   }
 }
 
-/* DESKTOP ab 576px */
 @include m.respond-sm {
   .img-desktop {
     display: block !important;
@@ -49,7 +47,6 @@
     height: 40px;
   }
 
-  /* WICHTIG: gleiche Spezifität wie Mobile-Regeln */
   .social-link {
     .img-mobile.black,
     .img-mobile.orange-mobile {
