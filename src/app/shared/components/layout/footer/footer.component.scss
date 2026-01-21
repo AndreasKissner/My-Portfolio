@@ -1,18 +1,16 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
 :host {
-    display: block;
-    width: 100%;
-    margin-top: auto; 
-    align-self: stretch; 
-     scroll-snap-align: end; 
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  align-self: stretch;
+  scroll-snap-align: end;
 }
-
-
 
 footer {
   min-height: 5rem;
-  background-color: orange;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: orange;;
+  @include m.flex;
 }
-

@@ -1,0 +1,11 @@
+<div class="section-indicator">
+  @for (id of sections; track id) {
+    <div (click)="scrollTo(id)" style="cursor: pointer">
+      @if (activeSection() === id) {
+        <img src="assets/img/icons/pointerNav/pointer-nav-karo.svg" alt="current section" />
+      } @else {
+        <img [src]="circleImg()" alt="section" />
+      }
+    </div>
+  }
+</div>

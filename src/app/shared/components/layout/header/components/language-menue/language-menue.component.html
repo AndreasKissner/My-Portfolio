@@ -1,6 +1,10 @@
 <section class="language-icons">
   @if (isGerman) {
-    <a (click)="toggleLanguage()" class="icon-de" style="cursor: pointer" aria-label="Switch to English">
+    <a href="javascript:void(0)" 
+       (click)="toggleLanguage()" 
+       (keydown.enter)="toggleLanguage()"
+       class="icon-de" 
+       aria-label="Switch to English">
       <img
         #deIcon
         [src]="isDark() ? 'assets/img/icons/iconTransBlack/deBlack.svg' : 'assets/img/icons/iconsTransWhite/deBtnWhite.svg'"
@@ -10,7 +14,11 @@
       />
     </a>
   } @else {  
-    <a (click)="toggleLanguage()" class="icon-en" style="cursor: pointer" aria-label="Auf Deutsch umstellen">
+    <a href="javascript:void(0)" 
+       (click)="toggleLanguage()" 
+       (keydown.enter)="toggleLanguage()"
+       class="icon-en" 
+       aria-label="Auf Deutsch umstellen">
       <img
         #enIcon
         [src]="isDark() ? 'assets/img/icons/iconTransBlack/enBlack.svg' : 'assets/img/icons/iconsTransWhite/enBtnWhite.svg'"

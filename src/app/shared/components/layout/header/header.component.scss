@@ -8,6 +8,7 @@ header {
   max-width: 332px;
   @include m.flex(space-between, center);
   background: c.$dark-blue;
+  border: 1px solid black;
 
 //360
    @include m.respond-xsm360 {

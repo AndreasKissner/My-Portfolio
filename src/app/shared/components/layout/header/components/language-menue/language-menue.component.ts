@@ -12,10 +12,14 @@ export class LanguageMenueComponent {
   isDark = input<boolean>(false);
   isGerman = this.translate.currentLang !== 'de';
 
-  toggleLanguage() {
-    this.isGerman = !this.isGerman;
-    const lang = this.isGerman ? 'en' : 'de';
-    this.translate.use(lang);
-    localStorage.setItem('lang', lang);
-  }
+/**
+ * Toggles the UI language between German and English and persists the choice in localStorage.
+ */
+toggleLanguage() {
+  this.isGerman = !this.isGerman;
+  const lang = this.isGerman ? 'en' : 'de';
+  this.translate.use(lang);
+  localStorage.setItem('lang', lang);
+}
+
 }

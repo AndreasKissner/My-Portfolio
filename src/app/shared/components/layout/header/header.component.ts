@@ -11,10 +11,7 @@ import { LanguageMenueComponent } from "./components/language-menue/language-men
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  // Ersetzt @Input() textColor: string = 'white';
   textColor = input<string>('white');
-
-  // Ersetzt @Input() showSocialButtons: boolean = true;
   showSocialButtons = input<boolean>(true);
 
   // Wir setzen hier wieder die Pfade zu den weißen SVGs ein
