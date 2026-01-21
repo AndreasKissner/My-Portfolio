@@ -13,6 +13,7 @@ header {
 //360
    @include m.respond-xsm360 {
     max-width: 352px;
+    padding: 0;
   }
 
   //390
@@ -34,9 +35,10 @@ header {
   //992px
   @include m.respond-normal {
     max-width:1199px;
+      padding: 0 20px;
   }
  //1200px
-   @include m.respond-xl {
+   @include m.respond-large {
     max-width:1399px;
   }
 

@@ -1,13 +1,31 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+
+:host {
+
+    @include m.respond-sm {
+        width: 54px;
+        display: flex;
+        justify-content: flex-start;
+        border: 2px solid violet;
+    }
+}
+
 .section-indicator {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  @media(max-width:480px){
+    @include m.flex();
+    flex-direction: column;
+    gap: 5px;
     display: none;
-  }
+    border: 1px solid blue;
+    width: 20px;
+
+    @include m.respond-sm {
+        display: flex;
+    }
 }
 
 .section-indicator img {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }

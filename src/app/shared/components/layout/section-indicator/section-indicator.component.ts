@@ -9,11 +9,11 @@ import { Component, input, signal, afterNextRender, ElementRef } from '@angular/
 export class SectionIndicatorComponent {
   readonly circleImg = input<string>('assets/img/icons/pointerNav/pointer-nav-circle.svg');
   // Lokales Signal für die aktive Sektion
-   activeSection = signal<string>('hero');
+  activeSection = signal<string>('hero');
   // Die Liste der IDs, die wir tracken wollen
   readonly sections = ['hero', 'about', 'skills', 'portfolio', 'references', 'contact'];
 
-private _renderEffect = afterNextRender(() => {
+  private _renderEffect = afterNextRender(() => {
     this.initObserver();
   });
 
@@ -23,13 +23,13 @@ private _renderEffect = afterNextRender(() => {
       threshold: 0.6 // 60% der Sektion müssen sichtbar sein
     };
 
-  const observer = new IntersectionObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.isIntersecting) {
-      this.activeSection.set(entry.target.id);
-    }
-  }
-}, options);
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          this.activeSection.set(entry.target.id);
+        }
+      }
+    }, options);
 
     this.sections.forEach(id => {
       const el = document.getElementById(id);
