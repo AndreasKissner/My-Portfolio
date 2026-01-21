@@ -29,3 +29,11 @@
     width: 10px;
     height: 10px;
 }
+
+.black-icon {
+    filter: brightness(0); 
+}
+
+.orange-icon {
+    filter: invert(56%) sepia(93%) saturate(2465%) hue-rotate(1deg) brightness(104%) contrast(106%);
+}

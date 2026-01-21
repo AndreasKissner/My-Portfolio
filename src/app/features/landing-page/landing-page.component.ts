@@ -7,6 +7,7 @@ import { SkillComponent } from '../sections-content/skill/skill.component';
 import { PortfolioComponent } from '../sections-content/portfolio/portfolio.component';
 import { ReferenceComponent } from '../sections-content/reference/reference.component';
 import { ContactComponent } from '../sections-content/contact/contact.component';
+import { SectionIndicatorComponent } from '../../shared/components/layout/section-indicator/section-indicator.component';
 
 // Hier deine 6 Inhalts-Komponenten importieren
 
@@ -22,11 +23,23 @@ import { ContactComponent } from '../sections-content/contact/contact.component'
     SkillComponent, 
     PortfolioComponent, 
     ReferenceComponent, 
-    ContactComponent
+    ContactComponent,
+    SectionIndicatorComponent
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
 
+// landing-page.component.ts
+
+export class LandingPageComponent {
+// landing-page.component.ts
+sectionColors = {
+  hero: '#679AAC',
+  about: '#F8F7E5',
+  skills: '#1D1D1D',
+  portfolio: '#F0F0F0',
+  references: '#679AAC',
+  contact: '#1D1D1D'
+};
 }

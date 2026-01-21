@@ -11,6 +11,8 @@ import { LanguageMenueComponent } from "./components/language-menue/language-men
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  // header.component.ts
+  readonly bgColor = input<string>('transparent'); // Standard ist transparent
   textColor = input<string>('white');
   showSocialButtons = input<boolean>(true);
 

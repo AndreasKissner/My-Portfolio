@@ -17,4 +17,6 @@ export class App {
     // Einfach die ausgelagerte Funktion aufrufen
     startTabRotation(this.titleService);
   }
+
+  
 }

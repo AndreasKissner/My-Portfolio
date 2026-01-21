@@ -7,6 +7,8 @@ import { Component, input, signal, afterNextRender, ElementRef } from '@angular/
   styleUrl: './section-indicator.component.scss',
 })
 export class SectionIndicatorComponent {
+  color = input<string>('white');
+  
   readonly circleImg = input<string>('assets/img/icons/pointerNav/pointer-nav-circle.svg');
   // Lokales Signal für die aktive Sektion
   activeSection = signal<string>('hero');

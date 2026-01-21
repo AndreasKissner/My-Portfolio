@@ -1,17 +1,27 @@
-html,
+html {
+  height: 100%;
+  overflow: hidden;         /* wichtig: verhindert html-scrolling */
+}
+
 body {
-  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
+  overflow-y: scroll;       /* body ist der Scroll-Container */
   overflow-x: hidden;
+
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+}
+
+/* sauberes box-sizing global */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: 'QuickFont';
-  /* ../ springt aus dem src-Ordner raus, um in den public-Ordner zu kommen */
   src: url('../public/assets/fonts/quick.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;

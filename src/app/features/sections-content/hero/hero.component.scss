@@ -1,0 +1,11 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+:host {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border: 4px solid green;
+  background-color: c.$dark-blue; // Der Hintergrund für die gesamte Komponente
+
+}
