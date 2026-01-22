@@ -1,0 +1,50 @@
+.image-content {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-width: 320px;
+  border: 3px solid black;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img {
+  position: absolute;
+  width: 70%;
+  max-width: 420px;
+  height: auto;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.bg-img-2 {
+  top: 10%;
+  left: 5%;
+  transform: rotate(-8deg);
+}
+
+.bg-img-3 {
+  bottom: 8%;
+  right: 5%;
+  transform: rotate(10deg);
+}
+
+.profil-img {
+  position: relative;
+  width: 80%;
+  max-width: 420px;
+  height: auto;
+  z-index: 2;
+  border-radius: 18px;
+  display: block;
+}
+
+
+app-scroll-down-element {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;   
+  z-index: 10;  
+}

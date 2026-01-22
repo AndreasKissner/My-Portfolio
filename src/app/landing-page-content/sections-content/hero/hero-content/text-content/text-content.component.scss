@@ -1,0 +1,43 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+.hero-titles{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  // Der Typing-Text ganz oben
+  h1 {
+    font-size: 22px;
+    font-family: f.$font-second;
+    font-weight: 400;
+    margin: 0;
+    
+    
+  }
+
+  // Der Namens-Block (Andreas Kissner)
+  div {
+    font-size: 72px;
+    font-family: f.$font-eczar;
+    letter-spacing: 0.6px;
+    line-height: 0.85;
+    margin: 12px 0; // Abstand nach oben und unten
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // Der Job-Titel ganz unten (das p, das direkt im header liegt)
+  > p {
+    font-size: 1.5rem;
+    font-family: f.$font-second;
+    font-weight: 400;
+    margin: 0;
+  }
+}

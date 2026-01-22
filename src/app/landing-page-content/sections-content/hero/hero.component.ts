@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { ProfilImageContainerComponent } from './hero-content/profil-image-container/profil-image-container.component';
+import { BtnPrimaerComponent } from '../../../shared/components/layout/btn-primaer/btn-primaer.component';
+import { TextContentComponent } from './hero-content/text-content/text-content.component';
+
+@Component({
+  selector: 'app-hero',
+  imports: [ProfilImageContainerComponent, BtnPrimaerComponent, TextContentComponent],
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.scss',
+})
+export class HeroComponent {
+
+}

@@ -1,0 +1,29 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+::ng-deep.btn-primaer {
+    @include m.flex();
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 155px;
+    height: 40px;
+    border-radius: 100px;
+    border: 1px solid c.$light-beige;
+    padding: 12px 24px;
+    background-color: transparent;
+    font-size: 18px;
+    color: c.$light-beige;
+    font-family: f.$font-second;
+    font-weight: 700;
+    transition: .200s ease-in;
+    text-decoration: none;
+
+    &:hover{
+        background-color:c.$accent-orange ;
+    }
+
+
+}

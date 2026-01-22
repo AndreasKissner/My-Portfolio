@@ -1,0 +1,37 @@
+.scroll-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Oder die Breite deines SVG */
+    height: 80px;
+    text-decoration: none;
+
+    .outer-ring {
+        width: 100%;
+        height: auto;
+        // Hier wird die Rotation gestartet
+        animation: rotateRing 10s linear infinite;
+    }
+
+    .inner-flash {
+        position: absolute;
+        // Zentrierung des Blitzes
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%; /* Größe des Blitzes anpassen */
+        height: auto;
+        z-index: 2;
+    }
+}
+
+// Die Animations-Regel
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
