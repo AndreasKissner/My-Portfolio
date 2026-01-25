@@ -20,12 +20,13 @@
 
 // Media
 
-// Ab 320px
+// Ab 321px
 @mixin respond-xs {
   @media (min-width: v.$screen-xs) {
     @content;
   }
 }
+
 //360
 @mixin respond-xsm360 {
   @media (min-width: v.$screen-xsm360) {
@@ -33,13 +34,6 @@
   }
 }
 
-// Ab 390px
-@mixin respond-xsm {
-  @media (min-width: v.$screen-xsm) {
-    @content;
-  }
-}
-/* Media Quaries */
 // 576px (Smartphones Landscape)
 @mixin respond-sm {
   @media (min-width: v.$screen-sm) {

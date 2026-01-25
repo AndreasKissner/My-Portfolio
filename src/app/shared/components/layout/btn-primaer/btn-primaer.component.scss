@@ -3,11 +3,16 @@
 @use 'style-varibles/mixins' as m;
 @use 'style-varibles/fonts' as f;
 
+.host {
+    display: block;
+    width: 100%;
+    max-width: 155px;
+}
+
 ::ng-deep.btn-primaer {
     @include m.flex();
     justify-content: center;
     align-items: center;
-    width: 100%;
     max-width: 155px;
     height: 40px;
     border-radius: 100px;
@@ -21,8 +26,16 @@
     transition: .200s ease-in;
     text-decoration: none;
 
-    &:hover{
-        background-color:c.$accent-orange ;
+
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: c.$accent-orange;
+        }
+    }
+
+    &:active {
+        background-color:c.$accent-orange;
     }
 
 

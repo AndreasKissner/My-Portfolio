@@ -2,20 +2,14 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
 
-main {
-  width: 100%;
+:host {
+  display: block;
 
-  /* WICHTIG: main darf kein Scroll-Container sein */
-  height: auto;
-  overflow-y: visible;
-
-  /* WICHTIG: scroll-snap NICHT hier */
-  /* scroll-snap-type: y mandatory; */
-  /* scroll-behavior: smooth; */
-
-  @include m.flex-col-center;
 }
 
+main {
+  @include m.flex-col-center;
+}
 
 .outer-container {
   width: 100%;
@@ -24,16 +18,16 @@ main {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   @include m.flex-col-center;
+
 }
 
 .inner-section {
   width: 100%;
-  max-width: 120rem;
+  max-width: 1920px;
   height: 100%;
   display: flex;
   flex-direction: column;
 
-  // Stellt sicher, dass der Hero/About Content den Platz nutzt
   app-hero,
   app-about,
   app-skill,
@@ -41,13 +35,12 @@ main {
   app-reference,
   app-contact {
     flex: 1;
-    display: block;
-    padding: v.$padding-0-10;
+    display: flex;
+    padding-left: clamp(2px, 4.28vw - 11.7px, 50px);
   }
 }
 
 .last-section {
   display: flex;
   height: 100%;
-
 }

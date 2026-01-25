@@ -1,10 +1,53 @@
 @use 'style-varibles/variables' as v;
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
+
 :host {
+  position: relative;
+  border: 3px solid blue;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2px;
   width: 100%;
-  border: 1px solid green;
-  background-color: c.$dark-blue; // Der Hintergrund für die gesamte Komponente
+  height: calc(100vh - 72px);
+  background-color: c.$dark-blue;
+
+  //576
+  @include m.respond-sm {
+    height: calc(100vh - 88px);
+  }
+
+  //992
+  @include m.respond-normal {
+    flex-direction: row;
+  }
+}
+
+article {
+  border: 3px solid violet;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+/*   @include m.respond-large{
+    margin-top: 102px;
+  } */
+}
+
+app-scroll-down-element {
+  position: absolute;
+  z-index: 3;
+  bottom: 37px;
+  left: 48;
+  display: none;
+
+  @include m.respond-normal {
+    display: block;
+  }
+}
+
+app-profil-image-container{
+  display: flex;
+  align-items: flex-end;
 }

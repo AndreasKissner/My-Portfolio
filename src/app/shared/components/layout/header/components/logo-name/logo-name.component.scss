@@ -9,10 +9,6 @@
     gap: 5px;
     left: 10px; 
     
-   @include m.respond-xsm {
-   left: 8px
-  }
-
   img {
     width: 50px;
   }

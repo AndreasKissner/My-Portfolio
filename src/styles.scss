@@ -7,15 +7,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-
-  overflow-y: scroll;       /* body ist der Scroll-Container */
-  overflow-x: hidden;
-
+  overflow-y: scroll;       
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
-/* sauberes box-sizing global */
 *, *::before, *::after {
   box-sizing: border-box;
 }
