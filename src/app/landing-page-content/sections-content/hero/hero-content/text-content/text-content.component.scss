@@ -11,8 +11,7 @@
   margin-top: 15px;
   margin-bottom: 5px;
   max-width: 100%;
-  overflow: hidden;
-
+  
 
   @media (min-width: 1241px) {
     margin-top: 100px;
@@ -35,3 +34,10 @@
     font-size: clamp(50px, 8vw, 96px);
   }
 
+h1:first-of-type {
+  margin-top: 5px;
+}
+
+h1:last-of-type {
+  margin-bottom: 5px;
+}

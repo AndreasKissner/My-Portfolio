@@ -11,19 +11,17 @@
 
 ::ng-deep.btn-primaer {
     @include m.flex();
-    justify-content: center;
-    align-items: center;
     max-width: 155px;
     height: 40px;
     border-radius: 100px;
-    border: 1px solid c.$light-beige;
+    border: 1px solid c.$light-beige;// Variablen machen ,ax width
     padding: 12px 24px;
     background-color: transparent;
     font-size: 18px;
     color: c.$light-beige;
     font-family: f.$font-second;
     font-weight: 700;
-    transition: .200s ease-in;
+    transition: .100s ease-in;
     text-decoration: none;
 
 
