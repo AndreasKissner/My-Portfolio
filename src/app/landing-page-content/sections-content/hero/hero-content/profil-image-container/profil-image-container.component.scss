@@ -31,10 +31,35 @@
   top: 16px;
   right: 114px;
 
-  @include m.respond-large {
+  @include m.respond-sm {
+    max-width: 283px;
+    top: -41px;
+    right: 164px;
+  }
+
+   @include m.respond-mid {
     right: 250px;
     top: 68px;
   }
+//992
+  @include m.respond-normal {
+    max-width: 250px;
+    right: 36px;
+  }
+//
+   @include m.respond-large {
+    max-width: 300px;
+    right: 305px;
+    top: 120px;
+  }
+  @include m.respond-xl {
+    right:350px;
+  }
+
+   @include m.respond-xxl {
+    right:450px;
+  }
+  
 }
 
 .bg-img-2 {
@@ -43,6 +68,29 @@
   max-width: 240px;
   top: 10px;
   right: 11px;
+
+   @include m.respond-mid {
+    top:-27px;
+    right:148px;
+  }
+
+   @include m.respond-large {
+    width: 70%;
+    max-width: 390px;
+    right:-5px;
+    top:-17px;
+  }
+
+   @include m.respond-xl {
+    right:80px;
+    max-width: 450px;
+  }
+
+  @include m.respond-xxl {
+    right:-10px;
+    max-width: 550px;
+    top:0px;
+  }
 }
 
 .profil-img {
@@ -51,16 +99,16 @@
   z-index: 2;
   display: flex;
   justify-content: center;
-  align-items: flex-end; // Sorgt dafür, dass das Bild unten aufsteht
-  width: 100%; // Nutzt die Breite, die der Host ihm gibt
+  align-items: flex-end; 
+  width: 100%; 
 
   img {
-    // Nur hier definieren wir die tatsächliche Größe
-    width: 100%; 
-    max-width: clamp(230px, 40vw, 800px); 
+    
+    width: 100%;
+    max-width: clamp(230px, 40vw, 800px);
     height: auto;
     max-height: clamp(315px, 80vh, 950px);
-    
+
     object-fit: contain;
     display: block;
   }

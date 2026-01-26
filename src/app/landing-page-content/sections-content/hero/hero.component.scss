@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 2px;
+  padding-left: clamp(1px, 2vw, 50px);
+
   width: 100%;
   height: calc(100vh - 72px);
   background-color: c.$dark-blue;
@@ -18,10 +19,10 @@
     height: calc(100vh - 88px);
   }
 
-  //992
-  @include m.respond-normal {
+ @media(min-width:725px){
     flex-direction: row;
-  }
+ }
+
 }
 
 article {

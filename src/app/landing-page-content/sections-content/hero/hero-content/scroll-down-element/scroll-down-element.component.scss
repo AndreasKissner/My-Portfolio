@@ -10,20 +10,21 @@
         bottom: 7px;
         left: 7px;
 
-        @include m.respond-normal {
+    @media(min-width:725px) {
             display: none;
         }
     }
 
     // 2. Varianet
     &.hero-style {
-        bottom: 27px;
+        bottom: 17px;
         left: 48px;
         display: none;
 
-        @include m.respond-normal {
+        @media(min-width:725px) {
             display: block;
         }
+
     }
 
     // 3. Das Element innerhalb des Hosts
@@ -36,7 +37,7 @@
         text-decoration: none;
 
         @include m.respond-normal {
-            width: 144px;
+            width: 124px;
         }
     }
 }

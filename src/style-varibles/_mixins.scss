@@ -62,7 +62,7 @@
   }
 }
 
-//  Ab 1440px )
+//  Ab 1400px )
 @mixin respond-xl {
   @media (min-width: v.$screen-xl) {
     @content;

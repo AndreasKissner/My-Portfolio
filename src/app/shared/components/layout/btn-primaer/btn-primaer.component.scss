@@ -23,9 +23,7 @@
     font-weight: 700;
     transition: .100s ease-in;
     text-decoration: none;
-
-
-
+    
     @media (hover: hover) {
         &:hover {
             background-color: c.$accent-orange;
