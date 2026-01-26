@@ -6,6 +6,8 @@
 :host {
   display: block;
   width: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .image-container {
@@ -27,7 +29,7 @@
   }
 }
 
-.bg-1 {
+/* .bg-1 {
   top: 16px;
   right: 114px;
   left: auto;
@@ -50,37 +52,56 @@
 .bg-img-2 {
   min-width: 150px;
   max-width: 400px;
+} */
+
+
+.bg-1 {
+  top: 16px;
+  right: 114px;
+  left: auto;
+
+  @include m.respond-large {
+    right: 250px;
+    top: 68px;
+  }
 }
+
+.bg-2 {
+  top: 10px;
+  right: 11px;
+}
+
+.bg-img-1 {
+  min-width: 170px;
+  max-width: 200px;
+}
+
+.bg-img-2 {
+  min-width: 150px;
+  max-width: 240px;
+}
+
 
 .profil-img {
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  width: clamp(230px, 40vw, 800px); 
-  max-height: clamp(350px, 78vh, 950px); 
-  
+  width: clamp(230px, 40vw, 800px);
+  // Check with img must be the same
+  max-height: clamp(350px, 78vh, 950px);
   display: flex;
   justify-content: center;
 
   img {
-   width: auto;
-  /*  height: auto;  */
-   max-width: 100%;  
-    // Muss mit den Werten oben übereinstimmen
-    max-height: clamp(350px, 85vh, 950px); 
+    width: auto;
+    /*  height: auto;  */
+    max-width: 100%;
+    // Must be  the same like profil img. 
+    /* max-height: clamp(350px, 85vh, 950px);  */
+    max-height: clamp(315px, 45vh, 950px);
     object-fit: contain;
     display: block;
   }
 }
 
 
-app-scroll-down-element {
-  position: absolute;
-  z-index: 3;
-  bottom: 7px;
-  left: 7px;
-
-  @include m.respond-normal {
-    display: none;
-  }
-}

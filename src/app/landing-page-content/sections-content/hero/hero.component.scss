@@ -29,25 +29,6 @@ article {
   width: 100%;
   display: flex;
   flex-direction: column;
-
-/*   @include m.respond-large{
-    margin-top: 102px;
-  } */
 }
 
-app-scroll-down-element {
-  position: absolute;
-  z-index: 3;
-  bottom: 37px;
-  left: 48;
-  display: none;
 
-  @include m.respond-normal {
-    display: block;
-  }
-}
-
-app-profil-image-container{
-  display: flex;
-  align-items: flex-end;
-}

@@ -4,11 +4,7 @@
 
 :host {
   display: block;
-
-}
-
-main {
-  @include m.flex-col-center;
+   @include m.flex-col-center;
 }
 
 .outer-container {
@@ -18,13 +14,12 @@ main {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   @include m.flex-col-center;
-
 }
 
 .inner-section {
   width: 100%;
   max-width: 1920px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 
