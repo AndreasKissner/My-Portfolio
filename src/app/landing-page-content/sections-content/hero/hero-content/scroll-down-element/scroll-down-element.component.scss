@@ -1,37 +1,68 @@
 @use 'style-varibles/mixins' as m;
-.scroll-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px; 
-    text-decoration: none;
 
-    @include m.respond-normal{
-        width: 144px;
+:host {
+    //  Basis-Styles für den Host
+    position: absolute;
+    z-index: 3;
+
+    // 2. Varianten 
+    &.profil-image-content-style {
+        bottom: 7px;
+        left: 7px;
+
+        @include m.respond-normal {
+            display: none;
+        }
     }
 
-    .outer-ring {
-        width: 100%;
-        height: auto;
-        animation: rotateRing 10s linear infinite;
+    // 2. Varianet
+    &.hero-style {
+        bottom: 27px;
+        left: 48px;
+        display: none;
+
+        @include m.respond-normal {
+            display: block;
+        }
     }
 
-    .inner-flash {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 30%; 
-        height: auto;
-        z-index: 2;
+    // 3. Das Element innerhalb des Hosts
+    a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        text-decoration: none;
+
+        @include m.respond-normal {
+            width: 144px;
+        }
     }
+}
+
+
+.outer-ring {
+    width: 100%;
+    height: auto;
+    animation: rotateRing 10s linear infinite;
+}
+
+.inner-flash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+    z-index: 2;
 }
 
 @keyframes rotateRing {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
