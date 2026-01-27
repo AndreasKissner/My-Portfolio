@@ -6,12 +6,12 @@
 .host {
     display: block;
     width: 100%;
-    max-width: 155px;
+    max-width: v.$btn-max-width;
 }
 
 ::ng-deep.btn-primaer {
     @include m.flex();
-    max-width: 155px;
+    max-width: v.$btn-max-width;
     height: 40px;
     border-radius: 100px;
     border: 1px solid c.$light-beige;// Variablen machen ,ax width

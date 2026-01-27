@@ -1,9 +1,7 @@
 @use 'style-varibles/mixins' as m;
 
 .social-btn-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include m.flex(center,center,row);
   gap: 15px;
 }
 

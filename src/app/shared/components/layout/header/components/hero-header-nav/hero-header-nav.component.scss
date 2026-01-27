@@ -6,9 +6,8 @@
 .burger-icon {
   width: 30px;
   height: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+  @include m.flex(space-between,center, column);
   cursor: pointer;
 
   span {
