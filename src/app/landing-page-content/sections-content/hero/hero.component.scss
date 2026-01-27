@@ -2,31 +2,15 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
 
-:host {
-  position: relative;
-  border: 3px solid blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-left: clamp(1px, 2vw, 50px);
 
-  width: 100%;
-  height: calc(100vh - 72px);
-  background-color: c.$dark-blue;
-
-  //576
-  @include m.respond-sm {
-    height: calc(100vh - 88px);
-  }
-
- @media(min-width:725px){
+:host{
+  @include m.section-layout(c.$dark-blue);
+  @media(min-width:725px){
     flex-direction: row;
  }
-
 }
 
-article {
-  border: 3px solid violet;
+section{
   width: 100%;
   display: flex;
   flex-direction: column;

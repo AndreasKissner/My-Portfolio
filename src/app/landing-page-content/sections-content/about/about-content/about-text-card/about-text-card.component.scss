@@ -1,0 +1,37 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+
+:host {
+  @include m.flex(space-between, center, column);
+  position: relative;
+  background-color: #1c1c1c;
+  color: c.$light-beige;
+  padding: 16px;
+  border-radius: 4px;
+  width: clamp(240px, 40vw + 100px, 600px);
+  height: clamp(250px, -10vw + 350px, 312px);
+
+  transition: all 0.3s ease;
+  .text-wrapper {
+    p {
+      font-family: f.$font-second;
+      margin: 0;
+    }
+  }
+
+ .btn-icon {
+  width: clamp(208px, 40vw + 50px, 536px);
+  border: 1px solid yellow; 
+/*   display: flex;
+  align-items: center;
+  justify-content: space-between;  */
+ @include m.flex(space-between, center, row);
+}
+
+  img {
+    width: 40px;
+  }
+}

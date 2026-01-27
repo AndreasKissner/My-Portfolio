@@ -4,36 +4,33 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; // Oben ausrichten
-  align-items: flex-start;     // Links ausrichten
-  margin-top: 15px;
-  margin-bottom: 5px;
+  /*  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; */
+  @include m.flex(flex-start, flex-start, column);
+  margin:15px 0 5px 0;
   max-width: 100%;
-  
 
   @media (min-width: 1241px) {
-    margin-top: 69px;
+    margin-top: 30px;
   }
 }
 
-  p {
-    white-space: nowrap;
-    font-size: clamp(20px, 4vw, 48px);
-    font-family: f.$font-second;
-    margin: 0;
-    line-height: 1.1;
-   margin-bottom: 10px;
-  }
+p {
+  white-space: nowrap;
+  font-size: clamp(20px, 4vw, 48px);
+  font-family: f.$font-second;
+  line-height: 1.1;
+  margin: 0 0 10px 0; 
+}
 
-  h1 {
-    font-family: f.$font-eczar;
-    font-weight: bold;
-    margin: 0;
-    line-height: 0.85;
-    font-size: clamp(50px, 8vw, 96px);
-  }
+h1 {
+  font-family: f.$font-eczar;
+  font-weight: bold;
+  margin: 0;
+  line-height: 0.85;
+  font-size: clamp(50px, 8vw, 96px);
+}
 
 h1:first-of-type {
   margin-top: 5px;

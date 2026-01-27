@@ -1,11 +1,9 @@
 @use 'style-varibles/mixins' as m;
 
 :host {
-    //  Basis-Styles für den Host
     position: absolute;
     z-index: 3;
 
-    // 2. Varianten 
     &.profil-image-content-style {
         bottom: 7px;
         left: 7px;
@@ -30,9 +28,10 @@
     // 3. Das Element innerhalb des Hosts
     a {
         position: relative;
-        display: flex;
+      /*   display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
+        @include m.flex();
         width: 80px;
         text-decoration: none;
 

@@ -1,0 +1,11 @@
+img{width: 100px;}img {
+  // Breite: Start 249px -> Ziel 528px
+  width: clamp(249px, 30vw + 150px, 528px);
+
+  // Höhe: Start 335px -> Ziel 740px
+  height: clamp(335px, 45vw + 180px, 740px);
+
+  // Wichtig, damit das Bild nicht verzerrt wird:
+  object-fit: cover; 
+ 
+}

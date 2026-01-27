@@ -1,11 +1,8 @@
 {
-  "ABOUT": {
-    "GREETING": "Hi, I'm Andreas — a dedicated developer and digital craftsman who thrives at the intersection of structured logic.",
-    "LOGIC_TEXT": "For me, programming extends far beyond mere syntax; it is a profound creative outlet.",
-    "FUTURE": "Let’s collaborate to architect the digital world and build something truly extraordinary",
-    "ABOUT_TITLE": "ABOUT ME",
-    "MORE_INFOS": "More"
-  },
+"ABOUT": {
+  "GREETING": "Hi, I'm Andreas. A dedicated developer and digital craftsman.\nFor me, programming extends far beyond mere syntax; it is a creative means of expression.\n\nLet’s collaborate to architect the digital world and build something truly extraordinary.",
+  "ABOUT_TITLE": "ABOUT ME"
+},
   "SKILL": {
     "SKILL_TITLE": "Core Competencies",
     "COMPETENCE": "In my projects, I have used a variety of front-end technologies – for both static and dynamic websites. I have implemented responsive layouts.",

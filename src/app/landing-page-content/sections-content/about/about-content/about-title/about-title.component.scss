@@ -1,0 +1,16 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:host{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    h1{
+        margin: 10px 20px 0 0;
+        font-size: 40px;
+        font-family: f.$font-eczar;
+        font-weight: 900;
+    }
+}

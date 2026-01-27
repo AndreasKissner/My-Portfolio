@@ -2,7 +2,9 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
 
-:host{
-    background-color: c.$light-beige;
-    border: 10px solid green;
+
+:host {
+    @include m.section-layout(c.$light-beige);
+    border: 2px solid green;
+height:auto;
 }

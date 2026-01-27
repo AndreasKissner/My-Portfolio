@@ -1,61 +1,60 @@
+<div class="outer-container" id="hero" [style.background-color]="sectionColors.hero">
+  <section class="inner-section">
+    <app-header [showSocialButtons]="true" [bgColor]="sectionColors.hero"></app-header>
+    <div class="last-section">
+      <app-hero></app-hero>
+      <app-section-indicator></app-section-indicator>
+    </div>
+  </section>
+</div>
 
-  <div class="outer-container" id="hero" [style.background-color]="sectionColors.hero">
-    <section class="inner-section">
-      <app-header [showSocialButtons]="true" [bgColor]="sectionColors.hero"></app-header>
-      <div class="last-section">
-        <app-hero></app-hero>
-        <app-section-indicator></app-section-indicator>
-      </div>
-    </section>
-  </div>
+<div class="outer-container" id="about" [style.background-color]="sectionColors.about">
+  <section class="inner-section">
+    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.about" textColor="black"></app-header>
+    <div class="last-section">
+      <app-about></app-about>
+      <app-section-indicator color="black"></app-section-indicator>
+    </div>
+  </section>
+</div>
 
-  <div class="outer-container" id="about" [style.background-color]="sectionColors.about">
-    <section class="inner-section">
-      <app-header [showSocialButtons]="false" [bgColor]="sectionColors.about" textColor="black"></app-header>
-      <div class="last-section">
-        <app-about></app-about>
-        <app-section-indicator color="black"></app-section-indicator>
-      </div>
-    </section>
-  </div>
+<div class="outer-container" id="skills" [style.background-color]="sectionColors.skills">
+  <section class="inner-section">
+    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.skills"></app-header>
+    <div class="last-section">
+      <app-skill></app-skill>
+      <app-section-indicator></app-section-indicator>
+    </div>
+  </section>
+</div>
 
-  <div class="outer-container" id="skills" [style.background-color]="sectionColors.skills">
-    <section class="inner-section">
-      <app-header [showSocialButtons]="false" [bgColor]="sectionColors.skills"></app-header>
-      <div class="last-section">
-        <app-skill></app-skill>
-        <app-section-indicator></app-section-indicator>
-      </div>
-    </section>
-  </div>
+<div class="outer-container" id="portfolio" [style.background-color]="sectionColors.portfolio">
+  <section class="inner-section">
+    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.portfolio" textColor="black"></app-header>
+    <div class="last-section">
+      <app-portfolio></app-portfolio>
+      <app-section-indicator color="black"></app-section-indicator>
+    </div>
+  </section>
+</div>
 
-  <div class="outer-container" id="portfolio" [style.background-color]="sectionColors.portfolio">
-    <section class="inner-section">
-      <app-header [showSocialButtons]="false" [bgColor]="sectionColors.portfolio" textColor="black"></app-header>
-      <div class="last-section">
-        <app-portfolio></app-portfolio>
-        <app-section-indicator color="black"></app-section-indicator>
-      </div>
-    </section>
-  </div>
+<div class="outer-container" id="references" [style.background-color]="sectionColors.references">
+  <section class="inner-section">
+    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.references" textColor="black"></app-header>
+    <div class="last-section">
+      <app-reference></app-reference>
+      <app-section-indicator color="black"></app-section-indicator>
+    </div>
+  </section>
+</div>
 
-  <div class="outer-container" id="references" [style.background-color]="sectionColors.references">
-    <section class="inner-section">
-      <app-header [showSocialButtons]="false" [bgColor]="sectionColors.references" textColor="black"></app-header>
-      <div class="last-section">
-        <app-reference></app-reference>
-        <app-section-indicator color="black"></app-section-indicator>
-      </div>
-    </section>
-  </div>
-
-  <div class="outer-container" id="contact" [style.background-color]="sectionColors.contact">
-    <section class="inner-section">
-      <app-header [showSocialButtons]="false" [bgColor]="sectionColors.contact"></app-header>
-      <div class="last-section">
-          <app-contact></app-contact>
-          <app-footer></app-footer>
-        <app-section-indicator></app-section-indicator>
-      </div>
-    </section>
-  </div>
+<div class="outer-container" id="contact" [style.background-color]="sectionColors.contact">
+  <section class="inner-section">
+    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.contact"></app-header>
+    <div class="last-section">
+        <app-contact></app-contact>
+        <app-footer></app-footer>
+      <app-section-indicator></app-section-indicator>
+    </div>
+  </section>
+</div>

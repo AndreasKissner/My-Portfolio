@@ -4,25 +4,28 @@
 
 :host {
   display: block;
-   @include m.flex-col-center;
 }
 
 .outer-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   flex-shrink: 0;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   @include m.flex-col-center;
+
+  &#hero {
+    height: 100vh;
+    /*     overflow: hidden;  */
+  }
 }
 
 .inner-section {
   width: 100%;
   max-width: 1920px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-A
+
   app-hero,
   app-about,
   app-skill,
@@ -38,4 +41,12 @@ A
 .last-section {
   display: flex;
   height: 100%;
+}
+
+.header-mobile-hidden {
+  display: none;
+
+  @include m.respond-mid {
+    display: block;
+  }
 }

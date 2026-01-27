@@ -1,13 +1,10 @@
 {
-  "ABOUT": {
-    "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.",
-    "LOGIC_TEXT": "Für mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.",
-
-    "FUTURE": "Lass uns gemeinsam die digitale Welt gestalten und etwas wahrhaft Außergewöhnliches erschaffen.",
-    
-    "MORE_INFOS": "Mehr",
-    "ABOUT_TITLE":"ÜBER MICH"
-  },
+ "ABOUT": {
+  "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.\nFür mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.\n\nLass uns gemeinsam die digitale Welt gestalten und etwas wahrhaft Außergewöhnliches erschaffen.",
+  
+  "ABOUT_TITLE": "ÜBER MICH"
+}
+,
 
   "SKILL":{
 

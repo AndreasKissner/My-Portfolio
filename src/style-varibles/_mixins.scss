@@ -1,21 +1,46 @@
 @use "variables" as v;
+
 // Global
 @mixin main-container {
   width: 100%;
-  max-width: 1920px; 
+  max-width: 1920px;
   margin: 0 auto;
 }
 
-@mixin flex($justify: center, $align: center) {
+/* @mixin flex($justify: center, $align: center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+} */
+
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
 @mixin flex-col-center {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@mixin section-layout($bg: transparent) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: clamp(1px, 2vw, 50px);
+  width: 100%;
+  height: calc(100vh - 72px);
+  background-color: $bg;
+
+  // 576px Breakpoint
+  @include respond-sm {
+    height: calc(100vh - 88px);
+  }
+
 }
 
 // Media
