@@ -3,35 +3,51 @@
 @use 'style-varibles/mixins' as m;
 @use 'style-varibles/fonts' as f;
 
-
 :host {
-  @include m.flex(space-between, center, column);
-  position: relative;
-  background-color: #1c1c1c;
+  @include m.flex(space-between, flex-start, column);
+  position: relative; 
+  z-index: 10;
+  margin-top: -30px; 
+  align-self: flex-end; 
+  background-color: #1c1c1c; // varibale
   color: c.$light-beige;
-  padding: 16px;
+  padding: clamp(16px, 3vw, 32px);
   border-radius: 4px;
-  width: clamp(240px, 40vw + 100px, 600px);
-  height: clamp(250px, -10vw + 350px, 312px);
+  width: clamp(240px, 73vw + 20px, 700px);
+  min-height: 250px;
+  height: auto; 
+  
+  @include m.respond-sm{
+    bottom: 120px;
+    align-self: center;
+  }
+   @include m.respond-normal{
+    bottom: 251px;
+    left: 148px;
+  }
 
-  transition: all 0.3s ease;
   .text-wrapper {
+    width: 100%;
     p {
       font-family: f.$font-second;
       margin: 0;
+      line-height: 1.4;
+      font-size: clamp(14px, 1.5vw, 18px);
     }
   }
 
- .btn-icon {
-  width: clamp(208px, 40vw + 50px, 536px);
-  border: 1px solid yellow; 
-/*   display: flex;
-  align-items: center;
-  justify-content: space-between;  */
- @include m.flex(space-between, center, row);
-}
+  .btn-icon {
+    width: 100%;
+    margin-top: 20px;
+    @include m.flex(space-between, center, row);
+    
+    app-btn-primaer {
+      flex-shrink: 0;
+    }
+  }
 
   img {
-    width: 40px;
+    width: clamp(30px, 5vw, 50px);
+    height: auto;
   }
 }

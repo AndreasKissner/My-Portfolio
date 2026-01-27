@@ -1,10 +1,17 @@
-@use 'style-varibles/variables' as v;
-@use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
-
+@use 'style-varibles/colors' as c;
 
 :host {
-    @include m.section-layout(c.$light-beige);
-    border: 2px solid green;
-height:auto;
+  /* @include m.section-layout(c.$light-beige); */
+  display: flex;
+  align-items: flex-start; 
+  justify-content: flex-end;
+  flex-direction: column;
+  height: auto;
+  padding: 10px 2px; 
+  
+  @include m.respond-sm{
+  justify-content: center;
+  }
+
 }

@@ -3,14 +3,21 @@
 @use 'style-varibles/mixins' as m;
 @use 'style-varibles/fonts' as f;
 
-:host{
+:host {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    h1{
-        margin: 10px 20px 0 0;
+    border:3px solid red;
+
+    h1 {
+        margin: 27px 20px 0 0;
         font-size: 40px;
         font-family: f.$font-eczar;
-        font-weight: 900;
+        font-weight: bold;
+
+        @include m.respond-normal {
+            font-size: 72px;
+        }
+
     }
 }

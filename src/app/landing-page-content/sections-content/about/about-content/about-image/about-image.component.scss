@@ -1,11 +1,12 @@
-img{width: 100px;}img {
-  // Breite: Start 249px -> Ziel 528px
-  width: clamp(249px, 30vw + 150px, 528px);
+img {
+  // Breite: Start auf ca. 182px (leicht reduziert für 320px Screens)
+  width: clamp(214px, 40vw + 86px, 528px);
 
-  // Höhe: Start 335px -> Ziel 740px
-  height: clamp(335px, 45vw + 180px, 740px);
+  // Höhe: Start auf ca. 244px (leicht reduziert für 320px Screens)
+  height: clamp(260px, 65vw + 100px, 740px);
 
   // Wichtig, damit das Bild nicht verzerrt wird:
   object-fit: cover; 
- 
+  margin: 25px 0 0 2px;
+
 }
