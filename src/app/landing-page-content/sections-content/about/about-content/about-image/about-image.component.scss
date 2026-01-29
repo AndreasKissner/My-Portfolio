@@ -1,12 +1,8 @@
 img {
-  // Breite: Start auf ca. 182px (leicht reduziert für 320px Screens)
+  display: block;
   width: clamp(214px, 40vw + 86px, 528px);
-
-  // Höhe: Start auf ca. 244px (leicht reduziert für 320px Screens)
   height: clamp(260px, 65vw + 100px, 740px);
-
-  // Wichtig, damit das Bild nicht verzerrt wird:
   object-fit: cover; 
   margin-left:2px;
-
+  margin-top: 10px;  // Aendern
 }

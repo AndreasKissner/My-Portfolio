@@ -1,4 +1,9 @@
 @use 'style-varibles/mixins' as m;
+
+button{
+    background-color: transparent;
+    border: none;
+}
 .language-icon{
     @include m.flex();
 }

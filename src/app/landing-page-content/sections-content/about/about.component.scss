@@ -5,23 +5,34 @@
   /* @include m.section-layout(c.$light-beige); */
   border: 1px solid red;
   display: flex;
-  align-items: flex-start; 
-  justify-content: flex-end;
-  flex-direction: column;
-  height: auto;
-  padding: 0 2px 0px 2px; 
-  width: 100%;
-  @include m.respond-sm{
-  justify-content: center;
-  }
-section{
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
-  flex-direction: column-reverse;
-}
-app-about-title{
-  align-self: flex-end;
-}
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 2px 0px 2px;
+  width: 100%;
+
+  @include m.respond-sm {
+    justify-content: center;
+  }
+
+  section {
+    position: relative;
+    border: 2px solid green;
+    width: 100%;
+    height: 625px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+
+    @include m.respond-normal {
+      flex-direction: column;
+    }
+  }
+
+  app-about-title {
+    align-self: flex-end;
+  }
+
 }
