@@ -2,6 +2,7 @@
 @use 'style-varibles/colors' as c;
 
 :host {
+/*   position: relative; */
   border: 1px solid red;
  /*  display: flex;
   align-items: flex-start;
@@ -35,5 +36,8 @@
   app-about-title {
     align-self: flex-end;
   }
-
 }
+
+
+
+
