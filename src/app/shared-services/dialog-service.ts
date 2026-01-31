@@ -29,7 +29,5 @@ closeDialog() {
 this.showDialog.set(true);
     }
   }
-
-
 }
 
