@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/components/layout/header/header.component';
 import { FooterComponent } from '../../shared/components/layout/footer/footer.component';
 import { HeroComponent } from '../sections-content/hero/hero.component';

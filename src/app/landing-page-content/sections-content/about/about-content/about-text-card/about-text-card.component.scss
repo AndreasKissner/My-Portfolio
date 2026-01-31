@@ -2,6 +2,7 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
 @use 'style-varibles/fonts' as f;
+@use 'style-varibles/component-mixins/close-dialog-btn' as closeDialogBtn;
 
 :host {
   @include m.flex(space-between, flex-start, column);
@@ -71,3 +72,110 @@
 }
 
 
+/* Open dialog Butten Scss */
+
+.dialog-trigger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 50px;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-3px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ENDE */
+
+app-dialog {
+  position: absolute;
+  top: 230px;
+  left:600px;
+  z-index: 1000;
+
+ &.is-open {
+    animation: dialogIn 0.4s ease-out forwards;
+  }
+
+  &.is-closing {
+    animation: dialogOut 0.3s ease-in forwards;
+  }
+
+  .dialog-inner {
+    position: relative;
+    min-width: 272px;
+    padding: 32px;
+    background: c.$dark-blue;
+    border: 1px solid  c.$skill-black ;
+    border-radius: 4px;
+
+    h1 {
+      margin: 0 0 20px 0;
+      color: c.$light-beige;
+      font-family: f.$font-second;
+      font-weight: 700;
+    }
+
+    .about-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-family: f.$font-second;
+        font-weight: 400px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        img {
+          width: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .close-btn {
+      @include closeDialogBtn.close-button-style;
+
+
+    }
+  }
+}
+
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dialogOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+}
