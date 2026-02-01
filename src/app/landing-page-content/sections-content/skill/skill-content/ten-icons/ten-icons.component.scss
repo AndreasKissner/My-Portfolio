@@ -1,0 +1,49 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:Host {
+  width: 100%;
+  
+  height: auto;
+  border: 2px solid violet;
+  @include m.flex();
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 16px 0 16px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    width: 69px;
+    height: 69px;
+    transition: transform 200ms ease;
+
+    @media(max-width:700px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  span {
+    font-family: f.$font-second;
+    color: c.$light-beige;
+
+    @media(max-width:400px) {
+      font-size: 14px;
+    }
+
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.3);
+    }
+  }
+}

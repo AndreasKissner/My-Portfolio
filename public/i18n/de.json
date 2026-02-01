@@ -1,10 +1,23 @@
 {
- "ABOUT": {
+   "HERO":{
+    "FRONT" :"Kaffe & Code",
+    "CONTACT" :"Kontakt"
+  },
+
+"ABOUT": {
   "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.\nFür mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.\n\nLass uns gemeinsam die digitale Welt gestalten und etwas wahrhaft Außergewöhnliches erschaffen.",
-  
   "ABOUT_TITLE": "ÜBER MICH"
-}
-,
+},
+
+"ABOUT_DIALOG": {
+  "TITLE":"Mehr Stärken",
+  "TEAM": "Starker Teamplayer",
+  "ANGULAR": "Web-Apps mit Angular",
+  "TYPESCRIPT": "Saubere TypeScript-Logik",
+  "RESPONSIVE": "Vollständig responsive Layouts",
+  "GIT": "Versionskontrolle mit Git",
+  "BUTTON": "Reden Wir"
+},
 
   "SKILL":{
 

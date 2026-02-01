@@ -1,0 +1,178 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+@use 'style-varibles/component-mixins/close-dialog-btn' as closeDialogBtn;
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  border: 2px solid blueviolet;
+  width: 100%;
+  max-width: 280px;
+  margin: 50px 0 25px 0px;
+}
+
+app-open-dialog-btn {
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    @include m.flex();
+    width: 120px;
+    height: 120px;
+
+    img {
+      // Standardmäßig werden beide Bilder übereinander gelegt
+      position: absolute;
+
+    }
+
+    img:first-of-type {
+      width: 120px;
+      height: 120px;
+      animation: rotateRing 10s linear infinite;
+      z-index: 1;
+    }
+
+    img:last-of-type {
+      width: 40px;
+      z-index: 2;
+    }
+
+    @keyframes rotateRing {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+
+app-dialog {
+  position: absolute;
+  top: 1700px;
+  left: 10px;
+  z-index: 1000;
+
+  @include m.respond-sm {
+    top: -87px;
+    left: 130px
+  }
+
+  @include m.respond-normal {
+    top: -87px;
+    left: 280px
+  }
+
+  @include m.respond-large {
+    top: 211px;
+    left: 410px
+  }
+
+
+  &.is-open {
+    animation: dialogIn 0.4s ease-out forwards;
+  }
+
+  &.is-closing {
+    animation: dialogOut 0.3s ease-in forwards;
+  }
+
+  .dialog-inner {
+    position: relative;
+    width: 302px;
+    height: 285px;
+    padding: 32px;
+    background: c.$accent-orange;
+    border: 1px solid c.$skill-black ;
+    color: c.$light-beige;
+    border-radius: 4px;
+
+    h1 {
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      font-family: f.$font-second;
+      font-weight: 700;
+    }
+
+   p{
+      font-family: f.$font-second;
+   }
+
+      li {
+        font-family: f.$font-second;
+        font-weight: 400px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        img {
+          width: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .close-btn {
+      @include closeDialogBtn.close-button-style;
+    }
+  }
+
+
+.skill-image-box {
+  width: 100%;
+  max-width: 300px;
+  @include m.flex();
+  gap: 20px;
+  height: auto;
+
+  a {
+    color: c.$light-beige;
+    font-weight: 400;
+    font-family: f.$font-second;
+    @include m.flex();
+    flex-direction: column;
+
+    &:last-child {
+      gap: 6px; 
+    }
+  
+  }
+
+  img {
+    width: 40px;
+  }
+}
+
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dialogOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(120%); // Weiter runter schieben
+    visibility: hidden; // Komplett vom Rendering ausschließen
+  }
+}

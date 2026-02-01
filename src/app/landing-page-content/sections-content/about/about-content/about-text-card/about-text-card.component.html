@@ -5,20 +5,9 @@
 <div class="btn-icon">
   <app-btn-primaer>
     <a class="btn-primaer" href="#contact">
-      <span>Let’s talk</span>
+      <span>{{ 'ABOUT_DIALOG.BUTTON' | translate }}</span>
     </a>
   </app-btn-primaer>
-
-  <!--  <img
-  src="assets/img/icons/silentIcon.png"
-  alt="Silent Smiley Icon"
-  tabindex="0"
-  (mouseenter)="showDialog = true"
-  (mouseleave)="showDialog = false"
-
-  (focus)="showDialog = true"
-  (blur)="showDialog = false"
-/> -->
 
   <app-open-dialog-btn>
     <button class="dialog-trigger" (mouseenter)="dialog.onHover(true)" (mouseleave)="dialog.onHover(false)"
@@ -26,36 +15,37 @@
       <img src="assets/img/icons/silentIcon.png" alt="Silent Smiley Icon">
     </button>
   </app-open-dialog-btn>
+
+
 <app-dialog
   [class.is-open]="dialog.showDialog()"
   [class.is-closing]="!dialog.showDialog()"
 >
   <div class="dialog-inner">
     <button class="close-btn" (click)="dialog.closeDialog()">X</button>
+    <h1>{{ 'ABOUT_DIALOG.TITLE' | translate }}</h1>
+<ul class="about-list">
+  <li>
+    <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
+    <span>{{ 'ABOUT_DIALOG.TEAM' | translate }}</span>
+  </li>
+  <li>
+    <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
+    <span>{{ 'ABOUT_DIALOG.ANGULAR' | translate }}</span>
+  </li>
+  <li>
+    <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
+    <span>{{ 'ABOUT_DIALOG.TYPESCRIPT' | translate }}</span>
+  </li>
+  <li>
+    <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
+    <span>{{ 'ABOUT_DIALOG.RESPONSIVE' | translate }}</span>
+  </li>
+  <li>
+    <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
+    <span>{{ 'ABOUT_DIALOG.GIT' | translate }}</span>
+  </li>
+</ul>
 
-    <h1>More about</h1>
-
-    <ul class="about-list">
-      <li>
-        <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
-        <span>Team player</span>
-      </li>
-      <li>
-        <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
-        <span>Angular Framework</span>
-      </li>
-      <li>
-        <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
-        <span>TypeScript Logik</span>
-      </li>
-      <li>
-        <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
-        <span>Responsive Layouts</span>
-      </li>
-      <li>
-        <img src="assets/img/icons/aboutMeMiniOverlay/checkMiniOverlay.svg">
-        <span>Version Control (Git)</span>
-      </li>
-    </ul>
   </div>
 </app-dialog>

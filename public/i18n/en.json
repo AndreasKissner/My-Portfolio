@@ -1,8 +1,25 @@
 {
-"ABOUT": {
-  "GREETING": "Hi, I'm Andreas. A dedicated developer and digital craftsman.\nFor me, programming extends far beyond mere syntax; it is a creative means of expression.\n\nLet’s collaborate to architect the digital world and build something truly extraordinary.",
-  "ABOUT_TITLE": "ABOUT ME"
-},
+  "HERO":{
+    "FRONT" :"Frontend Developer",
+    "CONTACT" :"contactMe"
+  },
+
+
+  "ABOUT": {
+    "GREETING": "Hi, I'm Andreas. A dedicated developer and digital craftsman.\nFor me, programming extends far beyond mere syntax; it is a creative means of expression.\n\nLet’s collaborate to architect the digital world and build something truly extraordinary.",
+    "ABOUT_TITLE": "ABOUT ME"
+  },
+
+  "ABOUT_DIALOG": {
+    "TITLE": "More about me",
+    "TEAM": "Strong team player",
+    "ANGULAR": "Angular-based web apps",
+    "TYPESCRIPT": "Clean TypeScript logic",
+    "RESPONSIVE": "Fully responsive layouts",
+    "GIT": "Git & version control",
+    "BUTTON": "Let's talk"
+  },
+
   "SKILL": {
     "SKILL_TITLE": "Core Competencies",
     "COMPETENCE": "In my projects, I have used a variety of front-end technologies – for both static and dynamic websites. I have implemented responsive layouts.",

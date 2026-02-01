@@ -1,3 +1,5 @@
+
+
 img {
   display: block;
   width: clamp(214px, 40vw + 86px, 528px);
@@ -5,4 +7,8 @@ img {
   object-fit: cover; 
 /*   margin-left:2px; */
   margin-top: 10px;  // Aendern
+
+   @media(min-width :768px ){
+    height: 614px;
+  }  
 }

@@ -16,7 +16,6 @@
   border-radius: 4px;
   width: clamp(230px, 60vw + 20px, 700px);
   min-height: 250px;
-  /*   height: auto;  */
 
   @include m.respond-sm {
     bottom: 0px;
@@ -72,8 +71,6 @@
 }
 
 
-/* Open dialog Butten Scss */
-
 .dialog-trigger {
   background-color: transparent;
   border: none;
@@ -103,11 +100,25 @@
 
 app-dialog {
   position: absolute;
-  top: 230px;
-  left:600px;
+  top: 40px;
+  left: -49px;
   z-index: 1000;
 
- &.is-open {
+  @include m.respond-sm {
+    top:-87px;
+    left:130px
+  }
+  @include m.respond-normal {
+    top:-87px;
+    left:280px
+  }
+    @include m.respond-large{
+    top:211px;
+    left:410px
+  }
+
+
+  &.is-open {
     animation: dialogIn 0.4s ease-out forwards;
   }
 
@@ -120,7 +131,7 @@ app-dialog {
     min-width: 272px;
     padding: 32px;
     background: c.$dark-blue;
-    border: 1px solid  c.$skill-black ;
+    border: 1px solid c.$skill-black ;
     border-radius: 4px;
 
     h1 {
@@ -151,8 +162,6 @@ app-dialog {
 
     .close-btn {
       @include closeDialogBtn.close-button-style;
-
-
     }
   }
 }
@@ -163,6 +172,7 @@ app-dialog {
     opacity: 0;
     transform: translateY(70%);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -176,6 +186,7 @@ app-dialog {
   }
   to {
     opacity: 0;
-    transform: translateY(70%);
+    transform: translateY(120%); // Weiter runter schieben
+    visibility: hidden;         // Komplett vom Rendering ausschließen
   }
 }

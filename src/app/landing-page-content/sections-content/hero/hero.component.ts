@@ -3,12 +3,13 @@ import { ProfilImageContainerComponent } from './hero-content/profil-image-conta
 import { BtnPrimaerComponent } from '../../../shared/components/layout/btn-primaer/btn-primaer.component';
 import { TextContentComponent } from './hero-content/text-content/text-content.component';
 import { ScrollDownElementComponent } from "./hero-content/scroll-down-element/scroll-down-element.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 ServiceWorker
 
 @Component({
   selector: 'app-hero',
-  imports: [ProfilImageContainerComponent, BtnPrimaerComponent, TextContentComponent, ScrollDownElementComponent],
+  imports: [ProfilImageContainerComponent, BtnPrimaerComponent, TextContentComponent, ScrollDownElementComponent,TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

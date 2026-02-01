@@ -1,0 +1,29 @@
+<app-open-dialog-btn>
+  <button class="dialog-trigger" (mouseenter)="dialog.onHover(true)" (mouseleave)="dialog.onHover(false)"
+    (focus)="dialog.onHover(true)" (blur)="dialog.onHover(false)" (click)="dialog.onClick()">
+    <img src="assets/img/icons/hutunderground.svg" alt="Carussel">
+    <img src="assets/img/icons/hut.svg" alt="Hut Bild">
+  </button>
+</app-open-dialog-btn>
+
+<app-dialog [class.is-open]="dialog.showDialog()" [class.is-closing]="!dialog.showDialog()">
+  <div class="dialog-inner">
+    <button class="close-btn" (click)="dialog.closeDialog()">X</button>
+    <h1>{{ 'SKILL.SKILL_TITLE' | translate }}</h1>
+    <p>{{ 'SKILL.OVERLAY_INTERESSE' | translate }}</p>
+    <div class="skill-image-box">
+      <a href="https://n8n.io" target="_blank">
+        <img src="assets/img/icons/skill-icons/n8n.svg" alt="n8n Icon">
+        <span>n8n</span>
+      </a>
+
+      <a href="https://react.dev" target="_blank">
+        <img src="assets/img/icons/skill-icons/react.svg" alt="React Icon">
+        <span>React</span>
+      </a>
+    </div>
+
+
+
+  </div>
+</app-dialog>

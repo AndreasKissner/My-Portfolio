@@ -1,13 +1,13 @@
 import { Component, OnInit, signal } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-text-content',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './text-content.component.html',
   styleUrl: './text-content.component.scss',
 })
 export class TextContentComponent implements OnInit {
- // Ein Signal statt einer normalen Variable
   displayText = signal(''); 
   
   private fullText = 'console.log("Hello (-: ");';
@@ -18,7 +18,7 @@ export class TextContentComponent implements OnInit {
   }
 
  async typeEffect(): Promise<void> {
-  const textToType = "Lets start ! I'm"; // Dein neuer Text
+  const textToType = "Lets start ! I'm"; 
   this.displayText.set('');
 
   for (let i = 0; i <= textToType.length; i++) {

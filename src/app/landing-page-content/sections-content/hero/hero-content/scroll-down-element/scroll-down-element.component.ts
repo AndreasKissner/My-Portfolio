@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DialogComponent } from '../../../../../shared/components/dialog-components/dialog/dialog.component';
+import { TranslateModule } from '@ngx-translate/core';
+
+
+
 
 @Component({
   selector: 'app-scroll-down-element',

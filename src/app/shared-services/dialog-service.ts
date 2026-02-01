@@ -8,13 +8,9 @@ export class DialogService {
   isGerman = signal(false);
   isClosing = signal(false);
 
-closeDialog() {
-  this.isClosing.set(true);
-
-  setTimeout(() => {
+  closeDialog() {
     this.showDialog.set(false);
-    this.isClosing.set(false);
-  }, 300);
+
 }
 
 // open-dialog.btn

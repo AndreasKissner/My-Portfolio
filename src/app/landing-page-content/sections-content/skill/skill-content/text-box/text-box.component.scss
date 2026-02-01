@@ -1,0 +1,37 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:host {
+
+    @include m.flex();
+    border: 2px solid rgb(187, 60, 17);
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    font-size: clamp(37px, 5vw + 1rem, 72px);
+    color: c.$titleName-white;
+    font-weight: 700;
+    font-family: f.$font-eczar;
+
+}
+
+.skill-box {
+    border: 2px solid rgb(32, 6, 138);
+    max-width: 358px;
+    height: 128px;
+    padding: 16px;
+    background-color: #679aac;
+    border-radius: 4px;
+    color: #f8f7e5;
+}
+
+span {
+    font-family: f.$font-second;
+    color: c.$light-beige;
+}

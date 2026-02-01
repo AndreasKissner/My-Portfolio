@@ -1,6 +1,9 @@
+
+
 html {
   height: auto; 
     scroll-behavior: smooth;
+      overflow-x: hidden;
 }
 
 body {
@@ -9,10 +12,14 @@ body {
   padding: 0;
   overflow-y: auto;
 box-sizing: border-box;
+
 }
 
 ul{
   list-style: none;
+}
+a{
+  text-decoration: none;
 }
 
 *, *::before, *::after {
