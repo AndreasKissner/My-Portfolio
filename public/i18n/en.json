@@ -25,5 +25,10 @@
     "COMPETENCE": "In my projects, I have used a variety of front-end technologies – for both static and dynamic websites. I have implemented responsive layouts.",
     "OVERLAY_TITLE": "Looking for another skill?",
     "OVERLAY_INTERESSE": "Feel free to contact me. I am eager to expand my existing knowledge and learn new things."
+  },
+
+  "PORTFOLIO":{
+    "HEADER": "My Work",
+    "SUBTITLE": "Explore a selection of my work here - Interact with the projects to see my skills in action."
   }
 }

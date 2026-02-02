@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
-import { BtnPrimaerComponent } from '../../../../../shared/components/layout/btn-primaer/btn-primaer.component';
+import { Component, input } from '@angular/core';
+
+import { ALinkBtnComponent } from '../../../../../shared/components/layout/a-link-btn/a-link-btn.component';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-test-and-next',
-  imports: [BtnPrimaerComponent],
+  imports: [ALinkBtnComponent, RouterModule],
   templateUrl: './test-and-next.component.html',
   styleUrl: './test-and-next.component.scss',
 })

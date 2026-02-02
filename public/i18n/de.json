@@ -29,5 +29,9 @@
 
     "OVERLAY_INTERESSE" :"Kontaktieren Sie mich gerne. Ich bin motiviert, mein bestehendes Wissen weiter auszubauen und Neues zu lernen."
 
-  }
+  },
+  "PORTFOLIO": {
+    "HEADER": "Meine Arbeiten",
+    "SUBTITLE": "Entdecke hier eine Auswahl meiner Projekte – Interagiere mit ihnen, um meine Fähigkeiten in Aktion zu sehen."
+}
 }

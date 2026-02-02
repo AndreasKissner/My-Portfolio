@@ -1,9 +1,27 @@
 @use 'style-varibles/mixins' as m;
 
-button{
-    background-color: transparent;
-    border: none;
+button {
+  background-color: transparent;
+  border: none;
 }
-.language-icon{
-    @include m.flex();
+
+.language-icons {
+  min-width: 40px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+ 
+
+  &:focus {
+    outline: none;
+  }
 }

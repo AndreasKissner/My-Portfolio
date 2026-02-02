@@ -25,9 +25,7 @@ app-open-dialog-btn {
     @include m.size(120px);
 
     img {
-      // Standardmäßig werden beide Bilder übereinander gelegt
       position: absolute;
-
     }
 
     img:first-of-type {

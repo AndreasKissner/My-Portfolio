@@ -1,0 +1,58 @@
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+
+:host {
+  display: inline-block;
+}
+
+.btn-style {
+  @include m.flex();
+  width: fit-content;
+  min-height: 40px;
+  border-radius: 100px;
+  border: 1px solid c.$light-beige;
+  padding: 12px 24px;
+  gap: 4px;
+  transition: all 0.2s ease; // Etwas weicher für die Rotation
+
+  span {
+    color: c.$light-beige;
+    white-space: nowrap;
+
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease; // Animation für den Pfeil
+  }
+
+  /* --- MOBILE & TABLET (bis 992px) --- */
+  /* Nutzt :active für den Klick-Effekt */
+  &:active {
+    background-color: c.$orange-two;
+    border-color: c.$orange-two;
+
+    img {
+      transform: rotate(-45deg);
+      /* Pfeil 45 Grad nach oben */
+    }
+  }
+
+  
+  @include m.respond-normal {
+   /*  &:active {
+      background-color: transparent; // Reset des Mobile-Effekts falls nötig
+    } */
+
+    &:hover {
+      background-color: c.$orange-two;
+      border-color: c.$orange-two;
+
+      img {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

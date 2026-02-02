@@ -1,10 +1,9 @@
 <section class="language-icons">
   @if (isGerman) {
-    <a href="javascript:void(0)" 
-       (click)="toggleLanguage()" 
-       (keydown.enter)="toggleLanguage()"
-       class="icon-de" 
-       aria-label="Switch to English">
+    <button type="button" 
+            (click)="toggleLanguage()" 
+            class="lang-btn" 
+            aria-label="Switch to English">
       <img
         #deIcon
         [src]="isDark() ? 'assets/img/icons/iconTransBlack/deBlack.svg' : 'assets/img/icons/iconsTransWhite/deBtnWhite.svg'"
@@ -12,13 +11,12 @@
         (mouseleave)="deIcon.src = isDark() ? 'assets/img/icons/iconTransBlack/deBlack.svg' : 'assets/img/icons/iconsTransWhite/deBtnWhite.svg'"
         alt="German Language Icon"
       />
-    </a>
+    </button> 
   } @else {  
-    <a href="javascript:void(0)" 
-       (click)="toggleLanguage()" 
-       (keydown.enter)="toggleLanguage()"
-       class="icon-en" 
-       aria-label="Auf Deutsch umstellen">
+    <button type="button" 
+            (click)="toggleLanguage()" 
+            class="lang-btn" 
+            aria-label="Auf Deutsch umstellen">
       <img
         #enIcon
         [src]="isDark() ? 'assets/img/icons/iconTransBlack/enBlack.svg' : 'assets/img/icons/iconsTransWhite/enBtnWhite.svg'"
@@ -26,10 +24,10 @@
         (mouseleave)="enIcon.src = isDark() ? 'assets/img/icons/iconTransBlack/enBlack.svg' : 'assets/img/icons/iconsTransWhite/enBtnWhite.svg'"
         alt="English Language Icon"
       />
-    </a>
+    </button>
   }
 </section>
-
+ 
 
 <!-- Short Version -->
 <!-- <section class="language-icons">

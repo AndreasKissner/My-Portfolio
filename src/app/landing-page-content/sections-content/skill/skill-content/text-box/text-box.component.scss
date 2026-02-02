@@ -17,7 +17,7 @@
 }
 
 .title {
-    font-size: clamp(37px, 5vw + 1rem, 72px);
+    font-size: clamp(37px, 5vw + 1rem, 80px);
     color: c.$titleName-white;
     font-weight: 700;
     font-family: f.$font-eczar;
@@ -28,10 +28,15 @@
     border: 2px solid rgb(32, 6, 138);
     min-width: 296px;
     max-width: 600px;
+    margin: 0 8px;
     padding: 16px;
     background-color: #679aac;
     border-radius: 4px;
     color: #f8f7e5;
+
+    @include m.respond-normal {
+        margin: 0px;
+    }
 }
 
 span {

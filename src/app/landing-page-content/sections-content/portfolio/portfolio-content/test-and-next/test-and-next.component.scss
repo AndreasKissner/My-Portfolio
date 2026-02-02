@@ -19,12 +19,13 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        margin-bottom: 20px;;
+        margin: 25px 0  25px 0;
+        ;
 
         h1 {
             font-size: 32px;
             font-family: f.$font-second;
-           color:c.$light-beige;
+            color: c.$light-beige;
         }
 
         img {
@@ -36,17 +37,29 @@
         width: 298px;
         height: auto;
         border: 2px solid green;
-        p {
-        &:first-child {
-            color: c.$dark-blue; // Farbe für die Tech-Stack Liste
-            font-family: f.$font-karla;
-            margin-bottom: 5px;
-        }
 
-        &:last-child {
-            color: c.$light-beige;    // Farbe für die Beschreibung
-            font-family: f.$font-second;
+        p {
+            &:first-child {
+                color: c.$dark-blue; 
+                font-family: f.$font-karla;
+                margin-bottom: 5px;
+            }
+
+            &:last-child {
+                color: c.$light-beige; 
+                font-family: f.$font-second;
+            }
         }
     }
-    }
+
+section {
+  width: 100%;
+  max-width: 300px;
+  @include m.flex(center, center); // Damit der Link in der Mitte der Section sitzt
+  padding: 12px 24px;
+  border: 2px solid red;
+  gap:2px;
+  margin-top: 20px;
+  font-family: f.$font-second;
+}
 }
