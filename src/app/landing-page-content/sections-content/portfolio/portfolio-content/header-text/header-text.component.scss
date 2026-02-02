@@ -1,0 +1,24 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:host {
+    border: 2px solid yellow;
+    height: auto;
+    min-width: 288px;
+   
+    @include m.flex(flex-start,center);
+    flex-direction: column;
+
+    h1 {
+        font-family: f.$font-eczar ;
+        font-weight: 700px;
+        font-size: clamp(40px, 4vw + 24px, 72px);
+        align-self: flex-start;
+    }
+    p{
+        font-family: f.$font-second;
+        font-weight: 400;
+    }
+}

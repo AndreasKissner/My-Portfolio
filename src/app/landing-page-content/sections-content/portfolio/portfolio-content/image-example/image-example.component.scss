@@ -1,0 +1,38 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+:host {
+    position: relative; // Wichtig für die absolute Positionierung des Bildes
+    width: 358px;
+    height: 358px;
+    border: 2px solid blue;
+    @include m.flex();
+    background-color: c.$orange-two;
+
+    article {
+        width: 303px;
+        height: 216px;
+        border: 2px solid green;
+        z-index: 10;
+    }
+
+    img {
+        position: absolute; 
+        top: 66%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+        z-index: 1; 
+        width: 120px; 
+        height: auto;
+        animation: rotateRing 10s linear infinite;   // Comonenten machen
+    }
+      @keyframes rotateRing {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+}
