@@ -1,5 +1,47 @@
-:host{
-       border: 2px solid rgb(228, 31, 31);
-    height: 200px;
-    min-width: 288px;
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:host {
+    border: 2px solid rgb(228, 31, 31);
+    height: 27px;
+    width: 360px;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0 90px 0;
+
+    button {
+        width: 165px;
+        height: 22px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: f.$font-second;
+        border: none;
+        background: none;
+        color: c.$skill-black;
+        transition: color 150ms ease-in-out;
+        cursor: pointer;
+
+        // 1. Hover-Effekt NUR ab 992px UND wenn eine Maus vorhanden ist
+        @media (min-width: 992px) and (hover: hover) {
+            &:hover {
+                color: c.$orange-four;
+            }
+        }
+
+        // 2. Effekt auf Tastendruck (Touch/Klick) für alle Geräte
+        // Das wirkt beim aktiven Draufdrücken
+        &:active {
+            color: c.$orange-four;
+        }
+
+        &:last-child {
+            justify-content: flex-end;
+        }
+    }
 }
