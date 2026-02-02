@@ -7,9 +7,10 @@
 :host {
   display: flex;
   justify-content: flex-start;
+  align-self: flex-start;
   border: 2px solid blueviolet;
   width: 100%;
-  max-width: 280px;
+  max-width: 330px;
   margin: 50px 0 25px 0px;
 }
 
@@ -21,8 +22,7 @@ app-open-dialog-btn {
     padding: 0;
     position: relative;
     @include m.flex();
-    width: 120px;
-    height: 120px;
+    @include m.size(120px);
 
     img {
       // Standardmäßig werden beide Bilder übereinander gelegt
@@ -31,8 +31,7 @@ app-open-dialog-btn {
     }
 
     img:first-of-type {
-      width: 120px;
-      height: 120px;
+      @include m.size(120px);
       animation: rotateRing 10s linear infinite;
       z-index: 1;
     }
@@ -57,26 +56,26 @@ app-open-dialog-btn {
 
 app-dialog {
   position: absolute;
-  top: 1700px;
+  top: 1842px;
   left: 10px;
   z-index: 1000;
 
-  @include m.respond-sm {
-    top: -87px;
-    left: 130px
+   @include m.respond-sm {
+    top: 1813px;
+    left: 98px
+  } 
+
+   @include m.respond-mid {
+    top: 2005px;
+    left: 210px
+  } 
+
+   @include m.respond-normal {
+    top: 2200px;
+    left: 310px
   }
-
-  @include m.respond-normal {
-    top: -87px;
-    left: 280px
-  }
-
-  @include m.respond-large {
-    top: 211px;
-    left: 410px
-  }
-
-
+ 
+ 
   &.is-open {
     animation: dialogIn 0.4s ease-out forwards;
   }
@@ -102,28 +101,28 @@ app-dialog {
       font-weight: 700;
     }
 
-   p{
+    p {
       font-family: f.$font-second;
-   }
+    }
 
-      li {
-        font-family: f.$font-second;
-        font-weight: 400px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
+    li {
+      font-family: f.$font-second;
+      font-weight: 400px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
 
-        img {
-          width: 16px;
-          margin-right: 5px;
-        }
+      img {
+        width: 16px;
+        margin-right: 5px;
       }
     }
-
-    .close-btn {
-      @include closeDialogBtn.close-button-style;
-    }
   }
+
+  .close-btn {
+    @include closeDialogBtn.close-button-style;
+  }
+}
 
 
 .skill-image-box {
@@ -141,9 +140,9 @@ app-dialog {
     flex-direction: column;
 
     &:last-child {
-      gap: 6px; 
+      gap: 6px;
     }
-  
+
   }
 
   img {
@@ -172,7 +171,7 @@ app-dialog {
 
   to {
     opacity: 0;
-    transform: translateY(120%); // Weiter runter schieben
-    visibility: hidden; // Komplett vom Rendering ausschließen
+    transform: translateY(120%);
+    visibility: hidden;
   }
 }

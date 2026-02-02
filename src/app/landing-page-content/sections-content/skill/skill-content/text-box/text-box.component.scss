@@ -4,13 +4,16 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
-
     @include m.flex();
     border: 2px solid rgb(187, 60, 17);
     width: 100%;
-    height: auto;
+    height: 310px;
     flex-direction: column;
     gap: 10px;
+
+    @include m.respond-normal {
+        @include m.flex(center, flex-start, center)
+    }
 }
 
 .title {
@@ -23,8 +26,8 @@
 
 .skill-box {
     border: 2px solid rgb(32, 6, 138);
-    max-width: 358px;
-    height: 128px;
+    min-width: 296px;
+    max-width: 600px;
     padding: 16px;
     background-color: #679aac;
     border-radius: 4px;
@@ -34,4 +37,5 @@
 span {
     font-family: f.$font-second;
     color: c.$light-beige;
+    font-size: clamp(16px, 1.25vw + 12px, 20px);
 }

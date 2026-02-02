@@ -4,9 +4,10 @@
 :host{
     width: 100%;
     height: auto;
-    display: flex;
+   /*  display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
+    @include m.flex-col-center();
     border: 2px solid yellow;
     margin-top: 45px;
 }

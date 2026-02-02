@@ -108,45 +108,8 @@
   }
 }
 
-//max mixims
-
-@mixin respond-smMax {
-  @media (max-width: v.$screen-Max) {
-    @content;
-  }
+// Mixins more-skill
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
 }
-
-/* @mixin metallic-gradient($base-color) {
-  $light-flare: lighten($base-color, 8%);
-  $dark-edge: darken($base-color, 6%);
-
-  background: radial-gradient(
-    circle at 30% 40%, 
-    $light-flare 0%, 
-    $base-color 60%, 
-    $dark-edge 100%
-  );
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg, 
-      rgba(255, 255, 255, 0.05) 0%, 
-      rgba(255, 255, 255, 0) 50%
-    );
-    pointer-events: none; 
-  }
-} */
-
-/* @mixin mobileHeader {
-  @media (max-width: 576px) {
-    @content; 
-  }
-} */
-
-/* Mixin Media Quaries */

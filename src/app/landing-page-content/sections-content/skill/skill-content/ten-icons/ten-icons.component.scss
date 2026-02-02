@@ -5,24 +5,31 @@
 
 :Host {
   width: 100%;
-  
-  height: auto;
+  max-width: 780px;
+  height: 310px;
   border: 2px solid violet;
   @include m.flex();
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 30px 16px 0 16px;
+  gap: clamp(10px, 3.75vw - 5px, 40px);
+  margin: 30px 20px 0 16px;
+    @include m.respond-normal {
+    align-self: flex-end;
+  }
+     @include m.respond-large {
+    padding-top: 150px;
+    
+  }
+  
+  
 }
 
 .skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include m.flex(center, center, column);
   gap: 12px;
 
   img {
-    width: 69px;
-    height: 69px;
+   width: clamp(69px, 3.5vw + 55px, 96px);
+height: clamp(69px, 3.5vw + 55px, 96px);
     transition: transform 200ms ease;
 
     @media(max-width:700px) {

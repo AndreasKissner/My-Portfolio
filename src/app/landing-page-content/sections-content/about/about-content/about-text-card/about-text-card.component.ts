@@ -12,6 +12,7 @@ import { DialogService } from '../../../../../shared-services/dialog-service';
   selector: 'app-about-text-card',
   imports: [BtnPrimaerComponent, TranslateModule, OpenDialogBtnComponent,DialogComponent
   ],
+  providers: [DialogService],
   templateUrl: './about-text-card.component.html',
   styleUrl: './about-text-card.component.scss',
 })
