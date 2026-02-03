@@ -1,6 +1,7 @@
 @use 'style-varibles/variables' as v;
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
+
 :host {
     position: relative; // Wichtig für die absolute Positionierung des Bildes
     width: 358px;
@@ -10,7 +11,7 @@
     background-color: c.$orange-two;
 
     article {
-        width: 303px;
+        width: 300px;
         height: 216px;
         border: 2px solid green;
         z-index: 10;
@@ -18,8 +19,8 @@
 
     img {
         position: absolute; 
-        top: 66%;
-        left: 5%;
+        top: 230px;
+        left: 20px;
         transform: translate(-50%, -50%);
         z-index: 1; 
         width: 120px; 

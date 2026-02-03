@@ -19,7 +19,7 @@
         font-size: 40px;
         font-family: f.$font-eczar;
         font-weight: bold;
-        margin: 0;
+        margin: 0 4px 0 0 ;
 
         @include m.respond-normal {
             font-size: 72px;
