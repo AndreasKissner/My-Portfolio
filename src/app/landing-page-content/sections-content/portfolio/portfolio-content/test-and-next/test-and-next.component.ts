@@ -1,17 +1,17 @@
 import { Component, inject, input } from '@angular/core';
-
-import { ALinkBtnComponent } from '../../../../../shared/components/layout/a-link-btn/a-link-btn.component';
 import { RouterModule } from '@angular/router';
 import { OpenDialogBtnComponent } from '../../../../../shared/components/dialog-components/open-dialog-btn/open-dialog-btn.component';
 import { DialogService } from '../../../../../shared-services/dialog-service';
 import { TranslateModule } from '@ngx-translate/core';
 import { DialogComponent } from '../../../../../shared/components/dialog-components/dialog/dialog.component';
+import { UtilyDescriptionComponent } from './utily-description/utily-description.component';
+import { LinkGitProjectComponent } from "./link-git-project/link-git-project.component";
 
 
 
 @Component({
   selector: 'app-test-and-next',
-  imports: [ALinkBtnComponent, RouterModule, OpenDialogBtnComponent,TranslateModule, DialogComponent],
+  imports: [RouterModule, OpenDialogBtnComponent, TranslateModule, DialogComponent, UtilyDescriptionComponent, UtilyDescriptionComponent, LinkGitProjectComponent],
   templateUrl: './test-and-next.component.html',
    providers: [DialogService],
   styleUrl: './test-and-next.component.scss',
