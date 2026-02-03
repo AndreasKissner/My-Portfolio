@@ -6,19 +6,19 @@
 :host {
     border: 2px solid rgb(228, 31, 31);
     height: 27px;
-    width: 360px;
+    width: 319px;
     display: flex;
     justify-content: space-around;
     margin: 30px 0 90px 0;
 
     button {
-        width: 165px;
+        width: 140px;
         height: 22px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 10px;
-        font-size: 18px;
+       
+        font-size: 16px;
         font-weight: 700;
         font-family: f.$font-second;
         border: none;

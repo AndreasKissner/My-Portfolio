@@ -21,6 +21,7 @@ export class DialogService {
   }
 
   onClick() {
+    console.log('Btn is clicked');
     if (window.innerWidth < 1024) {
 this.showDialog.set(true);
     }

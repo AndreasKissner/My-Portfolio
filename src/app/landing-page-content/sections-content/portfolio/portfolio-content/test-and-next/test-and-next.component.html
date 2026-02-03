@@ -1,8 +1,16 @@
 
 <header>
     <h1>Join</h1>
-    <img src="assets/img/icons/green-ok.svg" alt="Ok icon">
+    <app-open-dialog-btn>
+  <button class="dialog-trigger" (mouseenter)="dialog.onHover(true)" (mouseleave)="dialog.onHover(false)"
+    (focus)="dialog.onHover(true)" (blur)="dialog.onHover(false)" (click)="dialog.onClick()">
+    <img src="assets/img/icons/portfolio/green-ok.svg" alt="Carussel">
+ 
+  </button>
+</app-open-dialog-btn>
 </header>
+
+<!-- //component machen -->
 <article>
     <p>
         HTML | CSS | Firebase | API | SCRUM
@@ -11,8 +19,22 @@
     <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. </p>
 </article>
 
+
+<!-- Componennt machen -->
 <section>
   <app-a-link-btn link="https://github.com">GitHub</app-a-link-btn>
 
   <app-a-link-btn link="https://andreas-kissner.developerakademie.net/angular-projects/myportfolio/">My Portfolio</app-a-link-btn>
 </section>
+
+
+ <app-dialog [class.is-open]="dialog.showDialog()" [class.is-closing]="!dialog.showDialog()">
+  <div class="dialog-inner">
+    <button class="close-btn" (click)="dialog.closeDialog()">X</button>
+    <h1>{{ 'SKILL.SKILL_TITLE' | translate }}</h1>
+    <p>{{ 'SKILL.OVERLAY_INTERESSE' | translate }}</p>
+  </div>
+
+
+
+

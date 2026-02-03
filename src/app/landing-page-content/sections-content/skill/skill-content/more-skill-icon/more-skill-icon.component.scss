@@ -21,6 +21,7 @@ app-open-dialog-btn {
     cursor: pointer;
     padding: 0;
     position: relative;
+    margin-left:4px;
     @include m.flex();
     @include m.size(120px);
 
