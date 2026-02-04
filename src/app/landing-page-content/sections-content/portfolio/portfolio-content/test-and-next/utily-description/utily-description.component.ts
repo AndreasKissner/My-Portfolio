@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { PortfolioService } from '../../../../../../shared-services/portfolio.service';
+
 
 @Component({
   selector: 'app-utily-description',
@@ -8,5 +9,10 @@ import { PortfolioService } from '../../../../../../shared-services/portfolio.se
   styleUrl: './utily-description.component.scss',
 })
 export class UtilyDescriptionComponent {
-public portfolioService = inject(PortfolioService)
+ public portfolioService = inject(PortfolioService) 
+
+languageText = input<string | undefined>();
+descriptionText = input<string | undefined>();
+
+
 }

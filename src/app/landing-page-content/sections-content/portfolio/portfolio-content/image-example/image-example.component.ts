@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { PortfolioService } from '../../../../../shared-services/portfolio.service';
+import { PortfolioJson } from '../../../../../interfaces/portfolio-interfaces';
 
 @Component({
   selector: 'app-image-example',
@@ -8,4 +10,6 @@ import { Component } from '@angular/core';
 })
 export class ImageExampleComponent {
 
+
+content = input<PortfolioJson>();
 }

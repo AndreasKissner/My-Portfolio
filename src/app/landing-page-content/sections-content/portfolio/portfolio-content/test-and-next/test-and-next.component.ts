@@ -7,6 +7,7 @@ import { DialogComponent } from '../../../../../shared/components/dialog-compone
 import { UtilyDescriptionComponent } from './utily-description/utily-description.component';
 import { LinkGitProjectComponent } from "./link-git-project/link-git-project.component";
 import { PortfolioService } from '../../../../../shared-services/portfolio.service';
+import { PortfolioJson } from '../../../../../interfaces/portfolio-interfaces';
 
 
 
@@ -18,7 +19,10 @@ import { PortfolioService } from '../../../../../shared-services/portfolio.servi
   styleUrl: './test-and-next.component.scss',
 })
 export class TestAndNextComponent {
-portfolioService = inject(PortfolioService);
+
+content = input<PortfolioJson>();
   
 dialog = inject(DialogService);
+
+
 }
