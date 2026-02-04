@@ -15,14 +15,13 @@ import { PortfolioJson } from '../../../../../interfaces/portfolio-interfaces';
   selector: 'app-test-and-next',
   imports: [RouterModule, OpenDialogBtnComponent, TranslateModule, DialogComponent, UtilyDescriptionComponent, UtilyDescriptionComponent, LinkGitProjectComponent],
   templateUrl: './test-and-next.component.html',
-   providers: [DialogService],
+  providers: [DialogService],
   styleUrl: './test-and-next.component.scss',
 })
 export class TestAndNextComponent {
 
-content = input<PortfolioJson>();
-  
-dialog = inject(DialogService);
+  content = input<PortfolioJson>();
+  dialog = inject(DialogService);
 
 
 }

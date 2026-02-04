@@ -3,20 +3,20 @@
     "image": "assets/img/portfolio/join.webp",
     "title": "Join",
     "icon": "assets/img/portfolio/icon-join.svg",
-    "languages": "HTML | CSS | SCRUM | REST API | FIREBASE",
+    "languages": "HTML | CSS | SCRUM | API | FIREBASE",
     "description": "Join is a Kanban Clone with kfaof oa oifa ai iaj ija",
     "githubUrl": "https://github.com/AndreasKissner/JoinMy",
     "liveUrl": "https://join.andreaskissner.info/",
-    "dialog": "Good team work and coco cola rules with Xbox and friends – Make Partyyyyyyyyyyyyyyyyyyyyy"
+    "dialog": "Good team work and coco cola rules with Xbox and friends – Make Fun"
   },
   {
-    "image": "assets/img/portfolio/pocco.webp",
+    "image": "assets/img/portfolio/pocco.png",
     "title": "El Pocco Locco",
-    "icon": "assets/img/portfolio/pocco-join.svg",
-    "languages": "HTML | CSS | SCRUM | REST API | OOP",
+    "icon": "assets/img/portfolio/icon-pocco.png",
+    "languages": "HTML | CSS | SCRUM | API | OOP",
     "description": "El Locco Pocco is a jump and run 2D game with kfaof oa oifa ai iaj ija",
     "githubUrl": "https://github.com/AndreasKissner/EL-Pollo-Loco",
     "liveUrl": "https://elpolloloco.andreaskissner.info",
-    "dialog": "Good team work and coco cola rules with Xbox and friends – Make Partyyyyyyyyyyyyyyyyyyyyy"
+    "dialog": "Good team work and coco cola rules with Xbox and friends – Make Partyyyyyyy"
   }
 ]

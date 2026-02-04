@@ -2,4 +2,9 @@
 <app-header-text></app-header-text>
 <app-image-example [content]="allData()[currentIndex()]"></app-image-example>
 <app-test-and-next [content]="allData()[currentIndex()]"></app-test-and-next>
-<app-previous-next></app-previous-next>
+<app-previous-next
+  [indexActuel]="currentIndex()" 
+  
+  (onBack)="prevContent()" 
+  (onForward)="nextContent()">
+></app-previous-next>

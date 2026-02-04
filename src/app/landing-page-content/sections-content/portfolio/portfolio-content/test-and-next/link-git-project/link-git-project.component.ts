@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { ALinkBtnComponent } from '../../../../../../shared/components/layout/a-link-btn/a-link-btn.component';
 
 @Component({
@@ -9,4 +9,6 @@ import { ALinkBtnComponent } from '../../../../../../shared/components/layout/a-
 })
 export class LinkGitProjectComponent {
 
+  linkGit = input<string | undefined>();
+  linkLive = input<string | undefined>();
 }

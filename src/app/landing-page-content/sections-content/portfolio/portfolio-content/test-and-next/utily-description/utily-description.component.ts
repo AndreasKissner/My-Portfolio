@@ -9,7 +9,7 @@ import { PortfolioService } from '../../../../../../shared-services/portfolio.se
   styleUrl: './utily-description.component.scss',
 })
 export class UtilyDescriptionComponent {
- public portfolioService = inject(PortfolioService) 
+
 
 languageText = input<string | undefined>();
 descriptionText = input<string | undefined>();

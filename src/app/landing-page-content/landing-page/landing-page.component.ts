@@ -43,7 +43,4 @@ export class LandingPageComponent  {
     contact: '#1D1D1D'
   };
 
- 
-
-
 }

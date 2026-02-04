@@ -14,12 +14,15 @@
 [descriptionText]="content()?.description"
 ></app-utily-description>
 
-<app-link-git-project></app-link-git-project>
+<app-link-git-project
+  [linkGit]="content()?.githubUrl"
+  [linkLive]="content()?.liveUrl">
+</app-link-git-project>
 
 
 <app-dialog [class.is-open]="dialog.showDialog()" [class.is-closing]="!dialog.showDialog()">
   <div class="dialog-inner">
     <button class="close-btn" (click)="dialog.closeDialog()">X</button>
-    <h1>{{ 'SKILL.SKILL_TITLE' | translate }}</h1>
-    <p>{{ 'SKILL.OVERLAY_INTERESSE' | translate }}</p>
+    <h1>{{content()?.dialog}}</h1>
+   
   </div>
