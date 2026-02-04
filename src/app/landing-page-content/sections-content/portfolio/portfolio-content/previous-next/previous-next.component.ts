@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { PortfolioService } from '../../../../../shared-services/portfolio.service';
 
 
@@ -10,4 +10,19 @@ import { PortfolioService } from '../../../../../shared-services/portfolio.servi
 })
 export class PreviousNextComponent {
 portfolioService = inject(PortfolioService);
+
+indexActuel = input<number>(0);
+
+//For Landing page  
+onBack= output<void>();
+onForward = output<void>();
+
+  back(){
+   this.onBack.emit();
+  }
+
+  forward(){
+    this.onForward.emit();
+  }
+
 }
