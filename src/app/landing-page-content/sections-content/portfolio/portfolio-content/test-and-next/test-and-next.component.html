@@ -1,15 +1,18 @@
 <header>
-  <h1>Join</h1>
+  <h1>{{content()?.title}}</h1>
   <app-open-dialog-btn>
     <button class="dialog-trigger" (mouseenter)="dialog.onHover(true)" (mouseleave)="dialog.onHover(false)"
       (focus)="dialog.onHover(true)" (blur)="dialog.onHover(false)" (click)="dialog.onClick()">
-      <img src="assets/img/icons/portfolio/green-ok.svg" alt="Carussel">
+      <img [src]="content()?.icon" [alt]="content()?.title" width="300"> 
 
     </button>
   </app-open-dialog-btn>
 </header>
 
-<app-utily-description></app-utily-description>
+<app-utily-description
+[languageText]="content()?.languages"
+[descriptionText]="content()?.description"
+></app-utily-description>
 
 <app-link-git-project></app-link-git-project>
 

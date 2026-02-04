@@ -2,7 +2,7 @@ export interface PortfolioJson {
   image: string;
   title: string;
   icon: string;
-  languages: string[];
+  languages: string;
   description: string;
   githubUrl: string;
   liveUrl: string;

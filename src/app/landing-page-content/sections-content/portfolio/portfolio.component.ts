@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { HeaderTextComponent } from './portfolio-content/header-text/header-text.component';
 import { ImageExampleComponent } from './portfolio-content/image-example/image-example.component';
 import { TestAndNextComponent } from './portfolio-content/test-and-next/test-and-next.component';
 import { PreviousNextComponent } from './portfolio-content/previous-next/previous-next.component';
+import { PortfolioJson } from '../../../interfaces/portfolio-interfaces';
+import { PortfolioService } from '../../../shared-services/portfolio.service';
 
 
 @Component({
@@ -11,6 +13,37 @@ import { PreviousNextComponent } from './portfolio-content/previous-next/previou
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
+ private portService = inject(PortfolioService);
+
+  allData = signal<PortfolioJson[]>([]);
+  currentIndex = signal<number>(0);
+
+  ngOnInit() {
+    this.portService.getData().subscribe(result => { console.log('Portfolio-Daten:', result);
+      this.allData.set(result);
+    })
+  }
+    // From Button
+nextContent() {
+  this.currentIndex.update(index => {
+    if (index < 4) {
+      return index + 1;
+    } else {
+      return 0;
+    }
+  });
+}
+
+prevContent() {
+  this.currentIndex.update(index => {
+    if (index > 0) {
+      return index - 1;
+    } else {
+      return 4;
+    }
+  });
+}
+
 
 }

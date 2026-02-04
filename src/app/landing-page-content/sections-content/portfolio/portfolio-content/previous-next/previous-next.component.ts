@@ -19,10 +19,12 @@ onForward = output<void>();
 
   back(){
    this.onBack.emit();
+   console.log('Is clicked');
   }
 
   forward(){
     this.onForward.emit();
+    console.log('Is clicked');
   }
 
 }
