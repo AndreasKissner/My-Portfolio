@@ -1,4 +1,9 @@
-
-
-    <button><< Prefious project</button>
-    <button>Next project >></button>
+<div class="navigation">
+    <button (click)="portfolioService.prev()">
+        << Previous project
+    </button>
+    
+    <button (click)="portfolioService.next()">
+        Next project >>
+    </button>
+</div>

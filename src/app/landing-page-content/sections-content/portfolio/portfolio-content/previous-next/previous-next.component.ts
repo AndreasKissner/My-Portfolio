@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../../../../shared-services/portfolio.service';
 
 
 @Component({
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './previous-next.component.scss',
 })
 export class PreviousNextComponent {
-
+portfolioService = inject(PortfolioService);
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../../../../../shared-services/portfolio.service';
 
 @Component({
   selector: 'app-utily-description',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './utily-description.component.scss',
 })
 export class UtilyDescriptionComponent {
-
+public portfolioService = inject(PortfolioService)
 }

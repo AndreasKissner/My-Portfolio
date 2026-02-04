@@ -9,7 +9,7 @@ import { provideAppTranslate } from './app.translate.config';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-
+provideHttpClient(),
     provideHttpClient(),
 
     provideRouter(routes, withInMemoryScrolling({

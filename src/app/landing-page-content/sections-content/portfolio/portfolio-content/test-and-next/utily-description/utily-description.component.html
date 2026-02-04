@@ -1,6 +1,9 @@
-
+<div class="project-card">
     <p>
-        HTML | CSS | Firebase | API | SCRUM
+        {{ portfolioService.currentProject()?.languages }}
     </p>
 
-    <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. </p>
+    <p>
+        {{ portfolioService.currentProject()?.description }}
+    </p>
+</div>
