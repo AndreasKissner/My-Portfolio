@@ -1,0 +1,22 @@
+[
+  {
+    "image": "assets/img/portfolio/join.webp",
+    "title": "Join",
+    "icon": "assets/img/portfolio/icon-join.svg",
+    "languages": ["HTML","CSS","API","SCRUM","FIREBASE"],
+    "description": "Join is a Kanban Clone with kfaof oa oifa ai iaj ija",
+    "githubUrl": "https://github.com/AndreasKissner/JoinMy",
+    "liveUrl": "https://join.andreaskissner.info/",
+    "dialog": "Good team work and coco cola rules with Xbox and friends – Make Partyyyyyyyyyyyyyyyyyyyyy"
+  },
+  {
+    "image": "assets/img/portfolio/pocco.webp",
+    "title": "El Pocco Locco",
+    "icon": "assets/img/portfolio/pocco-join.svg",
+    "languages": ["HTML","CSS","API","FIREBASE","OOP"],
+    "description": "El Locco Pocco is a jump and run 2D game with kfaof oa oifa ai iaj ija",
+    "githubUrl": "https://github.com/AndreasKissner/EL-Pollo-Loco",
+    "liveUrl": "https://elpolloloco.andreaskissner.info",
+    "dialog": "Good team work and coco cola rules with Xbox and friends – Make Partyyyyyyyyyyyyyyyyyyyyy"
+  }
+]
