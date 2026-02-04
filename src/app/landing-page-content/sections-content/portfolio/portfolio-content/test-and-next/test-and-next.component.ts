@@ -6,6 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { DialogComponent } from '../../../../../shared/components/dialog-components/dialog/dialog.component';
 import { UtilyDescriptionComponent } from './utily-description/utily-description.component';
 import { LinkGitProjectComponent } from "./link-git-project/link-git-project.component";
+import { PortfolioService } from '../../../../../shared-services/portfolio.service';
 
 
 
@@ -17,5 +18,7 @@ import { LinkGitProjectComponent } from "./link-git-project/link-git-project.com
   styleUrl: './test-and-next.component.scss',
 })
 export class TestAndNextComponent {
+portfolioService = inject(PortfolioService);
+  
 dialog = inject(DialogService);
 }

@@ -1,7 +1,7 @@
  @use 'style-varibles/mixins' as m;
  @use 'style-varibles/fonts' as f;
 
- section {
+ :host {
      max-width: 300px;
      @include m.flex(center, center);
      padding: 12px 24px;
