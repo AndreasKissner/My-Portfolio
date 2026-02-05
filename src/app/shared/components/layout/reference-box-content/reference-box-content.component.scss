@@ -1,0 +1,16 @@
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/fonts' as f;
+
+
+:host{
+    display: flex;
+   flex-direction: column;
+    color: c.$light-beige;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    max-width: 500px;
+    border: 1px solid red;
+    padding: 16px;
+}
