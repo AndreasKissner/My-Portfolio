@@ -7,18 +7,31 @@
     border: 2px solid yellow;
     height: auto;
     min-width: 288px;
-   
-    @include m.flex(flex-start,center);
+    max-width: 942px;
+    padding-bottom: 20px;
+    @include m.flex(flex-start, center);
     flex-direction: column;
+    @include m.respond-normal{
+        align-self: flex-start;
+        flex-direction: row;
+        gap:40px;
+    };
 
     h1 {
         font-family: f.$font-eczar ;
         font-weight: 700px;
         font-size: clamp(40px, 4vw + 24px, 72px);
         align-self: flex-start;
+        border: 1px solid green;
     }
-    p{
+
+    p {
         font-family: f.$font-second;
         font-weight: 400;
+        border: 2px solid red;
+        @include m.respond-normal{
+        max-width:600px;
+        padding:32px;
+    };
     }
 }

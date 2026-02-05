@@ -1,15 +1,12 @@
 {
-  "HERO":{
-    "FRONT" :"Frontend Developer",
-    "CONTACT" :"contactMe"
+  "HERO": {
+    "FRONT": "Frontend Developer",
+    "CONTACT": "contactMe"
   },
-
-
   "ABOUT": {
     "GREETING": "Hi, I'm Andreas. A dedicated developer and digital craftsman.\nFor me, programming extends far beyond mere syntax; it is a creative means of expression.\n\nLet’s collaborate to architect the digital world and build something truly extraordinary.",
     "ABOUT_TITLE": "ABOUT ME"
   },
-
   "ABOUT_DIALOG": {
     "TITLE": "More about me",
     "TEAM": "Strong team player",
@@ -19,16 +16,18 @@
     "GIT": "Git & version control",
     "BUTTON": "Let's talk"
   },
-
   "SKILL": {
     "SKILL_TITLE": "Core Competencies",
     "COMPETENCE": "In my projects, I have used a variety of front-end technologies – for both static and dynamic websites. I have implemented responsive layouts.",
     "OVERLAY_TITLE": "Looking for another skill?",
     "OVERLAY_INTERESSE": "Feel free to contact me. I am eager to expand my existing knowledge and learn new things."
   },
-
-  "PORTFOLIO":{
+  "PORTFOLIO": {
     "HEADER": "My Work",
-    "SUBTITLE": "Explore a selection of my work here - Interact with the projects to see my skills in action."
+    "SUBTITLE": "Explore a selection of my work here - Interact with the projects to see my skills in action.",
+    "JOIN_DESC": "A Kanban-style task manager that lets you create, organize, and move tasks using drag-and-drop, while also assigning users and categories to each task.",
+    "LOCO_DESC": "A fast-paced jump-and-run game where you guide Loco Pocco through obstacles, collect items, and reach the finish line across fun, challenging levels. Hola !",
+    "JOIN_DIAL": "Through working in a team, I learned how to communicate better, share responsibilities, and collaborate to find solutions together.",
+    "POCO_DIAL": "While building this game, I sharpened my problem-solving skills and taught myself how to design engaging game mechanics, smooth animations, and well-structured levels."
   }
 }

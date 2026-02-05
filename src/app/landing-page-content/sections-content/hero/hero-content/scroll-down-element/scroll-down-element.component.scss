@@ -28,9 +28,6 @@
     // 3. Das Element innerhalb des Hosts
     a {
         position: relative;
-      /*   display: flex;
-        justify-content: center;
-        align-items: center; */
         @include m.flex();
         width: 80px;
         text-decoration: none;
@@ -45,11 +42,11 @@
 .outer-ring {
     width: 100%;
     height: auto;
-    animation: rotateRing 10s linear infinite;
+    @include m.rotate-ring;
 }
 
 .inner-flash {
-    position: absolute;
+    position: absolute; // Translate no Absolut
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -58,12 +55,4 @@
     z-index: 2;
 }
 
-@keyframes rotateRing {
-    from {
-        transform: rotate(0deg);
-    }
 
-    to {
-        transform: rotate(360deg);
-    }
-}

@@ -78,22 +78,10 @@
 
   img {
     width: 50px;
-    animation: float 2s ease-in-out infinite;
+    @include m.float-animation ;
   }
 
-  @keyframes float {
-    0% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-3px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
+  
 }
 
 /* ENDE */

@@ -4,44 +4,47 @@
 
 :host {
   position: relative; // Wichtig für die absolute Positionierung des Bildes
-  width: 358px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
   height: 358px;
   border: 2px solid blue;
   @include m.flex();
   background-color: c.$orange-two;
+  margin-bottom: 30px;
+     @include m.respond-normal {
+            
+            height:450px;
+        }
+    
 
   article {
-    width: 300px;
+    width: 280px;
     height: 216px;
     border: 2px solid green;
     z-index: 10;
+      @include m.respond-normal {
+            width: 420px;
+            height:auto;
+        }
+    
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; // Bild füllt den Rahmen schön aus
+      object-fit: cover; 
       display: block;
     }
   }
 
   .bg-image-wrapper img {
-    position: absolute;
-    top: 230px;
+    position: absolute;  // NO Translate
+    top: 215px;
     left: 20px;
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 120px;
     height: auto;
-    animation: rotateRing 10s linear infinite;
-  }
-
-  @keyframes rotateRing {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
+    @include m.rotate-ring;
   }
 }

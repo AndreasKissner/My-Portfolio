@@ -1,0 +1,14 @@
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/fonts' as f;
+
+:host {
+    h2 {
+        color: c.$light-beige;
+        font-size: 40px;
+        font-family: f.$font-eczar;
+        font-weight: 900;
+        line-height: 1.1;
+       
+    }
+}

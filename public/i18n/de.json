@@ -1,37 +1,33 @@
 {
-   "HERO":{
-    "FRONT" :"Kaffe & Code",
-    "CONTACT" :"Kontakt"
+  "HERO": {
+    "FRONT": "Kaffe & Code",
+    "CONTACT": "Kontakt"
   },
-
-"ABOUT": {
-  "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.\nFür mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.\n\nLass uns gemeinsam die digitale Welt gestalten und etwas wahrhaft Außergewöhnliches erschaffen.",
-  "ABOUT_TITLE": "ÜBER MICH"
-},
-
-"ABOUT_DIALOG": {
-  "TITLE":"Mehr Stärken",
-  "TEAM": "Starker Teamplayer",
-  "ANGULAR": "Web-Apps mit Angular",
-  "TYPESCRIPT": "Saubere TypeScript-Logik",
-  "RESPONSIVE": "Vollständig responsive Layouts",
-  "GIT": "Versionskontrolle mit Git",
-  "BUTTON": "Reden Wir"
-},
-
-  "SKILL":{
-
-    "SKILL_TITLE":"Kernkompetenzen",
-    
+  "ABOUT": {
+    "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.\nFür mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.\n\nLass uns gemeinsam die digitale Welt gestalten und etwas wahrhaft Außergewöhnliches erschaffen.",
+    "ABOUT_TITLE": "ÜBER MICH"
+  },
+  "ABOUT_DIALOG": {
+    "TITLE": "Mehr Stärken",
+    "TEAM": "Starker Teamplayer",
+    "ANGULAR": "Web-Apps mit Angular",
+    "TYPESCRIPT": "Saubere TypeScript-Logik",
+    "RESPONSIVE": "Vollständig responsive Layouts",
+    "GIT": "Versionskontrolle mit Git",
+    "BUTTON": "Reden Wir"
+  },
+  "SKILL": {
+    "SKILL_TITLE": "Kernkompetenzen",
     "COMPETENCE": "Ich habe in meinen Projekten vielfältige Frontend-Technologien eingesetzt – sowohl für statische als auch dynamische Websites. Dabei habe ich responsive Layouts umgesetzt, Datenvisualisierungen entwickelt und besondere Werte auf User Experience gelegt.",
-
-    "OVERLAY_TITLE":"Suchen Sie einen anderen SKILL ?",
-
-    "OVERLAY_INTERESSE" :"Kontaktieren Sie mich gerne. Ich bin motiviert, mein bestehendes Wissen weiter auszubauen und Neues zu lernen."
-
+    "OVERLAY_TITLE": "Suchen Sie einen anderen SKILL ?",
+    "OVERLAY_INTERESSE": "Kontaktieren Sie mich gerne. Ich bin motiviert, mein bestehendes Wissen weiter auszubauen und Neues zu lernen."
   },
   "PORTFOLIO": {
     "HEADER": "Meine Arbeiten",
-    "SUBTITLE": "Entdecke hier eine Auswahl meiner Projekte – Interagiere mit ihnen, um meine Fähigkeiten in Aktion zu sehen."
-}
+    "SUBTITLE": "Entdecke hier eine Auswahl meiner Projekte – Interagiere mit ihnen, um meine Fähigkeiten in Aktion zu sehen.",
+    "JOIN_DESC": "Ein Aufgaben-Manager im Stil des Kanban-Systems, mit dem Aufgaben per Drag-and-Drop erstellt, verschoben und organisiert sowie Benutzern und Kategorien zugewiesen werden können.",
+    "LOCO_DESC": "Ein temporeiches Jump-and-Run-Spiel, in dem du Loco Pocco durch Hindernisse steuerst, Gegenstände sammelst und in abwechslungsreichen, herausfordernden Levels das Ziel erreichst.",
+    "JOIN_DIAL": "Durch die Zusammenarbeit im Team habe ich gelernt, besser zu kommunizieren, Verantwortung zu teilen und gemeinsam Lösungen zu erarbeiten.",
+    "POCO_DIAL": "Beim Entwickeln dieses Spiels habe ich meine Problemlösungsfähigkeiten verbessert , coole Spielmechaniken, flüssige Animationen und strukturierte Level gestaltet."
+  }
 }

@@ -31,23 +31,13 @@ app-open-dialog-btn {
 
     img:first-of-type {
       @include m.size(120px);
-      animation: rotateRing 10s linear infinite;
+      @include m.rotate-ring;
       z-index: 1;
     }
 
     img:last-of-type {
       width: 40px;
       z-index: 2;
-    }
-
-    @keyframes rotateRing {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
     }
   }
 }
@@ -82,6 +72,31 @@ app-dialog {
   &.is-closing {
     animation: dialogOut 0.3s ease-in forwards;
   }
+
+  @keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dialogOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(120%);
+    visibility: hidden;
+  }
+}
 
   .dialog-inner {
     position: relative;
@@ -146,31 +161,5 @@ app-dialog {
 
   img {
     width: 40px;
-  }
-}
-
-
-@keyframes dialogIn {
-  from {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes dialogOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateY(120%);
-    visibility: hidden;
   }
 }

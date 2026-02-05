@@ -10,8 +10,8 @@
 </header>
 
 <app-utily-description
-[languageText]="content()?.languages"
-[descriptionText]="content()?.description"
+  [languageText]="content()?.languages"
+  [descriptionText]="content()?.description | translate"
 ></app-utily-description>
 
 <app-link-git-project
@@ -23,6 +23,6 @@
 <app-dialog [class.is-open]="dialog.showDialog()" [class.is-closing]="!dialog.showDialog()">
   <div class="dialog-inner">
     <button class="close-btn" (click)="dialog.closeDialog()">X</button>
-    <h1>{{content()?.dialog}}</h1>
+    <p>{{content()?.dialog | translate}}</p>
    
   </div>

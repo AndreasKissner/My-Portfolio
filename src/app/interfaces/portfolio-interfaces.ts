@@ -7,4 +7,6 @@ export interface PortfolioJson {
   githubUrl: string;
   liveUrl: string;
   dialog: string;
+  imgStar : string;
+
 }

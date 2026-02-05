@@ -1,14 +1,39 @@
 @use 'style-varibles/variables' as v;
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
-:host{
+
+:host {
     width: 100%;
     height: 100%;
-   /*  display: flex;
-    align-items: center;
-    flex-direction: column; */
     @include m.flex-col-center();
     border: 2px solid rgb(236, 26, 204);
     margin-top: 45px;
     padding-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        border: 2px solid violet;
+gap:20px;
+        @include m.respond-normal {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+        }
+
+        ;
+    }
+}
+ article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      @include m.respond-xxxl  {
+       align-items: flex-end;
+        }
 }
