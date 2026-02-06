@@ -37,6 +37,13 @@
         }
     }
 }
+:host ::ng-deep .content-wrapper{
+    width:100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 // Elemente im Grid platzieren
 :host ::ng-deep header {
