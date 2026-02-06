@@ -29,5 +29,15 @@
     "LOCO_DESC": "Ein temporeiches Jump-and-Run-Spiel, in dem du Loco Pocco durch Hindernisse steuerst, Gegenstände sammelst und in abwechslungsreichen, herausfordernden Levels das Ziel erreichst.",
     "JOIN_DIAL": "Durch die Zusammenarbeit im Team habe ich gelernt, besser zu kommunizieren, Verantwortung zu teilen und gemeinsam Lösungen zu erarbeiten.",
     "POCO_DIAL": "Beim Entwickeln dieses Spiels habe ich meine Problemlösungsfähigkeiten verbessert , coole Spielmechaniken, flüssige Animationen und strukturierte Level gestaltet."
-  }
+  },
+  "REFERENCE": {
+  "TEAM1": "Während seiner Ausbildung war Andreas zuverlässig und motiviert. Er arbeitete sowohl selbstständig als auch im Team gut, blieb neugierig und entwickelte sich stetig weiter.",
+  
+  "TEAM2": "Im Projekt zeichnete sich Andreas durch seine strukturierte Arbeitsweise aus. Er lieferte seine Aufgaben pünktlich ab und ging Probleme ruhig an. Das machte ihn zu einem geschätzten Teammitglied.",
+  
+  "TEAM3": "Andreas war ein verlässlicher Teampartner im Join-Projekt. Er kommunizierte klar, unterstützte andere und arbeitete verantwortungsvoll, was zu einer positiven Teamatmosphäre beitrug.",
+  
+  "GITLINK": "Zum LinkedIn-Profil"
+}
+
 }

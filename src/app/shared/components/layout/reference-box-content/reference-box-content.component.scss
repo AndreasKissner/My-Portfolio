@@ -15,15 +15,16 @@
 :host ::ng-deep section {
     border: 1px solid c.$light-beige;
     padding: 16px;
-    margin: 0 16px 0 16px;
+    height: 220px;
+    margin: 0 16px 0 16px; 
+    border-radius: 1px;
+    margin-top: 20px;
 }
-
 
 :host ::ng-deep header {
     font-family: f.$font-second;
-    font-size: 20px;
+    font-size: 20px;;
     font-weight: 700;
-
 }
 
 :host ::ng-deep main {
@@ -31,10 +32,24 @@
 }
 
 :host ::ng-deep a {
+    margin-top: 25px;
     align-self: flex-end;
     font-size: 18px;
     color: c.$light-beige;
     font-weight: 700;
     font-family: f.$font-second;
     margin-right: 16px;
+    transition: color 0.150s ease; 
+
+   
+    &:active {
+        color: c.$orange-four;
+    }
+
+    @media (min-width: 1024px) {
+        &:hover {
+            color: c.$orange-four;
+         
+        }
+    }
 }
