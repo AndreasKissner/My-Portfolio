@@ -9,7 +9,17 @@
         font-family: f.$font-eczar;
         font-weight: 900;
         line-height: 1.1;
-       padding-left: 16px;
-       margin-bottom: 10px;
+        padding-left: 16px;
+        margin-bottom: 10px;
+
+        @include m.respond-sm {
+            font-size: 55px;
+            text-align: center;
+        }
+
+        @include m.respond-large {
+            font-size: 80px;
+            text-align: center;
+        }
     }
 }

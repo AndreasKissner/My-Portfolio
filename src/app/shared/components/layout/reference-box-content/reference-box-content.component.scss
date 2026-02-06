@@ -2,34 +2,80 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/fonts' as f;
 
-
 :host {
     display: flex;
     flex-direction: column;
     color: c.$light-beige;
     width: 100%;
-    height: auto;
-    max-width: 500px;
+    padding: 0 16px;
+    max-width: 420px;
+    // border: 2px solid red; // Nur zum Debuggen
 }
 
 :host ::ng-deep section {
+    display: grid;
+    // Spalte 1: Text (nimmt allen Platz), Spalte 2: Icon (so breit wie nötig)
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto; // Header, Main, Footer
+    
     border: 1px solid c.$light-beige;
     padding: 16px;
-    height: 220px;
-    margin: 0 16px 0 16px; 
-    border-radius: 1px;
+    width: 100%;
+    max-width: 400px;
     margin-top: 20px;
+    border-radius: 1px;
+    height: auto; // Funktioniert jetzt perfekt!
+
+    @include m.respond-mid {
+        padding: 32px;
+    }
+
+    // Hover-Effekt für die Icons
+    &:hover {
+        .icon-top, .icon-center, .icon-bottom {
+            opacity: 1;
+        }
+    }
 }
 
+// Elemente im Grid platzieren
 :host ::ng-deep header {
+    grid-column: 1;
+    grid-row: 1;
     font-family: f.$font-second;
-    font-size: 20px;;
+    font-size: 20px;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
 :host ::ng-deep main {
+    grid-column: 1;
+    grid-row: 2;
     font-family: f.$font-second;
 }
+
+:host ::ng-deep footer {
+    grid-column: 1;
+    grid-row: 3;
+    font-family: f.$font-second;
+    margin-top: 7px;
+}
+
+// Die Icons sauber rechts oben positionieren ohne translate-Gepfusche
+:host ::ng-deep .icon-top,
+:host ::ng-deep .icon-center,
+:host ::ng-deep .icon-bottom {
+    grid-column: 2;
+    grid-row: 1; // Bleibt auf Höhe des Headers
+    align-self: start;
+    
+    width: 30px;
+    opacity: 0; // Standardmäßig unsichtbar (wird bei Section-Hover 1)
+    transition: opacity 0.15s ease;
+    margin-left: 10px; // Kleiner Abstand zum Text
+}
+
+
 
 :host ::ng-deep a {
     margin-top: 25px;
@@ -39,17 +85,15 @@
     font-weight: 700;
     font-family: f.$font-second;
     margin-right: 16px;
-    transition: color 0.150s ease; 
+    transition: color 0.150s ease;
 
-   
     &:active {
         color: c.$orange-four;
     }
 
-    @media (min-width: 1024px) {
+    @include m.respond-laptop {
         &:hover {
             color: c.$orange-four;
-         
         }
     }
 }

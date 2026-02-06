@@ -80,6 +80,13 @@
   }
 }
 
+//  1024px 
+@mixin respond-laptop {
+  @media (min-width: v.$screen-laptop) {
+    @content;
+  }
+}
+
 //  1200px 
 @mixin respond-large {
   @media (min-width: v.$screen-large) {
