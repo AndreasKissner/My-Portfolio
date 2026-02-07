@@ -1,1 +1,32 @@
-<p>contact-email works!</p>
+<form class="contact-form">
+
+    <app-input-fields-email labelText="What's your name?">
+        <input type="text" placeholder="Your name goes here">
+    </app-input-fields-email>
+
+    <app-input-fields-email labelText="What's your email?">
+        <input type="email" placeholder="youremail@email.com">
+    </app-input-fields-email>
+
+    <app-input-fields-email labelText="How can I help you?">
+        <textarea rows="1" placeholder="Hello Andreas, I am interested in..."></textarea>
+    </app-input-fields-email>
+
+    <div class="checkbox-group">
+        <input type="checkbox" id="privacy">
+        <label for="privacy">
+            I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
+        </label>
+    </div>
+
+    <div class="btn-flash-content">
+        <app-btn-primaer>
+            <button type="submit" class="btn-primaer">Send This</button>
+        </app-btn-primaer>
+
+        <div class="flash-height">
+            <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height">
+        </div>
+    </div>
+
+</form>

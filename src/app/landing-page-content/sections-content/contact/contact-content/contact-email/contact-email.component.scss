@@ -1,0 +1,58 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:host {
+    width: 100%;
+    display: flex;
+border:1px solid yellow;
+padding: 0 16px;
+margin-top:32px;
+}
+
+
+.contact-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: f.$font-second;
+
+}
+::ng-deep.btn-primaer {
+    @include m.flex();
+
+    background-color: transparent;
+    font-size: 18px;
+
+    text-decoration: none;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: c.$orange-four;
+        }
+    }
+
+    &:active {
+        background-color: c.$orange-four;
+    }
+}
+
+.btn-flash-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox-group{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text-wrapper{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+}
