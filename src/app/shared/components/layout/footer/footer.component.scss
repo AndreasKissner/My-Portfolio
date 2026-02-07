@@ -6,11 +6,11 @@
   width: 100%;
   margin-top: auto;
   align-self: stretch;
-  scroll-snap-align: end;
+/*   scroll-snap-align: end; */
 }
 
 footer {
-  min-height: 5rem;
+  min-height: 80px;
   background-color: orange;;
   @include m.flex;
 }

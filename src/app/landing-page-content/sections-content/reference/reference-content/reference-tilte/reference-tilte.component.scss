@@ -7,10 +7,9 @@ align-self: flex-start;
     
     h2 {
         color: c.$light-beige;
-        font-size: 40px;
-        font-family: f.$font-eczar;
+       @include m.font40-eczar(f.$font-eczar);
         font-weight: 900;
-        line-height: 1.1;
+        
         padding-left: 16px;
         margin-bottom: 10px;
 

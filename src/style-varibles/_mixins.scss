@@ -1,29 +1,9 @@
 @use "variables" as v;
 
-// Global
 @mixin main-container {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-}
-
-/* @mixin flex($justify: center, $align: center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-} */
-
-@mixin flex($justify: center, $align: center, $direction: row) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
-}
-
-@mixin flex-col-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 @mixin section-layout($bg: transparent) {
@@ -40,10 +20,20 @@
   @include respond-sm {
     height: calc(100vh - 88px);
   }
+} 
 
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
-// Media
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 // Ab 321px
 @mixin respond-xs {
@@ -129,9 +119,11 @@
     0% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(5px);
     }
+
     100% {
       transform: translateY(0);
     }
@@ -145,9 +137,35 @@
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(360deg);
     }
   }
 }
 
+@mixin card-icons-reference {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  width: 30px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  margin-left: 10px;
+  display: none;
+
+  @include respond-laptop {
+    display: block;
+  }
+}
+
+@mixin border-white-all($color) {
+  border: 1px solid $color;
+  border-radius: 1px;
+}
+  
+@mixin font40-eczar($font) {
+  font-size: 40px;
+  font-family: $font;
+  line-height: 1.1;
+}

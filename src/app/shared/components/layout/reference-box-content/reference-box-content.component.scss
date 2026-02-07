@@ -2,6 +2,7 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/fonts' as f;
 
+
 :host {
     display: flex;
     flex-direction: column;
@@ -9,43 +10,32 @@
     width: 100%;
     padding: 0 16px;
     max-width: 420px;
-    // border: 2px solid red; // Nur zum Debuggen
 }
 
 :host ::ng-deep section {
     display: grid;
-    // Spalte 1: Text (nimmt allen Platz), Spalte 2: Icon (so breit wie nötig)
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto auto; // Header, Main, Footer
-    
-    border: 1px solid c.$light-beige;
+    @include m.border-white-all(c.$light-beige);
     padding: 16px;
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
-    border-radius: 1px;
-    height: auto; // Funktioniert jetzt perfekt!
-
+    height: auto;
+    
     @include m.respond-mid {
         padding: 32px;
     }
 
-    // Hover-Effekt für die Icons
-    &:hover {
-        .icon-top, .icon-center, .icon-bottom {
-            opacity: 1;
+    @include m.respond-laptop {
+        &:hover {
+            .icon-top, .icon-center, .icon-bottom {
+                opacity: 1;
+            }
         }
     }
 }
-:host ::ng-deep .content-wrapper{
-    width:100%;
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-// Elemente im Grid platzieren
 :host ::ng-deep header {
     grid-column: 1;
     grid-row: 1;
@@ -53,6 +43,9 @@
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
+    @include m.respond-laptop{
+        font-size: 24px;
+    }
 }
 
 :host ::ng-deep main {
@@ -68,21 +61,11 @@
     margin-top: 7px;
 }
 
-// Die Icons sauber rechts oben positionieren ohne translate-Gepfusche
 :host ::ng-deep .icon-top,
 :host ::ng-deep .icon-center,
-:host ::ng-deep .icon-bottom {
-    grid-column: 2;
-    grid-row: 1; // Bleibt auf Höhe des Headers
-    align-self: start;
-    
-    width: 30px;
-    opacity: 0; // Standardmäßig unsichtbar (wird bei Section-Hover 1)
-    transition: opacity 0.15s ease;
-    margin-left: 10px; // Kleiner Abstand zum Text
+:host ::ng-deep .icon-bottom { 
+  @include m.card-icons-reference 
 }
-
-
 
 :host ::ng-deep a {
     margin-top: 25px;

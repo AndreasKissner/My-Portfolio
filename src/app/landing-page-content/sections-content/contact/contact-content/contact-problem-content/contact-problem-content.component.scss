@@ -1,0 +1,24 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+      padding: 0 16px;
+
+      h4{
+        font-size: 20px;
+        font-family: f.$font-second;
+        color: c.$orange-four;
+        margin-bottom: 16px;
+        font-weight: 700;
+      }
+      p{
+        color: c.$light-beige;
+        font-family: f.$font-second;
+        font-weight: 400;
+      }
+}
