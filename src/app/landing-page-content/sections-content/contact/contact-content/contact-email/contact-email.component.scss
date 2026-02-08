@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;  // Mixin
     align-items: stretch;
+   /*  @include m.flex(flex-direction:column, stretch); */
     width: 100%;
     font-family: f.$font-second;
 }
@@ -24,14 +25,17 @@
     font-size: 18px;
     text-decoration: none;
 
-    @media (hover: hover) {
-        &:hover {
-            background-color: c.$orange-four;
-        }
+    // Diese Stile dürfen NUR gelten, wenn der Button wirklich disabled ist
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        filter: grayscale(1);
     }
 
-    &:active {
-        background-color: c.$orange-four;
+    @media (hover: hover) {
+        &:hover:not(:disabled) { // Nur Hover-Effekt, wenn NICHT disabled
+            background-color: c.$orange-four;
+        }
     }
 }
 
@@ -94,7 +98,13 @@
 }
 }
 
-
+.error-message {
+  color: #ff4d4d; // Abwarten und abklaeren
+  font-size: 12px;
+  margin-top: 4px;
+  margin-left: 10px;  
+  display: block;
+}
 
 input:not([type="checkbox"]),
 textarea {

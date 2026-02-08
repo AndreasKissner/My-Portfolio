@@ -1,32 +1,71 @@
-<form class="contact-form">
+<form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  
 
-    <app-input-fields-email labelText="What's your name?">
-        <input type="text" placeholder="Your name goes here">
-    </app-input-fields-email>
+  <app-input-fields-email labelText="What's your name?">
+    <input 
+        type="text" 
+        name="userName" 
+        [(ngModel)]="contactData.name" 
+        #nameField="ngModel" 
+        required 
+        [placeholder]="(nameField.invalid && nameField.touched) ? 'Ihr Name fehlt' : 'Your name goes here'"
+        [class.input-error]="nameField.invalid && nameField.touched">
+</app-input-fields-email>
 
-    <app-input-fields-email labelText="What's your email?">
-        <input type="email" placeholder="youremail@email.com">
-    </app-input-fields-email>
+<app-input-fields-email labelText="What's your email?">
+    <input 
+        type="email" 
+        name="userEmail" 
+        [(ngModel)]="contactData.email" 
+        #emailField="ngModel" 
+        required 
+        email
+        [placeholder]="(emailField.invalid && emailField.touched) ? 'Email fehlt oder ist ungültig' : 'youremail@email.com'"
+        [class.input-error]="emailField.invalid && emailField.touched">
+</app-input-fields-email>
 
-    <app-input-fields-email labelText="How can I help you?">
-        <textarea rows="1" placeholder="Hello Andreas, I am interested in..."></textarea>
-    </app-input-fields-email>
+  <app-input-fields-email labelText="How can I help you?">
+    <textarea 
+        name="message" 
+        [(ngModel)]="contactData.message" 
+        #messageField="ngModel" 
+        required 
+        rows="1" 
+        [placeholder]="(messageField.invalid && messageField.touched) ? 'Ihr Anliegen fehlt' : 'Hello Andreas, I am interested in...'"
+        [class.input-error]="messageField.invalid && messageField.touched">
+    </textarea>
+</app-input-fields-email>
+
+
 
     <div class="checkbox-group">
-        <div class="checkbox-wrapper">
-            <input type="checkbox" id="privacy">
-        </div>
-
-        <div class="text-wrapper">
-            <label for="privacy">
-                I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
-            </label>
-        </div>
+    <div class="checkbox-wrapper">
+        <input 
+            type="checkbox" 
+            name="privacy" 
+            [(ngModel)]="contactData.privacy" 
+            #privacyField="ngModel" 
+            required 
+            id="privacy"
+            [class.input-error]="privacyField.invalid && privacyField.touched">
     </div>
+
+    <div class="text-wrapper">
+        <label for="privacy">
+            @if (privacyField.invalid && privacyField.touched) {
+                <span class="error-message">Bitte akzeptieren Sie die Datenschutzrichtlinien</span>
+            } @else {
+                I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
+            }
+        </label>
+    </div>
+</div>
 
     <div class="btn-flash-content">
         <app-btn-primaer>
-            <button type="submit" class="btn-primaer">Send This</button>
+          <button type="submit" class="btn-primaer" [disabled]="!contactForm.form.valid">
+    Send This
+</button>
         </app-btn-primaer>
 
         <div class="flash-height">
