@@ -35,6 +35,12 @@
   align-items: center;
 }
 
+// width height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
 // Ab 321px
 @mixin respond-xs {
   @media (min-width: v.$screen-xs) {
