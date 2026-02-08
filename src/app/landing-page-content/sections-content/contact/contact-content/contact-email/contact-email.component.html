@@ -1,76 +1,55 @@
 <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-  
 
-  <app-input-fields-email labelText="What's your name?">
-    <input 
-        type="text" 
-        name="userName" 
-        [(ngModel)]="contactData.name" 
-        #nameField="ngModel" 
-        required 
-        [placeholder]="(nameField.invalid && nameField.touched) ? 'Ihr Name fehlt' : 'Your name goes here'"
-        [class.input-error]="nameField.invalid && nameField.touched">
-</app-input-fields-email>
+    <app-input-fields-email labelText="What's your name?">
+        <input type="text" name="userName" [(ngModel)]="contactData.name" #nameField="ngModel" required
+            [placeholder]="(nameField.invalid && nameField.touched) ? 'Ihr Name fehlt' : 'Your name goes here'"
+            [class.input-error]="nameField.invalid && nameField.touched">
+    </app-input-fields-email>
 
-<app-input-fields-email labelText="What's your email?">
-    <input 
-        type="email" 
-        name="userEmail" 
-        [(ngModel)]="contactData.email" 
-        #emailField="ngModel" 
-        required 
-        email
-        [placeholder]="(emailField.invalid && emailField.touched) ? 'Email fehlt oder ist ungültig' : 'youremail@email.com'"
-        [class.input-error]="emailField.invalid && emailField.touched">
-</app-input-fields-email>
+    <app-input-fields-email labelText="What's your email?">
+        <input type="email" name="userEmail" [(ngModel)]="contactData.email" #emailField="ngModel" required email
+            [placeholder]="(emailField.invalid && emailField.touched) ? 'Email fehlt oder ist ungültig' : 'youremail@email.com'"
+            [class.input-error]="emailField.invalid && emailField.touched">
+    </app-input-fields-email>
 
-  <app-input-fields-email labelText="How can I help you?">
-    <textarea 
-        name="message" 
-        [(ngModel)]="contactData.message" 
-        #messageField="ngModel" 
-        required 
-        rows="1" 
-        [placeholder]="(messageField.invalid && messageField.touched) ? 'Ihr Anliegen fehlt' : 'Hello Andreas, I am interested in...'"
-        [class.input-error]="messageField.invalid && messageField.touched">
+    <app-input-fields-email labelText="How can I help you?">
+        <textarea name="message" [(ngModel)]="contactData.message" #messageField="ngModel" required rows="1"
+            [placeholder]="(messageField.invalid && messageField.touched) ? 'Ihr Anliegen fehlt' : 'Hello Andreas, I am interested in...'"
+            [class.input-error]="messageField.invalid && messageField.touched">
     </textarea>
-</app-input-fields-email>
-
-
+    </app-input-fields-email>
 
     <div class="checkbox-group">
-    <div class="checkbox-wrapper">
-        <input 
-            type="checkbox" 
-            name="privacy" 
-            [(ngModel)]="contactData.privacy" 
-            #privacyField="ngModel" 
-            required 
-            id="privacy"
-            [class.input-error]="privacyField.invalid && privacyField.touched">
-    </div>
+        <div class="checkbox-wrapper">
+            <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacyField="ngModel" required
+                id="privacy" [class.input-error]="privacyField.invalid && privacyField.touched">
+        </div>
 
-    <div class="text-wrapper">
-        <label for="privacy">
-            @if (privacyField.invalid && privacyField.touched) {
-                <span class="error-message">Bitte akzeptieren Sie die Datenschutzrichtlinien</span>
-            } @else {
+        <div class="text-wrapper">
+            <label for="privacy">
+                @if (privacyField.invalid && privacyField.touched) {
+                <span class="error-message">Pleace Accept Police</span>
+                } @else {
                 I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
-            }
-        </label>
+                }
+            </label>
+        </div>
     </div>
-</div>
 
     <div class="btn-flash-content">
         <app-btn-primaer>
-          <button type="submit" class="btn-primaer" [disabled]="!contactForm.form.valid">
-    Send This
-</button>
+            <button type="submit" class="btn-primaer" [disabled]="!contactForm.form.valid">
+                Send This
+            </button>
         </app-btn-primaer>
 
-        <div class="flash-height">
-            <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height">
-        </div>
+        <a href="#hero">
+    <div class="flash-height">
+        <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height" class="flash-icon">
+        <div class="flash-line"></div>
+    </div>
+</a>
+
     </div>
 
 </form>

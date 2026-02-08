@@ -14,16 +14,13 @@ export class ContactEmailComponent {
 contactData = {
   name: '',
   email: '',
-  message: '',
+  message: '', 
   privacy: false
 };
 
 onSubmit(form: NgForm) {
   if (form.valid) {
     console.log('Formular-Daten:', this.contactData);
-    // Hier schickst du die Daten an deinen Server oder Email-Service
-    
-    // Nach dem Senden das Formular zurücksetzen:
     form.resetForm();
   }
 } 

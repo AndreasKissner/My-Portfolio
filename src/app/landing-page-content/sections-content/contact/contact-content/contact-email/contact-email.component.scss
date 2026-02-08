@@ -25,7 +25,7 @@
     font-size: 18px;
     text-decoration: none;
 
-    // Diese Stile dürfen NUR gelten, wenn der Button wirklich disabled ist
+    //Only when BTn is Disabled
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
@@ -33,15 +33,57 @@
     }
 
     @media (hover: hover) {
-        &:hover:not(:disabled) { // Nur Hover-Effekt, wenn NICHT disabled
+        &:hover:not(:disabled) {
             background-color: c.$orange-four;
         }
     }
 }
 
 .btn-flash-content {
-    width: 100%;
-  @include m.flex();
+    margin-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative;   //mal sehen
+  a{
+     position: absolute;  
+  right: 0;
+  }
+}
+
+.flash-height {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+  margin-left: 16px;
+  position: relative;
+}
+
+.flash-icon {
+  animation: flashStretch 2s ease-in-out infinite;
+  transform-origin: bottom; 
+}
+
+.flash-line {
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  margin-top: 2px;
+  border-radius: 1px;
+}
+
+@keyframes flashStretch {
+  0% {
+    transform: translateY(-20px) scaleY(1);
+  }
+  50% {
+    transform: translateY(0px) scaleY(1.4);
+  }
+  100% {
+    transform: translateY(-20px) scaleY(1);
+  }
 }
 
 .checkbox-group {
