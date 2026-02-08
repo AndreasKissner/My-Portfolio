@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-around;
     margin: 35px 0 50px 0;
+    padding: 0 16px 0 16px;
       @include m.respond-normal {
          justify-content: space-between;
          margin-right: 12px;

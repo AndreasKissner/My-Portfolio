@@ -6,26 +6,24 @@
 :host {
     width: 100%;
     display: flex;
-border:1px solid yellow;
-padding: 0 16px;
-margin-top:32px;
+    border: 1px solid yellow;
+    padding: 0 16px;
+    margin-top: 32px;
 }
 
 
-.contact-form{
+.contact-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: column;  // Mixin
+    align-items: stretch;
+    width: 100%;
     font-family: f.$font-second;
-
 }
+
 ::ng-deep.btn-primaer {
     @include m.flex();
-
     background-color: transparent;
     font-size: 18px;
-
     text-decoration: none;
 
     @media (hover: hover) {
@@ -41,20 +39,51 @@ margin-top:32px;
 
 .btn-flash-content {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @include m.flex();
 }
-.checkbox-group{
-    margin-top: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    
-    .text-wrapper{
-     display: flex;
-     justify-content: center;
-     align-items: center;
+.checkbox-group {
+    margin-top: 32px;
+    @include m.flex();
+
+
+    .text-wrapper {
+        @include m.flex();
+
+        label {
+            font-weight: 400;
+            color: c.$light-beige;
+        }
+
+        a {
+            color: c.$orange-four;
+        }
+    }
+}
+
+
+
+input:not([type="checkbox"]),
+textarea {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid c.$orange-four;
+    padding: 10px 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: f.$font-second;
+    resize: none;
+    appearance: none;
+    padding-left: 10px;
+
+    &::placeholder {
+        color: rgba(c.$white, 0.8);
+        font-weight: 300;
+    }
+
+    &:focus {
+        border-bottom-color: #ffb400;
     }
 }

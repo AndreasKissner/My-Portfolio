@@ -1,17 +1,18 @@
 @use 'style-varibles/mixins' as m;
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/fonts' as f;
-:host{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-       padding: 0 16px;
+
+:host {
+   @include m.flex();
+   padding: 0 16px;
 }
-h3{
+
+h3 {
    @include m.font40-eczar(f.$font-eczar);
    color: c.$orange-two;
-      margin-bottom:32px ;
-   @include m.respond-normal{
-    font-size: 72px;
+   margin-bottom: 32px;
+
+   @include m.respond-normal {
+      font-size: 72px;
    }
-} 
+}

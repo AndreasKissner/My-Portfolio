@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
 import { HeaderComponent } from '../../shared/components/layout/header/header.component';
-import { FooterComponent } from '../../shared/components/layout/footer/footer.component';
 import { HeroComponent } from '../sections-content/hero/hero.component';
 import { AboutComponent } from '../sections-content/about/about.component';
 import { SkillComponent } from '../sections-content/skill/skill.component';
@@ -18,7 +17,6 @@ import { SectionIndicatorComponent } from '../../shared/components/layout/sectio
   standalone: true,
   imports: [
     HeaderComponent,
-    FooterComponent,
     HeroComponent,
     AboutComponent,
     SkillComponent,

@@ -1,9 +1,24 @@
-label{
-    color: red;
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:host {
+    display: block; 
+    width: 100%;
+    &:not(:last-of-type) {
+        margin-bottom: 45px;
+    }
 }
-.form-group{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+
+.form-group {
+    @include m.flex(center, flex-start);
     flex-direction: column;
+}
+
+label {
+   font-size: 20px;
+   font-weight: 700;
+   color: c.$light-beige;
+   margin-left: 10px;
 }
