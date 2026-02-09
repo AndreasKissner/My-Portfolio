@@ -14,7 +14,7 @@
 
     <app-input-fields-email labelText="How can I help you?">
         <textarea name="message" [(ngModel)]="contactData.message" #messageField="ngModel" required rows="1"
-            [placeholder]="(messageField.invalid && messageField.touched) ? 'Ihr Anliegen fehlt' : 'Hello Andreas, I am interested in...'"
+            [placeholder]="(messageField.invalid && messageField.touched) ? 'Ihr Anliegen fehlt' : 'Hello Andreas, you will trink a coffee...'"
             [class.input-error]="messageField.invalid && messageField.touched">
     </textarea>
     </app-input-fields-email>

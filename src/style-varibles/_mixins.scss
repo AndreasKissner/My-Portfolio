@@ -1,4 +1,6 @@
 @use "variables" as v;
+@use 'colors' as c; 
+@use 'fonts' as f;
 
 @mixin main-container {
   width: 100%;
@@ -22,11 +24,12 @@
   }
 } 
 
-@mixin flex($justify: center, $align: center, $direction: row) {
+@mixin flex($justify: center, $align: center, $direction: row, $gap: 0) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
+  gap: $gap;
 }
 
 @mixin flex-col-center {
@@ -174,4 +177,9 @@
   font-size: 40px;
   font-family: $font;
   line-height: 1.1;
+}
+
+@mixin color-font {
+  color: c.$light-beige;
+  font-family: f.$font-second;
 }

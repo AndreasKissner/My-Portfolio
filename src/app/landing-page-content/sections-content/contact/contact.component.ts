@@ -3,10 +3,11 @@ import { ContactTitleComponent } from './contact-content/contact-title/contact-t
 import { ContactProblemContentComponent } from './contact-content/contact-problem-content/contact-problem-content.component';
 import { FooterComponent } from '../../../shared/components/layout/footer/footer.component';
 import { ContactEmailComponent } from './contact-content/contact-email/contact-email.component';
+import { TwoIconsComponent } from "./contact-content/two-icons/two-icons.component";
 
 @Component({
   selector: 'app-contact',
-  imports: [ContactTitleComponent, ContactProblemContentComponent,FooterComponent, ContactEmailComponent],
+  imports: [ContactTitleComponent, ContactProblemContentComponent, FooterComponent, ContactEmailComponent, TwoIconsComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
