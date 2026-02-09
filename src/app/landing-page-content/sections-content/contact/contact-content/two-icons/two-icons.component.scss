@@ -1,0 +1,43 @@
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+
+:host {
+    @include m.flex(center, flex-end);
+    width: 100%;
+    padding: 20px 16px 0 16px;
+    overflow: hidden;
+ 
+}
+
+.icon {
+    // Das overflow: hidden muss vom img auf den Container (oder host)
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.icon-left {
+    width: 172px;
+    margin-right: 8px;
+    flex-shrink: 0; // Verhindert, dass das Bild gequetscht wird
+    @include m.rotate-ring; 
+}
+
+.icon-right {
+    width: 210px;
+    z-index: 2;
+    margin-left: -121px;
+    flex-shrink: 0; // Verhindert, dass das Bild gequetscht wird
+    animation: rotate-left 15s linear infinite; 
+}
+
+@keyframes rotate-left {
+    from {
+        transform: translateY(-5px) rotate(0deg);
+    }
+    to {
+        transform: translateY(-5px) rotate(-360deg);
+    }
+}

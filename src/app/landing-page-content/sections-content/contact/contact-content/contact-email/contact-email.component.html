@@ -27,12 +27,12 @@
 
         <div class="text-wrapper" [class.has-error]="privacyField.invalid && privacyField.touched">
             <label for="privacy">
-                I’ve read and agree to the privacy policy.
+                I’ve read and agree the privacy policy.
             </label>
 
             @if (privacyField.invalid && privacyField.touched) {
             <span class="error-message">
-                Please accept the privacy policy
+                Accept the privacy policy
             </span>
             }
         </div>
