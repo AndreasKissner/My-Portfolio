@@ -160,24 +160,35 @@ textarea {
     width: 100%;
     background: transparent;
     border: none;
-    border-bottom: 2px solid c.$orange-four;
+    border-bottom: 2px solid c.$orange-two;
     padding: 10px 0 0 10px;
     outline: none;
     box-sizing: border-box;
     font-family: f.$font-second;
     resize: none;
     appearance: none;
-
     color: c.$light-beige;
-
-
 
     &::placeholder {
         color: rgba(c.$light-beige, 0.8);
         font-weight: 300;
     }
 
-    /*   &:focus {
-        border-bottom-color: #ffb400;
-    } */
+    &:focus {
+        border-bottom: 2px solid c.$orange-four; // Bestätigt die Farbe beim Klicken
+        outline: none; // Entfernt den Standard-Browser-Rahmen
+    }
+}
+
+app-input-fields-email:focus-within {
+    ::ng-deep label {
+        color: c.$orange-four !important;
+    }
+}
+
+.input-error {
+    &::placeholder {
+        color: #E44C36 !important;
+        opacity: 1; // Stellt sicher, dass die Farbe kräftig angezeigt wird
+    }
 }
