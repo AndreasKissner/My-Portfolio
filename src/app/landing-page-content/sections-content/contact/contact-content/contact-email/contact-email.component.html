@@ -19,21 +19,24 @@
     </textarea>
     </app-input-fields-email>
 
-    <div class="checkbox-group">
+    <div class="checkbox-group"   [class.has-error]="privacyField.invalid && privacyField.touched">
         <div class="checkbox-wrapper">
             <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacyField="ngModel" required
                 id="privacy" [class.input-error]="privacyField.invalid && privacyField.touched">
         </div>
 
-        <div class="text-wrapper">
+        <div class="text-wrapper" [class.has-error]="privacyField.invalid && privacyField.touched">
             <label for="privacy">
-                @if (privacyField.invalid && privacyField.touched) {
-                <span class="error-message">Pleace Accept Police</span>
-                } @else {
-                I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
-                }
+                I’ve read and agree to the privacy policy.
             </label>
+
+            @if (privacyField.invalid && privacyField.touched) {
+            <span class="error-message">
+                Please accept the privacy policy
+            </span>
+            }
         </div>
+
     </div>
 
     <div class="btn-flash-content">

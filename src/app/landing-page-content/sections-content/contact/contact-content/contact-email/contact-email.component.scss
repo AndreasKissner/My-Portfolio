@@ -6,7 +6,7 @@
 :host {
     display: flex;
     justify-content: flex-start; // Falls du es zentrieren willst
-    width: 100%;             // Zwingt die Komponente auf volle Breite
+    width: 100%; // Zwingt die Komponente auf volle Breite
     border: 1px solid yellow;
     padding: 0 16px;
     margin-top: 32px;
@@ -14,9 +14,10 @@
 
 .contact-form {
     @include m.flex(flex-start, stretch, column);
-    width: 100%;             
+    width: 100%;
     font-family: f.$font-second;
 }
+
 ::ng-deep.btn-primaer {
     @include m.flex();
     background-color: transparent;
@@ -85,15 +86,24 @@
 
 .checkbox-group {
     margin-top: 32px;
-    height:30px;
-    @include m.flex(flex-start,center);
+    height: 30px;
+    @include m.flex(flex-start, center);
+
+
 
     .text-wrapper {
         @include m.flex();
 
+        &.has-error {
+            @include m.flex(flex-start, flex-start, column);
+            height: 24px;
+        }
+
         label {
             font-weight: 400;
             color: c.$light-beige;
+            height: 24px;
+
         }
 
         a {
@@ -108,7 +118,7 @@
 
         input[type="checkbox"] {
             -webkit-appearance: none;
-           @include m.size(18px, 18px);
+            @include m.size(18px, 18px);
             border: 2px solid c.$orange-four;
             border-radius: 4px;
             background-color: transparent;
@@ -137,15 +147,13 @@
     }
 }
 
- .error-message {
-    color: #ff4d4d; 
-
+.error-message {
+    color: #ff4d4d;
+    margin-left: 55px;
     font-size: 12px;
-    margin-top: 4px;
-    margin-left: 10px;
     display: block;
- }
- 
+}
+
 input:not([type="checkbox"]),
 textarea {
     display: block;
@@ -159,14 +167,17 @@ textarea {
     font-family: f.$font-second;
     resize: none;
     appearance: none;
-   
+
+    color: c.$light-beige;
+
+
 
     &::placeholder {
-        color: rgba(c.$white, 0.8);
+        color: rgba(c.$light-beige, 0.8);
         font-weight: 300;
     }
 
-    &:focus {
+    /*   &:focus {
         border-bottom-color: #ffb400;
-    }
+    } */
 }
