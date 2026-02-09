@@ -39,7 +39,7 @@
 }
 
 .btn-flash-content {
-    margin: 32px 0 24px 0;
+    margin: 40px 0 24px 0;
     width: 100%;
     @include m.flex(center, flex-end);
     position: relative; //mal sehen
@@ -149,7 +149,7 @@
 
 .error-message {
     color: #ff4d4d;
-    margin-left: 55px;
+    margin: 20px 0 0 0;
     font-size: 12px;
     display: block;
 }

@@ -1,10 +1,11 @@
 import { Component, inject, input, output } from '@angular/core';
 import { PortfolioService } from '../../../../../shared-services/portfolio.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-previous-next',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './previous-next.component.html',
   styleUrl: './previous-next.component.scss',
 })

@@ -3,10 +3,11 @@ import { InputFieldsEmailComponent } from './input-fields-email/input-fields-ema
 import { CommonModule } from '@angular/common';
 import { BtnPrimaerComponent } from "../../../../../shared/components/layout/btn-primaer/btn-primaer.component";
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-email',
-  imports: [InputFieldsEmailComponent, CommonModule, BtnPrimaerComponent, BtnPrimaerComponent, FormsModule],
+  imports: [InputFieldsEmailComponent, CommonModule, BtnPrimaerComponent, BtnPrimaerComponent, FormsModule, TranslateModule],
   templateUrl: './contact-email.component.html',
   styleUrl: './contact-email.component.scss',
 })

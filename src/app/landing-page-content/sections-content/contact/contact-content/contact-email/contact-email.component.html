@@ -1,20 +1,20 @@
 <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
-    <app-input-fields-email labelText="What's your name?">
+    <app-input-fields-email labelText="{{ 'CONTACT.LABELONE' | translate}}">
         <input type="text" name="userName" [(ngModel)]="contactData.name" #nameField="ngModel" required
-            [placeholder]="(nameField.invalid && nameField.touched) ? 'Ihr Name fehlt' : 'Your name goes here'"
+            [placeholder]="(nameField.invalid && nameField.touched) ? ('CONTACT.PLACEONE' | translate) : ('CONTACT.PLACETWO' | translate)"
             [class.input-error]="nameField.invalid && nameField.touched">
     </app-input-fields-email>
 
-    <app-input-fields-email labelText="What's your email?">
+    <app-input-fields-email labelText="{{ 'CONTACT.LABELTWO' | translate}}">
         <input type="email" name="userEmail" [(ngModel)]="contactData.email" #emailField="ngModel" required email
-            [placeholder]="(emailField.invalid && emailField.touched) ? 'Email fehlt oder ist ungültig' : 'youremail@email.com'"
+            [placeholder]="(emailField.invalid && emailField.touched) ? ('CONTACT.PLACETHREE' |translate) : ('CONTACT.PLACEFOUR'| translate)"
             [class.input-error]="emailField.invalid && emailField.touched">
     </app-input-fields-email>
 
-    <app-input-fields-email labelText="How can I help you?">
+    <app-input-fields-email labelText="{{ 'CONTACT.LABELTHREE' | translate}}">
         <textarea name="message" [(ngModel)]="contactData.message" #messageField="ngModel" required rows="1"
-            [placeholder]="(messageField.invalid && messageField.touched) ? 'Ihr Anliegen fehlt' : 'Hello Andreas, you will trink a coffee...'"
+            [placeholder]="(messageField.invalid && messageField.touched) ? ('CONTACT.PLACEFIVE' |translate)  : ('CONTACT.PLACESIX' |translate) "
             [class.input-error]="messageField.invalid && messageField.touched">
     </textarea>
     </app-input-fields-email>
@@ -27,12 +27,12 @@
 
         <div class="text-wrapper" [class.has-error]="privacyField.invalid && privacyField.touched">
             <label for="privacy">
-                I’ve read and agree the privacy policy.
+               {{'CONTACT.POLICY'| translate}}
             </label>
 
             @if (privacyField.invalid && privacyField.touched) {
             <span class="error-message">
-                Accept the privacy policy
+              {{'CONTACT.POLICY_ERROR' |translate}}
             </span>
             }
         </div>
@@ -42,7 +42,7 @@
     <div class="btn-flash-content">
         <app-btn-primaer>
             <button type="submit" class="btn-primaer" [disabled]="!contactForm.form.valid">
-                Send This
+                {{'CONTACT.CONTACT_BTN' | translate}}
             </button>
         </app-btn-primaer>
 

@@ -28,12 +28,33 @@
     "JOIN_DESC": "Ein Aufgaben-Manager im Stil des Kanban-Systems, mit dem Aufgaben per Drag-and-Drop erstellt, verschoben und organisiert sowie Benutzern und Kategorien zugewiesen werden können.",
     "LOCO_DESC": "Ein temporeiches Jump-and-Run-Spiel, in dem du Loco Pocco durch Hindernisse steuerst, Gegenstände sammelst und in abwechslungsreichen, herausfordernden Levels das Ziel erreichst.",
     "JOIN_DIAL": "Durch die Zusammenarbeit im Team habe ich gelernt, besser zu kommunizieren, Verantwortung zu teilen und gemeinsam Lösungen zu erarbeiten.",
-    "POCO_DIAL": "Beim Entwickeln dieses Spiels habe ich meine Problemlösungsfähigkeiten verbessert , coole Spielmechaniken, flüssige Animationen und strukturierte Level gestaltet."
+    "POCO_DIAL": "Beim Entwickeln dieses Spiels habe ich meine Problemlösungsfähigkeiten verbessert , coole Spielmechaniken, flüssige Animationen und strukturierte Level gestaltet.",
+    "PREVIOUS_BTN": "<< Zurück",
+"NEXT_BTN": "Nächstes >>"
+
   },
   "REFERENCE": {
     "TEAM1": "Während unserem Projekt war Andreas zuverlässig und immer Motiviert und neugierig. Das war echt cool!",
     "TEAM2": "Im Projekt überzeugte Andreas durch seine strukturierte Arbeitsweise. Er erledigte seine Aufgaben pünktlich und ging Probleme ruhig an.",
     "TEAM3": "Andreas war ein verlässlicher Teampartner im Join-Projekt. Er kommunizierte klar, unterstützte andere und arbeitete verantwortungsvoll, was zu einer positiven Teamatmosphäre beitrug.",
     "GITLINK": "Zum LinkedIn-Profil"
+  },
+  "CONTACT": {
+    "TITLE": "Lass uns Kaffee in guten Code verwandeln",
+    "SUBTITLE": "Hast du eine Idee?",
+    "TITLEMAIL": "Schreib mir deine Idee – wir machen etwas daraus.",
+    "LABELONE": "Wie heist Du?",
+    "PLACEONE": "Ihr Name fehlt",
+    "PLACETWO": "Dein Name hier bitte",
+    "LABELTWO": "Wie lautet deine email?",
+    "PLACETHREE": "E-Mail fehlt oder ist ungültig",
+    "PLACEFOUR": "deineEmail@email.com",
+    "LABELTHREE": "Wie kann ich dir helfen?",
+    "PLACEFIVE": "Was möchtest du von mir?",
+    "PLACESIX": "Hallo Andreas, willst du einen Kaffee trinken …",
+    "POLICY": "Ich habe die Datenschutzerklärung gelesen und stimme zu",
+    "POLICY_ERROR": "Bitte akzeptieren !!",
+
+    "CONTACT_BTN" :"SENDEN"
   }
 }
