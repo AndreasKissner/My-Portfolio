@@ -3,7 +3,7 @@
 
 :host {
   position: relative; 
-  border: 1px solid red; 
+
   @include m.flex(flex-start,flex-start);
   flex-direction: column;
   height: 100%;
@@ -16,9 +16,9 @@
 
   section {
     position: relative;
-    border: 2px solid green;
     width: 100%;
     height: 625px;
+    padding:0 16px;
     @include m.flex(flex-end,flex,start);
     flex-direction: column-reverse;
 

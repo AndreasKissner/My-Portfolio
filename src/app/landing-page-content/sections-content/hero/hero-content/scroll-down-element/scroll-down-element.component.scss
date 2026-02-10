@@ -6,14 +6,14 @@
 
     &.profil-image-content-style {
         bottom: 7px;
-        left: 7px;
+        left: -3px;
 
     @media(min-width:725px) {
             display: none;
         }
     }
 
-    // 2. Varianet
+
     &.hero-style {
         bottom: 17px;
         left: 48px;
@@ -22,10 +22,8 @@
         @media(min-width:725px) {
             display: block;
         }
-
     }
 
-    // 3. Das Element innerhalb des Hosts
     a {
         position: relative;
         @include m.flex();
@@ -37,7 +35,6 @@
         }
     }
 }
-
 
 .outer-ring {
     width: 100%;

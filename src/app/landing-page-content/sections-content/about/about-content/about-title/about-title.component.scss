@@ -5,21 +5,18 @@
 
 :host {
     display: flex;
-    justify-content: flex-end; // Horizontal nach rechts
-    align-items: flex-end; // Vertikal nach unten
+    justify-content: flex-end; 
+    align-items: flex-end; 
     width: 100%;
     padding-top:43px;
-    min-height: 100px; // Wichtig: Der Container braucht Höhe, um "unten" zu definieren
-    border: 3px solid red;
+    min-height: 100px; 
     max-width: 400px;
 
     h1 {
-        /*  margin: 0 20px 27px 0; */
-        // Margin angepasst (unten statt oben), damit es nicht am Rand klebt
         font-size: 40px;
         font-family: f.$font-eczar;
         font-weight: bold;
-        margin: 0 4px 0 0 ;
+        padding-right: 16px;
 
         @include m.respond-normal {
             font-size: 72px;

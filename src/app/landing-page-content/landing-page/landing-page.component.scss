@@ -16,7 +16,6 @@
 
   &#hero {
     height: 100vh;
-    /*     overflow: hidden;  */
   }
 }
 
@@ -34,8 +33,7 @@
   app-reference,
   app-contact {
     flex: 1;
- /*    padding-left: clamp(2px, 4.28vw - 11.7px, 50px); */
-  /*   padding-right: 2px; */
+    padding-left: clamp(2px, 4.28vw - 11.7px, 50px); 
   }
 } 
 
