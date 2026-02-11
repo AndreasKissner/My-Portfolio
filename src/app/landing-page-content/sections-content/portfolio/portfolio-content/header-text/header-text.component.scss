@@ -6,7 +6,7 @@
 :host {
     height: auto;
     min-width: 288px;
-    max-width: 942px;
+    max-width: 1135px;
     padding:0 16px ; 
     @include m.flex(flex-start, center);
     flex-direction: column;  //mixin

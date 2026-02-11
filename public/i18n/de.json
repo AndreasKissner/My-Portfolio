@@ -4,7 +4,7 @@
     "CONTACT": "Kontakt"
   },
   "ABOUT": {
-    "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.\nFür mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.\n\nLass uns gemeinsam die digitale Welt gestalten und etwas wahrhaft Außergewöhnliches erschaffen.",
+    "GREETING": "Hi, ich bin Andreas – ein engagierter Entwickler.\nFür mich geht Programmierung weit über bloße Syntax hinaus; sie ist ein kreatives Ausdrucksmittel.\n\nLass uns gemeinsam die digitale Welt gestalten .",
     "ABOUT_TITLE": "ÜBER MICH"
   },
   "ABOUT_DIALOG": {
@@ -18,7 +18,7 @@
   },
   "SKILL": {
     "SKILL_TITLE": "Kernkompetenzen",
-    "COMPETENCE": "Ich habe in meinen Projekten vielfältige Frontend-Technologien eingesetzt – sowohl für statische als auch dynamische Websites. Dabei habe ich responsive Layouts umgesetzt, Datenvisualisierungen entwickelt und besondere Werte auf User Experience gelegt.",
+    "COMPETENCE": "Ich habe in meinen Projekten vielfältige Frontend-Technologien eingesetzt – sowohl für statische als auch dynamische Websites. Dabei habe ich responsive Layouts umgesetzt,und Datenvisualisierungen entwickelt .",
     "OVERLAY_TITLE": "Suchen Sie einen anderen SKILL ?",
     "OVERLAY_INTERESSE": "Kontaktieren Sie mich gerne. Ich bin motiviert, mein bestehendes Wissen weiter auszubauen und Neues zu lernen."
   },
