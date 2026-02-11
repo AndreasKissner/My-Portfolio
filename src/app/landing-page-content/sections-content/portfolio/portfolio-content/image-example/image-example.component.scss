@@ -8,7 +8,7 @@
   min-width: 300px;
   max-width: 500px;
   height: 358px;
-  border: 2px solid blue;
+
   @include m.flex();
   background-color: c.$orange-two;
   margin-bottom: 30px;
