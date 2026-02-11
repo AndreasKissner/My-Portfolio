@@ -6,68 +6,70 @@
 
 :host {
   @include m.flex(space-between, flex-start, column);
-  position: absolute;
   z-index: 10;
-  margin-top: 292px;
   align-self: flex-end;
-  background-color: #1c1c1c; // varibale
+  background-color: #1c1c1c;
   color: c.$light-beige;
   padding: clamp(16px, 3vw, 32px);
   border-radius: 4px;
   width: clamp(230px, 60vw + 20px, 700px);
-  min-height: 250px;
-
-  @include m.respond-sm {
-    bottom: 0px;
-    min-height: 170px;
-    margin-bottom: 5px;
-    align-self: center;
-    justify-content: center;
+  transform: translate(0, -30px);
+ 
+  @include m.respond-500 {
+    min-width: 400px;
+    height: 250px;
+    transform: translate(-15px, -90px);
   }
 
-  @include m.respond-normal {
-    bottom: 251px;
-    left: 148px;
+  @include m.respond-650 {
+    min-width: 400px;
+    transform: translate(11px, -166px);
   }
 
   @include m.respond-mid {
-    bottom: 60px;
+    max-width: 600px;
+    transform: translate(2px, -320px);
   }
 
+  @include m.respond-normal {
+    transform: translate(9px, 420px);
+  }
+
+
   @include m.respond-large {
-    left: 365px;
-    bottom: 320px;
+    transform: translate(-50px, 420px);
   }
 
   @include m.respond-xl {
-    left: 440px
+    transform: translate(-253px, 420px);
   }
+}
 
-  .text-wrapper {
-    width: 100%;
+.text-wrapper {
+  width: 100%;
 
-    p {
-      font-family: f.$font-second;
-      margin: 0;
-      line-height: 1.4;
-      font-size: clamp(14px, 1.5vw, 18px);
-    }
+  p {
+    font-family: f.$font-second;
+    margin: 0;
+    line-height: 1.4;
+    font-size: clamp(14px, 1.5vw, 18px);
   }
+}
 
-  .btn-icon {
-    width: 100%;
-    margin-top: 20px;
-    @include m.flex(space-between, center, row);
+.btn-icon {
+  width: 100%;
+  margin-top: 20px;
+  height: 50px;
+  @include m.flex(space-between, center, row);
 
-    app-btn-primaer {
-      flex-shrink: 0;
-    }
+  app-btn-primaer {
+    flex-shrink: 0;
   }
+}
 
-  img {
-    width: clamp(30px, 5vw, 50px);
-    height: auto;
-  }
+img {
+  width: clamp(30px, 5vw, 50px);
+  height: auto;
 }
 
 
@@ -78,49 +80,59 @@
 
   img {
     width: 50px;
-    @include m.float-animation ;
+    @include m.float-animation;
   }
 
-  
+
 }
 
-/* ENDE */
-
 app-dialog {
-  position: absolute;
-  top: 40px;
-  left: -49px;
-  z-index: 1000;
+  display: block;
+  position: relative;
+  z-index: 9999;
+  pointer-events: none;
+  
+  transform: translate(-231px, -117px);
+
+   @include m.respond-500 {
+   transform: translate(-61px, -80px);
+  }
 
   @include m.respond-sm {
-    top:-87px;
-    left:130px
-  }
-  @include m.respond-normal {
-    top:-87px;
-    left:280px
-  }
-    @include m.respond-large{
-    top:211px;
-    left:410px
+    transform: translate(-231px, -117px);
   }
 
+  @include m.respond-normal {
+    transform: translate(-4px, -83px);
+  }
+
+  @include m.respond-large {
+    transform: translate(50px, -64px);
+  }
 
   &.is-open {
-    animation: dialogIn 0.4s ease-out forwards;
+    .dialog-inner {
+      pointer-events: auto;
+      animation: dialogIn 0.4s ease-out forwards;
+    }
   }
 
   &.is-closing {
-    animation: dialogOut 0.3s ease-in forwards;
+    .dialog-inner {
+      pointer-events: none;
+      animation: dialogOut 0.3s ease-in forwards;
+    }
   }
 
   .dialog-inner {
-    position: relative;
+    z-index: 10000;
     min-width: 272px;
     padding: 32px;
     background: c.$dark-blue;
-    border: 1px solid c.$skill-black ;
+    border: 1px solid c.$skill-black;
     border-radius: 4px;
+    pointer-events: auto;
+    opacity: 0; 
 
     h1 {
       margin: 0 0 20px 0;
@@ -150,17 +162,17 @@ app-dialog {
 
     .close-btn {
       @include closeDialogBtn.close-button-style;
+      cursor: pointer; 
     }
   }
 }
-
 
 @keyframes dialogIn {
   from {
     opacity: 0;
     transform: translateY(70%);
+    pointer-events: all;
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -174,7 +186,7 @@ app-dialog {
   }
   to {
     opacity: 0;
-    transform: translateY(120%); // Weiter runter schieben
-    visibility: hidden;         // Komplett vom Rendering ausschließen
+    transform: translateY(120%);
+    visibility: hidden;
   }
 }

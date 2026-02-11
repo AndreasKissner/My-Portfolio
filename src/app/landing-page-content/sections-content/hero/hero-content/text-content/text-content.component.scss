@@ -21,7 +21,7 @@ p {
   font-size: clamp(20px, 4vw, 48px);
   font-family: f.$font-second;
   line-height: 1.1;
-  margin: 0 0 10px 4px; 
+  margin-bottom:10px; 
 }
 
 h1 {
@@ -30,7 +30,7 @@ h1 {
   margin: 0;
   line-height: 0.85;
   font-size: clamp(50px, 8vw, 96px);
-  margin-left:4px;
+/*   margin-left:4px; */
 }
 
 h1:first-of-type {

@@ -58,12 +58,28 @@
   }
 }
 
+// $screen-sm500
+// 500px 
+@mixin respond-500 {
+  @media (min-width: v.$screen-sm500) {
+    @content;
+  }
+}
+
+
 // 576px (Smartphones Landscape)
 @mixin respond-sm {
   @media (min-width: v.$screen-sm) {
     @content;
   }
 }
+
+@mixin respond-650 {
+  @media (min-width: v.$screen-sm650) {
+    @content;
+  }
+}
+
 
 //  768px 
 @mixin respond-mid {

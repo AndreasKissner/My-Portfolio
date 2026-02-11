@@ -1,14 +1,30 @@
+@use 'style-varibles/mixins' as m;
 
+:host{
+ width: 100%;
+  height:100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
 
 img {
   display: block;
   width: clamp(214px, 40vw + 86px, 528px);
   height: clamp(260px, 65vw + 100px, 740px);
-  object-fit: cover; 
-/*   margin-left:2px; */
-  margin-top: 10px;  // Aendern
+  object-fit: cover;
+ /*  margin-top: 10px; */
 
-   @media(min-width :768px ){
+  @include m.respond-mid {
     height: 614px;
-  }  
+  }
+
+  @include m.respond-normal {
+    height: 656px;
+  }
+
+  @include m.respond-large {
+    height: 711px;
+  }
+
 }
