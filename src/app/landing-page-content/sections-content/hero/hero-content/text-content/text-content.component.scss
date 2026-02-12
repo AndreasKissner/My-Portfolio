@@ -4,7 +4,7 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
- 
+
   @include m.flex(flex-start, flex-start, column);
   margin: 15px 0 5px 0;
   max-width: 100%;
@@ -20,11 +20,13 @@ p {
   font-family: f.$font-second;
   line-height: 1.1;
   margin-bottom: 10px;
+
   @include m.respond-mid {
-    font-size: 25px;//48
+    font-size: 25px;
   }
-   @include m.respond-normal {
-    font-size: 48px;//48
+
+  @include m.respond-normal {
+    font-size: 48px;
   }
 }
 
@@ -34,11 +36,13 @@ h1 {
   margin: 0;
   line-height: 0.85;
   font-size: 50px;
+
   @include m.respond-mid {
-    font-size: 68px;//96
+    font-size: 68px;
   }
-   @include m.respond-mid {
-    font-size: 96px;//48
+
+  @include m.respond-mid {
+    font-size: 96px;
   }
 }
 

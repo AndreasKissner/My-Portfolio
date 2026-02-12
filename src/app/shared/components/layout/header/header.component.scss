@@ -8,7 +8,7 @@ header {
   max-width: 332px;
   @include m.flex(space-between, center);
 
-   @include m.respond-xsm360 {
+  @include m.respond-xsm360 {
     max-width: 352px;
     padding: 0;
   }
@@ -24,20 +24,20 @@ header {
   }
 
   @include m.respond-normal {
-    max-width:1199px;
-      padding: 0 20px;
+    max-width: 1199px;
+    padding: 0 20px;
   }
 
-   @include m.respond-large {
-    max-width:1399px;
+  @include m.respond-large {
+    max-width: 1399px;
   }
 
   @include m.respond-xl {
-    max-width:1599px;
+    max-width: 1599px;
   }
 
   @include m.respond-xxl {
-    max-width:1919px;
+    max-width: 1919px;
   }
 
   .header-left {
@@ -55,7 +55,7 @@ header {
     align-items: center;
     padding-right: 10px;
     gap: 10px;
-   
+
     @include m.respond-mid {
       padding-right: 20px;
     }

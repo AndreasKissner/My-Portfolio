@@ -3,18 +3,17 @@
 @use 'style-varibles/mixins' as m;
 
 
-:host{
+:host {
   @include m.section-layout(c.$dark-blue);
-  @media(min-width:725px){
+
+  @media(min-width:725px) {
     flex-direction: row;
- }
+  }
 }
 
-section{
+section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 16px ;
+  padding-left: 16px;
 }
-
-

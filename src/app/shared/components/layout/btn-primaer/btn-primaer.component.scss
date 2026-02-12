@@ -14,7 +14,7 @@
     max-width: v.$btn-max-width;
     height: 40px;
     border-radius: 100px;
-    border: 1px solid c.$light-beige;// Variablen machen ,ax width
+    border: 1px solid c.$light-beige;
     padding: 12px 24px;
     background-color: transparent;
     font-size: 18px;
@@ -23,7 +23,7 @@
     font-weight: 700;
     transition: .100s ease-in;
     text-decoration: none;
-    
+
     @media (hover: hover) {
         &:hover {
             background-color: c.$accent-orange;
@@ -31,7 +31,7 @@
     }
 
     &:active {
-        background-color:c.$accent-orange;
+        background-color: c.$accent-orange;
     }
 
 

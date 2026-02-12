@@ -4,12 +4,9 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
-    @include m.flex(center, center, column);
     width: 100%;
-   /*  height: 259px; */
-    flex-direction: column;
+    @include m.flex(center, center, column);
     padding: 0 16px;
-
 
     @include m.respond-normal {
         @include m.flex(center, flex-start, center)
@@ -25,13 +22,11 @@
 }
 
 .skill-box {
-
     max-width: 600px;
     margin-bottom: 20px;
     padding: 16px;
     background-color: #679aac;
     border-radius: 4px;
-
 
     @include m.respond-normal {
         margin: 0px;

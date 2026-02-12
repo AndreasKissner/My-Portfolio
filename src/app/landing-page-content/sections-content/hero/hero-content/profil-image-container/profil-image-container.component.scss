@@ -100,19 +100,21 @@
   @include m.flex(center, flex-end);
   width: 100%;
 
-
   img {
     width: 234px;
     object-fit: contain;
     display: block;
+
     @include m.respond-sm {
       width: 320px;
     }
+
     @include m.respond-mid {
       width: 390px;
     }
+
     @include m.respond-large {
-    width: 496px;
-  }
+      width: 496px;
+    }
   }
 }

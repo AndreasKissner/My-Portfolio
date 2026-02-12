@@ -5,9 +5,7 @@
 @use 'style-varibles/component-mixins/close-dialog-btn' as closeDialogBtn;
 
 :host {
-  display: flex;
-  justify-content: flex-start;
-  align-self: flex-start;
+  @include m.flex(flex-start, flex-start);
   width: 100%;
   padding-left: 10px;
   max-width: 330px;
@@ -18,10 +16,9 @@ app-open-dialog-btn {
   button {
     background-color: transparent;
     border: none;
-    cursor: pointer;
     padding: 0;
     position: relative;
-    margin-left:4px;
+    margin-left: 4px;
     @include m.flex();
     @include m.size(120px);
 
@@ -49,22 +46,22 @@ app-dialog {
   left: 10px;
   z-index: 1000;
 
-   @include m.respond-sm {
+  @include m.respond-sm {
     top: 1813px;
     left: 98px
-  } 
+  }
 
-   @include m.respond-mid {
+  @include m.respond-mid {
     top: 2005px;
     left: 210px
-  } 
+  }
 
-   @include m.respond-normal {
+  @include m.respond-normal {
     top: 2200px;
     left: 310px
   }
- 
- 
+
+
   &.is-open {
     animation: dialogIn 0.4s ease-out forwards;
   }
@@ -74,29 +71,29 @@ app-dialog {
   }
 
   @keyframes dialogIn {
-  from {
-    opacity: 0;
-    transform: translateY(70%);
+    from {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  @keyframes dialogOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-@keyframes dialogOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
+    to {
+      opacity: 0;
+      transform: translateY(120%);
+      visibility: hidden;
+    }
   }
-
-  to {
-    opacity: 0;
-    transform: translateY(120%);
-    visibility: hidden;
-  }
-}
 
   .dialog-inner {
     position: relative;

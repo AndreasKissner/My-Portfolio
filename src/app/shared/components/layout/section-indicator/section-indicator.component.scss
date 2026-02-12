@@ -13,10 +13,9 @@
 }
 
 .section-indicator {
-    @include m.flex();
-    flex-direction: column;
+    @include m.flex(center, center, column);
     gap: 5px;
-    display: none;
+    display: none;  
     border: 1px solid blue;
     width: 20px;
 
@@ -31,7 +30,7 @@
 }
 
 .black-icon {
-    filter: brightness(0); 
+    filter: brightness(0);
 }
 
 .orange-icon {

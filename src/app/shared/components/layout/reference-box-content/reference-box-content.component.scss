@@ -15,7 +15,7 @@
 :host ::ng-deep section {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto auto; // Header, Main, Footer
+    grid-template-rows: auto auto auto; 
     @include m.border-white-all(c.$light-beige);
     padding: 16px;
     width: 100%;

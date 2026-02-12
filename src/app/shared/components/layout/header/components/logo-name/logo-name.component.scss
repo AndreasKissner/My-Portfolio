@@ -4,11 +4,11 @@
 @use 'style-varibles/fonts' as f;
 
 .name-middle {
-    @include m.flex(flex-start,center);
-    position: relative;
-    gap: 5px;
-    left: 10px; 
-    
+  @include m.flex(flex-start, center);
+  position: relative;
+  gap: 5px;
+  left: 10px;
+
   img {
     width: 50px;
   }
@@ -20,6 +20,3 @@
     color: c.$titleName-white;
   }
 }
-
-
-

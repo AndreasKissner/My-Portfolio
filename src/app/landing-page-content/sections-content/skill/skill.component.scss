@@ -5,13 +5,10 @@
 :host {
     width: 100%;
     height: auto;
-    /*  display: flex;
-    align-items: center;
-    flex-direction: column; */
     @include m.flex-col-center();
 
- 
-margin:45px 0 0 0 ;
+    margin: 45px 0 0 0;
+
     @include m.respond-normal {
         margin: 20px 0 45px 0;
     }

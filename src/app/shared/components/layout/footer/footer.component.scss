@@ -11,18 +11,18 @@
 }
 
 footer {
-  padding: 10px 12px;   
-  @include m.flex(center, center, column, 10px);            
+  padding: 10px 12px;
+  @include m.flex(center, center, column, 10px);
   @include m.color-font;
 
   .footer-links {
     width: 100%;
-    max-width: 600px; 
-    @include m.flex(space-between,center);
+    max-width: 600px;
+    @include m.flex(space-between, center);
 
-a {
+    a {
       @include m.color-font;
-      transition: color 0.150s ease; 
+      transition: color 0.150s ease;
 
       &:active {
         color: c.$orange-four;
@@ -34,4 +34,5 @@ a {
         }
       }
     }
-  }}
+  }
+}

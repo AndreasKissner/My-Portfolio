@@ -22,7 +22,7 @@
     height: 205px;
     transform: translate(-15px, -90px);
   }
- 
+
   @include m.respond-500 {
     min-width: 400px;
     height: 205px;
@@ -69,17 +69,15 @@
   height: 50px;
   @include m.flex(space-between, center, row);
 
- app-btn-primaer {
+  app-btn-primaer {
     flex-shrink: 0;
-  } 
-
+  }
 }
 
 img {
   width: clamp(30px, 5vw, 50px);
   height: auto;
 }
-
 
 .dialog-trigger {
   background-color: transparent;
@@ -90,8 +88,6 @@ img {
     width: 50px;
     @include m.float-animation;
   }
-
-
 }
 
 app-dialog {
@@ -102,12 +98,12 @@ app-dialog {
   transform: translate(-56px, -282px);
 
 
- @include m.respond-420 {
-   transform: translate(76px, -282px);
+  @include m.respond-420 {
+    transform: translate(76px, -282px);
   }
 
-   @include m.respond-500 {
-   transform: translate(89px, -282px);
+  @include m.respond-500 {
+    transform: translate(89px, -282px);
   }
 
   @include m.respond-sm {
@@ -144,7 +140,7 @@ app-dialog {
     border: 1px solid c.$skill-black;
     border-radius: 4px;
     pointer-events: auto;
-    opacity: 0; 
+    opacity: 0;
 
     h1 {
       margin: 0 0 20px 0;
@@ -163,6 +159,7 @@ app-dialog {
         font-weight: 400px;
         @include m.flex();
         margin-bottom: 10px;
+
         img {
           width: 16px;
           margin-right: 5px;
@@ -172,7 +169,7 @@ app-dialog {
 
     .close-btn {
       @include closeDialogBtn.close-button-style;
-      cursor: pointer; 
+      cursor: pointer;
     }
   }
 }
@@ -183,6 +180,7 @@ app-dialog {
     transform: translateY(70%);
     pointer-events: all;
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -194,6 +192,7 @@ app-dialog {
     opacity: 1;
     transform: translateY(0);
   }
+
   to {
     opacity: 0;
     transform: translateY(120%);

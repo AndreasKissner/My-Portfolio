@@ -1,7 +1,7 @@
 @use 'style-varibles/mixins' as m;
 
 .social-btn-container {
-  @include m.flex(center,center,row);
+  @include m.flex(center, center, row);
   gap: 15px;
 }
 
@@ -44,12 +44,14 @@
   }
 
   .social-link {
+
     .img-mobile.black,
     .img-mobile.orange-mobile {
       display: none !important;
     }
 
     &:active {
+
       .img-mobile.black,
       .img-mobile.orange-mobile {
         display: none !important;

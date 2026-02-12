@@ -9,9 +9,10 @@
     margin-top: 17px;
     min-height: 100px;
     max-width: 400px;
-     @include m.respond-large {
-            margin-top: 0;
-        }
+
+    @include m.respond-large {
+        margin-top: 0;
+    }
 
     h1 {
         font-size: 40px;
@@ -23,6 +24,4 @@
             font-size: 72px;
         }
     }
-
-
 }
