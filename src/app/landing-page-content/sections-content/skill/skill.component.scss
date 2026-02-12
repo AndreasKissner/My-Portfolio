@@ -1,13 +1,18 @@
 @use 'style-varibles/variables' as v;
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
-:host{
+
+:host {
     width: 100%;
     height: auto;
-   /*  display: flex;
+    /*  display: flex;
     align-items: center;
     flex-direction: column; */
     @include m.flex-col-center();
+
  
-    margin-top: 45px;
+margin:45px 0 0 0 ;
+    @include m.respond-normal {
+        margin: 20px 0 45px 0;
+    }
 }

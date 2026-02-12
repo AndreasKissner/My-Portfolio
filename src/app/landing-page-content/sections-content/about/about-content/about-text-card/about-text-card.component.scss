@@ -10,14 +10,22 @@
   align-self: flex-end;
   background-color: #1c1c1c;
   color: c.$light-beige;
+  height: 300px;
+  margin-bottom: 39px;
   padding: clamp(16px, 3vw, 32px);
   border-radius: 4px;
   width: clamp(230px, 60vw + 20px, 700px);
   transform: translate(0, -30px);
+
+  @include m.respond-420 {
+    min-width: 400px;
+    height: 205px;
+    transform: translate(-15px, -90px);
+  }
  
   @include m.respond-500 {
     min-width: 400px;
-    height: 280px;
+    height: 205px;
     transform: translate(-15px, -90px);
   }
 
@@ -34,7 +42,6 @@
   @include m.respond-normal {
     transform: translate(9px, 420px);
   }
-
 
   @include m.respond-large {
     transform: translate(-50px, 420px);
@@ -62,9 +69,10 @@
   height: 50px;
   @include m.flex(space-between, center, row);
 
-  app-btn-primaer {
+ app-btn-primaer {
     flex-shrink: 0;
-  }
+  } 
+
 }
 
 img {

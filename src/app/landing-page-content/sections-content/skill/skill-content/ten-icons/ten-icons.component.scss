@@ -11,12 +11,12 @@
   @include m.flex();
   flex-wrap: wrap;
   padding: 0 16px;
-  gap: clamp(10px, 3.75vw - 5px, 40px);
+  gap: clamp(10px, 3.75vw - 5px, 44px);
     @include m.respond-normal {
     align-self: flex-end;
   }
      @include m.respond-large {
-    padding-top: 150px;
+    padding-top:110px;
   }
 
 }
@@ -26,8 +26,8 @@
   gap: 12px;
 
   img {
-   width: clamp(69px, 3.5vw + 55px, 96px);
-height: clamp(69px, 3.5vw + 55px, 96px);
+   width: clamp(69px, 3.5vw + 55px, 86px);
+height: clamp(69px, 3.5vw + 55px, 86px);
     transition: transform 200ms ease;
 
     @media(max-width:700px) {

@@ -5,12 +5,15 @@
 
 :host {
     display: flex;
-    justify-content: flex-end; 
-    align-items: flex-end; 
+    justify-content: flex-end;
+    align-items: flex-end;
     width: 100%;
-   /*  padding-top:43px; */  // Look fpr MOBILE VERSION DESIGN
-    min-height: 100px; 
+    margin-top: 17px;
+    min-height: 100px;
     max-width: 400px;
+     @include m.respond-large {
+            margin-top: 0;
+        }
 
     h1 {
         font-size: 40px;
@@ -23,5 +26,5 @@
         }
     }
 
-    
+
 }

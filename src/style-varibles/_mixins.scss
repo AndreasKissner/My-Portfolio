@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- /*  padding-left: clamp(1px, 2vw, 50px); */
   width: 100%;
   height: calc(100vh - 72px);
   background-color: $bg;
@@ -44,30 +43,31 @@
   height: $height;
 }
 
-// Ab 321px
+
 @mixin respond-xs {
   @media (min-width: v.$screen-xs) {
     @content;
   }
 }
 
-//360
 @mixin respond-xsm360 {
   @media (min-width: v.$screen-xsm360) {
     @content;
   }
 }
 
-// $screen-sm500
-// 500px 
+@mixin respond-420 {
+  @media (min-width: v.$screen-sm420) {
+    @content;
+  }
+}
+
 @mixin respond-500 {
   @media (min-width: v.$screen-sm500) {
     @content;
   }
 }
 
-
-// 576px (Smartphones Landscape)
 @mixin respond-sm {
   @media (min-width: v.$screen-sm) {
     @content;
@@ -80,50 +80,42 @@
   }
 }
 
-
-//  768px 
 @mixin respond-mid {
   @media (min-width: v.$screen-mid) {
     @content;
   }
 }
 
-// 992px 
 @mixin respond-normal {
   @media (min-width: v.$screen-normal) {
     @content;
   }
 }
-
-//  1024px 
+ 
 @mixin respond-laptop {
   @media (min-width: v.$screen-laptop) {
     @content;
   }
 }
 
-//  1200px 
 @mixin respond-large {
   @media (min-width: v.$screen-large) {
     @content;
   }
 }
 
-//  Ab 1400px )
 @mixin respond-xl {
   @media (min-width: v.$screen-xl) {
     @content;
   }
 }
 
-// Ab 1600px
 @mixin respond-xxl {
   @media (min-width: v.$screen-xxl) {
     @content;
   }
 }
 
-// Ab 1920px (FullHD / Ultra Wide)
 @mixin respond-xxxl {
   @media (min-width: v.$screen-xxxl) {
     @content;

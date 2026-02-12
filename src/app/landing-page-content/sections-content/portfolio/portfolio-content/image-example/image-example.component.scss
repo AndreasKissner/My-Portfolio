@@ -8,37 +8,36 @@
   min-width: 300px;
   max-width: 500px;
   height: 358px;
-
-  @include m.flex();
   background-color: c.$orange-two;
   margin-bottom: 30px;
-     @include m.respond-normal {
-            
-            height:450px;
-        }
-    
+  @include m.flex();
+  @include m.respond-normal {
+    height: 450px;
+  }
+
 
   article {
     width: 280px;
-    height: 216px;
+    height: 186px;
     border: 2px solid green;
     z-index: 10;
-      @include m.respond-normal {
-            width: 420px;
-            height:auto;
-        }
-    
+
+    @include m.respond-normal {
+      width: 420px;
+      height: auto;
+    }
+
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; 
+      object-fit: cover;
       display: block;
     }
   }
 
   .bg-image-wrapper img {
-    position: absolute;  // NO Translate
+    position: absolute; // NO Translate
     top: 215px;
     left: 20px;
     transform: translate(-50%, -50%);
@@ -46,5 +45,10 @@
     width: 120px;
     height: auto;
     @include m.rotate-ring;
+    @include m.respond-normal {
+      top: 293px;
+      left: 5px;
+    }
+
   }
 }

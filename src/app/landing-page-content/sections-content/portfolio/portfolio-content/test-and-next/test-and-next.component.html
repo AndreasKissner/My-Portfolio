@@ -3,26 +3,21 @@
   <app-open-dialog-btn>
     <button class="dialog-trigger" (mouseenter)="dialog.onHover(true)" (mouseleave)="dialog.onHover(false)"
       (focus)="dialog.onHover(true)" (blur)="dialog.onHover(false)" (click)="dialog.onClick()">
-      <img [src]="content()?.icon" [alt]="content()?.title" width="300"> 
+      <img [src]="content()?.icon" [alt]="content()?.title" width="300">
 
     </button>
   </app-open-dialog-btn>
 </header>
 
-<app-utily-description
-  [languageText]="content()?.languages"
-  [descriptionText]="content()?.description | translate"
-></app-utily-description>
+<app-utily-description [languageText]="content()?.languages"
+  [descriptionText]="content()?.description | translate"></app-utily-description>
 
-<app-link-git-project
-  [linkGit]="content()?.githubUrl"
-  [linkLive]="content()?.liveUrl">
+<app-link-git-project [linkGit]="content()?.githubUrl" [linkLive]="content()?.liveUrl">
 </app-link-git-project>
-
 
 <app-dialog [class.is-open]="dialog.showDialog()" [class.is-closing]="!dialog.showDialog()">
   <div class="dialog-inner">
     <button class="close-btn" (click)="dialog.closeDialog()">X</button>
     <p>{{content()?.dialog | translate}}</p>
-   
+
   </div>
