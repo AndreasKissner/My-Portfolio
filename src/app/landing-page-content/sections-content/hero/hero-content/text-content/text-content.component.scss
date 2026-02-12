@@ -4,11 +4,9 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
-  /*  display: flex;
-  justify-content: flex-start; 
-  align-items: flex-start; */
+ 
   @include m.flex(flex-start, flex-start, column);
-  margin:15px 0 5px 0;
+  margin: 15px 0 5px 0;
   max-width: 100%;
 
   @media (min-width: 1241px) {
@@ -18,10 +16,16 @@
 
 p {
   white-space: nowrap;
-  font-size: clamp(20px, 4vw, 48px);
+  font-size: 20px;
   font-family: f.$font-second;
   line-height: 1.1;
-  margin-bottom:10px; 
+  margin-bottom: 10px;
+  @include m.respond-mid {
+    font-size: 25px;//48
+  }
+   @include m.respond-normal {
+    font-size: 48px;//48
+  }
 }
 
 h1 {
@@ -29,8 +33,13 @@ h1 {
   font-weight: bold;
   margin: 0;
   line-height: 0.85;
-  font-size: clamp(50px, 8vw, 96px);
-/*   margin-left:4px; */
+  font-size: 50px;
+  @include m.respond-mid {
+    font-size: 68px;//96
+  }
+   @include m.respond-mid {
+    font-size: 96px;//48
+  }
 }
 
 h1:first-of-type {
