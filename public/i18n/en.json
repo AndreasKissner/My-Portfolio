@@ -35,9 +35,10 @@
      
   },
   "REFERENCE": {
-    "TEAM1": "Throughout his training, Andreas was reliable and motivated. He worked well both independently and in a team, everytime stayed curious.",
+    "TEAM_SAY" :"What my collegues say about me",
+    "TEAM1": "Throughout his training, Andreas was reliable and motivated. He worked well both independently and in a team.",
     "TEAM2": "In the project, Andreas stood out for his structured way of working. He completed his tasks on time and approached problems calmly.",
-    "TEAM3": "Andreas was a reliable team partner on the Join project. He communicated clearly, supported others, and worked responsibly, helping maintain a positive team atmosphere.",
+    "TEAM3": "Andreas was a reliable team partner . He communicated clearly, supported others, and worked responsibly, helping maintain a positive team atmosphere.",
     "GITLINK": "Go to LinkedIn profile."
   },
   "CONTACT": {

@@ -7,7 +7,7 @@
   width: 30px;
   height: 20px;
 
-  @include m.flex(space-between,center, column);
+  @include m.flex(space-between, center, column);
   cursor: pointer;
 
   span {
@@ -25,9 +25,11 @@
     span:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
+
     span:nth-child(2) {
       opacity: 0;
     }
+
     span:nth-child(3) {
       transform: translateY(-9px) rotate(-45deg);
     }
@@ -45,13 +47,11 @@
   @include m.flex(flex-end, flex-start);
 
   visibility: hidden;
-  /*   opacity: 0; */
   transition: all 0.2s ease-in-out;
   pointer-events: none;
 
   &.active {
     visibility: visible;
-    /*  opacity: 1; */
     pointer-events: all;
 
     .menu-content {
@@ -79,7 +79,6 @@
   }
 }
 
-/* SOCIAL BUTTONS im Menu (mobile-first) */
 ::ng-deep .social-mobile {
   display: flex !important;
   justify-content: flex-start !important;
@@ -158,7 +157,7 @@
       display: inline-block;
       background-image: url('/assets/img/icons/profilBg/profil-bg-1.webp');
       background-size: contain;
-      background-repeat: no-repeat; 
+      background-repeat: no-repeat;
       width: 0;
       height: 20px;
       margin-right: 0;

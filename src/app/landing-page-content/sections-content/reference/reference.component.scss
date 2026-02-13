@@ -16,9 +16,9 @@
 
 .content-wrapper {
   height: auto;
-
-  @include m.flex();
-  flex-direction: column;
+width: 100%;
+  @include m.flex(space-around,center);
+  flex-direction: column; 
 
   @include m.respond-laptop {
     flex-direction: row;

@@ -153,6 +153,9 @@ app-dialog {
       list-style: none;
       padding: 0;
       margin: 0;
+      display: flex;
+      align-items: flex-start;  // mixin
+      flex-direction: column;
 
       li {
         font-family: f.$font-second;

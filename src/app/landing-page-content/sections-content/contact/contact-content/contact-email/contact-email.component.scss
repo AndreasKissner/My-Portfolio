@@ -5,11 +5,28 @@
 
 :host {
     display: flex;
-    justify-content: flex-start; // Falls du es zentrieren willst
-    width: 100%; // Zwingt die Komponente auf volle Breite
+    justify-content: flex-start; //mixin
+    width: 100%;
+    max-width: 750px;
     border: 1px solid yellow;
     padding: 0 16px;
     margin-top: 32px;
+
+     
+    .double-content{
+        margin-bottom: 45px;
+        @include m.respond-laptop{
+        display: flex;
+        justify-content: center;  // mixin
+        align-items: stretch;
+        gap:8px;    }
+     
+        @include m.respond-large{
+        gap:80px;
+    }
+    }
+
+    
 }
 
 .contact-form {
@@ -42,7 +59,7 @@
     margin: 40px 0 24px 0;
     width: 100%;
     @include m.flex(center, flex-end);
-    position: relative; //mal sehen
+    position: relative; 
 
     a {
         position: absolute;
@@ -103,7 +120,6 @@
             font-weight: 400;
             color: c.$light-beige;
             height: 24px;
-
         }
 
         a {

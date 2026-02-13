@@ -23,7 +23,7 @@
     "OVERLAY_INTERESSE": "Kontaktieren Sie mich gerne. Ich bin motiviert, mein bestehendes Wissen weiter auszubauen und Neues zu lernen."
   },
   "PORTFOLIO": {
-    "HEADER": "Meine Arbeiten",
+    "HEADER": "Arbeiten",
     "SUBTITLE": "Entdecke hier eine Auswahl meiner Projekte – Interagiere mit ihnen, um meine Fähigkeiten in Aktion zu sehen.",
     "JOIN_DESC": "Ein Aufgaben-Manager im Stil des Kanban-Systems, mit dem Aufgaben per Drag-and-Drop erstellt, verschoben und organisiert sowie Benutzern und Kategorien zugewiesen werden können.",
     "LOCO_DESC": "Ein temporeiches Jump-and-Run-Spiel, in dem du Loco Pocco durch Hindernisse steuerst, Gegenstände sammelst und in abwechslungsreichen, herausfordernden Levels das Ziel erreichst.",
@@ -34,9 +34,10 @@
 
   },
   "REFERENCE": {
-    "TEAM1": "Während unserem Projekt war Andreas zuverlässig und immer Motiviert und neugierig. Das war echt cool!",
+    "TEAM_SAY" :"Was meine Kollegen sagen",
+    "TEAM1": "Während unserem Projekt war Andreas zuverlässig und immer Motiviert und neugierig. Das war echt cool mit Ihm!",
     "TEAM2": "Im Projekt überzeugte Andreas durch seine strukturierte Arbeitsweise. Er erledigte seine Aufgaben pünktlich und ging Probleme ruhig an.",
-    "TEAM3": "Andreas war ein verlässlicher Teampartner im Join-Projekt. Er kommunizierte klar, unterstützte andere und arbeitete verantwortungsvoll, was zu einer positiven Teamatmosphäre beitrug.",
+    "TEAM3": "Andreas war ein verlässlicher Teampartner. Er kommunizierte klar, unterstützte andere und arbeitete verantwortungsvoll, was zu einer positiven Teamatmosphäre beitrug.",
     "GITLINK": "Zum LinkedIn-Profil"
   },
   "CONTACT": {

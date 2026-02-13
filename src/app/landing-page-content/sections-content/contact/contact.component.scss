@@ -1,9 +1,69 @@
 @use 'style-varibles/mixins' as m;
+
 :host {
-  /*  width: 100%; */
   margin: 55px 0 0px 0;
   border: 1px solid yellow;
-  @include m.flex();
+  display: flex;
   flex-direction: column;
+  align-items: center;
 
+  @include m.respond-laptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; 
+    @include m.respond-laptop{
+      padding-right: 15px;
+    }
+    @include m.respond-large{
+      padding-right: 40px;
+    }
+  }
+
+  article {
+    display: contents; 
+
+    @include m.respond-laptop {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 530px;
+      order: 1;
+    }
+
+    app-contact-title, 
+    app-contact-problem-content {
+      order: 1;
+    }
+
+    app-two-icons {
+      order: 3;
+    }
+  }
+
+  section {
+    display: contents;
+    border: 2px solid red;
+
+    @include m.respond-laptop {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 830px;
+      order: 2;
+      align-items: center; 
+
+      app-contact-email {
+        margin-top: auto; 
+      }
+
+      app-footer {
+        margin-top: 20px; 
+      }
+    }
+
+    app-contact-email,
+    app-footer {
+      order: 2; 
+    }
+  }
 }

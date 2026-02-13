@@ -50,7 +50,7 @@
 .header-mobile-hidden {
   display: none;
 
-  @include m.respond-mid {
+  @include m.respond-laptop {
     display: block;
   }
 }

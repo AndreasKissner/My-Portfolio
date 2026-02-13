@@ -2,11 +2,14 @@
 @use 'style-varibles/mixins' as m;
 
 :host {
-    @include m.flex(center, flex-end);
+    @include m.flex(flex-start, flex-end);
     width: 100%;
     padding: 20px 16px 0 16px;
     overflow: hidden;
- 
+
+    @include m.respond-laptop{
+        padding-top:50px;
+    }
 }
 
 .icon {

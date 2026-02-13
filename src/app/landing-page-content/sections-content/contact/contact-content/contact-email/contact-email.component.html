@@ -1,5 +1,6 @@
 <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
+    <section class="double-content">
     <app-input-fields-email labelText="{{ 'CONTACT.LABELONE' | translate}}">
         <input type="text" name="userName" [(ngModel)]="contactData.name" #nameField="ngModel" required
             [placeholder]="(nameField.invalid && nameField.touched) ? ('CONTACT.PLACEONE' | translate) : ('CONTACT.PLACETWO' | translate)"
@@ -11,6 +12,7 @@
             [placeholder]="(emailField.invalid && emailField.touched) ? ('CONTACT.PLACETHREE' |translate) : ('CONTACT.PLACEFOUR'| translate)"
             [class.input-error]="emailField.invalid && emailField.touched">
     </app-input-fields-email>
+    </section>
 
     <app-input-fields-email labelText="{{ 'CONTACT.LABELTHREE' | translate}}">
         <textarea name="message" [(ngModel)]="contactData.message" #messageField="ngModel" required rows="1"

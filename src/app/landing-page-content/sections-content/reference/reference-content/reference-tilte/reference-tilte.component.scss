@@ -9,13 +9,16 @@ align-self: flex-start;
         color: c.$light-beige;
        @include m.font40-eczar(f.$font-eczar);
         font-weight: 900;
-        
         padding-left: 16px;
         margin-bottom: 10px;
 
         @include m.respond-sm {
             font-size: 55px;
             text-align: center;
+        }
+
+        @include m.respond-laptop{
+            padding-left:0;
         }
 
         @include m.respond-large {
