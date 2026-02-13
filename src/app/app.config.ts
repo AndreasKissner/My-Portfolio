@@ -9,12 +9,10 @@ import { provideAppTranslate } from './app.translate.config';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-provideHttpClient(),
-    provideHttpClient(),
-
+    provideHttpClient(), // Nur einmal nötig
     provideRouter(routes, withInMemoryScrolling({
-        anchorScrolling: 'enabled', // Das aktiviert die #id Links
-        scrollPositionRestoration: 'disabled' // Merkt sich die Scroll-Position
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'disabled'
       })),
     ...provideAppTranslate,
   ]
