@@ -6,6 +6,7 @@
 
 :host {
   @include m.flex(flex-start, flex-start);
+  align-self: flex-start;
   width: 100%;
   padding-left: 10px;
   max-width: 330px;
@@ -38,7 +39,6 @@ app-open-dialog-btn {
     }
   }
 }
-
 
 app-dialog {
   position: absolute;

@@ -2,15 +2,12 @@
 
 :host {
   margin: 55px 0 0px 0;
-  border: 1px solid yellow;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ @include m.flex(center, center, column);
+
 
   @include m.respond-laptop {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch; 
+  @include m.flex(space-between, stretch, row);
+
     @include m.respond-laptop{
       padding-right: 15px;
     }
@@ -42,7 +39,6 @@
 
   section {
     display: contents;
-    border: 2px solid red;
 
     @include m.respond-laptop {
       display: flex;

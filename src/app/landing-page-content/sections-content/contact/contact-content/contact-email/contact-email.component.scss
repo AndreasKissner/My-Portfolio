@@ -4,29 +4,23 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
-    display: flex;
-    justify-content: flex-start; //mixin
+    @include m.flex(flex-start);
     width: 100%;
     max-width: 750px;
-    border: 1px solid yellow;
     padding: 0 16px;
     margin-top: 32px;
 
-     
-    .double-content{
+    .double-content {
         margin-bottom: 45px;
-        @include m.respond-laptop{
-        display: flex;
-        justify-content: center;  // mixin
-        align-items: stretch;
-        gap:8px;    }
-     
-        @include m.respond-large{
-        gap:80px;
-    }
-    }
 
-    
+        @include m.respond-laptop {
+            @include m.flex(center, stretch, row, 8px);
+        }
+
+        @include m.respond-large {
+            gap: 80px;
+        }
+    }
 }
 
 .contact-form {
@@ -41,7 +35,6 @@
     font-size: 18px;
     text-decoration: none;
 
-    //Only when BTn is Disabled
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
@@ -57,9 +50,9 @@
 
 .btn-flash-content {
     margin: 40px 0 24px 0;
-    width: 100%;
+    /* width: 100%; */
     @include m.flex(center, flex-end);
-    position: relative; 
+    position: relative;
 
     a {
         position: absolute;
@@ -106,8 +99,6 @@
     height: 30px;
     @include m.flex(flex-start, center);
 
-
-
     .text-wrapper {
         @include m.flex();
 
@@ -129,8 +120,7 @@
 
     .checkbox-wrapper {
         margin-right: 12px;
-        display: flex;
-        align-items: center;
+        @include m.flex(center, center);
 
         input[type="checkbox"] {
             -webkit-appearance: none;
@@ -141,7 +131,6 @@
             cursor: pointer;
             display: grid;
             place-content: center;
-
 
             &::before {
                 content: "";
@@ -164,7 +153,7 @@
 }
 
 .error-message {
-    color: #ff4d4d;
+    color: c.$error;
     margin: 20px 0 0 0;
     font-size: 12px;
     display: block;
@@ -179,7 +168,7 @@ textarea {
     border-bottom: 2px solid c.$orange-two;
     padding: 10px 0 0 10px;
     outline: none;
-    box-sizing: border-box;
+    /*     box-sizing: border-box; */
     font-family: f.$font-second;
     resize: none;
     appearance: none;
@@ -191,8 +180,8 @@ textarea {
     }
 
     &:focus {
-        border-bottom: 2px solid c.$orange-four; // Bestätigt die Farbe beim Klicken
-        outline: none; // Entfernt den Standard-Browser-Rahmen
+        border-bottom: 2px solid c.$orange-four; //
+        outline: none;
     }
 }
 
@@ -204,7 +193,14 @@ app-input-fields-email:focus-within {
 
 .input-error {
     &::placeholder {
-        color: #E44C36 !important;
-        opacity: 1; // Stellt sicher, dass die Farbe kräftig angezeigt wird
+        color: c.$error !important;
+        opacity: 1;
     }
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: c.$light-beige !important;
+    caret-color: c.$light-beige;
+    transition: background-color 9999s ease-in-out 0s;
+} 
