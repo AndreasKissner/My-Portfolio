@@ -29,13 +29,11 @@
     "LOCO_DESC": "A fast-paced jump-and-run game where you guide Loco Pocco through obstacles, collect items, and reach the finish line across fun, challenging levels. Hola !",
     "JOIN_DIAL": "Through working in a team, I learned how to communicate better, share responsibilities, and collaborate to find solutions together.",
     "POCO_DIAL": "While building this game, I sharpened my problem-solving skills and taught myself how to design engaging game mechanics, smooth animations, and well-structured levels.",
-    "PREVIOUS_BTN" :"<< Previous project",
-    "NEXT_BTN" :"Next project >>"
-
-     
+    "PREVIOUS_BTN": "<< Previous project",
+    "NEXT_BTN": "Next project >>"
   },
   "REFERENCE": {
-    "TEAM_SAY" :"What my collegues say about me",
+    "TEAM_SAY": "What my collegues say about me",
     "TEAM1": "Throughout his training, Andreas was reliable and motivated. He worked well both independently and in a team.",
     "TEAM2": "In the project, Andreas stood out for his structured way of working. He completed his tasks on time and approached problems calmly.",
     "TEAM3": "Andreas was a reliable team partner . He communicated clearly, supported others, and worked responsibly, helping maintain a positive team atmosphere.",
@@ -45,22 +43,19 @@
     "TITLE": "Let’s turn coffee into code and vibes",
     "SUBTITLE": "Got something you want to build?",
     "TITLEMAIL": "Reach out, tell me what you’re creating, and let’s turn your idea into something remarkable together.",
-    "LABELONE" : "Whats's your name?",
-    "PLACEONE" : "Your Name is missing",
-    "PLACETWO" : "Your name goes here",
-
-    "LABELTWO" : "Whats your email?",
+    "LABELONE": "Whats's your name?",
+    "PLACEONE": "Your Name is missing",
+    "PLACETWO": "Your name goes here",
+    "LABELTWO": "Whats your email?",
     "PLACETHREE": "Email is missing or invalid",
-     "PLACEFOUR" : "youremail@email.com",
-
-     "LABELTHREE" : "How can I help you?",
-     "PLACEFIVE"  :"What you will from me?",
-     "PLACESIX" :" Hello Andreas, you will trink a coffee.....",
-
-     "POLICY" :"I’ve read and agree the privacy policy.",
-     "POLICY_ERROR" :"Accept the privacy policy",
-
-     "CONTACT_BTN" : "Send this"
-
+    "PLACEFOUR": "youremail@email.com",
+    "LABELTHREE": "How can I help you?",
+    "PLACEFIVE": "What you will from me?",
+    "PLACESIX": " Hello Andreas, you will trink a coffee.....",
+    "POLICY": "I’ve read and agree the privacy policy.",
+    "POLICY_ERROR": "Accept the privacy policy",
+    "CONTACT_BTN": "Send this",
+    "EMAIL_OK": "Your message has been sent successfully!",
+    "ERROR_MESSAGE": "Error while sending."
   }
 }

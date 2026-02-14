@@ -30,11 +30,10 @@
     "JOIN_DIAL": "Durch die Zusammenarbeit im Team habe ich gelernt, besser zu kommunizieren, Verantwortung zu teilen und gemeinsam Lösungen zu erarbeiten.",
     "POCO_DIAL": "Beim Entwickeln dieses Spiels habe ich meine Problemlösungsfähigkeiten verbessert , coole Spielmechaniken, flüssige Animationen und strukturierte Level gestaltet.",
     "PREVIOUS_BTN": "<< Zurück",
-"NEXT_BTN": "Nächstes >>"
-
+    "NEXT_BTN": "Nächstes >>"
   },
   "REFERENCE": {
-    "TEAM_SAY" :"Was meine Kollegen sagen",
+    "TEAM_SAY": "Was meine Kollegen sagen",
     "TEAM1": "Während unserem Projekt war Andreas zuverlässig und immer Motiviert und neugierig. Das war echt cool mit Ihm!",
     "TEAM2": "Im Projekt überzeugte Andreas durch seine strukturierte Arbeitsweise. Er erledigte seine Aufgaben pünktlich und ging Probleme ruhig an.",
     "TEAM3": "Andreas war ein verlässlicher Teampartner. Er kommunizierte klar, unterstützte andere und arbeitete verantwortungsvoll, was zu einer positiven Teamatmosphäre beitrug.",
@@ -55,7 +54,8 @@
     "PLACESIX": "Hallo Andreas, willst du einen Kaffee trinken …",
     "POLICY": "Ich habe die Datenschutzerklärung gelesen und stimme zu",
     "POLICY_ERROR": "Bitte akzeptieren !!",
-
-    "CONTACT_BTN" :"SENDEN"
+    "CONTACT_BTN": "SENDEN",
+    "EMAIL_OK": "Deine Nachricht wurde erfolgreich gesendet!",
+    "ERROR_MESSAGE": "Fehler beim Senden."
   }
 }

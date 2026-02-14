@@ -3,11 +3,8 @@
 :host {
   margin: 55px 0 0px 0;
  @include m.flex(center, center, column);
-
-
   @include m.respond-laptop {
   @include m.flex(space-between, stretch, row);
-
     @include m.respond-laptop{
       padding-right: 15px;
     }
@@ -18,7 +15,6 @@
 
   article {
     display: contents; 
-
     @include m.respond-laptop {
       display: flex;
       flex-direction: column;

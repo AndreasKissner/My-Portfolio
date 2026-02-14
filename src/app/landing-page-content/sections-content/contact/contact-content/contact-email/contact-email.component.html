@@ -59,15 +59,14 @@
         </a>
     </div>
 
-   <div class="feedback-overlay" [class.active]="mailSuccess || mailError">
-
-  @if (mailSuccess) {
-    <div class="success-message">Deine Nachricht wurde erfolgreich gesendet!</div>
-  }
-  @if (mailError) {
-    <div class="error-message">{{ errorMessage }}</div>
-  }
-</div>
+    <div class="feedback-overlay" [class.active]="mailSuccess || mailError">
+        @if (mailSuccess) {
+        <div class="success-message">{{'CONTACT.EMAIL_OK' | translate}}</div>
+        }
+        @if (mailError) {
+        <div class="error-message">{{ errorMessage | translate }}</div>
+        }
+    </div>
 
 
 </form>

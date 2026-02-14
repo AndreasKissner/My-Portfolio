@@ -81,7 +81,8 @@ export class ContactEmailComponent {
     } else {
       this.mailError = true;
       this.isSending = false;
-      this.errorMessage = 'Fehler beim Senden. Bitte versuche es später erneut.';
+      this.errorMessage = 'CONTACT.ERROR_MESSAGE';
+
       setTimeout(() => this.mailError = false, 3000);
     }
   }

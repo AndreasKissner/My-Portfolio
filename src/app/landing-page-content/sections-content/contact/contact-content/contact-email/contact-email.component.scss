@@ -34,6 +34,7 @@
     background-color: transparent;
     font-size: 18px;
     text-decoration: none;
+    cursor: pointer;
 
     &:disabled {
         opacity: 0.5;
@@ -49,8 +50,7 @@
 }
 
 .btn-flash-content {
-    margin: 40px 0 24px 0;
-    /* width: 100%; */
+    margin: 40px 0 0px 0;
     @include m.flex(center, flex-end);
     position: relative;
 
@@ -205,8 +205,6 @@ input:-webkit-autofill {
     transition: background-color 9999s ease-in-out 0s;
 }
 
-
-/* Die Animation: Ein leichtes Rütteln und kurzes Aufhellen */
 @keyframes shakeFlash {
     0% {
         transform: translateX(0);
@@ -234,7 +232,6 @@ input:-webkit-autofill {
     }
 }
 
-/* Diese Klasse triggert die Animation */
 .invalid-attempt {
     animation: shakeFlash 0.4s ease-in-out;
 }
@@ -273,6 +270,8 @@ input:-webkit-autofill {
     opacity: 0;
     transition: all 0.3s ease;
     pointer-events: none;
+    height:30px;
+  margin-top: 5px;;
 }
 
 .feedback-overlay.active {

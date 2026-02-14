@@ -7,10 +7,11 @@
 :host {
   @include m.flex(flex-start, flex-start);
   align-self: flex-start;
-  width: 100%;
+ /*  width: 100%; */
   padding-left: 10px;
-  max-width: 330px;
+  max-width: 136px;
   margin: 50px 0 25px 0px;
+  cursor:pointer;
 }
 
 app-open-dialog-btn {
@@ -20,6 +21,7 @@ app-open-dialog-btn {
     padding: 0;
     position: relative;
     margin-left: 4px;
+      cursor:pointer;
     @include m.flex();
     @include m.size(120px);
 

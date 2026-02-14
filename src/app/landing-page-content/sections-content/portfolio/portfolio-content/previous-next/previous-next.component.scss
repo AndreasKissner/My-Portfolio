@@ -6,23 +6,24 @@
 :host {
 
     height: 27px;
-    width:100%;
+    width: 100%;
     max-width: 820px;
     display: flex;
     justify-content: space-around;
     margin: 35px 0 50px 0;
-  /*   padding: 0 16px 0 16px; */
-      @include m.respond-normal {
-         justify-content: space-between;
-         margin-right: 12px;
-        }
+    cursor: pointer;
+
+    @include m.respond-normal {
+        justify-content: space-between;
+        margin-right: 12px;
+    }
 
 
     button {
         width: 145px;
         height: 22px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-start; // mixin
         align-items: center;
         font-size: 15px;
         font-weight: 700;
@@ -31,14 +32,14 @@
         background: none;
         color: c.$skill-black;
         transition: color 150ms ease-in-out;
-
-          @include m.respond-xsm360 {
-          font-size: 16px;
+cursor: pointer;
+        @include m.respond-xsm360 {
+            font-size: 16px;
         }
-      
-         @include m.respond-normal {
-          font-size: 18px;
-          width: 162px;
+
+        @include m.respond-normal {
+            font-size: 18px;
+            width: 162px;
         }
 
         @media (min-width: 992px) and (hover: hover) {
