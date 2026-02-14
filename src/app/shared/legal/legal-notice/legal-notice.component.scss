@@ -1,0 +1,54 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+.legal-page {
+  min-height: 100vh;
+  background-color: c.$skill-black;
+}
+
+.legal-content {
+  max-width: 1960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.legal-page {
+  min-height: 100vh;
+  background: #111;
+  color: #eee;
+}
+
+.legal-content {
+  max-width: 1032px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: f.$font-eczar;
+}
+
+h2 {
+  margin: 20px 0 8px;
+  font-size:23px;
+  color: c.$orange-two;
+  font-family: f.$font-josefine;
+font-weight: 400px;
+}
+
+p, li {
+  line-height: 1.2;
+   font-family: f.$font-josefineLight;
+   font-size: 19px;
+}
+
+a {
+color: c.$orange-two;
+}
+
+span {
+  color: c.$orange-two;
+}
