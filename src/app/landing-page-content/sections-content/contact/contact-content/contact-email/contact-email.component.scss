@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 750px;
     padding: 0 16px;
-    margin-top: 32px;
+    margin-top: 70px;
 
     .double-content {
         margin-bottom: 45px;
@@ -203,4 +203,79 @@ input:-webkit-autofill {
     -webkit-text-fill-color: c.$light-beige !important;
     caret-color: c.$light-beige;
     transition: background-color 9999s ease-in-out 0s;
-} 
+}
+
+
+/* Die Animation: Ein leichtes Rütteln und kurzes Aufhellen */
+@keyframes shakeFlash {
+    0% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+
+    25% {
+        transform: translateX(-5px);
+        filter: brightness(1.2);
+    }
+
+    50% {
+        transform: translateX(5px);
+        filter: brightness(1.2);
+    }
+
+    75% {
+        transform: translateX(-5px);
+        filter: brightness(1.2);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+}
+
+/* Diese Klasse triggert die Animation */
+.invalid-attempt {
+    animation: shakeFlash 0.4s ease-in-out;
+}
+
+
+@keyframes formFlash {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.form-flash {
+    animation: formFlash 0.5s ease-in-out;
+}
+
+.feedback-overlay {
+    color: c.$orange-two;
+    text-align: center;
+    transform: translateY(20px) scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.feedback-overlay.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}

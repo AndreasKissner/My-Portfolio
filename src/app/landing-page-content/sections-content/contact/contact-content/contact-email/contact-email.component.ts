@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-email',
+  standalone: true,
   imports: [InputFieldsEmailComponent, CommonModule, BtnPrimaerComponent, FormsModule, TranslateModule],
   templateUrl: './contact-email.component.html',
   styleUrl: './contact-email.component.scss',
@@ -23,24 +24,96 @@ export class ContactEmailComponent {
     privacy: false
   };
 
- private mailApiUrl = 'https://portfolio.andreaskissner.info/send_mail.php';
+  private mailApiUrl = 'https://portfolio.andreaskissner.info/send_mail.php';
 
-  mailSuccess = false; 
+  mailSuccess = false;
+  mailError = false;
+  isSending = false;
+  errorMessage = '';
+  isFlashing = false;
 
+  /**
+ * Called when the form is submitted.
+ * Checks if the form is valid and no request is currently in progress.
+ * If valid, it starts sending the email.
+ * 
+ * @param form - The Angular form (NgForm)
+ */
   onSubmit(form: NgForm) {
-    if (form.valid) {
-      this.http.post(this.mailApiUrl, this.contactData)
-        .subscribe({
-          next: (response) => {
-            this.mailSuccess = true; //
-            form.resetForm();
-            setTimeout(() => this.mailSuccess = false, 3000);
-          },
-         /*  error: (error) => {
-            console.error('Fehler beim Senden:', error);
-          } */
-        });
-
+    if (form.valid && !this.isSending) {
+      this.isSending = true;
+      this.mailError = false;
+      this.errorMessage = '';
+      this.sendMail(form);
     }
+  }
+
+  /**
+   * Sends the form data to the mail API.
+   * Handles the response and delegates success or error handling.
+   * 
+   * @param form - The Angular form (NgForm)
+   */
+  private sendMail(form: NgForm) {
+    this.http.post(this.mailApiUrl, this.contactData)
+      .subscribe({
+        next: () => {
+          this.processSuccess(form);
+        },
+        error: (error) => {
+          this.handleError(error, form);
+        }
+      });
+  }
+
+  /**
+   * Handles errors from the mail request.
+   * If the server returns status 200 in an error, it is treated as success.
+   * Otherwise, an error state is set and a message is shown.
+   * 
+   * @param error - The HTTP error response
+   * @param form - The Angular form (NgForm)
+   */
+
+  private handleError(error: any, form: NgForm) {
+    if (error.status === 200) {
+      this.processSuccess(form);
+    } else {
+      this.mailError = true;
+      this.isSending = false;
+      this.errorMessage = 'Fehler beim Senden. Bitte versuche es später erneut.';
+      setTimeout(() => this.mailError = false, 3000);
+    }
+  }
+
+  /**
+  * Called when the user tries to submit an invalid form.
+  * Marks all fields as touched to show validation errors
+  * and triggers a flash animation.
+  * 
+  * @param form - The Angular form (NgForm)
+  */
+
+  onInvalidSubmitAttempt(form: NgForm) {
+    if (!form.valid) {
+      form.control.markAllAsTouched();
+      this.isFlashing = true;
+      setTimeout(() => this.isFlashing = false, 500);
+    }
+  }
+
+  /**
+   * Handles a successful mail submission.
+   * Resets the form, clears the data, and shows a success message.
+   * 
+   * @param form - The Angular form (NgForm)
+   */
+  private processSuccess(form: NgForm) {
+    this.mailSuccess = true;
+    this.isSending = false;
+    this.errorMessage = '';
+    form.resetForm();
+    this.contactData = { name: '', email: '', message: '', privacy: false };
+    setTimeout(() => this.mailSuccess = false, 3000);
   }
 }
