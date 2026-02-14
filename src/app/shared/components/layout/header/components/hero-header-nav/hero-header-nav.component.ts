@@ -1,6 +1,7 @@
 import { Component, input, signal, ElementRef, ViewChild, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { HeaderSocialBtnComponent } from '../header-social-btn/header-social-btn.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-hero-header-nav',
   standalone: true,
@@ -10,87 +11,86 @@ import { HeaderSocialBtnComponent } from '../header-social-btn/header-social-btn
 })
 export class HeroHeaderNavComponent {
   private doc = inject(DOCUMENT);
+  private router = inject(Router);
+
   /** Burger button element (focus returns here after closing). */
-@ViewChild('burgerBtn', { static: false }) burgerBtn?: ElementRef<HTMLElement>;
+  @ViewChild('burgerBtn', { static: false }) burgerBtn?: ElementRef<HTMLElement>;
 
-/** Menu container element (used to detect focus leaving the menu). */
-@ViewChild('menuContent', { static: false }) menuContent?: ElementRef<HTMLElement>;
+  /** Menu container element (used to detect focus leaving the menu). */
+  @ViewChild('menuContent', { static: false }) menuContent?: ElementRef<HTMLElement>;
 
-/** First menu link (focused when the menu opens). */
-@ViewChild('firstLink', { static: false }) firstLink?: ElementRef<HTMLElement>;
+  /** First menu link (focused when the menu opens). */
+  @ViewChild('firstLink', { static: false }) firstLink?: ElementRef<HTMLElement>;
 
   burgerColor = input<string>('white');
-
   navGitSrc = input<string>('assets/img/icons/socialBtn/git.svg');
   navGitSrcHover = input<string>('assets/img/icons/socialBtn/gitOrange.svg');
-
   navLinkedInSrc = input<string>('assets/img/icons/socialBtn/linkedin.svg');
   navLinkedInSrcHover = input<string>('assets/img/icons/socialBtn/linkedinOrange.svg');
-
   navMailSrc = input<string>('assets/img/icons/socialBtn/mail.svg');
   navMailSrcHover = input<string>('assets/img/icons/socialBtn/mailOrange.svg');
-
   isMenuOpen = signal(false);
 
-   /**
- * Toggles the mobile menu open/closed and moves keyboard focus accordingly.
- * - When opening: focuses the first menu link.
- * - When closing: returns focus to the burger button.
- */
-toggleMenu() {
-  const nextState = !this.isMenuOpen();
-  this.isMenuOpen.set(nextState);
-  if (nextState) {
+  /**
+* Toggles the mobile menu open/closed and moves keyboard focus accordingly.
+* - When opening: focuses the first menu link.
+* - When closing: returns focus to the burger button.
+*/
+  toggleMenu() {
+    const nextState = !this.isMenuOpen();
+    this.isMenuOpen.set(nextState);
+    if (nextState) {
+      setTimeout(() => {
+        this.firstLink?.nativeElement.focus();
+      });
+    } else {
+      setTimeout(() => {
+        this.burgerBtn?.nativeElement.focus();
+      });
+    }
+  }
+
+  /**
+  * Closes the mobile menu and returns keyboard focus to the burger button.
+  */
+  /**
+   */
+  onClose() {
     setTimeout(() => {
-      this.firstLink?.nativeElement.focus();
-    });
-  } else {
-    setTimeout(() => {
+      this.isMenuOpen.set(false);
       this.burgerBtn?.nativeElement.focus();
-    });
+    }, 50); // 50 Millisekunden reichen oft schon aus
   }
-}
 
- /**
- * Closes the mobile menu and returns keyboard focus to the burger button.
- */
-/**
- */
-onClose() {
-  setTimeout(() => {
-    this.isMenuOpen.set(false);
-    this.burgerBtn?.nativeElement.focus();
-  }, 50); // 50 Millisekunden reichen oft schon aus
-}
+  /**
+   * Closes the menu when keyboard focus leaves the menu container (e.g. by tabbing out).
+   */
+  onMenuFocusOut(event: FocusEvent) {
+    const next = event.relatedTarget as HTMLElement | null;
+    const menuEl = this.menuContent?.nativeElement;
+    if (!menuEl) return;
+    if (!next || !menuEl.contains(next)) {
+      this.onClose();
+    }
+  }
 
-/**
- * Closes the menu when keyboard focus leaves the menu container (e.g. by tabbing out).
- */
-onMenuFocusOut(event: FocusEvent) {
-  const next = event.relatedTarget as HTMLElement | null;
-  const menuEl = this.menuContent?.nativeElement;
-  if (!menuEl) return;
-  if (!next || !menuEl.contains(next)) {
+ goTo(event: MouseEvent, id: string) {
+  const isOnLandingPage = this.router.url === '/';
+  
+  if (isOnLandingPage) {
+    // Alte Logik bleibt gleich
+    const el = this.doc.getElementById(id);
+    if (!el) return;
     this.onClose();
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', `#${id}`);
+    }, 60);
+  } else {
+    // Auf Legal Notice → zur Landing Page mit Fragment navigieren
+    this.onClose();
+    this.router.navigate(['/'], { fragment: id });
   }
 }
 
-goTo(event: MouseEvent, id: string) {
-  event.preventDefault();
-
-  const el = this.doc.getElementById(id);
-  if (!el) return;
-
-  this.onClose();
-  setTimeout(() => {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    history.replaceState(null, '', `#${id}`);
-  }, 60);
-}
-
-
-
-/*   handleContentClick(event: MouseEvent) {
-    event.stopPropagation();
-  } */
 }

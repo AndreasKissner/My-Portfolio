@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/components/layout/header/header.component';
 import { HeroComponent } from '../sections-content/hero/hero.component';
 import { AboutComponent } from '../sections-content/about/about.component';
@@ -7,6 +7,7 @@ import { PortfolioComponent } from '../sections-content/portfolio/portfolio.comp
 import { ReferenceComponent } from '../sections-content/reference/reference.component';
 import { ContactComponent } from '../sections-content/contact/contact.component';
 import { SectionIndicatorComponent } from '../../shared/components/layout/section-indicator/section-indicator.component';
+import { ActivatedRoute } from '@angular/router';
 
 
 // Hier deine 6 Inhalts-Komponenten importieren
@@ -30,8 +31,8 @@ import { SectionIndicatorComponent } from '../../shared/components/layout/sectio
 })
 
 
-export class LandingPageComponent  {
- 
+export class LandingPageComponent implements AfterViewInit{
+
   sectionColors = {
     hero: '#679AAC',
     about: '#F8F7E5',
@@ -41,4 +42,20 @@ export class LandingPageComponent  {
     contact: '#1D1D1D'
   };
 
+  constructor(private route: ActivatedRoute) {}
+
+  ngAfterViewInit() {
+    this.route.fragment.subscribe(fragment => {
+      if (!fragment) return;
+      
+      // Warten bis DOM wirklich gerendert ist
+      setTimeout(() => {
+        const el = document.getElementById(fragment);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    });
+  }
+  
 }
