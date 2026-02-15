@@ -51,12 +51,13 @@
             </div>
         </app-btn-primaer>
 
-        <a href="#hero">
-            <div class="flash-height">
-                <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height" class="flash-icon">
-                <div class="flash-line"></div>
-            </div>
-        </a>
+        <app-back-flash> <a href="#hero">
+                <div class="flash-height">
+                    <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height" class="flash-icon">
+                    <div class="flash-line"></div>
+                </div>
+            </a></app-back-flash>
+
     </div>
 
     <div class="feedback-overlay" [class.active]="mailSuccess || mailError">

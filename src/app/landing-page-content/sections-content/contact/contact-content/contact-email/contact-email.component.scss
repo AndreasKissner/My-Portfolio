@@ -51,47 +51,12 @@
 
 .btn-flash-content {
     margin: 40px 0 0px 0;
-    @include m.flex(center, flex-end);
+   @include m.flex(space-between, flex-end);
     position: relative;
-
-    a {
-        position: absolute;
-        right: 0;
-    }
 }
 
-.flash-height {
-    @include m.flex(flex-start, center, column);
-    align-self: flex-end;
-    margin-left: 16px;
-    position: relative;
-    color: c.$orange-four;
-}
-
-.flash-icon {
-    animation: flashStretch 2s ease-in-out infinite;
-    transform-origin: bottom;
-    color: c.$orange-four;
-}
-
-.flash-line {
-    @include m.size(20px, 2px);
-    color: c.$light-beige;
-    background-color: c.$orange-four;
-}
-
-@keyframes flashStretch {
-    0% {
-        transform: translateY(-20px) scaleY(1);
-    }
-
-    50% {
-        transform: translateY(0px) scaleY(1.4);
-    }
-
-    100% {
-        transform: translateY(-20px) scaleY(1);
-    }
+.btn-flash-content app-btn-primaer {
+    margin: 0 auto;
 }
 
 .checkbox-group {
@@ -168,7 +133,6 @@ textarea {
     border-bottom: 2px solid c.$orange-two;
     padding: 10px 0 0 10px;
     outline: none;
-    /*     box-sizing: border-box; */
     font-family: f.$font-second;
     resize: none;
     appearance: none;

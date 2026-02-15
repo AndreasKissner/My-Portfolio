@@ -3,10 +3,11 @@ import { HeaderComponent } from '../../components/layout/header/header.component
 import { FooterComponent } from "../../components/layout/footer/footer.component";
 import { TranslateModule } from '@ngx-translate/core';
 import { TwoIconsComponent } from '../../../landing-page-content/sections-content/contact/contact-content/two-icons/two-icons.component';
+import { BackFlashComponent } from '../../../landing-page-content/sections-content/contact/contact-content/contact-email/back-flash/back-flash.component';
 
 @Component({
   selector: 'app-legal-notice',
-  imports: [HeaderComponent, FooterComponent, FooterComponent,TranslateModule, TwoIconsComponent],
+  imports: [HeaderComponent, FooterComponent, FooterComponent,TranslateModule, TwoIconsComponent, BackFlashComponent],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss',
 })

@@ -1,7 +1,8 @@
 import { Component, input, signal, ElementRef, ViewChild, inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+/* import { DOCUMENT } from '@angular/common'; */
 import { HeaderSocialBtnComponent } from '../header-social-btn/header-social-btn.component';
-import { Router } from '@angular/router';
+/* import { Router } from '@angular/router'; */
+import { ScrollToService } from '../../../../../../shared-services/scroll-to-service';
 @Component({
   selector: 'app-hero-header-nav',
   standalone: true,
@@ -10,8 +11,9 @@ import { Router } from '@angular/router';
   styleUrl: './hero-header-nav.component.scss',
 })
 export class HeroHeaderNavComponent {
-  private doc = inject(DOCUMENT);
-  private router = inject(Router);
+ /*  private doc = inject(DOCUMENT);
+  private router = inject(Router); */
+  private scrollToService = inject(ScrollToService);
 
   /** Burger button element (focus returns here after closing). */
   @ViewChild('burgerBtn', { static: false }) burgerBtn?: ElementRef<HTMLElement>;
@@ -74,23 +76,9 @@ export class HeroHeaderNavComponent {
     }
   }
 
- goTo(event: MouseEvent, id: string) {
-  const isOnLandingPage = this.router.url === '/';
-  
-  if (isOnLandingPage) {
-    // Alte Logik bleibt gleich
-    const el = this.doc.getElementById(id);
-    if (!el) return;
-    this.onClose();
-    setTimeout(() => {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.replaceState(null, '', `#${id}`);
-    }, 60);
-  } else {
-    // Auf Legal Notice → zur Landing Page mit Fragment navigieren
-    this.onClose();
-    this.router.navigate(['/'], { fragment: id });
-  }
+goTo(event: MouseEvent, id: string) {
+  this.onClose();
+  this.scrollToService.scrollTo(id);
 }
 
 }

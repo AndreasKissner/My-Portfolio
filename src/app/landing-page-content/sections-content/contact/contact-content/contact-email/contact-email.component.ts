@@ -5,11 +5,12 @@ import { BtnPrimaerComponent } from "../../../../../shared/components/layout/btn
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import { BackFlashComponent } from './back-flash/back-flash.component';
 
 @Component({
   selector: 'app-contact-email',
   standalone: true,
-  imports: [InputFieldsEmailComponent, CommonModule, BtnPrimaerComponent, FormsModule, TranslateModule],
+  imports: [InputFieldsEmailComponent, CommonModule, BtnPrimaerComponent, FormsModule, TranslateModule, BackFlashComponent],
   templateUrl: './contact-email.component.html',
   styleUrl: './contact-email.component.scss',
 })

@@ -12,7 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(), // Nur einmal nötig
     provideRouter(routes, withInMemoryScrolling({
         anchorScrolling: 'enabled',
-        scrollPositionRestoration: 'disabled'
+        scrollPositionRestoration: 'top'
       })),
     ...provideAppTranslate,
   ]

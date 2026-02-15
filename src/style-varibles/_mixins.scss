@@ -17,7 +17,6 @@
   height: calc(100vh - 72px);
   background-color: $bg;
 
-  // 576px Breakpoint
   @include respond-sm {
     height: calc(100vh - 88px);
   }

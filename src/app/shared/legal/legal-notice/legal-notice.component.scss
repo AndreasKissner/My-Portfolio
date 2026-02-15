@@ -3,27 +3,40 @@
 @use 'style-varibles/mixins' as m;
 @use 'style-varibles/fonts' as f;
 
-.legal-page {
-  min-height: 100vh;
-  background-color: c.$skill-black;
+header {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  height: 115px;
+}
+
+::ng-deep .flash-left {
+  transform: rotate(-90deg);
+}
+
+app-back-flash {
+  @include m.respond-laptop {
+    display: none;
+  }
 }
 
 .legal-content {
   max-width: 1960px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 12px 45px ;
 }
 
 .legal-page {
   min-height: 100vh;
-  background: #111;
+  background-color: c.$skill-black;
   color: #eee;
 }
 
-.legal-content {
+// Hier wird der Text-Inhalt auf die gewünschte Lesebreite begrenzt
+main.legal-page .legal-content {
   max-width: 1032px;
   margin: 0 auto;
-  padding: 24px 16px;
 }
 
 h1 {
@@ -33,22 +46,89 @@ h1 {
 
 h2 {
   margin: 20px 0 8px;
-  font-size:23px;
+  font-size: 23px;
   color: c.$orange-two;
   font-family: f.$font-josefine;
-font-weight: 400px;
+  font-weight: 400;
 }
 
-p, li {
+p,
+li {
   line-height: 1.2;
-   font-family: f.$font-josefineLight;
-   font-size: 19px;
+  font-family: f.$font-josefineLight;
+  font-size: 19px;
 }
 
 a {
-color: c.$orange-two;
+  color: c.$orange-two;
 }
 
 span {
   color: c.$orange-two;
+}
+
+:host ::ng-deep {
+  app-two-icons {
+    width: 300px;
+  }
+
+  // Wir nutzen die Eltern-Klasse .footer-content, um den Selektor stärker zu machen
+  .footer-content {
+    app-footer {
+      width: 100%;
+      align-self: flex-end;
+
+      @include m.respond-laptop {
+        max-width: 650px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-around;
+      }
+
+      // Durch die Verschachtelung ist dieser Selektor nun stärker als der im Footer-Component
+      .footer-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include m.respond-laptop {
+          display: flex;
+          justify-content: flex-end;
+          max-width: 100px;
+          flex-direction: row;
+          gap: 15px;
+        }
+      }
+    }
+  }
+
+  .imprint-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include m.respond-laptop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 650px;
+    }
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  @include m.respond-laptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1232px;
+   margin: auto;
+  }
 }
