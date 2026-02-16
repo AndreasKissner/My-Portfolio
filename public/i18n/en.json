@@ -59,45 +59,59 @@
     "ERROR_MESSAGE": "Error while sending."
   },
   "IMPRINT": {
-  "TITLE": "Legal Notice",
-  "IMPRINT_TITLE": "Imprint",
-
-  "NAMES": "Andreas Kissner, Sven Michels, Martin Frei, Dennis King Tran",
-  "ADDRESS_LINE1": "Rue du Champ fort 6",
-  "ADDRESS_LINE2": "2853 Courfaivre",
-
-  "CONTACT_TITLE": "Contact",
-  "EMAIL_LABEL": "Email",
-  "EMAIL": "andikiss500@gmail.com",
-
-  "TERMS_TITLE": "Acceptance of Terms",
-  "TERMS_TEXT": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, including any policies or guidelines that may be updated from time to time without notice.",
-
-  "SCOPE_TITLE": "Scope and Ownership of the Product",
-  "SCOPE_TEXT1": "Portfolio was developed as part of a student group project in a web development bootcamp at Developer Akademie GmbH. It is intended for educational purposes only.",
-  "SCOPE_TEXT2": "We do not guarantee availability, reliability, or accuracy of the product.",
-  "SCOPE_TEXT3": "The design of Portfolio is owned by Developer Akademie GmbH. Any unauthorized use, reproduction, or distribution is prohibited.",
-
-  "RIGHTS_TITLE": "Proprietary Rights",
-  "RIGHTS_TEXT": "Except for the design owned by Developer Akademie GmbH, all rights related to Portfolio remain with the listed students.",
-
-  "USAGE_TITLE": "Use of the Product",
-  "USAGE_TEXT": "Portfolio may only be used for lawful purposes. Any misuse or harmful activity is strictly prohibited.",
-
-  "DISCLAIMER_TITLE": "Disclaimer of Warranties",
-  "DISCLAIMER_TEXT": "Portfolio is provided \"as is\" without warranties of any kind. We are not liable for any damages arising from its use.",
-
-  "LIABILITY_TITLE": "Limitation of Liability",
-  "LIABILITY_TEXT": "We are not responsible for any direct or indirect damages resulting from the use of Portfolio.",
-
-  "INDEMNITY_TITLE": "Indemnity",
-  "INDEMNITY_TEXT": "You agree to indemnify and hold harmless the developers and Developer Akademie from any claims related to the use of Portfolio.",
-
-  "QUESTIONS_TEXT": "For any questions, please contact",
-  "CONTACT_EMAIL": "info@developerakademie.com",
-
-  "DATE": "Date",
-  "DATE_VALUE": "January 25, 2026"
-}
-
+    "TITLE": "Legal Notice",
+    "IMPRINT_TITLE": "Imprint",
+    "NAMES": "Andreas Kissner, Sven Michels, Martin Frei, Dennis King Tran",
+    "ADDRESS_LINE1": "Rue du Champ fort 6",
+    "ADDRESS_LINE2": "2853 Courfaivre",
+    "CONTACT_TITLE": "Contact",
+    "EMAIL_LABEL": "Email",
+    "EMAIL": "andikiss500@gmail.com",
+    "TERMS_TITLE": "Acceptance of Terms",
+    "TERMS_TEXT": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, including any policies or guidelines that may be updated from time to time without notice.",
+    "SCOPE_TITLE": "Scope and Ownership of the Product",
+    "SCOPE_TEXT1": "Portfolio was developed as part of a student group project in a web development bootcamp at Developer Akademie GmbH. It is intended for educational purposes only.",
+    "SCOPE_TEXT2": "We do not guarantee availability, reliability, or accuracy of the product.",
+    "SCOPE_TEXT3": "The design of Portfolio is owned by Developer Akademie GmbH. Any unauthorized use, reproduction, or distribution is prohibited.",
+    "RIGHTS_TITLE": "Proprietary Rights",
+    "RIGHTS_TEXT": "Except for the design owned by Developer Akademie GmbH, all rights related to Portfolio remain with the listed students.",
+    "USAGE_TITLE": "Use of the Product",
+    "USAGE_TEXT": "Portfolio may only be used for lawful purposes. Any misuse or harmful activity is strictly prohibited.",
+    "DISCLAIMER_TITLE": "Disclaimer of Warranties",
+    "DISCLAIMER_TEXT": "Portfolio is provided \"as is\" without warranties of any kind. We are not liable for any damages arising from its use.",
+    "LIABILITY_TITLE": "Limitation of Liability",
+    "LIABILITY_TEXT": "We are not responsible for any direct or indirect damages resulting from the use of Portfolio.",
+    "INDEMNITY_TITLE": "Indemnity",
+    "INDEMNITY_TEXT": "You agree to indemnify and hold harmless the developers and Developer Akademie from any claims related to the use of Portfolio.",
+    "QUESTIONS_TEXT": "For any questions, please contact",
+    "CONTACT_EMAIL": "info@developerakademie.com",
+    "DATE": "Date",
+    "DATE_VALUE": "January 25, 2026"
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "GENERAL_TITLE": "General Information",
+    "GENERAL_TEXT": "This Privacy Policy explains how personal data is collected and processed when you use this website.",
+    "RESPONSIBLE_TITLE": "Responsible Person",
+    "NAME": "Andreas Kissner",
+    "ADDRESS_LINE1": "Rue du Champ fort 6",
+    "ADDRESS_LINE2": "2853 Courfaivre",
+    "DATA_TITLE": "Data Collection",
+    "DATA_TEXT": "When you use this website, certain data may be collected automatically, such as your IP address, browser type, and time of access.",
+    "FORM_TITLE": "Contact Form",
+    "FORM_TEXT": "If you contact me via the contact form, your name, email address, and message will be stored for the purpose of processing your request.",
+    "PURPOSE_TITLE": "Purpose of Data Processing",
+    "PURPOSE_TEXT": "The collected data is used only to provide and improve this website and to respond to inquiries.",
+    "SHARING_TITLE": "Data Sharing",
+    "SHARING_TEXT": "Your personal data will not be shared with third parties unless required by law.",
+    "SECURITY_TITLE": "Data Security",
+    "SECURITY_TEXT": "Appropriate technical and organizational measures are taken to protect your data against unauthorized access.",
+    "RIGHTS_TITLE": "Your Rights",
+    "RIGHTS_TEXT": "You have the right to request information about your stored data and to request correction or deletion at any time.",
+    "CONTACT_TITLE": "Contact",
+    "CONTACT_TEXT": "If you have any questions about this Privacy Policy, please contact:",
+    "EMAIL": "andikiss500@gmail.com",
+    "DATE": "Date",
+    "DATE_VALUE": "January 25, 2026"
+  }
 }

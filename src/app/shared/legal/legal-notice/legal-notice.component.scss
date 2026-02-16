@@ -79,7 +79,7 @@ span {
       align-self: flex-end;
 
       @include m.respond-laptop {
-        max-width: 650px;
+        max-width: 760px;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
