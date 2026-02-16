@@ -57,5 +57,48 @@
     "CONTACT_BTN": "SENDEN",
     "EMAIL_OK": "Deine Nachricht wurde erfolgreich gesendet!",
     "ERROR_MESSAGE": "Fehler beim Senden."
-  }
+  },
+  "IMPRINT": {
+  "TITLE": "Impressum",
+  "IMPRINT_TITLE": "Kontakt & Rechtliches",
+
+  "NAMES": "Andreas Kissner, Sven Michels, Martin Frei, Dennis King Tran",
+  "ADDRESS_LINE1": "Rue du Champ fort 6",
+  "ADDRESS_LINE2": "2853 Courfaivre",
+
+  "CONTACT_TITLE": "Kontakt",
+  "EMAIL_LABEL": "E-Mail",
+  "EMAIL": "andikiss500@gmail.com",
+
+  "TERMS_TITLE": "Nutzungsbedingungen",
+  "TERMS_TEXT": "Durch den Zugriff und die Nutzung des Portfolios (Produkt) erkennen Sie die folgenden Bedingungen an. Diese können jederzeit ohne vorherige Ankündigung angepasst werden.",
+
+  "SCOPE_TITLE": "Umfang und Eigentum des Produkts",
+  "SCOPE_TEXT1": "Das Portfolio wurde im Rahmen eines Gruppenprojekts in einem Webentwicklungs-Bootcamp bei der Developer Akademie GmbH erstellt und dient ausschließlich zu Lernzwecken.",
+  "SCOPE_TEXT2": "Es wird keine Gewähr für Verfügbarkeit, Zuverlässigkeit oder Genauigkeit des Produkts übernommen.",
+  "SCOPE_TEXT3": "Das Design des Portfolios gehört der Developer Akademie GmbH. Jede unbefugte Nutzung, Vervielfältigung oder Weitergabe ist untersagt.",
+
+  "RIGHTS_TITLE": "Urheberrechte",
+  "RIGHTS_TEXT": "Mit Ausnahme des Designs, das der Developer Akademie GmbH gehört, verbleiben alle Rechte am Portfolio bei den genannten Studierenden.",
+
+  "USAGE_TITLE": "Nutzung des Produkts",
+  "USAGE_TEXT": "Das Portfolio darf nur im Rahmen der geltenden Gesetze genutzt werden. Jede missbräuchliche oder schädliche Nutzung ist untersagt.",
+
+  "DISCLAIMER_TITLE": "Haftungsausschluss",
+  "DISCLAIMER_TEXT": "Das Portfolio wird ohne jegliche Gewährleistung bereitgestellt. Eine Haftung für Schäden, die aus der Nutzung entstehen, wird ausgeschlossen.",
+
+  "LIABILITY_TITLE": "Haftungsbeschränkung",
+  "LIABILITY_TEXT": "Wir übernehmen keine Haftung für direkte oder indirekte Schäden, die aus der Nutzung des Portfolios entstehen.",
+
+  "INDEMNITY_TITLE": "Freistellung",
+  "INDEMNITY_TEXT": "Sie verpflichten sich, die Entwickler sowie die Developer Akademie von allen Ansprüchen freizustellen, die im Zusammenhang mit der Nutzung des Portfolios entstehen.",
+
+  "QUESTIONS_TEXT": "Bei Fragen kontaktieren Sie uns bitte unter",
+  "CONTACT_EMAIL": "info@developerakademie.com",
+
+  "DATE": "Datum",
+  "DATE_VALUE": "25. Januar 2026"
 }
+
+
+  }
