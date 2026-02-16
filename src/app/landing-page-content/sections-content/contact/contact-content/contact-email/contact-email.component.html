@@ -28,9 +28,14 @@
         </div>
 
         <div class="text-wrapper" [class.has-error]="privacyField.invalid && privacyField.touched">
-            <label for="privacy">
-                {{'CONTACT.POLICY'| translate}}
-            </label>
+        <label for="privacy">
+  {{ 'CONTACT.POLICY_TEXT' | translate }}
+  <a routerLink="/privacy-policy">
+    {{ 'CONTACT.POLICY_LINK' | translate }}
+  </a>
+  {{ 'CONTACT.POLICY_TEXT_END' | translate }}
+</label>
+
 
             @if (privacyField.invalid && privacyField.touched) {
             <span class="error-message">

@@ -52,7 +52,10 @@
     "LABELTHREE": "Wie kann ich dir helfen?",
     "PLACEFIVE": "Was möchtest du von mir?",
     "PLACESIX": "Hallo Andreas, willst du einen Kaffee trinken …",
-    "POLICY": "Ich habe die Datenschutzerklärung gelesen und stimme zu",
+    "POLICY_TEXT": "Ich habe die ",
+"POLICY_LINK": "Datenschutzerklärung",
+"POLICY_TEXT_END": " gelesen und stimme zu",
+
     "POLICY_ERROR": "Bitte akzeptieren !!",
     "CONTACT_BTN": "SENDEN",
     "EMAIL_OK": "Deine Nachricht wurde erfolgreich gesendet!",
