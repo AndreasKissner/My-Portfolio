@@ -2,22 +2,30 @@ import { Component, inject, signal, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { startTabRotation } from '../favicon-logic';
 import { Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App implements AfterViewInit {
-
   protected readonly title = signal('myportfolio');
   private titleService = inject(Title);
+  private translate = inject(TranslateService);
+
+  // Dieser Block wird sofort ausgeführt, wenn die Klasse erstellt wird
+  // Er ersetzt den Constructor komplett
+  private initLang = (() => {
+    const savedLang = localStorage.getItem('lang') || 'en';
+    this.translate.use(savedLang);
+  })();
 
   ngAfterViewInit() {
-    history.replaceState(null, '', location.pathname); // Anti scroll move .
+    history.replaceState(null, '', location.pathname); 
     window.scrollTo(0, 0);
-
     startTabRotation(this.titleService);
   }
 }
