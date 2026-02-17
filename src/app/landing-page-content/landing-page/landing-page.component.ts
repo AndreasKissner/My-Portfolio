@@ -7,6 +7,8 @@ import { PortfolioComponent } from '../sections-content/portfolio/portfolio.comp
 import { ReferenceComponent } from '../sections-content/reference/reference.component';
 import { ContactComponent } from '../sections-content/contact/contact.component';
 import { SectionIndicatorComponent } from '../../shared/components/layout/section-indicator/section-indicator.component';
+import { AfterViewInit, QueryList, ViewChildren, ElementRef } from '@angular/core';
+
 
 
 // Hier deine 6 Inhalts-Komponenten importieren
@@ -30,7 +32,9 @@ import { SectionIndicatorComponent } from '../../shared/components/layout/sectio
 })
 
 
-export class LandingPageComponent  {
+export class LandingPageComponent  implements AfterViewInit {
+  @ViewChildren('section') sections!: QueryList<ElementRef>;
+
  
   sectionColors = {
     hero: '#679AAC',
@@ -40,5 +44,23 @@ export class LandingPageComponent  {
     references: '#679AAC',
     contact: '#1D1D1D'
   };
+
+ngAfterViewInit() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  this.sections.forEach(section => {
+    observer.observe(section.nativeElement);
+  });
+}
+
+
 
 }

@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-email',
+  standalone: true,
   imports: [InputFieldsEmailComponent, CommonModule, BtnPrimaerComponent, FormsModule, TranslateModule],
   templateUrl: './contact-email.component.html',
   styleUrl: './contact-email.component.scss',
@@ -23,24 +24,48 @@ export class ContactEmailComponent {
     privacy: false
   };
 
- private mailApiUrl = 'https://portfolio.andreaskissner.info/send_mail.php';
+  private mailApiUrl = 'https://portfolio.andreaskissner.info/send_mail.php';
 
-  mailSuccess = false; 
+  mailSuccess = false;
+  mailError = false; 
+  isSending = false; 
+  errorMessage = ''; // Diese Zeile sorgt dafür, dass dein HTML-Error verschwindet
 
   onSubmit(form: NgForm) {
-    if (form.valid) {
+    // Nur senden, wenn das Formular gültig ist UND nicht gerade schon ein Sendevorgang läuft
+    if (form.valid && !this.isSending) {
+      this.isSending = true;
+      this.mailError = false;
+      this.errorMessage = ''; 
+
       this.http.post(this.mailApiUrl, this.contactData)
         .subscribe({
           next: (response) => {
-            this.mailSuccess = true; //
-            form.resetForm();
-            setTimeout(() => this.mailSuccess = false, 3000);
+            this.processSuccess(form);
           },
-         /*  error: (error) => {
-            console.error('Fehler beim Senden:', error);
-          } */
+          error: (error) => {
+            // Falls PHP 200 OK liefert (Mail wurde gesendet), aber Textmüll das JSON-Parsing stört
+            if (error.status === 200) {
+              this.processSuccess(form);
+            } else {
+              this.mailError = true;
+              this.isSending = false;
+              this.errorMessage = 'Fehler beim Senden. Bitte versuche es später erneut.';
+              console.error('Fehler beim Senden:', error);
+            }
+          }
         });
-
     }
+  }
+
+  private processSuccess(form: NgForm) {
+    this.mailSuccess = true;
+    this.isSending = false;
+    this.errorMessage = '';
+    form.resetForm();
+    // Daten zurücksetzen
+    this.contactData = { name: '', email: '', message: '', privacy: false };
+    // Erfolgsmeldung nach 3 Sekunden ausblenden
+    setTimeout(() => this.mailSuccess = false, 3000);
   }
 }

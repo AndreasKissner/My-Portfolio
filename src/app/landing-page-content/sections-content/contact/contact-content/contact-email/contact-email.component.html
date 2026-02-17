@@ -46,6 +46,17 @@
             <button type="submit" class="btn-primaer" [disabled]="!contactForm.form.valid">
                 {{'CONTACT.CONTACT_BTN' | translate}}
             </button>
+            @if (mailSuccess) {
+  <div class="success-message">
+    Deine Nachricht wurde erfolgreich gesendet!
+  </div>
+}
+
+@if (mailError) {
+  <div class="error-message">
+    {{ errorMessage }}
+  </div>
+}
         </app-btn-primaer>
 
         <a href="#hero">

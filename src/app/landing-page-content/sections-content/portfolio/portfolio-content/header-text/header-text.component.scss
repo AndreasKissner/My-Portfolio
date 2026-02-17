@@ -24,6 +24,10 @@
        
     }
 
+.title {
+  @include m.slide-in(1200px);
+}
+
     p {
         font-family: f.$font-second;
         font-weight: 400;

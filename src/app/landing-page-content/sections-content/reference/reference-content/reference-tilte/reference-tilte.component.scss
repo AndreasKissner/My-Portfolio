@@ -3,11 +3,11 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
-align-self: flex-start;
-    
+    align-self: flex-start;
+
     h2 {
         color: c.$light-beige;
-       @include m.font40-eczar(f.$font-eczar);
+        @include m.font40-eczar(f.$font-eczar);
         font-weight: 900;
         padding-left: 16px;
         margin-bottom: 10px;
@@ -17,8 +17,8 @@ align-self: flex-start;
             text-align: center;
         }
 
-        @include m.respond-laptop{
-            padding-left:0;
+        @include m.respond-laptop {
+            padding-left: 0;
         }
 
         @include m.respond-large {
@@ -26,4 +26,9 @@ align-self: flex-start;
             text-align: center;
         }
     }
+
+    .title {
+        @include m.slide-in(-400px);
+    }
+
 }

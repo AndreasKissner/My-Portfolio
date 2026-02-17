@@ -18,7 +18,7 @@
     color: c.$titleName-white;
     font-weight: 700;
     font-family: f.$font-eczar;
-
+    @include m.slide-in(-100px)
 }
 
 .skill-box {
