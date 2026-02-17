@@ -6,24 +6,25 @@
   margin: 55px 0 50px 0;
   display: flex;
   justify-content: center;
-  align-items: center;  // mixin
+  align-items: center; // mixin
   flex-direction: column;
-     @include m.respond-normal {
-     margin-bottom: 70px;
+
+  @include m.respond-normal {
+    margin-bottom: 70px;
   }
-  
+
 }
 
 .content-wrapper {
   height: auto;
-width: 100%;
-  @include m.flex(space-around,center);
-  flex-direction: column; 
+  width: 100%;
+  @include m.flex(space-around, center);
+  flex-direction: column;
 
   @include m.respond-laptop {
     flex-direction: row;
     align-items: flex-start;
-  
+
 
     app-reference-box-content:nth-of-type(1) {
       margin-top: 20px;

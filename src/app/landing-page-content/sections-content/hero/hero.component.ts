@@ -9,7 +9,7 @@ ServiceWorker
 
 @Component({
   selector: 'app-hero',
-  imports: [ProfilImageContainerComponent, BtnPrimaerComponent, TextContentComponent, ScrollDownElementComponent,TranslateModule],
+  imports: [ProfilImageContainerComponent, BtnPrimaerComponent, TextContentComponent, ScrollDownElementComponent, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

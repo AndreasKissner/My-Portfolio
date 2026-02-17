@@ -7,11 +7,10 @@
 :host {
   @include m.flex(flex-start, flex-start);
   align-self: flex-start;
- /*  width: 100%; */
   padding-left: 10px;
   max-width: 136px;
   margin: 50px 0 25px 0px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 app-open-dialog-btn {
@@ -21,7 +20,7 @@ app-open-dialog-btn {
     padding: 0;
     position: relative;
     margin-left: 4px;
-      cursor:pointer;
+    cursor: pointer;
     @include m.flex();
     @include m.size(120px);
 
@@ -136,7 +135,6 @@ app-dialog {
     @include closeDialogBtn.close-button-style;
   }
 }
-
 
 .skill-image-box {
   width: 100%;

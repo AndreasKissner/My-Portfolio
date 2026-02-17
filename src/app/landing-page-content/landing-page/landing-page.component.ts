@@ -37,8 +37,17 @@ export class LandingPageComponent implements AfterViewInit {
     contact: '#1D1D1D'
   };
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
+  /**
+  * Handles scrolling to anchor fragments after the view has been initialized.
+  *
+  * Subscribes to the current route fragment (e.g. #sectionId) and scrolls
+  * smoothly to the corresponding element in the DOM.
+  *
+  * A small timeout ensures that the view is fully rendered before attempting
+  * to find and scroll to the target element.
+  */
   ngAfterViewInit() {
     // Teil 1: Intersection Observer für Animationen
     const observer = new IntersectionObserver((entries) => {
@@ -58,7 +67,6 @@ export class LandingPageComponent implements AfterViewInit {
     // Teil 2: Scroll-Logik für Fragmente (Anker-Links)
     this.route.fragment.subscribe(fragment => {
       if (!fragment) return;
-      
       setTimeout(() => {
         const el = document.getElementById(fragment);
         if (el) {

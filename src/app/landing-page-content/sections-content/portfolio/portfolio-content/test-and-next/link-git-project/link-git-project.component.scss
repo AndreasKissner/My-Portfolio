@@ -1,22 +1,17 @@
  @use 'style-varibles/mixins' as m;
  @use 'style-varibles/fonts' as f;
 
-:host {
-    width: 100%;
-    max-width: 340px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-   
-    align-self: flex-start;
- 
-    gap: 10px;
-    margin-top: 25px;
-    font-family: "QuickFont", monospace;
-      @include m.respond-normal {
-    
-          gap:30px;
-        }
+ :host {
+   width: 100%;
+   max-width: 340px;
+   @include m.flex(center, center, row, 10px);
+   align-self: flex-start;
+   margin-top: 25px;
+   font-family: "QuickFont", monospace;
 
-}
+   @include m.respond-normal {
+
+     gap: 30px;
+   }
+
+ }

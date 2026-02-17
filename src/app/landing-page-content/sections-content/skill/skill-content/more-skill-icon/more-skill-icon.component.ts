@@ -6,11 +6,11 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-more-skill-icon',
-  imports: [OpenDialogBtnComponent,DialogComponent,TranslateModule],
+  imports: [OpenDialogBtnComponent, DialogComponent, TranslateModule],
   templateUrl: './more-skill-icon.component.html',
   providers: [DialogService],
   styleUrl: './more-skill-icon.component.scss',
 })
 export class MoreSkillIconComponent {
-dialog = inject(DialogService)
+  dialog = inject(DialogService)
 }

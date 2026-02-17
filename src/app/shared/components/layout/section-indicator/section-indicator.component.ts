@@ -10,9 +10,9 @@ export class SectionIndicatorComponent {
   color = input<string>('white');
   
   readonly circleImg = input<string>('assets/img/icons/pointerNav/pointer-nav-circle.svg');
-  // Lokales Signal für die aktive Sektion
+
   activeSection = signal<string>('hero');
-  // Die Liste der IDs, die wir tracken wollen
+
   readonly sections = ['hero', 'about', 'skills', 'portfolio', 'references', 'contact'];
 
   private _renderEffect = afterNextRender(() => {
@@ -24,7 +24,6 @@ export class SectionIndicatorComponent {
       root: null,
       threshold: 0.6 // 60% der Sektion müssen sichtbar sein
     };
-
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
@@ -32,7 +31,6 @@ export class SectionIndicatorComponent {
         }
       }
     }, options);
-
     this.sections.forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);

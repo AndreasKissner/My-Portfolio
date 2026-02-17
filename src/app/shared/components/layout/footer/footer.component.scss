@@ -32,8 +32,6 @@ footer {
     max-width: 600px;
     @include m.flex(space-between, center);
 
-    
-
     @include m.respond-large {
       justify-content: space-evenly;
       max-width: 340px;

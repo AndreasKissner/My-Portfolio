@@ -9,7 +9,6 @@ import { PortfolioJson } from '../../../../../interfaces/portfolio-interfaces';
   styleUrl: './image-example.component.scss',
 })
 export class ImageExampleComponent {
-
-
-content = input<PortfolioJson>();
+  
+  content = input<PortfolioJson>();
 }

@@ -7,5 +7,5 @@ import { Component, input } from '@angular/core';
   styleUrl: './input-fields-email.component.scss',
 })
 export class InputFieldsEmailComponent {
-labelText = input.required<string>();
+  labelText = input.required<string>();
 }

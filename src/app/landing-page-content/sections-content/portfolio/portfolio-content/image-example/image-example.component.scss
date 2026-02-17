@@ -15,7 +15,6 @@
     height: 450px;
   }
 
-
   article {
     width: 280px;
     height: 186px;
@@ -37,7 +36,7 @@
   }
 
   .bg-image-wrapper img {
-    position: absolute; // NO Translate
+    position: absolute; 
     top: 215px;
     left: 20px;
     transform: translate(-50%, -50%);

@@ -8,7 +8,6 @@
         width: 74px;
         display: flex;
         justify-content: flex-start;
-        border: 2px solid violet;
     }
 }
 
@@ -16,7 +15,6 @@
     @include m.flex(center, center, column);
     gap: 5px;
     display: none;  
-    border: 1px solid blue;
     width: 20px;
 
     @include m.respond-sm {

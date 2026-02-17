@@ -97,7 +97,6 @@ app-dialog {
   pointer-events: none;
   transform: translate(-56px, -282px);
 
-
   @include m.respond-420 {
     transform: translate(76px, -282px);
   }
@@ -153,9 +152,8 @@ app-dialog {
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex;
-      align-items: flex-start;  // mixin
-      flex-direction: column;
+      @include m.flex(center, flex-start, column);
+
 
       li {
         font-family: f.$font-second;

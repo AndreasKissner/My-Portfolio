@@ -10,9 +10,7 @@ import { PortfolioService } from '../../../../../../shared-services/portfolio.se
 })
 export class UtilyDescriptionComponent {
 
-
 languageText = input<string | undefined>();
 descriptionText = input<string | undefined>();
-
 
 }

@@ -14,18 +14,24 @@ portfolioService = inject(PortfolioService);
 
 indexActuel = input<number>(0);
 
-//For Landing page  
 onBack= output<void>();
 onForward = output<void>();
 
-  back(){
-   this.onBack.emit();
-   console.log('Is clicked');
-  }
+/**
+ * Emits back navigation event.
+ */
+back() {
+  this.onBack.emit();
+  console.log('Is clicked');
+}
 
-  forward(){
-    this.onForward.emit();
-    console.log('Is clicked');
-  }
+/**
+ * Emits forward navigation event.
+ */
+forward() {
+  this.onForward.emit();
+  console.log('Is clicked');
+}
+
 
 }

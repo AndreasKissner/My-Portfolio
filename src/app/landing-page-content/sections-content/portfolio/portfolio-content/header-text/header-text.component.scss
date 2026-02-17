@@ -8,14 +8,14 @@
     min-width: 288px;
     max-width: 1135px;
     padding: 0 16px;
-    @include m.flex(flex-start, center);
-    flex-direction: column; //mixin
+    @include m.flex(flex-start, center, column);
 
     @include m.respond-normal {
+        @include m.flex(center, center, row, 25px);
         align-self: flex-start;
-        flex-direction: row;
-        gap: 25px; 
     }
+
+    ;
 
     h1 {
         font-family: f.$font-eczar ;
@@ -37,5 +37,7 @@
             max-width: 600px;
             padding: 32px;
         }
+
+        ;
     }
 }

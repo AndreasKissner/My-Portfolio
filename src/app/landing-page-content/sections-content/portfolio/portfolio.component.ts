@@ -9,41 +9,42 @@ import { PortfolioService } from '../../../shared-services/portfolio.service';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [HeaderTextComponent,ImageExampleComponent, TestAndNextComponent, PreviousNextComponent],
+  imports: [HeaderTextComponent, ImageExampleComponent, TestAndNextComponent, PreviousNextComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent implements OnInit {
- private portService = inject(PortfolioService);
+  private portService = inject(PortfolioService);
 
   allData = signal<PortfolioJson[]>([]);
   currentIndex = signal<number>(0);
 
+  /** Loads data from the service and stores it in allData */
   ngOnInit() {
-    this.portService.getData().subscribe(result => { ;
+    this.portService.getData().subscribe(result => {
       this.allData.set(result);
     })
   }
-    // From Button
-nextContent() {
-  this.currentIndex.update(index => {
-    if (index < 1) {
-      return index + 1;
-    } else {
-      return 0;
-    }
-  });
-}
 
-prevContent() {
-  this.currentIndex.update(index => {
-    if (index > 0) {
-      return index - 1;
-    } else {
-      return 1;
-    }
-  });
-}
+  /** Moves to the next item (loops back to the start) */
+  nextContent() {
+    this.currentIndex.update(index => {
+      if (index < 1) {
+        return index + 1;
+      } else {
+        return 0;
+      }
+    });
+  }
 
-
+  /** Moves to the previous item (loops to the end) */
+  prevContent() {
+    this.currentIndex.update(index => {
+      if (index > 0) {
+        return index - 1;
+      } else {
+        return 1;
+      }
+    });
+  }
 }

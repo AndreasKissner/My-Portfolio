@@ -8,5 +8,4 @@ export interface PortfolioJson {
   liveUrl: string;
   dialog: string;
   imgStar : string;
-
 }

@@ -75,9 +75,8 @@
   }
 
   @include m.respond-large {
-    width: 70%;
     max-width: 390px;
-    right: -5px;
+    right: 27px;
     top: -17px;
   }
 
