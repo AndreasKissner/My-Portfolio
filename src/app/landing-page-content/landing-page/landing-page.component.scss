@@ -13,6 +13,7 @@
   height: auto;
   flex-shrink: 0;
   @include m.flex-col-center;
+  overflow: hidden;
 
   &#hero {
     height: 100vh;
@@ -33,19 +34,20 @@
   app-reference,
   app-contact {
     flex: 1;
-    padding-left: clamp(0px, 4.28vw - 17px, 50px);  
+    padding-left: clamp(0px, 4.28vw - 17px, 50px);
   }
-} 
+}
 
 .last-section {
   display: flex;
   height: 100%;
-} 
+}
+
 .last-section-footer {
   display: flex;
   height: 100%;
   flex-direction: row;
-} 
+}
 
 .header-mobile-hidden {
   display: none;

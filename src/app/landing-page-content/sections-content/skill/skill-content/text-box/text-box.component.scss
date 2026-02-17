@@ -5,7 +5,7 @@
 
 :host {
     width: 100%;
-    @include m.flex(center, center, column);
+    @include m.flex(center, flex-start, column);
     padding: 0 16px;
 
     @include m.respond-normal {
