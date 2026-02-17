@@ -32,6 +32,7 @@
     p {
         font-family: f.$font-second;
         font-weight: 400;
+        margin-bottom: 30px;
 
         @include m.respond-normal {
             max-width: 600px;
