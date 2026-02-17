@@ -16,15 +16,19 @@ export class App implements AfterViewInit {
   private titleService = inject(Title);
   private translate = inject(TranslateService);
 
-  // Dieser Block wird sofort ausgeführt, wenn die Klasse erstellt wird
-  // Er ersetzt den Constructor komplett
+  /**
+     * Initializes the application language from localStorage or defaults to English.
+     */
   private initLang = (() => {
     const savedLang = localStorage.getItem('lang') || 'en';
     this.translate.use(savedLang);
   })();
 
+  /**
+   * Handles post-initialization tasks like scroll reset and tab title rotation.
+   */
   ngAfterViewInit() {
-    history.replaceState(null, '', location.pathname); 
+    history.replaceState(null, '', location.pathname);
     window.scrollTo(0, 0);
     startTabRotation(this.titleService);
   }

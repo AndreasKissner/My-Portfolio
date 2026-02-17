@@ -4,11 +4,9 @@
 @use 'style-varibles/fonts' as f;
 
 :host {
-
   @include m.flex(flex-start, flex-start, column);
   margin: 15px 0 5px 0;
   max-width: 100%;
-
   @media (min-width: 1241px) {
     margin-top: 30px;
   }
@@ -44,6 +42,10 @@ h1 {
   @include m.respond-mid {
     font-size: 96px;
   }
+}
+
+.title{
+@include m.slide-in(-100px)
 }
 
 h1:first-of-type {

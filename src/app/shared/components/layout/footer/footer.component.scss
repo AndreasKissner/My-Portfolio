@@ -15,10 +15,16 @@ footer {
   @include m.flex(center, center, column, 10px);
   @include m.color-font;
 
-  @include m.respond-large {
+  @include m.respond-laptop {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
+  }
+  .footer-name{
+    text-align: center;
+   @include m.respond-laptop{
+    width: 270px;
+   }
   }
 
   .footer-links {
@@ -30,7 +36,7 @@ footer {
 
     @include m.respond-large {
       justify-content: space-evenly;
-      max-width: 380px;
+      max-width: 340px;
     }
 
     a {

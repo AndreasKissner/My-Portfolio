@@ -15,16 +15,29 @@ header {
   transform: rotate(-90deg);
 }
 
-app-back-flash {
-  @include m.respond-laptop {
-    display: none;
+app-back-flash{
+      @include m.respond-laptop {
+        display: none;
+      }
+}
+
+.back-flash-desk{
+  display: none;
+    @include m.respond-laptop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .legal-content {
   max-width: 1960px;
   margin: 0 auto;
-  padding: 0 12px 45px ;
+  padding: 0 12px 5px;
+   @include m.respond-laptop {
+  padding: 0 12px 45px;
+  }
+   
 }
 
 .legal-page {
@@ -33,7 +46,6 @@ app-back-flash {
   color: #eee;
 }
 
-// Hier wird der Text-Inhalt auf die gewünschte Lesebreite begrenzt
 main.legal-page .legal-content {
   max-width: 1032px;
   margin: 0 auto;
@@ -72,21 +84,22 @@ span {
     width: 300px;
   }
 
-  // Wir nutzen die Eltern-Klasse .footer-content, um den Selektor stärker zu machen
   .footer-content {
     app-footer {
       width: 100%;
       align-self: flex-end;
 
       @include m.respond-laptop {
-        max-width: 760px;
+        width: 650px;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-around;
       }
+      @include m.respond-large{
+        width: 830px;
+      }
 
-      // Durch die Verschachtelung ist dieser Selektor nun stärker als der im Footer-Component
       .footer-links {
         width: 100%;
         display: flex;
@@ -114,7 +127,7 @@ span {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      width: 740px;
+      width: 830px;
     }
   }
 }
@@ -124,11 +137,14 @@ span {
   flex-direction: column-reverse;
   align-items: center;
 
+  height: 320px;
+
   @include m.respond-laptop {
+    height: 200px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     max-width: 1340px;
-   margin: auto;
+    margin: auto;
   }
 }
