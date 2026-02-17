@@ -20,7 +20,7 @@ export class PortfolioComponent implements OnInit {
   currentIndex = signal<number>(0);
 
   ngOnInit() {
-    this.portService.getData().subscribe(result => { console.log('Portfolio-Daten:', result);
+    this.portService.getData().subscribe(result => { ;
       this.allData.set(result);
     })
   }

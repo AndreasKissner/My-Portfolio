@@ -23,8 +23,8 @@
     <img [src]="linkedInSrcHover()" class="img-mobile orange-mobile" alt="LinkedIn">
   </a>
 
-  <a href="#contact" class="social-link"
-     (mouseenter)="mailHover.set(true)" (mouseleave)="mailHover.set(false)">
+  <a class="social-link" (click)="goToContact($event)"
+   (mouseenter)="mailHover.set(true)" (mouseleave)="mailHover.set(false)">
     @if (mailHover()) {
       <img [src]="mailSrcHover()" class="img-desktop" alt="Mail"> 
     } @else {

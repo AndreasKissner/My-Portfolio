@@ -1,0 +1,98 @@
+<div class="legal-page">
+  <div class="legal-content">
+    <app-header></app-header>
+
+    <main class="legal-page">
+      <div class="legal-content">
+
+        <header>
+          <h1>{{ 'IMPRINT.TITLE' | translate }}</h1>
+
+          <app-back-flash>
+            <a href="#hero">
+              <div class="flash-height flash-left">
+                <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height" class="flash-icon">
+                <div class="flash-line"></div>
+              </div>
+            </a>
+          </app-back-flash>
+        </header>
+
+        <section>
+          <h2>{{ 'IMPRINT.IMPRINT_TITLE' | translate }}</h2>
+          <ul>
+            <li>{{ 'IMPRINT.NAMES' | translate }}</li>
+            <li>{{ 'IMPRINT.ADDRESS_LINE1' | translate }}</li>
+            <li>{{ 'IMPRINT.ADDRESS_LINE2' | translate }}</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.CONTACT_TITLE' | translate }}</h2>
+          <p>
+            {{ 'IMPRINT.EMAIL_LABEL' | translate }}:
+            <a href="mailto:{{ 'IMPRINT.EMAIL' | translate }}">
+              {{ 'IMPRINT.EMAIL' | translate }}
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.TERMS_TITLE' | translate }}</h2>
+          <p>{{ 'IMPRINT.TERMS_TEXT' | translate }}</p>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.SCOPE_TITLE' | translate }}</h2>
+          <p>{{ 'IMPRINT.SCOPE_TEXT1' | translate }}</p>
+          <p>{{ 'IMPRINT.SCOPE_TEXT2' | translate }}</p>
+          <p>{{ 'IMPRINT.SCOPE_TEXT3' | translate }}</p>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.RIGHTS_TITLE' | translate }}</h2>
+          <p>{{ 'IMPRINT.RIGHTS_TEXT' | translate }}</p>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.USAGE_TITLE' | translate }}</h2>
+          <p>{{ 'IMPRINT.USAGE_TEXT' | translate }}</p>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.DISCLAIMER_TITLE' | translate }}</h2>
+          <p>{{ 'IMPRINT.DISCLAIMER_TEXT' | translate }}</p>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.LIABILITY_TITLE' | translate }}</h2>
+          <p>{{ 'IMPRINT.LIABILITY_TEXT' | translate }}</p>
+        </section>
+
+        <section>
+          <h2>{{ 'IMPRINT.INDEMNITY_TITLE' | translate }}</h2>
+          <p>{{ 'IMPRINT.INDEMNITY_TEXT' | translate }}</p>
+          <p>
+            {{ 'IMPRINT.QUESTIONS_TEXT' | translate }}
+            <a href="mailto:{{ 'IMPRINT.CONTACT_EMAIL' | translate }}">
+              {{ 'IMPRINT.CONTACT_EMAIL' | translate }}
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <p>
+            {{ 'IMPRINT.DATE' | translate }}:
+            {{ 'IMPRINT.DATE_VALUE' | translate }}
+          </p>
+        </section>
+
+      </div>
+    </main>
+
+    <section class="footer-content">
+      <app-two-icons></app-two-icons>
+      <app-footer></app-footer>
+    </section>
+  </div>
+</div>

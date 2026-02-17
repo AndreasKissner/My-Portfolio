@@ -1,0 +1,42 @@
+@use 'style-varibles/variables' as v;
+@use 'style-varibles/colors' as c;
+@use 'style-varibles/mixins' as m;
+@use 'style-varibles/fonts' as f;
+
+:host {
+    display: block;
+}
+
+/* ::ng-deep sorgt dafür, dass die Styles auf den projizierten Content wirken */
+::ng-deep {
+    .flash-height {
+        @include m.flex(flex-start, center, column);
+        align-self: flex-end;
+        margin-left: 16px;
+        color: c.$orange-four;
+    }
+
+    .flash-icon {
+        animation: flashStretch 2s ease-in-out infinite;
+        transform-origin: bottom;
+        color: c.$orange-four;
+    }
+
+    .flash-line {
+        @include m.size(20px, 2px);
+        color: c.$light-beige;
+        background-color: c.$orange-four;
+    }
+
+    @keyframes flashStretch {
+        0% {
+            transform: translateY(-20px) scaleY(1);
+        }
+        50% {
+            transform: translateY(0px) scaleY(1.4);
+        }
+        100% {
+            transform: translateY(-20px) scaleY(1);
+        }
+    }
+}

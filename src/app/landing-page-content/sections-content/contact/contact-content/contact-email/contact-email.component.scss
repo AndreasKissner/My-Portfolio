@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 750px;
     padding: 0 16px;
-    margin-top: 32px;
+    margin-top: 70px;
 
     .double-content {
         margin-bottom: 45px;
@@ -34,6 +34,7 @@
     background-color: transparent;
     font-size: 18px;
     text-decoration: none;
+    cursor: pointer;
 
     &:disabled {
         opacity: 0.5;
@@ -49,49 +50,13 @@
 }
 
 .btn-flash-content {
-    margin: 40px 0 24px 0;
-    /* width: 100%; */
-    @include m.flex(center, flex-end);
+    margin: 40px 0 0px 0;
+   @include m.flex(space-between, flex-end);
     position: relative;
-
-    a {
-        position: absolute;
-        right: 0;
-    }
 }
 
-.flash-height {
-    @include m.flex(flex-start, center, column);
-    align-self: flex-end;
-    margin-left: 16px;
-    position: relative;
-    color: c.$orange-four;
-}
-
-.flash-icon {
-    animation: flashStretch 2s ease-in-out infinite;
-    transform-origin: bottom;
-    color: c.$orange-four;
-}
-
-.flash-line {
-    @include m.size(20px, 2px);
-    color: c.$light-beige;
-    background-color: c.$orange-four;
-}
-
-@keyframes flashStretch {
-    0% {
-        transform: translateY(-20px) scaleY(1);
-    }
-
-    50% {
-        transform: translateY(0px) scaleY(1.4);
-    }
-
-    100% {
-        transform: translateY(-20px) scaleY(1);
-    }
+.btn-flash-content app-btn-primaer {
+    margin: 0 auto;
 }
 
 .checkbox-group {
@@ -168,7 +133,6 @@ textarea {
     border-bottom: 2px solid c.$orange-two;
     padding: 10px 0 0 10px;
     outline: none;
-    /*     box-sizing: border-box; */
     font-family: f.$font-second;
     resize: none;
     appearance: none;
@@ -203,4 +167,78 @@ input:-webkit-autofill {
     -webkit-text-fill-color: c.$light-beige !important;
     caret-color: c.$light-beige;
     transition: background-color 9999s ease-in-out 0s;
-} 
+}
+
+@keyframes shakeFlash {
+    0% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+
+    25% {
+        transform: translateX(-5px);
+        filter: brightness(1.2);
+    }
+
+    50% {
+        transform: translateX(5px);
+        filter: brightness(1.2);
+    }
+
+    75% {
+        transform: translateX(-5px);
+        filter: brightness(1.2);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+}
+
+.invalid-attempt {
+    animation: shakeFlash 0.4s ease-in-out;
+}
+
+
+@keyframes formFlash {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.form-flash {
+    animation: formFlash 0.5s ease-in-out;
+}
+
+.feedback-overlay {
+    color: c.$orange-two;
+    text-align: center;
+    transform: translateY(20px) scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    height:30px;
+  margin-top: 5px;;
+}
+
+.feedback-overlay.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}

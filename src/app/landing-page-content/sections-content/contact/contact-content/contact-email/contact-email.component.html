@@ -1,17 +1,17 @@
-<form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+<form class="contact-form" #contactForm="ngForm" [class.form-flash]="isFlashing" (ngSubmit)="onSubmit(contactForm)">
 
     <section class="double-content">
-    <app-input-fields-email labelText="{{ 'CONTACT.LABELONE' | translate}}">
-        <input type="text" name="userName" [(ngModel)]="contactData.name" #nameField="ngModel" required
-            [placeholder]="(nameField.invalid && nameField.touched) ? ('CONTACT.PLACEONE' | translate) : ('CONTACT.PLACETWO' | translate)"
-            [class.input-error]="nameField.invalid && nameField.touched">
-    </app-input-fields-email>
+        <app-input-fields-email labelText="{{ 'CONTACT.LABELONE' | translate}}">
+            <input type="text" name="userName" [(ngModel)]="contactData.name" #nameField="ngModel" required
+                [placeholder]="(nameField.invalid && nameField.touched) ? ('CONTACT.PLACEONE' | translate) : ('CONTACT.PLACETWO' | translate)"
+                [class.input-error]="nameField.invalid && nameField.touched">
+        </app-input-fields-email>
 
-    <app-input-fields-email labelText="{{ 'CONTACT.LABELTWO' | translate}}">
-        <input type="email" name="userEmail" [(ngModel)]="contactData.email" #emailField="ngModel" required email
-            [placeholder]="(emailField.invalid && emailField.touched) ? ('CONTACT.PLACETHREE' |translate) : ('CONTACT.PLACEFOUR'| translate)"
-            [class.input-error]="emailField.invalid && emailField.touched">
-    </app-input-fields-email>
+        <app-input-fields-email labelText="{{ 'CONTACT.LABELTWO' | translate}}">
+            <input type="email" name="userEmail" [(ngModel)]="contactData.email" #emailField="ngModel" required email
+                [placeholder]="(emailField.invalid && emailField.touched) ? ('CONTACT.PLACETHREE' |translate) : ('CONTACT.PLACEFOUR'| translate)"
+                [class.input-error]="emailField.invalid && emailField.touched">
+        </app-input-fields-email>
     </section>
 
     <app-input-fields-email labelText="{{ 'CONTACT.LABELTHREE' | translate}}">
@@ -21,7 +21,7 @@
     </textarea>
     </app-input-fields-email>
 
-    <div class="checkbox-group"   [class.has-error]="privacyField.invalid && privacyField.touched">
+    <div class="checkbox-group" [class.has-error]="privacyField.invalid && privacyField.touched">
         <div class="checkbox-wrapper">
             <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacyField="ngModel" required
                 id="privacy" [class.input-error]="privacyField.invalid && privacyField.touched">
@@ -29,43 +29,46 @@
 
         <div class="text-wrapper" [class.has-error]="privacyField.invalid && privacyField.touched">
             <label for="privacy">
-               {{'CONTACT.POLICY'| translate}}
+                {{ 'CONTACT.POLICY_TEXT' | translate }}
+                <a routerLink="/privacy-policy">
+                    {{ 'CONTACT.POLICY_LINK' | translate }}
+                </a>
+                {{ 'CONTACT.POLICY_TEXT_END' | translate }}
             </label>
 
             @if (privacyField.invalid && privacyField.touched) {
             <span class="error-message">
-              {{'CONTACT.POLICY_ERROR' |translate}}
+                {{'CONTACT.POLICY_ERROR' |translate}}
             </span>
             }
         </div>
-
     </div>
 
     <div class="btn-flash-content">
         <app-btn-primaer>
-            <button type="submit" class="btn-primaer" [disabled]="!contactForm.form.valid">
-                {{'CONTACT.CONTACT_BTN' | translate}}
-            </button>
-            @if (mailSuccess) {
-  <div class="success-message">
-    Deine Nachricht wurde erfolgreich gesendet!
-  </div>
-}
-
-@if (mailError) {
-  <div class="error-message">
-    {{ errorMessage }}
-  </div>
-}
+            <div (click)="onInvalidSubmitAttempt(contactForm)">
+                <button type="submit" class="btn-primaer">
+                    {{'CONTACT.CONTACT_BTN' | translate}}
+                </button>
+            </div>
         </app-btn-primaer>
 
-        <a href="#hero">
-            <div class="flash-height">
-                <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height" class="flash-icon">
-                <div class="flash-line"></div>
-            </div>
-        </a>
-
+        <app-back-flash> 
+            <a href="#hero">
+                <div class="flash-height">
+                    <img src="assets/img/icons/contact/flash-high.svg" alt="Icon flash Height" class="flash-icon">
+                    <div class="flash-line"></div>
+                </div>
+            </a>
+        </app-back-flash>
     </div>
 
+    <div class="feedback-overlay" [class.active]="mailSuccess || mailError">
+        @if (mailSuccess) {
+            <div class="success-message">{{'CONTACT.EMAIL_OK' | translate}}</div>
+        }
+        @if (mailError) {
+            <div class="error-message">{{ errorMessage | translate }}</div>
+        }
+    </div>
 </form>

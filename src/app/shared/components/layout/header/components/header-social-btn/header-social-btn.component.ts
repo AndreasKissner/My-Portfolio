@@ -1,4 +1,6 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
+/* import { Router } from '@angular/router'; */
+import { ScrollToService } from '../../../../../../shared-services/scroll-to-service';
 
 @Component({
   selector: 'app-header-social-btn',
@@ -7,6 +9,9 @@ import { Component, input, signal } from '@angular/core';
   styleUrl: './header-social-btn.component.scss',
 })
 export class HeaderSocialBtnComponent {
+
+  private scrollToService = inject(ScrollToService);
+
   gitSrc = input<string>('assets/img/icons/socialBtn/git.svg');
   gitSrcHover = input<string>('assets/img/icons/socialBtn/gitOrange.svg');
 
@@ -19,4 +24,9 @@ export class HeaderSocialBtnComponent {
   gitHover = signal(false);
   linkedInHover = signal(false);
   mailHover = signal(false);
+
+  goToContact(event: MouseEvent) {
+    this.scrollToService.scrollTo('contact');
+  }
+
 }
