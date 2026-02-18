@@ -11,19 +11,17 @@ import { LanguageMenueComponent } from "./components/language-menue/language-men
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  // header.component.ts
-  readonly bgColor = input<string>('transparent'); // Standard ist transparent
+ 
+  readonly bgColor = input<string>('transparent'); 
   textColor = input<string>('white');
   showSocialButtons = input<boolean>(true);
 
-  // Wir setzen hier wieder die Pfade zu den weißen SVGs ein
   headerGitSrc = signal('assets/img/icons/socialBtn/git.svg');
   headerGitSrcHover = signal('assets/img/icons/socialBtn/gitOrange.svg');
 
   headerLinkedInSrc = signal('assets/img/icons/socialBtn/linkedin.svg');
   headerLinkedInSrcHover = signal('assets/img/icons/socialBtn/linkedinOrange.svg');
 
-  // Hier wieder 'mail.svg' statt 'emailblack.svg'
   headerMailSrc = signal('assets/img/icons/socialBtn/mail.svg');
   headerMailSrcHover = signal('assets/img/icons/socialBtn/mailOrange.svg');
 }

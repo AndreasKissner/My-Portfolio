@@ -3,28 +3,39 @@ import { Injectable, signal } from '@angular/core';
 @Injectable()
 
 
+/**
+ * Service to manage the state and visibility of dialog components.
+ */
 export class DialogService {
   showDialog = signal(false);
   isGerman = signal(false);
   isClosing = signal(false);
 
+  /**
+   * Closes the dialog by updating the visibility signal.
+   */
   closeDialog() {
     this.showDialog.set(false);
+  }
 
-}
-
-// open-dialog.btn
+  /**
+   * Updates dialog visibility based on hover state for desktop screens.
+   */
   onHover(state: boolean) {
     if (window.innerWidth >= 1024) {
-  this.showDialog.set(state);
+      this.showDialog.set(state);
     }
   }
 
+  /**
+   * Opens the dialog on click for mobile and tablet devices.
+   */
   onClick() {
     console.log('Btn is clicked');
     if (window.innerWidth < 1024) {
-this.showDialog.set(true);
+      this.showDialog.set(true);
     }
   }
 }
+
 

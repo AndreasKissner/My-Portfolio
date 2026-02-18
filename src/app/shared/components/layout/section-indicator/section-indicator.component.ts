@@ -15,32 +15,44 @@ export class SectionIndicatorComponent {
 
   readonly sections = ['hero', 'about', 'skills', 'portfolio', 'references', 'contact'];
 
-  private _renderEffect = afterNextRender(() => {
-    this.initObserver();
-  });
+ /**
+ * Triggers the observer initialization after the next render cycle.
+ */
+private _renderEffect = afterNextRender(() => {
+  this.initObserver();
+});
 
-  private initObserver() {
-    const options = {
-      root: null,
-      threshold: 0.6 // 60% der Sektion müssen sichtbar sein
-    };
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          this.activeSection.set(entry.target.id);
-        }
-      }
-    }, options);
-    this.sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+/**
+ * Sets up the IntersectionObserver to track active sections.
+ */
+private initObserver() {
+  const options = { root: null, threshold: 0.6 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) this.activeSection.set(entry.target.id);
     });
-  }
+  }, options);
 
-  scrollTo(id: string) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  this.observeSections(observer);
+}
+
+/**
+ * Connects the observer to each section element by ID.
+ */
+private observeSections(observer: IntersectionObserver) {
+  this.sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+}
+
+/**
+ * Smoothly scrolls to a specific element by its ID.
+ */
+scrollTo(id: string) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+}
 }

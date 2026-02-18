@@ -11,19 +11,16 @@ export class LanguageMenueComponent {
   private translate = inject(TranslateService);
   isDark = input<boolean>(false);
 
-  // Wir prüfen: Ist die aktuelle Sprache NICHT Deutsch? 
-  // Wenn ja (also 'en'), dann soll der deutsche Button angezeigt werden.
+  
   showGermanBtn = this.translate.currentLang !== 'de';
 
-  toggleLanguage() {
-    // 1. Status umschalten
-    this.showGermanBtn = !this.showGermanBtn;
-    
-    // 2. Wenn wir jetzt NICHT mehr den deutschen Button zeigen, 
-    // muss die Sprache auf Deutsch gewechselt sein.
-    const lang = this.showGermanBtn ? 'en' : 'de';
-    
-    this.translate.use(lang);
-    localStorage.setItem('lang', lang);
-  }
+ /**
+ * Toggles the application language between German and English.
+ */
+toggleLanguage() {
+  this.showGermanBtn = !this.showGermanBtn;
+  const lang = this.showGermanBtn ? 'en' : 'de';
+  this.translate.use(lang);
+  localStorage.setItem('lang', lang);
+}
 }

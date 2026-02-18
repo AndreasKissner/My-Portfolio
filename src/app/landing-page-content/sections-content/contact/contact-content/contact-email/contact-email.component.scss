@@ -51,7 +51,7 @@
 
 .btn-flash-content {
     margin: 40px 0 0px 0;
-   @include m.flex(space-between, flex-end);
+    @include m.flex(space-between, flex-end);
     position: relative;
 }
 
@@ -234,8 +234,9 @@ input:-webkit-autofill {
     opacity: 0;
     transition: all 0.3s ease;
     pointer-events: none;
-    height:30px;
-  margin-top: 5px;;
+    height: 30px;
+    margin-top: 5px;
+    ;
 }
 
 .feedback-overlay.active {

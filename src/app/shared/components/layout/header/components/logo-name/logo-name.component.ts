@@ -6,8 +6,7 @@ import { Component, input,  } from '@angular/core';
   templateUrl: './logo-name.component.html',
   styleUrl: './logo-name.component.scss',
 })
-export class LogoNameComponent {
- // Hier erstellen wir den "Briefkasten" für die Farbe
-  color = input<string>('white');
 
+export class LogoNameComponent {
+  color = input<string>('white');
 }

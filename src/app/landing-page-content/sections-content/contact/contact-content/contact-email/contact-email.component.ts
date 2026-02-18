@@ -43,8 +43,8 @@ export class ContactEmailComponent {
   isFlashing = false;
 
   /**
-   * Wird beim Absenden des Formulars aufgerufen.
-   */
+ * Called when the form is submitted.
+ */
   onSubmit(form: NgForm) {
     if (form.valid && !this.isSending) {
       this.isSending = true;
@@ -54,9 +54,9 @@ export class ContactEmailComponent {
     }
   }
 
-  /**
-   * Sendet die Daten an die Mail-API.
-   */
+ /**
+ * Sends the data to the Mail API.
+ */
   private sendMail(form: NgForm) {
     this.http.post(this.mailApiUrl, this.contactData)
       .subscribe({
@@ -69,11 +69,10 @@ export class ContactEmailComponent {
       });
   }
 
-  /**
-   * Behandelt Fehler bei der HTTP-Anfrage.
-   */
+ /**
+ * Handles errors occurring during the HTTP request.
+ */
   private handleError(error: any, form: NgForm) {
-    // Falls der Server 200 liefert, aber das JSON nicht lesbar ist
     if (error.status === 200) {
       this.processSuccess(form);
     } else {
@@ -85,8 +84,8 @@ export class ContactEmailComponent {
   }
 
   /**
-   * Zeigt Validierungsfehler an, wenn das Formular ungültig abgeschickt wird.
-   */
+ * Displays validation errors when the form is submitted invalidly.
+ */
   onInvalidSubmitAttempt(form: NgForm) {
     if (!form.valid) {
       form.control.markAllAsTouched();
@@ -95,9 +94,9 @@ export class ContactEmailComponent {
     }
   }
 
-  /**
-   * Setzt das Formular nach Erfolg zurück.
-   */
+ /**
+ * Resets the form after successful submission.
+ */
   private processSuccess(form: NgForm) {
     this.mailSuccess = true;
     this.isSending = false;

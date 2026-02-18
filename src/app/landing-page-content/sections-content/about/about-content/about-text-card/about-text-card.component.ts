@@ -5,12 +5,10 @@ import { DialogComponent } from '../../../../../shared/components/dialog-compone
 import { OpenDialogBtnComponent } from '../../../../../shared/components/dialog-components/open-dialog-btn/open-dialog-btn.component';
 import { DialogService } from '../../../../../shared-services/dialog-service';
 
-
-
 @Component({
 
   selector: 'app-about-text-card',
-  imports: [BtnPrimaerComponent, TranslateModule, OpenDialogBtnComponent,DialogComponent
+  imports: [BtnPrimaerComponent, TranslateModule, OpenDialogBtnComponent, DialogComponent
   ],
   providers: [DialogService],
   templateUrl: './about-text-card.component.html',
@@ -18,9 +16,5 @@ import { DialogService } from '../../../../../shared-services/dialog-service';
 })
 export class AboutTextCardComponent {
   dialog = inject(DialogService);
-  //For Dialog
-  
-showDialog = false;
-
-
+  showDialog = false;
 }

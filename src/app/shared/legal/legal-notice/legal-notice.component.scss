@@ -4,10 +4,8 @@
 @use 'style-varibles/fonts' as f;
 
 header {
-  display: flex;
   width: 100%;
-  align-items: flex-start;
-  flex-direction: column-reverse;
+  @include m.flex($align: flex-start, $direction: column-reverse);
   height: 115px;
 }
 
@@ -15,18 +13,17 @@ header {
   transform: rotate(-90deg);
 }
 
-app-back-flash{
-      @include m.respond-laptop {
-        display: none;
-      }
+app-back-flash {
+  @include m.respond-laptop {
+    display: none;
+  }
 }
 
-.back-flash-desk{
+.back-flash-desk {
   display: none;
-    @include m.respond-laptop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  @include m.respond-laptop {
+    @include m.flex();
   }
 }
 
@@ -34,10 +31,11 @@ app-back-flash{
   max-width: 1960px;
   margin: 0 auto;
   padding: 0 12px 5px;
-   @include m.respond-laptop {
-  padding: 0 12px 45px;
+
+  @include m.respond-laptop {
+    padding: 0 12px 45px;
   }
-   
+
 }
 
 .legal-page {
@@ -91,59 +89,44 @@ span {
 
       @include m.respond-laptop {
         width: 650px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-around;
+        @include m.flex(space-around, flex-end, row);
       }
-      @include m.respond-large{
+
+      @include m.respond-large {
         width: 830px;
       }
 
       .footer-links {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include m.flex();
 
         @include m.respond-laptop {
-          display: flex;
-          justify-content: flex-end;
+          @include m.flex(flex-end, center, row, 15px);
           max-width: 100px;
-          flex-direction: row;
-          gap: 15px;
         }
       }
     }
   }
 
   .imprint-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    .dein-element {
+      @include m.flex(center, center, column);
+    }
 
     @include m.respond-laptop {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
+      @include m.flex(space-between, flex-end, row);
       width: 830px;
     }
   }
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-
+  @include m.flex(center, center, column-reverse);
   height: 320px;
 
   @include m.respond-laptop {
     height: 200px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    @include m.flex(space-between, flex-end, row);
     max-width: 1340px;
     margin: auto;
   }

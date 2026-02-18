@@ -39,40 +39,41 @@ export class LandingPageComponent implements AfterViewInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  /**
-  * Handles scrolling to anchor fragments after the view has been initialized.
-  *
-  * Subscribes to the current route fragment (e.g. #sectionId) and scrolls
-  * smoothly to the corresponding element in the DOM.
-  *
-  * A small timeout ensures that the view is fully rendered before attempting
-  * to find and scroll to the target element.
-  */
-  ngAfterViewInit() {
-    // Teil 1: Intersection Observer für Animationen
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+/**
+ * Main lifecycle hook to initialize observers and scroll logic.
+ */
+ngAfterViewInit() {
+  this.initIntersectionObserver();
+  this.handleFragmentScrolling();
+}
 
-    this.sections.forEach(section => {
-      observer.observe(section.nativeElement);
+/**
+ * Sets up the IntersectionObserver for section visibility animations.
+ */
+private initIntersectionObserver() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
+  }, { threshold: 0.1 });
 
-    // Teil 2: Scroll-Logik für Fragmente (Anker-Links)
-    this.route.fragment.subscribe(fragment => {
-      if (!fragment) return;
-      setTimeout(() => {
-        const el = document.getElementById(fragment);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    });
-  }
+  this.sections.forEach(sec => observer.observe(sec.nativeElement));
+}
+
+/**
+ * Subscribes to route fragments and scrolls to the target element.
+ */
+private handleFragmentScrolling() {
+  this.route.fragment.subscribe(fragment => {
+    if (!fragment) return;
+    setTimeout(() => {
+      const el = document.getElementById(fragment);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  });
+}
 }

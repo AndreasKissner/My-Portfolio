@@ -22,6 +22,4 @@ export class TestAndNextComponent {
 
   content = input<PortfolioJson>();
   dialog = inject(DialogService);
-
-
 }

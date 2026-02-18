@@ -25,6 +25,9 @@ export class HeaderSocialBtnComponent {
   linkedInHover = signal(false);
   mailHover = signal(false);
 
+  /**
+ * Handles the click event to scroll to the contact section.
+ */
   goToContact(event: MouseEvent) {
     this.scrollToService.scrollTo('contact');
   }

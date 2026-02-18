@@ -9,9 +9,11 @@ export class ScrollToService {
   private router = inject(Router);
   private doc = inject(DOCUMENT);
 
+  /**
+  * Scrolls to a section on the landing page or navigates back to it if on a different route.
+  */
   scrollTo(id: string) {
     const isOnLandingPage = this.router.url === '/';
-
     if (isOnLandingPage) {
       const el = this.doc.getElementById(id);
       if (!el) return;

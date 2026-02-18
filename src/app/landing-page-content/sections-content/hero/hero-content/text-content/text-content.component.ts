@@ -13,21 +13,30 @@ export class TextContentComponent implements OnInit {
   private fullText = 'console.log("Hello (-: ");';
   private typoText = 'console.log("Helo';
 
-  ngOnInit(): void {
-    this.typeEffect();
-  }
+/**
+ * Initializes the component and starts the typing effect.
+ */
+ngOnInit(): void {
+  this.typeEffect();
+}
 
- async typeEffect(): Promise<void> {
-  const textToType = "Lets start ! I'm"; 
+/**
+ * Creates a typing animation effect for the display text.
+ */
+async typeEffect(): Promise<void> {
+  const textToType = "Lets start ! I'm";
   this.displayText.set('');
 
   for (let i = 0; i <= textToType.length; i++) {
-    this.displayText.set(textToType.substring(0, i)); 
+    this.displayText.set(textToType.substring(0, i));
     await this.delay(120);
   }
 }
 
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+/**
+ * Pauses execution for a specified duration in milliseconds.
+ */
+private delay(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 }

@@ -9,7 +9,10 @@ export class PortfolioService {
   private http = inject(HttpClient);
   private url = 'assets/json/portfolio.json';
 
-  getData(){
+  /**
+   * Fetches the portfolio data from the specified URL.
+   */
+  getData() {
     return this.http.get<PortfolioJson[]>(this.url);
   }
 }

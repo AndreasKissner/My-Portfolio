@@ -13,7 +13,6 @@
 }
 
 .icon {
-    // Das overflow: hidden muss vom img auf den Container (oder host)
     img {
         width: 100%;
         height: auto;
@@ -24,7 +23,7 @@
 .icon-left {
     width: 172px;
     margin-right: 8px;
-    flex-shrink: 0; // Verhindert, dass das Bild gequetscht wird
+    flex-shrink: 0; 
     @include m.rotate-ring; 
 }
 
@@ -32,7 +31,7 @@
     width: 210px;
     z-index: 2;
     margin-left: -121px;
-    flex-shrink: 0; // Verhindert, dass das Bild gequetscht wird
+    flex-shrink: 0;
     animation: rotate-left 15s linear infinite; 
 }
 
