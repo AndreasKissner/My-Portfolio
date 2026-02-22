@@ -1,4 +1,6 @@
-import { Component, input, signal, afterNextRender, ElementRef } from '@angular/core';
+import { Component, input, signal, afterNextRender } from '@angular/core';
+import { SectionService } from '../../../../shared-services/section.service';
+
 
 @Component({
   selector: 'app-section-indicator',
@@ -8,51 +10,48 @@ import { Component, input, signal, afterNextRender, ElementRef } from '@angular/
 })
 export class SectionIndicatorComponent {
   color = input<string>('white');
-  
   readonly circleImg = input<string>('assets/img/icons/pointerNav/pointer-nav-circle.svg');
-
-  activeSection = signal<string>('hero');
-
   readonly sections = ['hero', 'about', 'skills', 'portfolio', 'references', 'contact'];
 
- /**
- * Triggers the observer initialization after the next render cycle.
- */
-private _renderEffect = afterNextRender(() => {
-  this.initObserver();
-});
+  activeSection!: typeof this.sectionService.activeSection; // ← Typ-Deklaration ohne Zuweisung
 
-/**
- * Sets up the IntersectionObserver to track active sections.
- */
-private initObserver() {
-  const options = { root: null, threshold: 0.6 };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) this.activeSection.set(entry.target.id);
-    });
-  }, options);
+  constructor(private sectionService: SectionService) {
+    this.activeSection = this.sectionService.activeSection; // ← Zuweisung im Constructor
+  }
 
-  this.observeSections(observer);
-}
 
-/**
- * Connects the observer to each section element by ID.
- */
-private observeSections(observer: IntersectionObserver) {
-  this.sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
+  private _renderEffect = afterNextRender(() => {
+    this.initObserver();
   });
-}
 
-/**
- * Smoothly scrolls to a specific element by its ID.
- */
+  private initObserver() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.sectionService.setActive(entry.target.id);
+        }
+      });
+    }, { root: null, threshold: 0.6 });
+
+    this.sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  }
+
 scrollTo(id: string) {
   const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (!element) return;
+
+  const host = document.querySelector('app-landing-page') as HTMLElement;
+  const headerHeight = window.matchMedia('(min-width: 576px)').matches ? 88 : 72;
+
+  if (host) {
+    const elementTop = element.getBoundingClientRect().top + host.scrollTop;
+    host.scrollTo({ 
+      top: elementTop - headerHeight, 
+      behavior: 'smooth' 
+    });
   }
 }
 }

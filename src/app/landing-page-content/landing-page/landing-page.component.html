@@ -1,60 +1,100 @@
-<div class="outer-container" #section id="hero" [style.background-color]="sectionColors.hero">
-  <section class="inner-section">
-    <app-header [showSocialButtons]="true" [bgColor]="sectionColors.hero"></app-header>
-    <div class="last-section">
-      <app-hero></app-hero>
-      <app-section-indicator></app-section-indicator>
-    </div>
-  </section>
-</div>
+<app-header
+  class="global-header"
+  [showSocialButtons]="activeSection().showSocialButtons"
+  [bgColor]="activeSection().bgColor"
+  [textColor]="activeSection().textColor"
+></app-header>
 
-<div class="outer-container" #section id="about" [style.background-color]="sectionColors.about">
-  <section class="inner-section">
-    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.about" textColor="black"></app-header>
-    <div class="last-section">
-      <app-about></app-about>
-      <app-section-indicator color="black"></app-section-indicator>
-    </div>
-  </section>
-</div>
+<div class="sections-wrapper">
 
-<div class="outer-container" #section id="skills" [style.background-color]="sectionColors.skills">
-  <section class="inner-section">
-    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.skills"></app-header>
-    <div class="last-section">
-      <app-skill></app-skill>
-      <app-section-indicator></app-section-indicator>
-    </div>
-  </section>
-</div>
+  <div class="outer-container"
+       #section
+       id="hero"
+       data-header-bg="#679AAC"
+       data-header-text="white"
+       data-show-social="true"
+       [style.background-color]="sectionColors.hero">
+    <section class="inner-section">
+      <div class="last-section">
+        <app-hero></app-hero>
+        <app-section-indicator></app-section-indicator>
+      </div>
+    </section>
+  </div>
 
-<div class="outer-container" #section id="portfolio" [style.background-color]="sectionColors.portfolio">
-  <section class="inner-section">
-    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.portfolio" textColor="black"></app-header>
-    <div class="last-section">
-      <app-portfolio></app-portfolio>
-      <app-section-indicator color="black"></app-section-indicator>
-    </div>
-  </section>
-</div>
+  <div class="outer-container"
+       #section
+       id="about"
+       data-header-bg="#F8F7E5"
+       data-header-text="black"
+       data-show-social="false"
+       [style.background-color]="sectionColors.about">
+    <section class="inner-section">
+      <div class="last-section">
+        <app-about></app-about>
+        <app-section-indicator color="black"></app-section-indicator>
+      </div>
+    </section>
+  </div>
 
-<div class="outer-container" #section id="references" [style.background-color]="sectionColors.references">
-  <section class="inner-section">
-    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.references" textColor="black"></app-header>
-    <div class="last-section">
-      <app-reference></app-reference>
-      <app-section-indicator color="black"></app-section-indicator>
-    </div>
-  </section>
-</div>
+  <div class="outer-container"
+       #section
+       id="skills"
+       data-header-bg="#1D1D1D"
+       data-header-text="white"
+       data-show-social="false"
+       [style.background-color]="sectionColors.skills">
+    <section class="inner-section">
+      <div class="last-section">
+        <app-skill></app-skill>
+        <app-section-indicator></app-section-indicator>
+      </div>
+    </section>
+  </div>
 
-<div class="outer-container" #section id="contact" [style.background-color]="sectionColors.contact">
-  <section class="inner-section">
-    <app-header class="header-mobile-hidden" [showSocialButtons]="false" [bgColor]="sectionColors.contact"></app-header>
-    <div class="last-section-footer">
+  <div class="outer-container"
+       #section
+       id="portfolio"
+       data-header-bg="#F0F0F0"
+       data-header-text="black"
+       data-show-social="false"
+       [style.background-color]="sectionColors.portfolio">
+    <section class="inner-section">
+      <div class="last-section">
+        <app-portfolio></app-portfolio>
+        <app-section-indicator color="black"></app-section-indicator>
+      </div>
+    </section>
+  </div>
+
+  <div class="outer-container"
+       #section
+       id="references"
+       data-header-bg="#679AAC"
+       data-header-text="black"
+       data-show-social="false"
+       [style.background-color]="sectionColors.references">
+    <section class="inner-section">
+      <div class="last-section">
+        <app-reference></app-reference>
+        <app-section-indicator color="black"></app-section-indicator>
+      </div>
+    </section>
+  </div>
+
+  <div class="outer-container"
+       #section
+       id="contact"
+       data-header-bg="#1D1D1D"
+       data-header-text="white"
+       data-show-social="false"
+       [style.background-color]="sectionColors.contact">
+    <section class="inner-section">
+      <div class="last-section-footer">
         <app-contact></app-contact>
-       
-      <app-section-indicator></app-section-indicator>
-    </div>
-  </section>
+        <app-section-indicator></app-section-indicator>
+      </div>
+    </section>
+  </div>
+
 </div>

@@ -31,7 +31,6 @@ export class DialogService {
    * Opens the dialog on click for mobile and tablet devices.
    */
   onClick() {
-    console.log('Btn is clicked');
     if (window.innerWidth < 1024) {
       this.showDialog.set(true);
     }
