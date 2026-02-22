@@ -41,6 +41,7 @@ header {
     max-width: 1919px;
   }
 
+
   .header-left {
     display: none;
 
@@ -62,4 +63,17 @@ header {
     }
   }
     transition: background-color 0.2s ease;
+}
+header {
+  @include m.respond-xxl {
+    max-width: 1919px;
+  }
+}
+
+// ← außerhalb von header
+@media (min-width: 1920px) {
+  header {
+    max-width: 100%;
+    padding: 0 40px;
+  }
 }

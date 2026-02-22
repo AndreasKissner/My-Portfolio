@@ -1,6 +1,6 @@
 <div class="section-indicator">
   @for (id of sections; track id) {
-    <div (click)="scrollTo(id)" style="cursor: pointer">
+    <div (click)="scrollToId(id)" style="cursor: pointer">
       
       @if (activeSection() === id) {
         <img 

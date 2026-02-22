@@ -14,6 +14,7 @@ export class SectionIndicatorComponent {
   readonly sections = ['hero', 'about', 'skills', 'portfolio', 'references', 'contact'];
 
   activeSection!: typeof this.sectionService.activeSection; // ← Typ-Deklaration ohne Zuweisung
+    private lastScrollTop = 0; 
 
   constructor(private sectionService: SectionService) {
     this.activeSection = this.sectionService.activeSection; // ← Zuweisung im Constructor
@@ -24,22 +25,34 @@ export class SectionIndicatorComponent {
     this.initObserver();
   });
 
-  private initObserver() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.sectionService.setActive(entry.target.id);
-        }
-      });
-    }, { root: null, threshold: 0.6 });
+private initObserver() {
+  const host = document.querySelector('app-landing-page') as HTMLElement;
 
-    this.sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+  const observer = new IntersectionObserver((entries) => {
+    const currentScrollTop = host?.scrollTop ?? 0;
+    const scrollingDown = currentScrollTop >= this.lastScrollTop;
+    this.lastScrollTop = currentScrollTop;
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting && scrollingDown && entry.intersectionRatio >= 0.8) {
+        this.sectionService.setActive(entry.target.id);
+      }
+
+      if (entry.isIntersecting && !scrollingDown && entry.intersectionRatio >= 0.8) {
+        this.sectionService.setActive(entry.target.id);
+      }
     });
-  }
 
-scrollTo(id: string) {
+  }, { root: host, threshold: [0.1, 0.8] });
+
+  this.sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+}
+
+
+scrollToId(id: string) {
   const element = document.getElementById(id);
   if (!element) return;
 

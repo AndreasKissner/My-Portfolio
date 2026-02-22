@@ -46,21 +46,21 @@ export class LandingPageComponent implements AfterViewInit, OnDestroy {
   @ViewChildren('section') sections!: QueryList<ElementRef>;
 
   sectionColors = {
-    hero:       '#679AAC',
-    about:      '#F8F7E5',
-    skills:     '#1D1D1D',
-    portfolio:  '#F0F0F0',
+    hero: '#679AAC',
+    about: '#F8F7E5',
+    skills: '#1D1D1D',
+    portfolio: '#F0F0F0',
     references: '#679AAC',
-    contact:    '#1D1D1D'
+    contact: '#1D1D1D'
   };
 
   private sectionHeaderMap: Record<string, HeaderState> = {
-    hero:       { bgColor: '#679AAC', textColor: 'white', showSocialButtons: true  },
-    about:      { bgColor: '#F8F7E5', textColor: 'black', showSocialButtons: false },
-    skills:     { bgColor: '#1D1D1D', textColor: 'white', showSocialButtons: false },
-    portfolio:  { bgColor: '#F0F0F0', textColor: 'black', showSocialButtons: false },
+    hero: { bgColor: '#679AAC', textColor: 'white', showSocialButtons: true },
+    about: { bgColor: '#F8F7E5', textColor: 'black', showSocialButtons: false },
+    skills: { bgColor: '#1D1D1D', textColor: 'white', showSocialButtons: false },
+    portfolio: { bgColor: '#F0F0F0', textColor: 'black', showSocialButtons: false },
     references: { bgColor: '#679AAC', textColor: 'black', showSocialButtons: false },
-    contact:    { bgColor: '#1D1D1D', textColor: 'white', showSocialButtons: false },
+    contact: { bgColor: '#1D1D1D', textColor: 'white', showSocialButtons: false },
   };
 
   activeSection = computed<HeaderState>(() =>
@@ -74,23 +74,34 @@ export class LandingPageComponent implements AfterViewInit, OnDestroy {
     private sectionService: SectionService,
     private ngZone: NgZone,
     private el: ElementRef
-  ) {}
+  ) { }
 
+  /**
+  * Initializes observers and fragment-based scrolling after view is ready.
+  */
   ngAfterViewInit(): void {
     this.initVisibilityObserver();
     this.handleFragmentScrolling();
   }
 
+  /**
+   * Cleans up observers on component destruction.
+   */
   ngOnDestroy(): void {
     this.visibilityObserver?.disconnect();
   }
 
+  /**
+   * Returns the fixed header height based on current breakpoint.
+   */
   private getHeaderHeight(): number {
     return window.matchMedia('(min-width: 576px)').matches ? 88 : 72;
   }
 
-
-
+  /**
+   * Adds 'visible' class to sections as they enter the viewport.
+   * Used to trigger CSS entrance animations.
+   */
   private initVisibilityObserver(): void {
     this.visibilityObserver = new IntersectionObserver(
       (entries) => {
@@ -103,25 +114,34 @@ export class LandingPageComponent implements AfterViewInit, OnDestroy {
     this.sections.forEach(sec => this.visibilityObserver.observe(sec.nativeElement));
   }
 
-private handleFragmentScrolling(): void {
-  this.route.fragment.subscribe(fragment => {
-    if (!fragment) return;
-    setTimeout(() => {
-      const el = document.getElementById(fragment);
-      if (el) {
-        const host = this.el.nativeElement as HTMLElement;
-        const elementTop = el.getBoundingClientRect().top + host.scrollTop;
-        host.scrollTo({ top: elementTop - this.getHeaderHeight(), behavior: 'smooth' });
-      }
-    }, 100);
-  });
+  /**
+   * Listens for route fragment changes and scrolls to the target section,
+   * offset by the fixed header height.
+   */
+  private handleFragmentScrolling(): void {
+    this.route.fragment.subscribe(fragment => {
+      if (!fragment) return;
+      setTimeout(() => {
+        const el = document.getElementById(fragment);
+        if (el) {
+          const host = this.el.nativeElement as HTMLElement;
+          const elementTop = el.getBoundingClientRect().top + host.scrollTop;
+          host.scrollTo({ top: elementTop - this.getHeaderHeight(), behavior: 'smooth' });
+        }
+      }, 100);
+    });
+  }
+
+  /**
+   * Scrolls to a section by ID, offset by the fixed header height.
+   * Used by the section indicator and external navigation links.
+   */
+  scrollToSection(id: string): void {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const host = this.el.nativeElement as HTMLElement;
+    const elementTop = el.getBoundingClientRect().top + host.scrollTop;
+    host.scrollTo({ top: elementTop - this.getHeaderHeight(), behavior: 'smooth' });
+  }
 }
 
-scrollToSection(id: string): void {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const host = this.el.nativeElement as HTMLElement;
-  const elementTop = el.getBoundingClientRect().top + host.scrollTop;
-  host.scrollTo({ top: elementTop - this.getHeaderHeight(), behavior: 'smooth' });
-}
-}
