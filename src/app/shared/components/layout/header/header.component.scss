@@ -2,22 +2,32 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
 
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+  transition: background-color 0.2s ease;
+}
 
 header {
   height: 72px;
   width: 100%;
   max-width: 530px;
+  margin: 0 auto;
   @include m.flex(space-between, center);
 
   @include m.respond-xsm360 {
-   /*  max-width: 352px; */
-   width: 100%;
+    width: 100%;
     padding: 0;
   }
 
   @include m.respond-sm {
     height: 88px;
-    max-width: 710px
+    max-width: 710px;
   }
 
   @include m.respond-mid {
@@ -42,7 +52,6 @@ header {
     max-width: 1919px;
   }
 
-
   .header-left {
     display: none;
 
@@ -63,15 +72,8 @@ header {
       padding-right: 20px;
     }
   }
-    transition: background-color 0.2s ease;
-}
-header {
-  @include m.respond-xxl {
-    max-width: 1919px;
-  }
 }
 
-// ← außerhalb von header
 @media (min-width: 1920px) {
   header {
     max-width: 100%;
