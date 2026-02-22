@@ -33,12 +33,11 @@
   overflow: clip;
   justify-content: flex-end;
 
-
   &#hero {
     height: 100vh;
   }
   &:last-child {
-    min-height: 100vh;
+    min-height: auto;
   }
 }
 
@@ -49,8 +48,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   padding-top: var(--header-height);
+
+  @include m.respond-sm{
+    padding-right: 40px;
+  }
 
   app-hero,
   app-about,
@@ -65,6 +67,6 @@
 
 .last-section,
 .last-section-footer {
-  display: block;  // oder flex column, je nach Bedarf
+  display: block;  
   height: 100%;
 }

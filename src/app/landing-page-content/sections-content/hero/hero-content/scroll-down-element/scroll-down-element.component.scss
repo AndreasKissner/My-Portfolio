@@ -5,8 +5,9 @@
     z-index: 3;
 
     &.profil-image-content-style {
-        bottom: 7px;
+        bottom: 54px;
         left: -3px;
+        width:80px;
 
         @media(min-width:725px) {
             display: none;

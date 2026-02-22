@@ -20,12 +20,14 @@ footer {
     justify-content: space-between;
     margin-bottom: 30px;
   }
-  .footer-name{
+
+  .footer-name {
     text-align: center;
-   @include m.respond-laptop{
-    width: 270px;
-    padding-right: 8px;
-   }
+
+    @include m.respond-laptop {
+      width: 270px;
+      padding-right: 8px;
+    }
   }
 
   .footer-links {
