@@ -23,4 +23,8 @@ img {
   @include m.respond-large {
     height: 711px;
   }
+
+   @include m.respond-xxl {
+    height: 830px;
+  }
 }

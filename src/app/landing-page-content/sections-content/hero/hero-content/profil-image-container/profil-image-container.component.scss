@@ -83,12 +83,14 @@
   @include m.respond-xl {
     right: -3px;
     max-width: 428px;
+    margin-right: 10px;
   }
 
   @include m.respond-xxl {
     right: -10px;
     max-width: 550px;
     top: 0px;
+    margin-right: 20px;
   }
 }
 
@@ -109,11 +111,14 @@
     }
 
     @include m.respond-mid {
-      width: 390px;
+      width: 340px;
     }
 
     @include m.respond-large {
-      width: 425px;
+      width: 410px;
+    }
+    @include m.respond-xxl{
+      width:585px
     }
   }
 }
