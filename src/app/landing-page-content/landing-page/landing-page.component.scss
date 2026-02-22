@@ -33,6 +33,7 @@
   overflow: clip;
   justify-content: flex-end;
 
+
   &#hero {
     height: 100vh;
   }
@@ -62,13 +63,8 @@
   }
 }
 
-.last-section {
-  display: flex;
-  height: 100%;
-}
-
+.last-section,
 .last-section-footer {
-  display: flex;
+  display: block;  // oder flex column, je nach Bedarf
   height: 100%;
-  flex-direction: row;
 }
