@@ -34,16 +34,16 @@ private initObserver() {
     this.lastScrollTop = currentScrollTop;
 
     entries.forEach(entry => {
-      if (entry.isIntersecting && scrollingDown && entry.intersectionRatio >= 0.8) {
+      if (entry.isIntersecting && scrollingDown && entry.intersectionRatio >= 0.6) {
         this.sectionService.setActive(entry.target.id);
       }
 
-      if (entry.isIntersecting && !scrollingDown && entry.intersectionRatio >= 0.8) {
+      if (entry.isIntersecting && !scrollingDown && entry.intersectionRatio >= 0.6) {
         this.sectionService.setActive(entry.target.id);
       }
     });
 
-  }, { root: host, threshold: [0.1, 0.8] });
+  }, { root: host, threshold: [0.1, 0.7] });
 
   this.sections.forEach(id => {
     const el = document.getElementById(id);
