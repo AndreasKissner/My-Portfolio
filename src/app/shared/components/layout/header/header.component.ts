@@ -1,4 +1,4 @@
-import { Component, HostBinding, input,signal } from '@angular/core';
+import { Component, HostBinding, HostListener, input, signal } from '@angular/core';
 import { HeaderSocialBtnComponent } from './components/header-social-btn/header-social-btn.component';
 import { HeroHeaderNavComponent } from './components/hero-header-nav/hero-header-nav.component';
 import { LogoNameComponent } from './components/logo-name/logo-name.component';
@@ -13,10 +13,15 @@ import { LanguageMenueComponent } from "./components/language-menue/language-men
 export class HeaderComponent {
 
   @HostBinding('style.background-color') get hostBg() {
-  return this.bgColor();
-}
- 
-  readonly bgColor = input<string>('transparent'); 
+    return this.bgColor();
+  }
+
+  @HostBinding('style.position') get hostPosition() {
+    return this.isFixed() ? 'fixed' : 'static';
+  }
+
+  readonly isFixed = input<boolean>(true);
+  readonly bgColor = input<string>('transparent');
   textColor = input<string>('white');
   showSocialButtons = input<boolean>(true);
 
