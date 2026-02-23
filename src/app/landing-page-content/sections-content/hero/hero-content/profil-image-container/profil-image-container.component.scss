@@ -57,7 +57,7 @@
   }
 
   @include m.respond-xxl {
-    right: 450px;
+    right: 375px;
   }
 
 }
@@ -90,7 +90,7 @@
     right: -10px;
     max-width: 550px;
     top: 0px;
-    margin-right: 20px;
+    margin-right: 50px;
   }
 }
 
@@ -118,7 +118,7 @@
       width: 410px;
     }
     @include m.respond-xxl{
-      width:585px
+      width:650px
     }
   }
 }

@@ -7,7 +7,6 @@
   width: 100%;
   max-width: 780px;
   height: 310px;
-
   @include m.flex();
   flex-wrap: wrap;
   padding: 0 16px;
@@ -21,6 +20,9 @@
     padding-top: 110px;
   }
 
+  @include m.respond-xxl {
+    max-width: 1070px;
+  }
 }
 
 .skill-item {
@@ -32,9 +34,14 @@
     height: clamp(69px, 3.5vw + 55px, 86px);
     transition: transform 200ms ease;
 
-    @media(max-width:700px) {
-      width: 46px;
-      height: 46px;
+    @include m.respond-mid {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include m.respond-xxl {
+      width: 115px;
+      height: 115px;
     }
   }
 
@@ -45,7 +52,6 @@
     @media(max-width:400px) {
       font-size: 14px;
     }
-
   }
 
   &:hover {

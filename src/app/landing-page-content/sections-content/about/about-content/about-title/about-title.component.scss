@@ -27,13 +27,21 @@
             font-size: 72px;
         }
 
-        @include m.respond-xxl {
+         @include m.respond-sm{
+            margin-right: 20px;
+         } 
+
+          @include m.respond-xxl {
             font-size: 144px;
         }
+     
+        }
+
+       
         
         
     }
-}
+
 
 .title{
 @include m.slide-in(100px)
