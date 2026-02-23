@@ -46,12 +46,18 @@
     @include m.respond-laptop{
         font-size: 24px;
     }
+    @include m.respond-xxl{
+        font-size: 42px;
+    }
 }
 
 :host ::ng-deep main {
     grid-column: 1;
     grid-row: 2;
     font-family: f.$font-second;
+     @include m.respond-xxl{
+        font-size: 28px;
+    }
 }
 
 :host ::ng-deep footer {
@@ -59,6 +65,9 @@
     grid-row: 3;
     font-family: f.$font-second;
     margin-top: 7px;
+     @include m.respond-xxl{
+        font-size: 20px;
+    }
 }
 
 :host ::ng-deep .icon-top,
@@ -85,5 +94,8 @@
         &:hover {
             color: c.$orange-four;
         }
+    }
+     @include m.respond-xxl{
+        font-size: 32px;
     }
 }

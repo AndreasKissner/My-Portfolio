@@ -25,6 +25,9 @@
             font-size: 72px;
             text-align: center;
         }
+        @include m.respond-xxl{
+            font-size: 144px;
+        }
     }
 
     .title {
