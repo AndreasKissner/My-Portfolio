@@ -77,3 +77,21 @@ a {
 app-landing-page {
   scroll-behavior: smooth;
 }
+
+/* Globaler Reset für das blaue Tipp-Feedback auf Mobilgeräten */
+button, 
+a, 
+input[type="submit"],
+input[type="button"],
+[role="button"],
+.clickable {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        opacity: 0.7;
+        transition: opacity 0.1s ease;
+    }
+}

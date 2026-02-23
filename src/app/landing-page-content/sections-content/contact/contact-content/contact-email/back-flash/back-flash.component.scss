@@ -7,13 +7,20 @@
     display: block;
 }
 
-/* ::ng-deep sorgt dafür, dass die Styles auf den projizierten Content wirken */
 ::ng-deep {
     .flash-height {
         @include m.flex(flex-start, center, column);
         align-self: flex-end;
         margin-left: 16px;
         color: c.$orange-four;
+        cursor: pointer;
+        @media (min-width: 1025px) {
+            &:hover {
+                .flash-line {
+                    opacity: 1;
+                }
+            }
+        }
     }
 
     .flash-icon {
@@ -26,6 +33,11 @@
         @include m.size(20px, 2px);
         color: c.$light-beige;
         background-color: c.$orange-four;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 1;
+        @media (min-width: 1025px) {
+            opacity: 0;
+        }
     }
 
     @keyframes flashStretch {
