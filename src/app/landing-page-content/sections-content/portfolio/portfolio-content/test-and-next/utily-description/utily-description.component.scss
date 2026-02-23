@@ -25,5 +25,8 @@
             color: c.$light-beige;
             font-family: f.$font-second;
         }
+          @include m.respond-xxl {
+            font-size: 24px;
+        }
     }
 }

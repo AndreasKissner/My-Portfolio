@@ -3,7 +3,7 @@
 @use 'style-varibles/mixins' as m;
 
 :host {
-  position: relative; 
+  position: relative;
   width: 100%;
   min-width: 300px;
   max-width: 500px;
@@ -11,8 +11,14 @@
   background-color: c.$orange-two;
   margin-bottom: 30px;
   @include m.flex();
+
   @include m.respond-normal {
     height: 450px;
+  }
+
+  @include m.respond-xxl {
+    max-width: 700px;
+    height: 510px;
   }
 
   article {
@@ -24,6 +30,10 @@
     @include m.respond-normal {
       width: 420px;
       height: auto;
+
+      @include m.respond-xxl {
+        width: 560px;
+      }
     }
 
     img {
@@ -35,7 +45,7 @@
   }
 
   .bg-image-wrapper img {
-    position: absolute; 
+    position: absolute;
     top: 215px;
     left: 20px;
     transform: translate(-50%, -50%);
@@ -43,9 +53,14 @@
     width: 120px;
     height: auto;
     @include m.rotate-ring;
+
     @include m.respond-normal {
       top: 293px;
       left: 5px;
+    }
+
+    @include m.respond-xxl {
+      top: 360px;
     }
 
   }

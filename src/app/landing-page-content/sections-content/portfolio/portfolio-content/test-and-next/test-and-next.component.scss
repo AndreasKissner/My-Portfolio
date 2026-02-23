@@ -19,6 +19,9 @@
         padding: 32px;
         height: 330px;
     }
+      @include m.respond-xxl {
+            height: 430px;
+        }
 
     app-dialog {
         display: block;
