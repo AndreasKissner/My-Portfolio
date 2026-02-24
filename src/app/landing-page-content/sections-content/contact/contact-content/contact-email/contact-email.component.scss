@@ -262,3 +262,22 @@ input:-webkit-autofill {
     transform: translateY(0) scale(1);
     opacity: 1;
 }
+
+
+
+.input-error {
+    border-bottom: 2px solid c.$error !important; 
+    
+    &::placeholder {
+        color: c.$error !important;
+        opacity: 1;
+    }
+}
+
+.error-text {
+    color: c.$error;
+    font-size: 12px;
+    margin-top: 4px;
+    font-family: f.$font-second;
+    min-height: 16px; 
+}

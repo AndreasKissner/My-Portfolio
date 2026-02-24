@@ -40,7 +40,11 @@ export class SectionIndicatorComponent {
     const host = document.querySelector('app-landing-page') as HTMLElement;
     const observer = new IntersectionObserver((entries) => {
       this.processEntries(entries, host);
-    }, { root: host, threshold: [0.1, 0.7] });
+    }, { 
+      root: host, 
+      // FAKT: 0.4 MUSS hier enthalten sein, damit die checkActivation-Logik greift
+      threshold: [0.1, 0.4, 0.7] 
+    });
 
     this.sections.forEach(id => {
       const el = document.getElementById(id);
@@ -61,7 +65,7 @@ export class SectionIndicatorComponent {
    * Updates the active section if an entry meets the visibility threshold.
    */
   private checkActivation(entry: IntersectionObserverEntry) {
-    if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
       const textColor = sectionTextColors[entry.target.id] ?? 'white';
       this.sectionService.setActive(entry.target.id, textColor);
     }

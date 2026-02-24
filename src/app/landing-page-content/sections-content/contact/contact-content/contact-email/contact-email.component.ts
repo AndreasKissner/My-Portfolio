@@ -43,8 +43,8 @@ export class ContactEmailComponent {
   isFlashing = false;
 
   /**
- * Called when the form is submitted.
- */
+  * Called when the form is submitted.
+  */
   onSubmit(form: NgForm) {
     if (form.valid && !this.isSending) {
       this.isSending = true;
@@ -87,12 +87,24 @@ export class ContactEmailComponent {
  * Displays validation errors when the form is submitted invalidly.
  */
   onInvalidSubmitAttempt(form: NgForm) {
-    if (!form.valid) {
-      form.control.markAllAsTouched();
-      this.isFlashing = true;
-      setTimeout(() => this.isFlashing = false, 500);
+  if (!form.valid) {
+    form.control.markAllAsTouched();
+    const emailControl = form.controls['userEmail'];
+    if (emailControl && emailControl.invalid) {
+      this.contactData.email = ''; 
+      emailControl.markAsDirty(); 
+      emailControl.setValue('');   
     }
+    const nameControl = form.controls['userName'];
+    if (nameControl && nameControl.invalid) {
+      this.contactData.name = '';
+      nameControl.markAsDirty();
+      nameControl.setValue('');
+    }
+    this.isFlashing = true;
+    setTimeout(() => this.isFlashing = false, 500);
   }
+}
 
  /**
  * Resets the form after successful submission.

@@ -32,8 +32,8 @@
   outline: none;        // Entfernt den Standard-Browser-Rahmen (optional, siehe Hinweis unten)
 
   img {
-    width: clamp(69px, 3.5vw + 55px, 86px);
-    height: clamp(69px, 3.5vw + 55px, 86px);
+    width: clamp(60px, 2.5vw + 55px, 86px);
+    height: clamp(60px, 2.5vw + 55px, 86px);
     transition: transform 200ms ease;
 
     @include m.respond-mid {
