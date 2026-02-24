@@ -23,10 +23,12 @@
 
         @include m.respond-large {
             font-size: 72px;
-            text-align: center;
+            text-align: left;
         }
-        @include m.respond-xxl{
+
+        @include m.respond-xxl {
             font-size: 144px;
+           
         }
     }
 

@@ -2,7 +2,6 @@ import { Injectable, signal } from '@angular/core';
 
 @Injectable()
 
-
 /**
  * Service to manage the state and visibility of dialog components.
  */

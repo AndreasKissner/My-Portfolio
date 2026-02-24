@@ -21,6 +21,9 @@ label {
    font-weight: 700;
    color: c.$light-beige;
    margin-left: 10px;
+    @include m.respond-xxxl{
+      font-size:  32px;
+    }
 }
 
 

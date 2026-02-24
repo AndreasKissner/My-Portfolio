@@ -28,6 +28,8 @@
 .skill-item {
   @include m.flex(center, center, column);
   gap: 12px;
+  text-decoration: none; // Entfernt Unterstreichungen bei Links
+  outline: none;        // Entfernt den Standard-Browser-Rahmen (optional, siehe Hinweis unten)
 
   img {
     width: clamp(69px, 3.5vw + 55px, 86px);
@@ -54,9 +56,20 @@
     }
   }
 
-  &:hover {
+  &:hover, 
+  &:focus {
     img {
       transform: scale(1.3);
     }
+    
+    span {
+      color: white; 
+    }
   }
-}
+
+  &:focus-visible {
+    outline: 2px solid c.$light-beige; 
+    outline-offset: 8px;
+    border-radius: 8px;
+  }
+} 

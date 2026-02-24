@@ -15,9 +15,12 @@ h3 {
    @include m.respond-normal {
       font-size: 72px;
    }
-}
 
-.title {
-  @include m.slide-in(100px);
-}
+   @include m.respond-xxl {
+      font-size: 144px;
+   }
+    @include m.respond-xxxl {
+      margin-bottom:100px;
+   }
 
+}

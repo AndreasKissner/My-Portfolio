@@ -9,6 +9,9 @@
     max-width: 750px;
     padding: 0 16px;
     margin-top: 70px;
+     @include m.respond-xxxl {
+           max-width: 850px;
+        }
 
     .double-content {
         margin-bottom: 45px;
@@ -20,6 +23,7 @@
         @include m.respond-large {
             gap: 80px;
         }
+        
     }
 }
 
@@ -63,6 +67,10 @@
     height: 30px;
     @include m.flex(flex-start, center);
 
+    @include m.respond-xxl {
+        @include m.flex(flex-start, flex-end);
+    }
+
     .text-wrapper {
         @include m.flex();
 
@@ -75,10 +83,18 @@
             font-weight: 400;
             color: c.$light-beige;
             height: 24px;
+
+            @include m.respond-xxxl {
+                font-size: 24px;
+            }
         }
 
         a {
             color: c.$orange-four;
+
+            @include m.respond-xxxl {
+                font-size: 24px;
+            }
         }
     }
 
@@ -145,6 +161,10 @@ textarea {
     &:focus {
         border-bottom: 2px solid c.$orange-four; //
         outline: none;
+    }
+
+    @include m.respond-xxxl {
+        font-size: 22px;
     }
 }
 

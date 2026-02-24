@@ -29,7 +29,14 @@
     app-contact-title,
     app-contact-problem-content {
       order: 1;
+   
     }
+    app-contact-title{
+       @include m.respond-xxl{
+        width:1000px;
+      }
+    }
+
 
     app-two-icons {
       order: 3;

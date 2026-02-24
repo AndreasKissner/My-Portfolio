@@ -33,21 +33,13 @@ export class SectionIndicatorComponent {
     this.initObserver();
   });
 
+  /**
+   * Initializes the IntersectionObserver for all defined sections.
+   */
   private initObserver() {
     const host = document.querySelector('app-landing-page') as HTMLElement;
-
     const observer = new IntersectionObserver((entries) => {
-      const currentScrollTop = host?.scrollTop ?? 0;
-      const scrollingDown = currentScrollTop >= this.lastScrollTop;
-      this.lastScrollTop = currentScrollTop;
-
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
-          const textColor = sectionTextColors[entry.target.id] ?? 'white';
-          this.sectionService.setActive(entry.target.id, textColor);
-        }
-      });
-
+      this.processEntries(entries, host);
     }, { root: host, threshold: [0.1, 0.7] });
 
     this.sections.forEach(id => {
@@ -56,19 +48,37 @@ export class SectionIndicatorComponent {
     });
   }
 
+  /**
+   * Handles scroll position tracking and triggers entry checks.
+   */
+  private processEntries(entries: IntersectionObserverEntry[], host: HTMLElement) {
+    const currentScrollTop = host?.scrollTop ?? 0;
+    this.lastScrollTop = currentScrollTop;
+    entries.forEach(entry => this.checkActivation(entry));
+  }
+
+  /**
+   * Updates the active section if an entry meets the visibility threshold.
+   */
+  private checkActivation(entry: IntersectionObserverEntry) {
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+      const textColor = sectionTextColors[entry.target.id] ?? 'white';
+      this.sectionService.setActive(entry.target.id, textColor);
+    }
+  }
+
+  /**
+   * Smoothly scrolls to a specific section by its ID.
+   */
   scrollToId(id: string) {
     const element = document.getElementById(id);
-    if (!element) return;
-
     const host = document.querySelector('app-landing-page') as HTMLElement;
+    if (!element || !host) return;
     const headerHeight = window.matchMedia('(min-width: 576px)').matches ? 88 : 72;
-
-    if (host) {
-      const elementTop = element.getBoundingClientRect().top + host.scrollTop;
-      host.scrollTo({
-        top: elementTop - headerHeight,
-        behavior: 'smooth'
-      });
-    }
+    const elementTop = element.getBoundingClientRect().top + host.scrollTop;
+    host.scrollTo({
+      top: elementTop - headerHeight,
+      behavior: 'smooth'
+    });
   }
 }

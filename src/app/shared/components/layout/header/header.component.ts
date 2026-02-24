@@ -12,10 +12,16 @@ import { LanguageMenueComponent } from "./components/language-menue/language-men
 })
 export class HeaderComponent {
 
+  /**
+   * Binds the current signal-based color to the host's background style.
+   */
   @HostBinding('style.background-color') get hostBg() {
     return this.bgColor();
   }
 
+  /**
+   * Toggles the host's CSS position between fixed and static.
+   */
   @HostBinding('style.position') get hostPosition() {
     return this.isFixed() ? 'fixed' : 'static';
   }
