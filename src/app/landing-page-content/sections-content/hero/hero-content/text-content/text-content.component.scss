@@ -5,7 +5,7 @@
 
 :host {
   @include m.flex(flex-start, flex-start, column);
-  margin: 15px 0 5px 0;
+  margin: -5px 0 5px 0;
   max-width: 100%;
    color: c.$light-beige;
   @media (min-width: 1241px) {
@@ -51,7 +51,7 @@ h1,h2 {
   }
 
       @include m.respond-xxl {
-    font-size: 144px;
+    font-size: 120px;
   }
 }
 

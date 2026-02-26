@@ -7,45 +7,42 @@
     @include m.flex(flex-end, flex-end);
     width: 100%;
     margin-top: 17px;
-    min-height: 100px;
     max-width: 400px;
 
     @include m.respond-large {
         margin-top: 0;
     }
 
-     @include m.respond-xxl {
+    @include m.respond-xxl {
         max-width: 800px;
     }
+
+
 
     h1 {
         font-size: 40px;
         font-family: f.$font-eczar;
         font-weight: bold;
 
+        @include m.respond-sm {
+            margin-right: 18px;
+        }
+
+
         @include m.respond-normal {
             font-size: 72px;
         }
 
-         @include m.respond-sm{
-            margin-right: 18px;
-         } 
 
-          @include m.respond-xxl {
-            font-size: 144px;
-        }
-     
+        @include m.respond-xxl {
+            font-size: 120px;
         }
 
-       
-        
-        
     }
-
-
-.title{
-@include m.slide-in(100px)
 }
- 
 
 
+.title {
+    @include m.slide-in(100px);
+    padding-top:88px;
+}

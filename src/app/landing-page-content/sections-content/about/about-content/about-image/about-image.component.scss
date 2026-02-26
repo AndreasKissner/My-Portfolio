@@ -8,23 +8,19 @@
 
 img {
   display: block;
-  width: clamp(214px, 40vw + 86px, 528px);
-  height: clamp(260px, 65vw + 100px, 740px);
+  width: 240px;
   object-fit: cover;
 
-  @include m.respond-mid {
-    height: 614px;
-  }
+@include m.respond-sm {
+  width: 400px;
+}
 
-  @include m.respond-normal {
-    height: 656px;
-  }
+@include m.respond-mid {
+  width: 600px;
+}
+  @include m.respond-normal {}
 
-  @include m.respond-large {
-    height: 711px;
-  }
+  @include m.respond-large {}
 
-   @include m.respond-xxl {
-    height: 740px;
-  }
+  @include m.respond-xxl {}
 }

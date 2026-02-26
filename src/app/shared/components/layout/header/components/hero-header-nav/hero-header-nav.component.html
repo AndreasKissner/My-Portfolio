@@ -1,32 +1,14 @@
-<div
-  class="burger-icon"
-  id="burger-icons"
-  #burgerBtn
-  tabindex="0"
-  role="button"
-  aria-label="Menü öffnen"
-  aria-controls="mobileMenu"
-  [attr.aria-expanded]="isMenuOpen()"
-  [class.open]="isMenuOpen()"
-  (click)="toggleMenu()"
-  (keydown.enter)="toggleMenu()"
-  (keydown.space)="toggleMenu()"
->
+<div class="burger-icon" id="burger-icons" #burgerBtn tabindex="0" role="button" aria-label="Menü öffnen"
+  aria-controls="mobileMenu" [attr.aria-expanded]="isMenuOpen()" [class.open]="isMenuOpen()" (click)="toggleMenu()"
+  (keydown.enter)="toggleMenu()" (keydown.space)="toggleMenu()">
   <span [style.background-color]="burgerColor()"></span>
   <span [style.background-color]="burgerColor()"></span>
   <span [style.background-color]="burgerColor()"></span>
 </div>
 
 <div class="menu-overlay" [class.active]="isMenuOpen()" (click)="onClose()">
-  <div
-    class="menu-content"
-    id="mobileMenu"
-    #menuContent
-    tabindex="-1"
-    (click)="$event.stopPropagation()"
-    (focusout)="onMenuFocusOut($event)"
-    (keydown.escape)="onClose()"
-  >
+  <div class="menu-content" id="mobileMenu" #menuContent tabindex="-1" (click)="$event.stopPropagation()"
+    (focusout)="onMenuFocusOut($event)" (keydown.escape)="onClose()">
     <div class="menu-header">
       <h2>Menu</h2>
       <button class="close-btn" (click)="onClose()">
@@ -35,37 +17,31 @@
       </button>
     </div>
 
-<nav class="menu-links">
-  <a href="#about" (click)="goTo($event, 'about')">
-    <span class="icon-sun"></span> About Me
-  </a>
+    <nav class="menu-links">
+      <a href="#about" (click)="goTo($event, 'about')">
+        <span class="icon-sun"></span> About Me
+      </a>
 
-  <a href="#skills" (click)="goTo($event, 'skills')">
-    <span class="icon-sun"></span> Skillset
-  </a>
+      <a href="#skills" (click)="goTo($event, 'skills')">
+        <span class="icon-sun"></span> Skillset
+      </a>
 
-  <a href="#portfolio" (click)="goTo($event, 'portfolio')">
-    <span class="icon-sun"></span> Portfolio
-  </a>
+      <a href="#portfolio" (click)="goTo($event, 'portfolio')">
+        <span class="icon-sun"></span> Portfolio
+      </a>
 
-  <a href="#references" (click)="goTo($event, 'references')">
-    <span class="icon-sun"></span> References
-  </a>
+      <a href="#references" (click)="goTo($event, 'references')">
+        <span class="icon-sun"></span> References
+      </a>
 
-  <a href="#contact" (click)="goTo($event, 'contact')">
-    <span class="icon-sun"></span> Contact me
-  </a>
-</nav>
+      <a href="#contact" (click)="goTo($event, 'contact')">
+        <span class="icon-sun"></span> Contact me
+      </a>
+    </nav>
 
 
-    <app-header-social-btn
-      class="social-mobile"
-      [gitSrc]="navGitSrc()"
-      [gitSrcHover]="navGitSrcHover()"
-      [linkedInSrc]="navLinkedInSrc()"
-      [linkedInSrcHover]="navLinkedInSrcHover()"
-      [mailSrc]="navMailSrc()"
-      [mailSrcHover]="navMailSrcHover()"
-    ></app-header-social-btn>
+    <app-header-social-btn class="social-mobile" [gitSrc]="navGitSrc()" [gitSrcHover]="navGitSrcHover()"
+      [linkedInSrc]="navLinkedInSrc()" [linkedInSrcHover]="navLinkedInSrcHover()" [mailSrc]="navMailSrc()"
+      [mailSrcHover]="navMailSrcHover()"></app-header-social-btn>
   </div>
 </div>

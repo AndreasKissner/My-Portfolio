@@ -8,6 +8,18 @@
   display: flex;
   align-items: flex-end;
   padding-left: 16px;
+
+  @include m.respond-mid {
+    padding: 0 100px 0 0;
+  }
+
+  @include m.respond-xl {
+    padding: 0 200px 0 0;
+  }
+
+  @include m.respond-xxxl {
+    padding: 0 0px 0 0;
+  }
 }
 
 .image-container {
@@ -48,49 +60,68 @@
 
   @include m.respond-large {
     max-width: 300px;
-    right: 305px;
+    right: 179px;
     top: 120px;
   }
 
   @include m.respond-xl {
-    right: 350px;
+    right: 225px;
   }
 
   @include m.respond-xxl {
-    right: 375px;
+    right: 220px;
+  }
+   @include m.respond-xxxl {
+    right: 380px;
   }
 
 }
 
 .bg-img-2 {
-  width: 60%;
-  min-width: 150px;
-  max-width: 240px;
+  width: 200px;
   top: 10px;
-  right: 20px;
+  right: 12px;
+
+  @include m.respond-sm {
+    width: 260px;
+    top: -27px;
+    right: 9px;
+    padding-right: 50px;
+  }
 
   @include m.respond-mid {
     top: -27px;
-    right: 9px;
+    right: -50px;
+
   }
 
+  @include m.respond-laptop {
+    top: 25px;
+  }
+
+
   @include m.respond-large {
-    max-width: 390px;
-    right: 27px;
-    top: -17px;
+    width: 369px;
+    right: -74px;
+    top: -32px;
   }
 
   @include m.respond-xl {
-    right: -3px;
-    max-width: 428px;
-    margin-right: 25px;
+
+    right: -160px;
+    top: -38px;
+    width: 501px;
   }
 
   @include m.respond-xxl {
     right: -10px;
-    max-width: 550px;
-    top: 0px;
-    margin-right: 50px;
+    top: -43px;
+    margin-right: -159px;
+  }
+
+  @include m.respond-xxxl {
+    right: 155px;
+    top: 2px;
   }
 }
 
@@ -114,11 +145,24 @@
       width: 340px;
     }
 
+    @include m.respond-laptop {
+      width: 384px;
+    }
+
     @include m.respond-large {
       width: 410px;
     }
-    @include m.respond-xxl{
-      width:650px
+
+    @include m.respond-xl {
+      width: 550px;
+    }
+
+    @include m.respond-xxl {
+      width: 530px
+    }
+
+    @include m.respond-xxxl {
+      width: 580px
     }
   }
 }

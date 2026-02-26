@@ -14,8 +14,6 @@
   margin-bottom: 39px;
   padding: clamp(16px, 3vw, 32px);
   border-radius: 4px;
-
-  // Standard-Breite
   width: clamp(230px, 60vw + 20px, 700px);
   transform: translate(0, -30px);
 
@@ -42,16 +40,16 @@
   }
 
   @include m.respond-normal {
-    transform: translate(9px, 420px);
+    transform: translate(9px, -300px);
     margin-right: 20px;
   }
 
   @include m.respond-large {
-    transform: translate(-50px, 420px);
+    transform: translate(-105px, 420px);
   }
 
   @include m.respond-xl {
-    transform: translate(-253px, 420px);
+    transform: translate(-280px, 315px);
   }
 
   @include m.respond-xxl {
@@ -60,8 +58,12 @@
     max-width: 1090px;
     height: auto;
     margin-right: 20px;
-    min-height: 460px;
-    transform: translate(0, 600px);
+    min-height: 250px;
+    transform: translate(0, 500px);
+  }
+
+@include m.respond-xxxl {
+    transform: translate(-260px, 500px);
   }
 }
 
@@ -75,7 +77,7 @@
     font-size: clamp(14px, 1.5vw, 18px);
 
     @include m.respond-xxl {
-      font-size: 42px;
+      font-size: 24px;
     }
   }
 }
@@ -87,12 +89,12 @@
   @include m.flex(space-between, center, row);
 
 
- app-btn-primaer {
-  flex-shrink: 0;
+  app-btn-primaer {
+    flex-shrink: 0;
 
     .btn-primaer {
       @include m.respond-xxl {
-       
+
         width: 200px;
         display: flex;
         justify-content: center;

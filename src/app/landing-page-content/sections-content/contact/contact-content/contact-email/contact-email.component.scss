@@ -10,7 +10,7 @@
     padding: 0 16px;
     margin-top: 70px;
      @include m.respond-xxxl {
-           max-width: 850px;
+           max-width: 900px;
         }
 
     .double-content {
@@ -23,7 +23,6 @@
         @include m.respond-large {
             gap: 80px;
         }
-        
     }
 }
 

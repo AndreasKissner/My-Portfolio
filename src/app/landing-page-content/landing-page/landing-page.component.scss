@@ -2,71 +2,53 @@
 @use 'style-varibles/colors' as c;
 @use 'style-varibles/mixins' as m;
 
-:root {
-  --header-height: 72px;
-
-  @include m.respond-laptop {
-    --header-height: 88px;
-  }
-}
-
 :host {
   display: block;
   width: 100%;
-  overflow-y: scroll;
   height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   scrollbar-width: none;
   &::-webkit-scrollbar { display: none; }
 }
 
-.sections-wrapper {
-  width: 100%;
-}
-
 .outer-container {
   width: 100%;
+  // Hero immer 100vh, Rest auf Handy auto
   height: auto;
-  flex-shrink: 0;
+  min-height: 100svh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: clip;
-  justify-content: flex-end;
+  justify-content: center;
+  scroll-snap-align: start;
 
   &#hero {
-    height: 100vh;
+    height: 100vh; 
   }
-  &:last-child {
-    min-height: auto;
+
+  @include m.respond-laptop {
+    height: 100vh; 
   }
 }
 
 .inner-section {
   width: 100%;
   max-width: 1920px;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-top: var(--header-height);
-
-  @include m.respond-sm{
-    padding-right: 40px;
-  }
-
-  app-hero,
-  app-about,
-  app-skill,
-  app-portfolio,
-  app-reference,
-  app-contact {
-    flex: 1;
-    padding-left: clamp(0px, 4.28vw - 17px, 50px);
+  
+  
+  @include m.respond-laptop {
+    padding-top: 88px; 
   }
 }
 
-.last-section,
-.last-section-footer {
-  display: block;  
+.last-section, .last-section-footer {
+  width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.last-section{
+  justify-content: flex-end;
 }

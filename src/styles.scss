@@ -3,19 +3,25 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-  height: auto;
+  /* Geändert auf 100%, damit Kinder vh-Einheiten korrekt berechnen */
+  height: 100%; 
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: scroll;
-  overflow: hidden;
+  /* Überflüssiges overflow: hidden/scroll entfernt, damit nur ein Scroll-Mechanismus greift */
 }
 
 body {
-  min-height: 100vh;
-  overflow-y: auto;
-  box-sizing: border-box;
-
+  /* Geändert auf 100%, um Scroll-Dopplungen zu vermeiden */
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
 }
 
 ul {
@@ -24,12 +30,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 @font-face {
@@ -74,10 +74,12 @@ a {
   font-style: normal;
 }
 
+/* Wichtig, damit die Angular-Komponente den Platz füllt */
 app-landing-page {
+  display: block;
+  height: 100%;
   scroll-behavior: smooth;
 }
-
 
 button, 
 a, 
