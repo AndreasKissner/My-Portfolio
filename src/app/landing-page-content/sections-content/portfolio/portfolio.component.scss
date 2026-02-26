@@ -3,31 +3,42 @@
 @use 'style-varibles/mixins' as m;
 
 :host {
+  width: 100%;
+  height: auto;        // mobile: frei wachsen
+  margin: 45px 0 0 0;
+  @include m.flex-col-center();
+
+  @include m.respond-normal {
+    margin: 20px 0 40px 0;
+  }
+
+  @include m.respond-laptop {
+    flex: 1;
+    min-height: 0;
+    margin: 0;         // ab 1024px: weg
+    justify-content: center;
+  }
+
+  section {
     width: 100%;
-    height: 100%;
-    margin: 45px 0 0 0;
-    @include m.flex-col-center();
+    gap: 20px;
 
     @include m.respond-normal {
-        margin: 20px 0 40px 0;
+      @include m.flex(center, flex-start, row, 20px);
     }
 
-    section {
-        width: 100%;
-        gap: 20px;
-
-        @include m.respond-normal {
-            @include m.flex(center, flex-start, row, 20px);
-        }
+    @include m.respond-laptop {
+      min-height: 0;   // section darf auch nicht rauswachsen
     }
+  }
 }
 
 article {
-    width: 100%;
-    @include m.flex(center, center, column);
-    padding: 0 16px;
+  width: 100%;
+  @include m.flex(center, center, column);
+  padding: 0 16px;
 
-    @include m.respond-xxxl {
-        align-items: flex-end;
-    }
+  @include m.respond-xxxl {
+    align-items: flex-end;
+  }
 }

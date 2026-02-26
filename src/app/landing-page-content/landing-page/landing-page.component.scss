@@ -7,48 +7,65 @@
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  
+  @include m.respond-laptop {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: -88px;  // ← hier, nicht auf dem container
+  }
 }
 
 .outer-container {
   width: 100%;
-  // Hero immer 100vh, Rest auf Handy auto
   height: auto;
-  min-height: 100svh;
   display: flex;
   justify-content: center;
-  scroll-snap-align: start;
 
   &#hero {
-    height: 100vh; 
+    height: 100vh;
   }
 
   @include m.respond-laptop {
-    height: 100vh; 
+    height: 100vh;
+    scroll-snap-align: start;
   }
 }
 
 .inner-section {
   width: 100%;
   max-width: 1920px;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  
-  
+
   @include m.respond-laptop {
-    padding-top: 88px; 
+    height: 100vh;
+ padding-top: 88px; 
+    box-sizing: border-box;
   }
 }
 
-.last-section, .last-section-footer {
+#hero .inner-section {
+  justify-content: flex-end;
+}
+
+.last-section,
+.last-section-footer {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+
+  @include m.respond-laptop {
+    flex: 1;
+    min-height: 0;
+  }
 }
-.last-section{
+
+
+.last-section {
   justify-content: flex-end;
 }

@@ -3,13 +3,20 @@
 @use 'style-varibles/mixins' as m;
 
 :host {
-    width: 100%;
-    height: auto;
-    @include m.flex-col-center();
+  width: 100%;
+  height: auto;        // mobile: frei wachsen
+  @include m.flex-col-center();
 
-    margin: 45px 0 0 0;
+  margin: 45px 0 0 0;  // mobile: margin ok
 
-    @include m.respond-normal {
-        margin: 20px 0 45px 0;
-    }
+  @include m.respond-normal {
+    margin: 20px 0 45px 0;
+  }
+
+  @include m.respond-laptop {
+    flex: 1;
+    min-height: 0;
+    margin: 0;         // ab 1024px: weg, sonst drückt es raus
+    justify-content: center;
+  }
 }

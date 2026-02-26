@@ -26,30 +26,34 @@
   @include m.respond-500 {
     min-width: 400px;
     height: 230px;
-    transform: translate(-15px, -90px);
+    transform: translate(-81px, -15px);
   }
 
   @include m.respond-650 {
     min-width: 400px;
-    transform: translate(11px, -166px);
+    transform: translate(-59px, -33px);
   }
 
   @include m.respond-mid {
     max-width: 600px;
-    transform: translate(2px, -320px);
+    transform: translate(-78px, -25px);
   }
 
-  @include m.respond-normal {
-    transform: translate(9px, -300px);
-    margin-right: 20px;
+  @include m.respond-laptop {
+    max-width: 600px;
+    margin-left: -120px; // ← überlappung nach links über das Bild
+    margin-bottom: 40px; // ← etwas hochsetzen
+    transform: none; // ← kein transform mehr
   }
 
   @include m.respond-large {
-    transform: translate(-105px, 420px);
+    margin-left: -150px;
+    margin-bottom: 60px;
   }
 
   @include m.respond-xl {
-    transform: translate(-280px, 315px);
+    margin-left: -76px;
+    margin-bottom: 262px;
   }
 
   @include m.respond-xxl {
@@ -57,13 +61,14 @@
     min-width: 1000px;
     max-width: 1090px;
     height: auto;
-    margin-right: 20px;
+    margin-left: -200px;
+    margin-bottom: 60px;
     min-height: 250px;
-    transform: translate(0, 500px);
+    transform: none;
   }
 
-@include m.respond-xxxl {
-    transform: translate(-260px, 500px);
+  @include m.respond-xxxl {
+    margin-left: -300px;
   }
 }
 

@@ -154,16 +154,16 @@
     align-items: center;
     transition: color 0.2s;
 
-    .icon-sun {
-      display: inline-block;
-      background-image: url('/assets/img/icons/profilBg/profil-bg-1.webp');
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 0;
-      height: 20px;
-      margin-right: 0;
-      transition: all 0.25s ease-in-out;
-    }
+ .icon-sun {
+  display: inline-block;
+  background-image: url('/angular-projects/myportfolio/assets/img/icons/profilBg/bg-1.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 0;
+  height: 20px;
+  margin-right: 0;
+  transition: all 0.25s ease-in-out;
+}
 
     &:hover,
     &.active-link {
