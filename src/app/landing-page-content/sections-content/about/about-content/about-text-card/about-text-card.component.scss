@@ -58,9 +58,9 @@
 
   @include m.respond-xxl {
     width: 90vw;
-    min-width: 1000px;
-    max-width: 1090px;
-    height: auto;
+    min-width: 700px;
+    max-width: 890px;
+    height: 300px;
     margin-left: -200px;
     margin-bottom: 60px;
     min-height: 250px;
@@ -68,7 +68,7 @@
   }
 
   @include m.respond-xxxl {
-    margin-left: -300px;
+    margin-left: -220px;
   }
 }
 

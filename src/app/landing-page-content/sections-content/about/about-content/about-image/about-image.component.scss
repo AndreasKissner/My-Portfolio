@@ -52,14 +52,14 @@ img {
   }
 
   @include m.respond-xl {
-    width: 620px;
+    width: 695px;
   }
 
   @include m.respond-xxl {
-    width: 650px;
+    width: 600px;
   }
 
   @include m.respond-xxxl {
-    width: 660px;
+    width: 620px;
   }
 }
