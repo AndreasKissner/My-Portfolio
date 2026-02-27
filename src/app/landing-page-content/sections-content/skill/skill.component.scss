@@ -19,4 +19,8 @@
     margin: 0;         // ab 1024px: weg, sonst drückt es raus
     justify-content: center;
   }
+
+  @include m.respond-xxl {
+    margin: 0;
+}
 }

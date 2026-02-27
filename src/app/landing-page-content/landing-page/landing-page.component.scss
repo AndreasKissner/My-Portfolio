@@ -16,7 +16,7 @@
   
   @include m.respond-laptop {
     scroll-snap-type: y mandatory;
-    scroll-padding-top: -88px;  // ← hier, nicht auf dem container
+    scroll-padding-top: -88px; 
   }
 }
 
