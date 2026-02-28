@@ -14,21 +14,24 @@
     color: c.$orange-four;
     margin-bottom: 16px;
     font-weight: 700;
-    @include m.respond-xxl{
-      font-size:  32px;
+
+    @include m.respond-xxl {
+      font-size: 32px;
     }
-     @include m.respond-xxxl {
+
+    @include m.respond-xxxl {
       margin-bottom: 30px;
-   }
+    }
   }
 
   p {
     color: c.$light-beige;
     font-family: f.$font-second;
     font-weight: 400;
-    height:20px;
-     @include m.respond-xxl{
-      font-size:  22px;
+    height: 20px;
+
+    @include m.respond-xxl {
+      font-size: 22px;
     }
   }
 }

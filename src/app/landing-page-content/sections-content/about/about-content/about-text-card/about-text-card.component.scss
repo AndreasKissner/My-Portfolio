@@ -41,9 +41,9 @@
 
   @include m.respond-laptop {
     max-width: 600px;
-    margin-left: -120px; // ← überlappung nach links über das Bild
-    margin-bottom: 40px; // ← etwas hochsetzen
-    transform: none; // ← kein transform mehr
+    margin-left: -120px; 
+    margin-bottom: 40px; 
+    transform: none; 
   }
 
   @include m.respond-large {

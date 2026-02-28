@@ -12,12 +12,12 @@ import { RouterLink } from '@angular/router';
   selector: 'app-contact-email',
   standalone: true,
   imports: [
-    InputFieldsEmailComponent, 
-    CommonModule, 
-    BtnPrimaerComponent, 
-    FormsModule, 
-    TranslateModule, 
-    BackFlashComponent, 
+    InputFieldsEmailComponent,
+    CommonModule,
+    BtnPrimaerComponent,
+    FormsModule,
+    TranslateModule,
+    BackFlashComponent,
     RouterLink
   ],
   templateUrl: './contact-email.component.html',
@@ -26,6 +26,7 @@ import { RouterLink } from '@angular/router';
 export class ContactEmailComponent {
 
   private http = inject(HttpClient);
+
 
   contactData = {
     name: '',
@@ -41,6 +42,9 @@ export class ContactEmailComponent {
   isSending = false;
   errorMessage = '';
   isFlashing = false;
+  nameFocused = false;
+  emailFocused = false;
+  messageFocused = false;
 
   /**
   * Called when the form is submitted.
@@ -54,9 +58,9 @@ export class ContactEmailComponent {
     }
   }
 
- /**
- * Sends the data to the Mail API.
- */
+  /**
+  * Sends the data to the Mail API.
+  */
   private sendMail(form: NgForm) {
     this.http.post(this.mailApiUrl, this.contactData)
       .subscribe({
@@ -69,9 +73,9 @@ export class ContactEmailComponent {
       });
   }
 
- /**
- * Handles errors occurring during the HTTP request.
- */
+  /**
+  * Handles errors occurring during the HTTP request.
+  */
   private handleError(error: any, form: NgForm) {
     if (error.status === 200) {
       this.processSuccess(form);
@@ -87,28 +91,28 @@ export class ContactEmailComponent {
  * Displays validation errors when the form is submitted invalidly.
  */
   onInvalidSubmitAttempt(form: NgForm) {
-  if (!form.valid) {
-    form.control.markAllAsTouched();
-    const emailControl = form.controls['userEmail'];
-    if (emailControl && emailControl.invalid) {
-      this.contactData.email = ''; 
-      emailControl.markAsDirty(); 
-      emailControl.setValue('');   
+    if (!form.valid) {
+      form.control.markAllAsTouched();
+      const emailControl = form.controls['userEmail'];
+      if (emailControl && emailControl.invalid) {
+        this.contactData.email = '';
+        emailControl.markAsDirty();
+        emailControl.setValue('');
+      }
+      const nameControl = form.controls['userName'];
+      if (nameControl && nameControl.invalid) {
+        this.contactData.name = '';
+        nameControl.markAsDirty();
+        nameControl.setValue('');
+      }
+      this.isFlashing = true;
+      setTimeout(() => this.isFlashing = false, 500);
     }
-    const nameControl = form.controls['userName'];
-    if (nameControl && nameControl.invalid) {
-      this.contactData.name = '';
-      nameControl.markAsDirty();
-      nameControl.setValue('');
-    }
-    this.isFlashing = true;
-    setTimeout(() => this.isFlashing = false, 500);
   }
-}
 
- /**
- * Resets the form after successful submission.
- */
+  /**
+  * Resets the form after successful submission.
+  */
   private processSuccess(form: NgForm) {
     this.mailSuccess = true;
     this.isSending = false;
@@ -116,5 +120,21 @@ export class ContactEmailComponent {
     form.resetForm();
     this.contactData = { name: '', email: '', message: '', privacy: false };
     setTimeout(() => this.mailSuccess = false, 3000);
+  }
+
+  /**
+  * Toggles the focus state of an input field.
+  * First click: activates error style and hint placeholder.
+  * Second click (while still in field): resets to default state.
+  * @param flag - The focus flag to toggle ('nameFocused' | 'emailFocused' | 'messageFocused')
+  * @param field - The NgModel reference of the input field
+  */
+  toggleFocus(flag: 'nameFocused' | 'emailFocused' | 'messageFocused', field: any) {
+    if (this[flag]) {
+      this[flag] = false;
+      field.control.markAsUntouched();
+    } else {
+      this[flag] = true;
+    }
   }
 }

@@ -4,10 +4,10 @@
 
 :host {
   width: 100%;
-  height: auto;        // mobile: frei wachsen
+  height: auto;       
   @include m.flex-col-center();
 
-  margin: 45px 0 0 0;  // mobile: margin ok
+  margin: 45px 0 0 0; 
 
   @include m.respond-normal {
     margin: 20px 0 45px 0;
@@ -17,7 +17,7 @@
     padding-left: 30px;
     flex: 1;
     min-height: 0;
-    margin: 0;         // ab 1024px: weg, sonst drückt es raus
+    margin: 0;         
     justify-content: center;
   }
 

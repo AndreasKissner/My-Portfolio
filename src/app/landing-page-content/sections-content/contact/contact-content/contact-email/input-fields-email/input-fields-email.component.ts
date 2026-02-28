@@ -8,4 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class InputFieldsEmailComponent {
   labelText = input.required<string>();
+  isFocused = input<boolean>(false);
 }

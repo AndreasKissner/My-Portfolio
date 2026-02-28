@@ -1,23 +1,29 @@
 <form class="contact-form" #contactForm="ngForm" [class.form-flash]="isFlashing" (ngSubmit)="onSubmit(contactForm)">
 
     <section class="double-content">
-        <app-input-fields-email labelText="{{ 'CONTACT.LABELONE' | translate}}">
+        <app-input-fields-email labelText="{{ 'CONTACT.LABELONE' | translate}}" [isFocused]="nameFocused">
             <input type="text" name="userName" [(ngModel)]="contactData.name" #nameField="ngModel" required
-                [placeholder]="(nameField.invalid && nameField.touched) ? ('CONTACT.PLACEONE' | translate) : ('CONTACT.PLACETWO' | translate)"
-                [class.input-error]="nameField.invalid && nameField.touched">
+                [placeholder]="nameFocused ? ('CONTACT.PLACEONE' | translate) : (nameField.invalid && nameField.touched) ? ('CONTACT.PLACEONE' | translate) : ('CONTACT.PLACETWO' | translate)"
+                [class.input-error]="(nameField.invalid && nameField.touched && !nameFocused) || nameFocused"
+                (focus)="nameFocused = true" (click)="toggleFocus('nameFocused', nameField)"
+                (blur)="nameFocused = false; nameField.control.markAsUntouched()">
         </app-input-fields-email>
 
-        <app-input-fields-email labelText="{{ 'CONTACT.LABELTWO' | translate}}">
+        <app-input-fields-email labelText="{{ 'CONTACT.LABELTWO' | translate}}" [isFocused]="emailFocused">
             <input type="email" name="userEmail" [(ngModel)]="contactData.email" #emailField="ngModel" required email
-                [placeholder]="(emailField.invalid && emailField.touched) ? ('CONTACT.PLACETHREE' | translate) : ('CONTACT.PLACEFOUR' | translate)"
-                [class.input-error]="emailField.invalid && emailField.touched">
+                [placeholder]="emailFocused ? ('CONTACT.PLACETHREE' | translate) : (emailField.invalid && emailField.touched) ? ('CONTACT.PLACETHREE' | translate) : ('CONTACT.PLACEFOUR' | translate)"
+                [class.input-error]="(emailField.invalid && emailField.touched && !emailFocused) || emailFocused"
+                (focus)="emailFocused = true" (click)="toggleFocus('emailFocused', emailField)"
+                (blur)="emailFocused = false; emailField.control.markAsUntouched()">
         </app-input-fields-email>
     </section>
 
-    <app-input-fields-email labelText="{{ 'CONTACT.LABELTHREE' | translate}}">
+    <app-input-fields-email labelText="{{ 'CONTACT.LABELTHREE' | translate}}" [isFocused]="messageFocused">
         <textarea name="message" [(ngModel)]="contactData.message" #messageField="ngModel" required rows="1"
-            [placeholder]="(messageField.invalid && messageField.touched) ? ('CONTACT.PLACEFIVE' |translate)  : ('CONTACT.PLACESIX' |translate) "
-            [class.input-error]="messageField.invalid && messageField.touched">
+            [placeholder]="messageFocused ? ('CONTACT.PLACEFIVE' | translate) : (messageField.invalid && messageField.touched) ? ('CONTACT.PLACEFIVE' | translate) : ('CONTACT.PLACESIX' | translate)"
+            [class.input-error]="(messageField.invalid && messageField.touched && !messageFocused) || messageFocused"
+            (focus)="messageFocused = true" (click)="toggleFocus('messageFocused', messageField)"
+            (blur)="messageFocused = false; messageField.control.markAsUntouched()">
     </textarea>
     </app-input-fields-email>
 
@@ -45,16 +51,14 @@
     </div>
 
     <div class="btn-flash-content">
-     <app-btn-primaer>
-    <div (click)="onInvalidSubmitAttempt(contactForm)">
-        <button type="submit" 
-                class="btn-primaer" 
-                [class.btn-disabled]="contactForm.invalid" 
-                [disabled]="isSending">
-            {{'CONTACT.CONTACT_BTN' | translate}}
-        </button>
-    </div>
-</app-btn-primaer>
+        <app-btn-primaer>
+            <div (click)="onInvalidSubmitAttempt(contactForm)">
+                <button type="submit" class="btn-primaer" [class.btn-disabled]="contactForm.invalid"
+                    [disabled]="isSending">
+                    {{'CONTACT.CONTACT_BTN' | translate}}
+                </button>
+            </div>
+        </app-btn-primaer>
 
         <app-back-flash>
             <a href="#hero">

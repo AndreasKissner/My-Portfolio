@@ -14,7 +14,7 @@
         @include m.flex(center, center, row, 25px);
         align-self: flex-start;
 
-          @include m.respond-xxl {
+        @include m.respond-xxl {
             max-width: 1520px;
             gap: 100px;
         }
@@ -45,16 +45,15 @@
             padding: 22px;
         }
 
-           @include m.respond-1280 {
-           
+        @include m.respond-1280 {
+
             padding: 32px;
         }
-
 
         @include m.respond-xxl {
             font-size: 32px;
             max-width: 800px;
-        } 
+        }
 
         ;
     }

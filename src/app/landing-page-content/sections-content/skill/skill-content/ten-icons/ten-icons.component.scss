@@ -12,11 +12,10 @@
   padding: 0 16px;
   gap: clamp(10px, 3.75vw - 5px, 40px);
 
-  // NEU: Vertikaler Fix für flache Bildschirme (Laptop/600px)
+
   @media (max-height: 700px) {
-    height: auto;           // Entfernt: Feste Höhe, damit nichts gequetscht wird
-       // Korrigiert: Viel weniger Platzverschwendung oben
-    gap: 15px;              // Korrigiert: Engerer Abstand zwischen den Icons
+    height: auto;           
+    gap: 15px;        
   }
 
   @include m.respond-mid {
@@ -33,7 +32,6 @@
   }
 
   @include m.respond-large {
-    // Bleibt für große Screens, wird aber durch max-height oben für flache Screens überschrieben
     padding-top: 70px;
   }
 
@@ -50,7 +48,6 @@
   text-decoration: none;
   outline: none;
 
-  // NEU: Kleinerer Abstand für flache Screens
   @media (max-height: 700px) {
     gap: 8px;
   }
@@ -60,7 +57,6 @@
     height: clamp(60px, 2.5vw + 55px, 86px);
     transition: transform 200ms ease;
 
-    // NEU: Zwingt Icons kleiner zu werden, wenn die Höhe fehlt
     @media (max-height: 700px) {
       width: 60px !important;
       height: 60px !important;
@@ -86,7 +82,6 @@
     font-family: f.$font-second;
     color: c.$light-beige;
 
-    // NEU: Schrift etwas kleiner bei wenig Höhe
     @media (max-height: 700px) {
       font-size: 13px;
     }

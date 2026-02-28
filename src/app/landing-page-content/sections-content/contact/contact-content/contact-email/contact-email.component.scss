@@ -180,12 +180,6 @@ textarea {
     }
 }
 
-app-input-fields-email:focus-within {
-    ::ng-deep label {
-        color: c.$orange-four !important;
-    }
-}
-
 .input-error {
     &::placeholder {
         color: c.$error !important;
@@ -274,8 +268,6 @@ input:-webkit-autofill {
     transform: translateY(0) scale(1);
     opacity: 1;
 }
-
-
 
 .input-error {
     border-bottom: 2px solid c.$error !important; 

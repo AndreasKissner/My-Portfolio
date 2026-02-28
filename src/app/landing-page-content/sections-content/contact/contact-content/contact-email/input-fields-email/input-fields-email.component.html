@@ -1,4 +1,4 @@
 <div class="form-group">
-  <label>{{ labelText() }}</label>
+  <label [class.focused]="isFocused()">{{ labelText() }}</label>
   <ng-content></ng-content>
 </div>
