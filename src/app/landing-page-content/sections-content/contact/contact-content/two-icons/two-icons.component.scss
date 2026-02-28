@@ -10,6 +10,10 @@
     @include m.respond-laptop{
         padding-top:50px;
     }
+
+    @include m.respond-1280{
+        padding-top: 210px;
+    }
 }
 
 .icon {
@@ -24,7 +28,15 @@
     width: 172px;
     margin-right: 8px;
     flex-shrink: 0; 
-    @include m.rotate-ring; 
+    @include m.rotate-ring;
+
+    @include m.respond-normal {
+        width: 120px;
+    }
+
+    @include m.respond-1280 {
+        width: 172px;
+    } 
 }
 
 .icon-right {
@@ -32,7 +44,23 @@
     z-index: 2;
     margin-left: -121px;
     flex-shrink: 0;
-    animation: rotate-left 15s linear infinite; 
+    animation: rotate-left 15s linear infinite;
+
+    @include m.respond-normal {
+        width: 150px;
+        margin-left: -90px;
+    }
+
+    @include m.respond-1280 {
+        width: 210px;
+        margin-left: -121px;
+    } 
+
+    
+    @include m.respond-xxl {
+        width: 210px;
+        margin-left: -121px;
+    } 
 }
 
 @keyframes rotate-left {

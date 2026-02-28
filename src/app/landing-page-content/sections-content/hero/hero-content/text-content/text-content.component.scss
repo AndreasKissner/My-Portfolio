@@ -28,6 +28,10 @@ p {
     font-size: 48px;
   }
 
+  @include m.respond-laptop{
+    margin-bottom: 5px;
+  }
+
     @include m.respond-xxl {
     font-size: 80px;
   }
@@ -51,7 +55,7 @@ h1,h2 {
   }
 
       @include m.respond-xxl {
-    font-size: 120px;
+    font-size: 100px;
   }
 }
 

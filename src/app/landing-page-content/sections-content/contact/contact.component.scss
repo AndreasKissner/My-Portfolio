@@ -7,9 +7,13 @@
   @include m.respond-laptop {
     flex: 1;
     min-height: 0;
-    margin: 0;         // ab 1024px: weg
+    margin: 0;        
     @include m.flex(space-between, stretch, row);
+
     padding-right: 15px;
+    @include m.respond-laptop{
+    padding-left: 30px;
+  }
 
     @include m.respond-large {
       padding-right: 40px;

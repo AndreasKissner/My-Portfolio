@@ -27,7 +27,7 @@
         align-self: flex-start;
 
         @include m.respond-xxl {
-            font-size: 144px;
+            font-size: 100px;
         }
     }
 
@@ -42,11 +42,17 @@
 
         @include m.respond-normal {
             max-width: 600px;
+            padding: 22px;
+        }
+
+           @include m.respond-1280 {
+           
             padding: 32px;
         }
 
+
         @include m.respond-xxl {
-            font-size: 42px;
+            font-size: 32px;
             max-width: 800px;
         } 
 

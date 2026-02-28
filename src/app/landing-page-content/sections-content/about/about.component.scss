@@ -12,6 +12,9 @@
     min-height: 0;
     justify-content: center;
   }
+  @include m.respond-laptop{
+    padding-left: 30px;
+  }
 }
 
 section {

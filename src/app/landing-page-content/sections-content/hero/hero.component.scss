@@ -9,6 +9,10 @@
   @media(min-width:725px) {
     flex-direction: row;
   }
+
+  @include m.respond-laptop{
+    padding-left: 30px;
+  }
 }
 
 section {

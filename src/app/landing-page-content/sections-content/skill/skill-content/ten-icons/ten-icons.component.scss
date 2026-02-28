@@ -12,10 +12,16 @@
   padding: 0 16px;
   gap: clamp(10px, 3.75vw - 5px, 40px);
 
+  // NEU: Vertikaler Fix für flache Bildschirme (Laptop/600px)
+  @media (max-height: 700px) {
+    height: auto;           // Entfernt: Feste Höhe, damit nichts gequetscht wird
+       // Korrigiert: Viel weniger Platzverschwendung oben
+    gap: 15px;              // Korrigiert: Engerer Abstand zwischen den Icons
+  }
+
   @include m.respond-mid {
     max-width: 780px; 
   }
-
 
   @include m.respond-normal {
     margin: 20px 20px 0 0;
@@ -27,12 +33,13 @@
   }
 
   @include m.respond-large {
+    // Bleibt für große Screens, wird aber durch max-height oben für flache Screens überschrieben
     padding-top: 70px;
   }
 
   @include m.respond-xxl {
     max-width: 1070px;
-    margin-top:-45px;
+    margin-top: -45px;
     margin-right: -32px;
   }
 }
@@ -40,20 +47,31 @@
 .skill-item {
   @include m.flex(center, center, column);
   gap: 12px;
-  text-decoration: none; // Entfernt Unterstreichungen bei Links
-  outline: none;        // Entfernt den Standard-Browser-Rahmen (optional, siehe Hinweis unten)
+  text-decoration: none;
+  outline: none;
+
+  // NEU: Kleinerer Abstand für flache Screens
+  @media (max-height: 700px) {
+    gap: 8px;
+  }
 
   img {
     width: clamp(60px, 2.5vw + 55px, 86px);
     height: clamp(60px, 2.5vw + 55px, 86px);
     transition: transform 200ms ease;
 
+    // NEU: Zwingt Icons kleiner zu werden, wenn die Höhe fehlt
+    @media (max-height: 700px) {
+      width: 60px !important;
+      height: 60px !important;
+    }
+
     @include m.respond-mid {
       width: 90px;
       height: 90px;
     }
 
-     @include m.respond-large{
+    @include m.respond-large {
       width: 100px;
       height: 100px;
     }
@@ -67,6 +85,11 @@
   span {
     font-family: f.$font-second;
     color: c.$light-beige;
+
+    // NEU: Schrift etwas kleiner bei wenig Höhe
+    @media (max-height: 700px) {
+      font-size: 13px;
+    }
 
     @media(max-width:400px) {
       font-size: 14px;
@@ -89,4 +112,4 @@
     outline-offset: 8px;
     border-radius: 8px;
   }
-} 
+}

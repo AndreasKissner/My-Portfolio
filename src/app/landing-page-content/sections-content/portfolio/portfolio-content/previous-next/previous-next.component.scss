@@ -14,7 +14,12 @@
 
     @include m.respond-normal {
         justify-content: space-between;
-        margin-right: 30px;
+        margin: 20px 50px 0 0;
+    }
+
+    @include m.respond-1280 {
+        justify-content: space-between;
+        margin: 35px 50px 0 0;
     }
 
     button {

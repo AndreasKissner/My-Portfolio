@@ -83,7 +83,7 @@
   right: 12px;
 
   @include m.respond-sm {
-    width: 260px;
+    width: 340px;
     top: -27px;
     right: 9px;
     padding-right: 50px;
@@ -91,12 +91,12 @@
 
   @include m.respond-mid {
     top: -27px;
-    right: -50px;
+    right: -85px;
 
   }
 
   @include m.respond-laptop {
-    top: 25px;
+    top: 8px;
   }
 
 
@@ -116,7 +116,7 @@
   @include m.respond-xxl {
     right: -10px;
     top: -43px;
-    margin-right: -159px;
+    margin-right: -140px;
   }
 
   @include m.respond-xxxl {
@@ -146,16 +146,18 @@
     }
 
     @include m.respond-laptop {
-      width: 384px;
+      width: 370px;
     }
 
     @include m.respond-large {
       width: 410px;
     }
 
-    @include m.respond-xl {
+   @include m.respond-xl {
       width: 550px;
-    }
+      // NEU: Begrenzung für die Höhe auf Laptops
+      max-height: 84vh; 
+      object-fit: contain;
 
     @include m.respond-xxl {
       width: 530px
@@ -165,4 +167,4 @@
       width: 580px
     }
   }
-}
+  }}

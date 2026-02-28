@@ -9,6 +9,11 @@
     max-width: 750px;
     padding: 0 16px;
     margin-top: 70px;
+
+     @include m.respond-laptop {
+            padding-left: 0;
+        }
+
      @include m.respond-xxxl {
            max-width: 900px;
         }
@@ -30,6 +35,14 @@
     @include m.flex(flex-start, stretch, column);
     width: 100%;
     font-family: f.$font-second;
+
+    @include m.respond-normal {
+        max-width: 478px;
+    }
+
+    @include m.respond-1280 {
+        max-width: 100%;
+    }
 }
 
 ::ng-deep.btn-primaer {

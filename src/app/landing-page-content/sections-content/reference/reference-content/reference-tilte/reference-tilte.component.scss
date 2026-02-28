@@ -18,7 +18,7 @@
         }
 
         @include m.respond-laptop {
-            padding-left: 0;
+            padding-left: 21;
         }
 
         @include m.respond-large {
@@ -27,7 +27,7 @@
         }
 
         @include m.respond-xxl {
-            font-size: 144px;
+            font-size: 100px;
            
         }
     }

@@ -5,7 +5,7 @@
 :host {
   display: none;
 
-  @include m.respond-sm {
+  @include m.respond-laptop {
     display: flex;
     position: fixed;
     right: 30px;

@@ -103,6 +103,12 @@
   }
 }
 
+@mixin respond-1280 {
+  @media (min-width: v.$screen-1280) {
+    @content;
+  }
+}
+
 @mixin respond-xl {
   @media (min-width: v.$screen-xl) {
     @content;

@@ -27,13 +27,26 @@
         padding: 32px;
     }
 
+    @include m.respond-normal{
+        width:270px;
+        height: 330px;
+    }
+
     @include m.respond-laptop {
+        
         &:hover {
             .icon-top, .icon-center, .icon-bottom {
                 opacity: 1;
             }
         }
     }
+    @include m.respond-1280 {
+        width: 335px;
+    }
+
+     @include m.respond-xxl {
+        height: 400px;
+}
 }
 
 :host ::ng-deep header {
@@ -47,7 +60,7 @@
         font-size: 24px;
     }
     @include m.respond-xxl{
-        font-size: 42px;
+        font-size: 28px;
     }
 }
 
@@ -56,7 +69,7 @@
     grid-row: 2;
     font-family: f.$font-second;
      @include m.respond-xxl{
-        font-size: 28px;
+        font-size: 20px;
     }
 }
 
@@ -91,11 +104,12 @@
     }
 
     @include m.respond-laptop {
+        margin-right:50px;
         &:hover {
             color: c.$orange-four;
         }
     }
      @include m.respond-xxl{
-        font-size: 32px;
+        font-size: 20px;
     }
 }

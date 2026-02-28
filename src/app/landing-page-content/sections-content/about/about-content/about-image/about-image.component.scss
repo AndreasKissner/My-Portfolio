@@ -44,7 +44,7 @@ img {
   @include m.respond-laptop {
     width: 400px;
     height: auto;
-    max-width: none;   // ← damit max-width von mobile nicht greift
+    max-width: none;   
   }
 
   @include m.respond-large {
@@ -52,7 +52,7 @@ img {
   }
 
   @include m.respond-xl {
-    width: 695px;
+    width: 615px;
   }
 
   @include m.respond-xxl {

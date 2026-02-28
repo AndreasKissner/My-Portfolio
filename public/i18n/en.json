@@ -4,7 +4,7 @@
     "CONTACT": "contactMe"
   },
   "ABOUT": {
-    "GREETING": "Hi, I'm Andreas. A dedicated developer and digital craftsman.\nFor me, programming extends far beyond mere syntax; it is a creative means of expression.\n\nLet’s collaborate to architect the digital world and build something truly extraordinary.",
+    "GREETING": "Hi, I'm Andreas.\nFor me, programming extends far beyond mere syntax; it is a creative means of expression.\n\nLet’s collaborate to architect the digital world and build something truly extraordinary.",
     "ABOUT_TITLE": "ABOUT ME"
   },
   "ABOUT_DIALOG": {
@@ -40,7 +40,7 @@
     "GITLINK": "Go to GitHub profile."
   },
   "CONTACT": {
-    "TITLE": "Let’s turn coffee into code and vibes",
+    "TITLE": "Let’s turn coffee into code ",
     "SUBTITLE": "Got something you want to build?",
     "TITLEMAIL": "Reach out, tell me what you’re creating, and let’s turn your idea into something remarkable together.",
     "LABELONE": "What's your name?",

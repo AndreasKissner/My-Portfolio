@@ -4,7 +4,7 @@
 
 :host {
   width: 100%;
-  height: auto;        // mobile: frei wachsen
+  height: auto;    
   margin: 45px 0 0 0;
   @include m.flex-col-center();
 
@@ -15,11 +15,11 @@
   @include m.respond-laptop {
     flex: 1;
     min-height: 0;
-    margin: 0;         // ab 1024px: weg
-    justify-content: center;
+    margin: 0;     
+    padding-left: 30px;
   }
 
-  section {
+section {
     width: 100%;
     gap: 20px;
 
@@ -27,8 +27,8 @@
       @include m.flex(center, flex-start, row, 20px);
     }
 
-    @include m.respond-laptop {
-      min-height: 0;   // section darf auch nicht rauswachsen
+    @include m.respond-1280 {
+      margin-top: 60px;
     }
   }
 }
@@ -38,7 +38,14 @@ article {
   @include m.flex(center, center, column);
   padding: 0 16px;
 
+   @include m.respond-normal {
+    align-items: flex-end;
+   margin-left: 20px;
+  }
+
   @include m.respond-xxxl {
     align-items: flex-end;
+    width:1000px;
+    margin-left:50px;
   }
 }
