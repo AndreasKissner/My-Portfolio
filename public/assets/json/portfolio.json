@@ -20,5 +20,17 @@
     "liveUrl": "https://elpolloloco.andreaskissner.info",
     "dialog": "PORTFOLIO.POCO_DIAL",
      "imgStar" :"assets/img/icons/bottlestar.png"
+  },
+
+    {
+    "image": "assets/img/portfolio/memory.webp",
+    "title": "Memory",
+    "icon": "assets/img/portfolio/memo.webp",
+    "languages": "HTML | SCSS | Vite | TS | ",
+    "description": "MEMORY.LOCO_DESC",
+    "githubUrl": "https://github.com/AndreasKissner/Memory",
+    "liveUrl": "https://memory.andreaskissner.info",
+    "dialog": "PORTFOLIO.MEMORY_DIAL",
+     "imgStar" :"assets/img/icons/bottlestar.png"
   }
 ]

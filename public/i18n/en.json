@@ -29,6 +29,7 @@
     "LOCO_DESC": "A fast-paced jump-and-run game where you guide Loco Poco through obstacles, collect items, and reach the finish line across fun, challenging levels. Hola!",
     "JOIN_DIAL": "Through working in a team, I learned how to communicate better, share responsibilities, and collaborate to find solutions together.",
     "POCO_DIAL": "While building this game, I sharpened my problem-solving skills and taught myself how to design engaging game mechanics, smooth animations, and well-structured levels.",
+    "MEMORY_DIAL":"Memory game with various settings, made compliant with Vite, TS, SCSS, BEM, and WCAG",
     "PREVIOUS_BTN": "<< Previous project",
     "NEXT_BTN": "Next project >>"
   },
@@ -63,7 +64,7 @@
   "IMPRINT": {
     "TITLE": "Legal Notice",
     "IMPRINT_TITLE": "Imprint",
-    "NAMES": "Andreas Kissner, Sven Michels, Martin Frei, Dennis King Tran",
+    "NAMES": "Andreas Kissner",
     "ADDRESS_LINE1": "Rue du Champ fort 6",
     "ADDRESS_LINE2": "2853 Courfaivre",
     "CONTACT_TITLE": "Contact",

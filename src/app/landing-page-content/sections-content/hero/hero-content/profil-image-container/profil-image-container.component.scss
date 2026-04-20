@@ -136,9 +136,11 @@
     width: 213px;
     object-fit: contain;
     display: block;
+      max-height: 50vh;  
 
     @include m.respond-sm {
-      width: 320px;
+      width: 240px;
+       max-height: 60vh; 
     }
 
     @include m.respond-mid {

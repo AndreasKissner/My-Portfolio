@@ -74,15 +74,9 @@ export class SectionIndicatorComponent {
   /**
    * Smoothly scrolls to a specific section by its ID.
    */
-  scrollToId(id: string) {
-    const element = document.getElementById(id);
-    const host = document.querySelector('app-landing-page') as HTMLElement;
-    if (!element || !host) return;
-    const headerHeight = window.matchMedia('(min-width: 576px)').matches ? 88 : 72;
-    const elementTop = element.getBoundingClientRect().top + host.scrollTop;
-    host.scrollTo({
-      top: elementTop - headerHeight,
-      behavior: 'smooth'
-    });
-  }
+scrollToId(id: string) {
+  const element = document.getElementById(id);
+  if (!element) return;
+  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 }

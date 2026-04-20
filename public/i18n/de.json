@@ -29,6 +29,7 @@
     "LOCO_DESC": "Ein temporeiches Jump-and-Run-Spiel, in dem du Loco Poco durch Hindernisse steuerst, Gegenstände sammelst und in abwechslungsreichen, herausfordernden Levels das Ziel erreichst.",
     "JOIN_DIAL": "Durch die Zusammenarbeit im Team habe ich gelernt, besser zu kommunizieren, Verantwortung zu teilen und gemeinsam Lösungen zu erarbeiten.",
     "POCO_DIAL": "Beim Entwickeln dieses Spiels habe ich meine Problemlösungsfähigkeiten verbessert, coole Spielmechaniken, flüssige Animationen und strukturierte Level gestaltet.",
+    "MEMORY_DIAL":"Memory Spiel mit verschiedenen einstellungsmöglichkeiten, mit vite und TS und scss und BEM und WCAG conform gemacht",
     "PREVIOUS_BTN": "<< Zurück",
     "NEXT_BTN": "Nächstes >>"
   },
@@ -63,7 +64,7 @@
   "IMPRINT": {
     "TITLE": "Impressum",
     "IMPRINT_TITLE": "Kontakt & Rechtliches",
-    "NAMES": "Andreas Kissner, Sven Michels, Martin Frei, Dennis King Tran",
+    "NAMES": "Andreas Kissner",
     "ADDRESS_LINE1": "Rue du Champ fort 6",
     "ADDRESS_LINE2": "2853 Courfaivre",
     "CONTACT_TITLE": "Kontakt",
