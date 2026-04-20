@@ -29,7 +29,7 @@ export class PortfolioComponent implements OnInit {
   /** Moves to the next item (loops back to the start) */
   nextContent() {
     this.currentIndex.update(index => {
-      if (index < 1) {
+      if (index < this.allData().length - 1) {
         return index + 1;
       } else {
         return 0;
@@ -43,7 +43,7 @@ export class PortfolioComponent implements OnInit {
       if (index > 0) {
         return index - 1;
       } else {
-        return 1;
+        return this.allData().length - 1;
       }
     });
   }

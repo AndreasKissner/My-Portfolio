@@ -27,9 +27,10 @@
     "SUBTITLE": "Entdecke hier eine Auswahl meiner Projekte  um meine Fähigkeiten in Aktion zu sehen.",
     "JOIN_DESC": "Ein Aufgaben-Manager im Stil des Kanban-Systems, mit dem Aufgaben per Drag-and-Drop erstellt, dieenutzern und Kategorien zugewiesen werden können.",
     "LOCO_DESC": "Ein temporeiches Jump-and-Run-Spiel, in dem du Loco Poco durch Hindernisse steuerst, Gegenstände sammelst und in abwechslungsreichen, herausfordernden Levels das Ziel erreichst.",
+    "MEMORY_DESC": "Memory Spiel mit verschiedenen einstellungsmöglichkeiten, mit Vite und TS und scss und BEM und WCAG conform gemacht",
     "JOIN_DIAL": "Durch die Zusammenarbeit im Team habe ich gelernt, besser zu kommunizieren, Verantwortung zu teilen und gemeinsam Lösungen zu erarbeiten.",
     "POCO_DIAL": "Beim Entwickeln dieses Spiels habe ich meine Problemlösungsfähigkeiten verbessert, coole Spielmechaniken, flüssige Animationen und strukturierte Level gestaltet.",
-    "MEMORY_DIAL":"Memory Spiel mit verschiedenen einstellungsmöglichkeiten, mit vite und TS und scss und BEM und WCAG conform gemacht",
+    "MEMORY_DIAL": "Habe gelernt mit Vite zu Arbeiten . BEM vertieft und WCAG konforme Code zu schreiben.",
     "PREVIOUS_BTN": "<< Zurück",
     "NEXT_BTN": "Nächstes >>"
   },

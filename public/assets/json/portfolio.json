@@ -27,10 +27,10 @@
     "title": "Memory",
     "icon": "assets/img/portfolio/memo.webp",
     "languages": "HTML | SCSS | Vite | TS | ",
-    "description": "MEMORY.LOCO_DESC",
+    "description": "PORTFOLIO.MEMORY_DESC",
     "githubUrl": "https://github.com/AndreasKissner/Memory",
     "liveUrl": "https://memory.andreaskissner.info",
     "dialog": "PORTFOLIO.MEMORY_DIAL",
-     "imgStar" :"assets/img/icons/bottlestar.png"
+     "imgStar" :"assets/img/icons/chess-orange.svg"
   }
 ]
