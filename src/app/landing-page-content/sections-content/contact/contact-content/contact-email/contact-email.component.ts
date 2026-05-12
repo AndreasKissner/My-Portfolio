@@ -35,7 +35,7 @@ export class ContactEmailComponent {
     privacy: false
   };
 
-  private mailApiUrl = 'https://andreaskissner.info/send_mail.php';
+private mailApiUrl = 'https://andreas-kissner.cloud/send_mail.php';
 
   mailSuccess = false;
   mailError = false;
