@@ -27,10 +27,12 @@
     "SUBTITLE": "Explore a selection of my work here – interact with the projects to see my skills in action.",
     "JOIN_DESC": "A Kanban-style task manager that lets you create, organize, and move tasks using drag-and-drop, while also assigning users and categories to each task.",
     "LOCO_DESC": "A fast-paced jump-and-run game where you guide Loco Poco through obstacles, collect items, and reach the finish line across fun, challenging levels. Hola!",
-    "MEMORY_DESC":"Memory game with various settings, made with Vite, TS, SCSS, BEM, and WCAG compliant",
+    "MEMORY_DESC": " !!! Only Webbrowser !!! Memory Game with various settings, made with Vite, TS, SCSS, BEM, and WCAG compliant",
+    "POLLOAPP_DESC": "A survey app for creating, and analyzing your own polls.",
     "JOIN_DIAL": "Through working in a team, I learned how to communicate better, share responsibilities, and collaborate to find solutions together.",
     "POCO_DIAL": "While building this game, I sharpened my problem-solving skills and taught myself how to design engaging game mechanics, smooth animations, and well-structured levels.",
     "MEMORY_DIAL": "Learned to work with Vite. Deepened my understanding of BEM and how to write WCAG-compliant code.",
+    "POLLOAPP_DIAL": "Built with Angular 21, Reactive Forms, semantic HTML, and consistent WCAG compliance — a project I'm proud of.",
     "PREVIOUS_BTN": "<< Previous project",
     "NEXT_BTN": "Next project >>"
   },
