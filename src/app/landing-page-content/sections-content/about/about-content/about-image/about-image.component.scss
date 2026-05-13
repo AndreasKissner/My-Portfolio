@@ -42,10 +42,13 @@ img {
   }
 
   @include m.respond-laptop {
-    width: 400px;
-    height: auto;
-    max-width: none;   
-  }
+  width: 400px;
+  height: auto;
+  max-width: none;
+  max-height: calc(100vh - 140px); // neu: begrenzt Höhe auf verfügbaren Platz
+  object-fit: cover;               // schon vorhanden, bleibt
+}
+
 
   @include m.respond-large {
     width: 500px;
