@@ -15,38 +15,46 @@
 :host ::ng-deep section {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto auto; 
+    grid-template-rows: auto auto auto;
     @include m.border-white-all(c.$light-beige);
     padding: 16px;
     width: 100%;
     max-width: 400px;
-    margin-top: 20px;
     height: auto;
-    
+
+    @media (max-height: 599px) {
+        margin-top: 8px;
+        padding: 8px;
+    }
+
     @include m.respond-mid {
         padding: 32px;
     }
 
-    @include m.respond-normal{
-        width:270px;
+    @include m.respond-normal {
+        width: 270px;
         height: 330px;
     }
 
     @include m.respond-laptop {
-        
+
         &:hover {
-            .icon-top, .icon-center, .icon-bottom {
+
+            .icon-top,
+            .icon-center,
+            .icon-bottom {
                 opacity: 1;
             }
         }
     }
+
     @include m.respond-1280 {
         width: 335px;
     }
 
-     @include m.respond-xxl {
+    @include m.respond-xxl {
         height: 400px;
-}
+    }
 }
 
 :host ::ng-deep header {
@@ -56,10 +64,12 @@
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
-    @include m.respond-laptop{
+
+    @include m.respond-laptop {
         font-size: 24px;
     }
-    @include m.respond-xxl{
+
+    @include m.respond-xxl {
         font-size: 28px;
     }
 }
@@ -68,7 +78,8 @@
     grid-column: 1;
     grid-row: 2;
     font-family: f.$font-second;
-     @include m.respond-xxl{
+
+    @include m.respond-xxl {
         font-size: 20px;
     }
 }
@@ -78,15 +89,16 @@
     grid-row: 3;
     font-family: f.$font-second;
     margin-top: 7px;
-     @include m.respond-xxl{
+
+    @include m.respond-xxl {
         font-size: 20px;
     }
 }
 
 :host ::ng-deep .icon-top,
 :host ::ng-deep .icon-center,
-:host ::ng-deep .icon-bottom { 
-  @include m.card-icons-reference 
+:host ::ng-deep .icon-bottom {
+    @include m.card-icons-reference
 }
 
 :host ::ng-deep a {
@@ -104,12 +116,18 @@
     }
 
     @include m.respond-laptop {
-        margin-right:50px;
+        margin-right: 50px;
+
         &:hover {
             color: c.$orange-four;
         }
     }
-     @include m.respond-xxl{
+
+    @include m.respond-xxl {
         font-size: 20px;
+    }
+
+    @media (max-height: 599px) {
+        margin-top: 8px;
     }
 }
