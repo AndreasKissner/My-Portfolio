@@ -37,8 +37,10 @@
 
   @include m.respond-xxl {
     max-width: 1070px;
-    margin-top: -45px;
-    margin-right: -32px;
+    margin-top: -25px;
+    margin-right: 0;
+    height: auto;
+    padding-top: 20px;
   }
 }
 
@@ -73,8 +75,8 @@
     }
 
     @include m.respond-xxl {
-      width: 115px;
-      height: 115px;
+      width: 100px;
+      height: 100px;
     }
   }
 

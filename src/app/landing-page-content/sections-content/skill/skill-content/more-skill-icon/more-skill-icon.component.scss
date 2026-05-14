@@ -11,6 +11,14 @@
   max-width: 136px;
   margin: 50px 0 25px 0px;
   cursor: pointer;
+
+  @media (max-height: 599px) {
+    margin: 10px 0 10px 0;
+  }
+
+  @include m.respond-xxl {
+    margin: 20px 0 10px 0;
+  }
 }
 
 app-open-dialog-btn {

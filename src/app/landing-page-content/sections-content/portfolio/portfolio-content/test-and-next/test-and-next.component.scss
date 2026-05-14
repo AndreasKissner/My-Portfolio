@@ -21,8 +21,12 @@
         height: 330px;
     }
       @include m.respond-xxl {
-            height: 430px;
+            height: 380px;
         }
+
+    @media (max-height: 599px) {
+        height: 250px;
+    }
 
     app-dialog {
         display: block;
