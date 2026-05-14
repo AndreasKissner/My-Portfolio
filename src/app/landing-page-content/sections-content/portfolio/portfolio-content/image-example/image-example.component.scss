@@ -23,14 +23,17 @@
 
   @include m.respond-xxl {
     max-width: 700px;
-    height: 510px;
+    height: 420px;
   }
 
+  @media (max-height: 599px) {
+    height: 270px;
+    margin-bottom: 10px;
+  }
 
   article {
     width: 280px;
     height: 186px;
-    border: 2px solid green;
     z-index: 10;
 
     @include m.respond-sm{
