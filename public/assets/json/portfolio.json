@@ -17,7 +17,7 @@
     "languages": "HTML | CSS | API | OOP | CANVA",
     "description": "PORTFOLIO.LOCO_DESC",
     "githubUrl": "https://github.com/AndreasKissner/EL-Pollo-Loco",
-    "liveUrl": "https://elpolloloco.andreaskissner.info",
+    "liveUrl": "https://elpolloloco.andreas-kissner.cloud",
     "dialog": "PORTFOLIO.POCO_DIAL",
      "imgStar" :"assets/img/icons/bottlestar.png"
   },
@@ -29,13 +29,13 @@
     "languages": "HTML | SCSS | Vite | TS ",
     "description": "PORTFOLIO.MEMORY_DESC",
     "githubUrl": "https://github.com/AndreasKissner/Memory",
-    "liveUrl": "https://memory.andreaskissner.info",
+    "liveUrl": "https://memory.andreas-kissner.cloud",
     "dialog": "PORTFOLIO.MEMORY_DIAL",
      "imgStar" :"assets/img/icons/chess-orange.svg"
   },
   {
     "image": "assets/img/portfolio/polloapp.svg",
-    "title": "PolloApp",
+    "title": "PollApp",
     "icon": "assets/img/portfolio/polloicon.svg",
     "languages": "HTML | SCSS | TS | SupaBase | WCAG | BEM",
     "description": "PORTFOLIO.POLLOAPP_DESC",
