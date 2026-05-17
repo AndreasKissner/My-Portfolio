@@ -1,0 +1,108 @@
+<aside class="chat" aria-label="Chat Assistant">
+
+  <button
+    class="chat__bubble"
+    (click)="toggleChat()"
+    [attr.aria-expanded]="isOpen"
+    aria-controls="chatOverlay"
+    aria-label="Chat öffnen"
+  >
+    <svg
+      class="chat__bubble-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <span class="chat__bubble-ping" *ngIf="!isOpen"></span>
+  </button>
+
+  <section
+    id="chatOverlay"
+    class="chat__overlay"
+    [class.chat__overlay--open]="isOpen"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="chatTitle"
+  >
+    <header class="chat__header">
+      <h2 class="chat__header-title" id="chatTitle">Andreas Chat with n8n and Angular (BETA)</h2>
+      <button
+        class="chat__header-close"
+        (click)="toggleChat()"
+        aria-label="Chat schliessen"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </header>
+
+    <div
+      class="chat__messages"
+      #messageContainer
+      role="log"
+      aria-live="polite"
+      aria-label="Chat-Nachrichten"
+    >
+      <div
+        *ngFor="let msg of messages"
+        class="chat__message"
+        [class.chat__message--user]="msg.role === 'user'"
+        [class.chat__message--bot]="msg.role === 'bot'"
+      >
+        <p class="chat__message-text">{{ msg.text }}</p>
+      </div>
+
+      <div class="chat__message chat__message--bot" *ngIf="isLoading">
+        <span class="chat__typing" aria-label="Antwort wird geladen">
+          <span class="chat__typing-dot"></span>
+          <span class="chat__typing-dot"></span>
+          <span class="chat__typing-dot"></span>
+        </span>
+      </div>
+    </div>
+
+    <form class="chat__input" (ngSubmit)="sendMessage()" role="search">
+      <label for="chatInput" class="sr-only">Nachricht eingeben</label>
+      <input
+        id="chatInput"
+        class="chat__input-field"
+        type="text"
+        [(ngModel)]="userInput"
+        name="message"
+        placeholder="Schreib mir was..."
+        autocomplete="off"
+        [disabled]="isLoading"
+      />
+      <button
+        class="chat__input-send"
+        type="submit"
+        [disabled]="!userInput.trim() || isLoading"
+        aria-label="Nachricht senden"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </form>
+  </section>
+
+  <div
+    class="chat__backdrop"
+    *ngIf="isOpen"
+    (click)="toggleChat()"
+    aria-hidden="true"
+  ></div>
+
+</aside>
