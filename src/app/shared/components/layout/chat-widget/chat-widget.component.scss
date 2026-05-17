@@ -56,24 +56,13 @@ $transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       outline: 3px solid $color-text-light;
       outline-offset: 3px;
     }
+    
   }
 
   &__bubble-icon {
-    width: 28px;
-    height: 28px;
+    width: 98px;
+    height: 98px;
     color: $color-text-dark;
-  }
-
-  &__bubble-ping {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 14px;
-    height: 14px;
-    background: #e74c3c;
-    border-radius: 50%;
-    border: 2px solid $color-bg;
-    animation: ping 1.5s infinite;
   }
 
   // ==================
