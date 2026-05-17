@@ -44,3 +44,11 @@ Thumbs.db
 
 # Rest
 .vscode/
+
+
+# Ignoriere die chatDocumentatio.md Datei
+chatDocumentatio.md
+
+# Ignoriere den .chatDocumentatio/ Ordner (falls vorhanden)
+.chatDocumentatio/
+       

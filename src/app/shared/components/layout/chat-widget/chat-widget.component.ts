@@ -62,7 +62,7 @@ export class ChatWidgetComponent {
   private async fetchBotResponse(text: string): Promise<string> {
     try {
       const response = await fetch(
-        'http://217.160.10.236/webhook/299b772d-2ec5-459d-b357-7e911e05a519',
+       'https://n8n.andreas-kissner.cloud/webhook/299b772d-2ec5-459d-b357-7e911e05a519',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
