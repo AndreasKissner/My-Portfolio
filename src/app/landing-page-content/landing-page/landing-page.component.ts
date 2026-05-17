@@ -18,6 +18,7 @@ import { ReferenceComponent } from '../sections-content/reference/reference.comp
 import { ContactComponent } from '../sections-content/contact/contact.component';
 import { SectionIndicatorComponent } from '../../shared/components/layout/section-indicator/section-indicator.component';
 import { SectionService } from '../../shared-services/section.service';
+import { ChatWidgetComponent } from '../../shared/components/layout/chat-widget/chat-widget.component';
 
 
 interface HeaderState {
@@ -37,7 +38,8 @@ interface HeaderState {
     PortfolioComponent,
     ReferenceComponent,
     ContactComponent,
-    SectionIndicatorComponent
+    SectionIndicatorComponent,
+    ChatWidgetComponent
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
