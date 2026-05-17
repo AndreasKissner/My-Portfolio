@@ -2,6 +2,7 @@
 $allowedOrigins = [
     'https://andreas-kissner.developerakademie.net',
     'https://portfolio.andreas-kissner.cloud',
+    'https://www.andreas-kissner.cloud',
     'http://localhost:4200'
 ];
 

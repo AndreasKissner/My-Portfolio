@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { InputFieldsEmailComponent } from './input-fields-email/input-fields-email.component';
 import { CommonModule } from '@angular/common';
-import { BtnPrimaerComponent } from "../../../../../shared/components/layout/btn-primaer/btn-primaer.component";
+import { BtnPrimaerComponent } from '../../../../../shared/components/layout/btn-primaer/btn-primaer.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
@@ -18,24 +18,22 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     TranslateModule,
     BackFlashComponent,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './contact-email.component.html',
   styleUrl: './contact-email.component.scss',
 })
 export class ContactEmailComponent {
-
   private http = inject(HttpClient);
-
 
   contactData = {
     name: '',
     email: '',
     message: '',
-    privacy: false
+    privacy: false,
   };
 
-private mailApiUrl = 'https://andreas-kissner.cloud/send_mail.php';
+  private mailApiUrl = 'https://www.andreas-kissner.cloud/send_mail.php';
 
   mailSuccess = false;
   mailError = false;
@@ -47,8 +45,8 @@ private mailApiUrl = 'https://andreas-kissner.cloud/send_mail.php';
   messageFocused = false;
 
   /**
-  * Called when the form is submitted.
-  */
+   * Called when the form is submitted.
+   */
   onSubmit(form: NgForm) {
     if (form.valid && !this.isSending) {
       this.isSending = true;
@@ -59,23 +57,22 @@ private mailApiUrl = 'https://andreas-kissner.cloud/send_mail.php';
   }
 
   /**
-  * Sends the data to the Mail API.
-  */
+   * Sends the data to the Mail API.
+   */
   private sendMail(form: NgForm) {
-    this.http.post(this.mailApiUrl, this.contactData)
-      .subscribe({
-        next: () => {
-          this.processSuccess(form);
-        },
-        error: (error) => {
-          this.handleError(error, form);
-        }
-      });
+    this.http.post(this.mailApiUrl, this.contactData).subscribe({
+      next: () => {
+        this.processSuccess(form);
+      },
+      error: (error) => {
+        this.handleError(error, form);
+      },
+    });
   }
 
   /**
-  * Handles errors occurring during the HTTP request.
-  */
+   * Handles errors occurring during the HTTP request.
+   */
   private handleError(error: any, form: NgForm) {
     if (error.status === 200) {
       this.processSuccess(form);
@@ -83,13 +80,13 @@ private mailApiUrl = 'https://andreas-kissner.cloud/send_mail.php';
       this.mailError = true;
       this.isSending = false;
       this.errorMessage = 'CONTACT.ERROR_MESSAGE';
-      setTimeout(() => this.mailError = false, 3000);
+      setTimeout(() => (this.mailError = false), 3000);
     }
   }
 
   /**
- * Displays validation errors when the form is submitted invalidly.
- */
+   * Displays validation errors when the form is submitted invalidly.
+   */
   onInvalidSubmitAttempt(form: NgForm) {
     if (!form.valid) {
       form.control.markAllAsTouched();
@@ -106,29 +103,29 @@ private mailApiUrl = 'https://andreas-kissner.cloud/send_mail.php';
         nameControl.setValue('');
       }
       this.isFlashing = true;
-      setTimeout(() => this.isFlashing = false, 500);
+      setTimeout(() => (this.isFlashing = false), 500);
     }
   }
 
   /**
-  * Resets the form after successful submission.
-  */
+   * Resets the form after successful submission.
+   */
   private processSuccess(form: NgForm) {
     this.mailSuccess = true;
     this.isSending = false;
     this.errorMessage = '';
     form.resetForm();
     this.contactData = { name: '', email: '', message: '', privacy: false };
-    setTimeout(() => this.mailSuccess = false, 3000);
+    setTimeout(() => (this.mailSuccess = false), 3000);
   }
 
   /**
-  * Toggles the focus state of an input field.
-  * First click: activates error style and hint placeholder.
-  * Second click (while still in field): resets to default state.
-  * @param flag - The focus flag to toggle ('nameFocused' | 'emailFocused' | 'messageFocused')
-  * @param field - The NgModel reference of the input field
-  */
+   * Toggles the focus state of an input field.
+   * First click: activates error style and hint placeholder.
+   * Second click (while still in field): resets to default state.
+   * @param flag - The focus flag to toggle ('nameFocused' | 'emailFocused' | 'messageFocused')
+   * @param field - The NgModel reference of the input field
+   */
   toggleFocus(flag: 'nameFocused' | 'emailFocused' | 'messageFocused', field: any) {
     if (this[flag]) {
       this[flag] = false;
