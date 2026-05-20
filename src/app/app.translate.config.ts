@@ -9,8 +9,7 @@ export const provideAppTranslate = [
  * Provides the translation service configuration using a local storage language fallback.
  */
 provideTranslateService({
-  fallbackLang: 'en', 
-  defaultLanguage: lang,
+  fallbackLang: lang,
 }),
 
 /**
