@@ -1,0 +1,59 @@
+@use 'style-varibles/colors' as c;
+
+@keyframes cursor-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes cursor-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.5); }
+}
+
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  &__circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    will-change: transform;
+    transition: opacity 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(
+        #FF3B3B 0deg,
+        #FFD600 120deg,
+        #2979FF 240deg,
+        #FF3B3B 360deg
+      );
+      mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #fff calc(100% - 5px));
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #fff calc(100% - 5px));
+      animation: cursor-spin 2s linear infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(228, 76, 54, 0.35) 0%, transparent 70%);
+      animation: cursor-pulse 2s ease-in-out infinite;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    display: none;
+  }
+}
