@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { startTabRotation } from '../favicon-logic';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
+import { CustomCursorComponent } from './shared/components/layout/custom-cursor/custom-cursor.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CustomCursorComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
