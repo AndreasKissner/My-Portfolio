@@ -43,5 +43,15 @@
     "liveUrl": "https://polloapp.andreas-kissner.cloud",
     "dialog": "PORTFOLIO.POLLOAPP_DIAL",
      "imgStar" :"assets/img/portfolio/animation2.svg"
+  },
+  {
+    "image": "assets/img/portfolio/second.avif",
+    "title": "Second Hand Manager",
+    "icon": "assets/img/portfolio/spinnersecond.png",
+    "languages": "Angular 21 | Firebase | Stripe | BEM | WCAG",
+    "description": "PORTFOLIO.SECONDHAND_DESC",
+    "liveUrl": "https://second-hand-manager.com",
+    "dialog": "PORTFOLIO.SECONDHAND_DIAL",
+    "imgStar": "assets/img/portfolio/spinnersecond.png"
   }
 ]

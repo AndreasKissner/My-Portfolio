@@ -29,10 +29,12 @@
     "LOCO_DESC": "A fast-paced jump-and-run game where you guide Loco Poco through obstacles, collect items, and reach the finish line across fun, challenging levels. Hola!",
     "MEMORY_DESC": " !!! Only Webbrowser !!! Memory Game with various settings, made with Vite, TS, SCSS, BEM, and WCAG compliant",
     "POLLOAPP_DESC": "A survey app for creating, and analyzing your own polls.",
+    "SECONDHAND_DESC": "A SaaS platform for second-hand boutiques and clothing exchanges. Built with Angular, Firebase, Stripe integration, and WCAG compliance for accessible shopping.",
     "JOIN_DIAL": "Through working in a team, I learned how to communicate better, share responsibilities, and collaborate to find solutions together.",
     "POCO_DIAL": "While building this game, I sharpened my problem-solving skills and taught myself how to design engaging game mechanics, smooth animations, and well-structured levels.",
     "MEMORY_DIAL": "Learned to work with Vite. Deepened my understanding of BEM and how to write WCAG-compliant code.",
     "POLLOAPP_DIAL": "Built with Angular 21, Reactive Forms, semantic HTML, and consistent WCAG compliance — a project I'm proud of.",
+    "SECONDHAND_DIAL": "Deepened Firebase and Stripe expertise, built complex Angular forms with validation, and structured scalable SaaS architecture with semantic HTML and SCSS.",
     "PREVIOUS_BTN": "<< Previous project",
     "NEXT_BTN": "Next project >>"
   },
