@@ -29,8 +29,10 @@ export class App implements AfterViewInit {
    * Handles post-initialization tasks like scroll reset and tab title rotation.
    */
   ngAfterViewInit() {
-    history.replaceState(null, '', location.pathname);
-    window.scrollTo(0, 0);
+    if (!location.hash) {
+      history.replaceState(null, '', location.pathname);
+      window.scrollTo(0, 0);
+    }
     startTabRotation(this.titleService);
   }
 }
