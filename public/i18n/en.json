@@ -111,7 +111,7 @@
     "PURPOSE_TITLE": "Purpose of Data Processing",
     "PURPOSE_TEXT": "The collected data is used only to provide and improve this website and to respond to inquiries.",
     "SHARING_TITLE": "Data Sharing",
-    "SHARING_TEXT": "Your personal data will not be shared with third parties unless required by law.",
+    "SHARING_TEXT": "Your personal data will not be shared with third parties unless required by law. Exception: The chat widget uses DeepSeek to process chat messages.",
     "SECURITY_TITLE": "Data Security",
     "SECURITY_TEXT": "Appropriate technical and organizational measures are taken to protect your data against unauthorized access.",
     "RIGHTS_TITLE": "Your Rights",
