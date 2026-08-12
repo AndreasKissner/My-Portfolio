@@ -84,6 +84,11 @@ export class LandingPageComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.initVisibilityObserver();
     this.handleFragmentScrolling();
+
+    const fragment = this.route.snapshot.fragment;
+    if (fragment) {
+      setTimeout(() => this.scrollToSection(fragment), 150);
+    }
   }
 
   /**
