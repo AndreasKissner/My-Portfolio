@@ -74,12 +74,12 @@
         name="message"
         placeholder="Schreib mir was..."
         autocomplete="off"
-        [disabled]="isLoading"
+        [disabled]="isLoading || chatOffline"
       />
       <button
         class="chat__input-send"
         type="submit"
-        [disabled]="!userInput.trim() || isLoading"
+        [disabled]="!userInput.trim() || isLoading || chatOffline"
         aria-label="Nachricht senden"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
