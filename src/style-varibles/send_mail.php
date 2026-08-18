@@ -32,7 +32,7 @@ if ($params && isset($params->email) && isset($params->message)) {
    $apiKey = $brevoKey;
 
     $data = [
-        "sender" => ["name" => "Portfolio Kontakt", "email" => "andikiss500@gmail.com"],
+        "sender" => ["name" => "Portfolio Kontakt", "email" => "kontakt@send.andreas-kissner.cloud"],
         "to" => [["email" => "andikiss500@gmail.com", "name" => "Andreas Kissner"]],
         "subject" => "Neue Nachricht von " . ($params->name ?? 'Unbekannt'),
         "textContent" => "Name: " . ($params->name ?? 'N/A') . "\n" .
