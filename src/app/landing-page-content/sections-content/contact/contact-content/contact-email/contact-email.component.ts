@@ -57,10 +57,12 @@ export class ContactEmailComponent {
   }
 
   /**
-   * Sends the data to the Mail API.
+   * Sends the data to the Mail API, including the user's language for the autoresponder.
    */
   private sendMail(form: NgForm) {
-    this.http.post(this.mailApiUrl, this.contactData).subscribe({
+    const lang = localStorage.getItem('lang') || 'en';
+    const payload = { ...this.contactData, lang };
+    this.http.post(this.mailApiUrl, payload).subscribe({
       next: () => {
         this.processSuccess(form);
       },
