@@ -22,13 +22,13 @@ export class ChatWidgetComponent {
   isOpen = false;
   isLoading = false;
   userInput = '';
-  chatOffline = true;
+  chatOffline = false;
 
   /** Initial bot greeting message shown on first open */
   messages: ChatMessage[] = [
     {
       role: 'bot',
-      text: 'Der KI-Chat wird gerade getuned und optimiert. Er ist voraussichtlich 2 Tage offline. Danke für dein Verständnis!',
+      text: 'Hallo! Ich bin Andreas Kissner – oder genauer gesagt, eine digitale Kopie von mir. Schön, dass du da bist! Was kann ich für dich tun?',
     },
   ];
 
