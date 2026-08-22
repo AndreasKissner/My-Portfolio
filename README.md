@@ -2,7 +2,7 @@
 
 Personal portfolio website built with Angular 21. Showcases projects, skills, and background as a frontend developer, with a multilingual UI, an AI-powered chat assistant, and a working contact form.
 
-**Live:** [developer.andreas-kissner.cloud](https://developer.andreas-kissner.cloud)
+**Live:** [andreas-kissner.cloud](https://developer.andreas-kissner.cloud)
 
 ## Features
 
