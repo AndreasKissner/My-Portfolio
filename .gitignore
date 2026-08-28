@@ -51,4 +51,7 @@ chatDocumentatio.md
 
 # Ignoriere den .chatDocumentatio/ Ordner (falls vorhanden)
 .chatDocumentatio/
+
+# Persoenliche Notizen, nicht ins Repo
+TODO.md
        
