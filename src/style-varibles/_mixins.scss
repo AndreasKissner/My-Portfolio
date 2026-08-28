@@ -14,11 +14,11 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
   background-color: $bg;
 
   @include respond-sm {
-    height: calc(100vh - 88px);
+    min-height: calc(100vh - 88px);
   }
 } 
 

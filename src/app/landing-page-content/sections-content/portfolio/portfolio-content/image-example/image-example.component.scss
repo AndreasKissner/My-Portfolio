@@ -66,6 +66,12 @@
     height: auto;
     @include m.rotate-ring;
 
+    /* Dekoration bei wenig Bildschirmhöhe ausblenden (z. B. starker Browser-Zoom),
+       da die feste Position sonst über den Inhalt läuft. */
+    @media (max-height: 600px) {
+      display: none;
+    }
+
     @include m.respond-normal {
       top: 232px;
       left: 5px;

@@ -28,11 +28,11 @@
   outline: none;  
 
   &#hero {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   @include m.respond-laptop {
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
   }
 }
@@ -44,7 +44,7 @@
   flex-direction: column;
 
   @include m.respond-laptop {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 88px;
     box-sizing: border-box;
   }

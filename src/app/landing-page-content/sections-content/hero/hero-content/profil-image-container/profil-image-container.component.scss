@@ -33,6 +33,12 @@
   z-index: 1;
   height: auto;
   display: block;
+
+  /* Dekoration bei wenig Bildschirmhöhe ausblenden (z. B. starker Browser-Zoom),
+     damit sie nicht in die nächste Section ragt. */
+  @media (max-height: 600px) {
+    display: none;
+  }
 }
 
 .bg-img-1 {
