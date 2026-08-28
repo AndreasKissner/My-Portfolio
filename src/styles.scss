@@ -34,44 +34,56 @@ a {
 
 @font-face {
   font-family: 'QuickFont';
-  src: url('../public/assets/fonts/quick.ttf') format('truetype');
+  src: url('../public/assets/fonts/quick.woff2') format('woff2'),
+       url('../public/assets/fonts/quick.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'SpaceFont';
-  src: url('../public/assets/fonts/space.ttf') format('truetype');
+  src: url('../public/assets/fonts/space.woff2') format('woff2'),
+       url('../public/assets/fonts/space.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'EczarFont';
-  src: url('../public/assets/fonts/eczar.ttf') format('truetype');
+  src: url('../public/assets/fonts/eczar.woff2') format('woff2'),
+       url('../public/assets/fonts/eczar.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'KarlaFont';
-  src: url('../public/assets/fonts/karla.ttf') format('truetype');
+  src: url('../public/assets/fonts/karla.woff2') format('woff2'),
+       url('../public/assets/fonts/karla.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'JosefineFont';
-  src: url('../public/assets/fonts/josefine.ttf') format('truetype');
+  src: url('../public/assets/fonts/josefine.woff2') format('woff2'),
+       url('../public/assets/fonts/josefine.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'JosefineLightFont';
-  src: url('../public/assets/fonts/josefineLight.ttf') format('truetype');
+  src: url('../public/assets/fonts/josefineLight.woff2') format('woff2'),
+       url('../public/assets/fonts/josefineLight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Wichtig, damit die Angular-Komponente den Platz füllt */

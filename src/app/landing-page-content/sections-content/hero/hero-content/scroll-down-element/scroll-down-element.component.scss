@@ -12,6 +12,12 @@
         @media(min-width:725px) {
             display: none;
         }
+
+        /* Bei wenig Bildschirmhöhe (z. B. starker Browser-Zoom) ausblenden,
+           da die feste Position sonst den Kontakt-Button überlappt. */
+        @media (max-height: 600px) {
+            display: none;
+        }
     }
 
     &.hero-style {
@@ -21,6 +27,10 @@
 
         @media(min-width:725px) {
             display: block;
+        }
+
+        @media (max-height: 600px) {
+            display: none;
         }
     }
 
