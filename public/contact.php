@@ -14,7 +14,7 @@ const ALLOWED_ORIGINS = [
     'https://andreas-kissner.cloud',
     'https://www.andreas-kissner.cloud',
 ];
-const RECIPIENT_EMAIL = 'andikiss500@gmail.com';
+const RECIPIENT_EMAIL = 'developer@andreas-kissner.cloud';
 const SITE_HOST = 'andreas-kissner.cloud';
 const OWNER_NAME = 'Andreas Kissner';
 

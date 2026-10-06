@@ -108,13 +108,13 @@
     "DATA_TITLE": "Data Collection",
     "DATA_TEXT": "When you use this website, certain data may be collected automatically, such as your IP address, browser type, and time of access.",
     "FORM_TITLE": "Contact Form",
-    "FORM_TEXT": "If you contact me via the contact form, your name, email address, and message will be stored for the purpose of processing your request. This data is kept only as long as necessary to process your inquiry.",
+    "FORM_TEXT": "If you contact me via the contact form, your name, email address, message and selected language are processed by a script on my own web server and delivered by email to my mailbox. An automatic confirmation is sent to the email address you provide. The data is not stored in any database and is kept only as long as necessary to process your inquiry. To protect against abuse, your IP address is stored not in plain text but only as an irreversible hash together with the time of the request; entries older than one hour are deleted on the next request. To detect automated requests, a hidden field and the time taken to submit the form are also evaluated, but not stored.",
     "PURPOSE_TITLE": "Purpose of Data Processing",
     "PURPOSE_TEXT": "The collected data is used only to provide and improve this website and to respond to inquiries.",
     "SHARING_TITLE": "Data Sharing",
     "SHARING_TEXT": "Your personal data will not be shared with third parties unless required by law or explicitly stated below.",
     "THIRDPARTY_TITLE": "Third-Party Services",
-    "THIRDPARTY_TEXT": "This website uses the following third-party services: Brevo (Sendinblue SAS, France) for sending emails via the contact form. The AI chat assistant uses DeepSeek to process chat messages — DeepSeek is based in China, a country without a level of data protection recognized as adequate by Switzerland. By using the chat, your messages are accordingly transferred to a third country. Please do not share sensitive personal data in the chat. This website is hosted with IONOS (Germany).",
+    "THIRDPARTY_TEXT": "This website uses the following third-party services: IONOS (IONOS SE, Germany) for hosting this website and for sending the emails of the contact form. The AI chat assistant uses DeepSeek to process chat messages — DeepSeek is based in China, a country without a level of data protection recognized as adequate by Switzerland. By using the chat, your messages are accordingly transferred to a third country. Please do not share sensitive personal data in the chat.",
     "STORAGE_TITLE": "Local Storage",
     "STORAGE_TEXT": "Your language preference is stored in your browser's local storage (localStorage). No tracking cookies are used.",
     "SECURITY_TITLE": "Data Security",
@@ -125,6 +125,6 @@
     "CONTACT_TEXT": "If you have any questions about this Privacy Policy, please contact:",
     "EMAIL": "andikiss500@gmail.com",
     "DATE": "Date",
-    "DATE_VALUE": "January 25, 2026"
+    "DATE_VALUE": "October 6, 2026"
   }
 }

@@ -108,13 +108,13 @@
     "DATA_TITLE": "Datenerfassung",
     "DATA_TEXT": "Beim Besuch dieser Website können automatisch Daten wie Ihre IP-Adresse, Browsertyp oder Zugriffszeit erfasst werden.",
     "FORM_TITLE": "Kontaktformular",
-    "FORM_TEXT": "Wenn Sie mich über das Kontaktformular kontaktieren, werden Ihre Angaben (Name, E-Mail-Adresse und Nachricht) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nur so lange aufbewahrt, wie es zur Bearbeitung Ihrer Anfrage erforderlich ist.",
+    "FORM_TEXT": "Wenn Sie mich über das Kontaktformular kontaktieren, werden Ihr Name, Ihre E-Mail-Adresse, Ihre Nachricht und die eingestellte Sprache von einem eigenen Skript auf meinem Webserver verarbeitet und per E-Mail an mein Postfach zugestellt. An die angegebene E-Mail-Adresse wird automatisch eine Bestätigung gesendet. Die Daten werden in keiner Datenbank gespeichert und nur so lange aufbewahrt, wie es zur Bearbeitung Ihrer Anfrage erforderlich ist. Zum Schutz vor Missbrauch wird Ihre IP-Adresse nicht im Klartext, sondern nur als nicht umkehrbarer Hash zusammen mit dem Zeitpunkt der Anfrage gespeichert; Einträge, die älter als eine Stunde sind, werden bei der nächsten Anfrage gelöscht. Zur Erkennung automatisierter Anfragen werden außerdem ein verstecktes Feld und die Dauer bis zum Absenden ausgewertet, aber nicht gespeichert.",
     "PURPOSE_TITLE": "Zweck der Datenverarbeitung",
     "PURPOSE_TEXT": "Die erhobenen Daten werden ausschließlich zur Bereitstellung der Website und zur Bearbeitung von Anfragen verwendet.",
     "SHARING_TITLE": "Weitergabe von Daten",
     "SHARING_TEXT": "Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben oder nachfolgend ausdrücklich genannt.",
     "THIRDPARTY_TITLE": "Eingesetzte Drittanbieter",
-    "THIRDPARTY_TEXT": "Für den Betrieb dieser Website werden folgende Drittanbieter eingesetzt: Brevo (Sendinblue SAS, Frankreich) für den Versand von E-Mails über das Kontaktformular. Der KI-Chat-Assistent nutzt DeepSeek zur Verarbeitung von Chat-Nachrichten – DeepSeek hat seinen Sitz in China, einem Land ohne von der Schweiz als angemessen anerkanntes Datenschutzniveau. Durch die Nutzung des Chats werden Ihre Nachrichten entsprechend in ein Drittland übermittelt. Bitte geben Sie im Chat keine sensiblen personenbezogenen Daten an. Diese Website wird bei IONOS (Deutschland) gehostet.",
+    "THIRDPARTY_TEXT": "Für den Betrieb dieser Website werden folgende Drittanbieter eingesetzt: IONOS (IONOS SE, Deutschland) für das Hosting dieser Website und den Versand der E-Mails des Kontaktformulars. Der KI-Chat-Assistent nutzt DeepSeek zur Verarbeitung von Chat-Nachrichten – DeepSeek hat seinen Sitz in China, einem Land ohne von der Schweiz als angemessen anerkanntes Datenschutzniveau. Durch die Nutzung des Chats werden Ihre Nachrichten entsprechend in ein Drittland übermittelt. Bitte geben Sie im Chat keine sensiblen personenbezogenen Daten an.",
     "STORAGE_TITLE": "Lokale Speicherung",
     "STORAGE_TEXT": "Ihre Spracheinstellung wird im lokalen Speicher (localStorage) Ihres Browsers gespeichert. Es werden keine Tracking-Cookies eingesetzt.",
     "SECURITY_TITLE": "Datensicherheit",
@@ -125,6 +125,6 @@
     "CONTACT_TEXT": "Bei Fragen zum Datenschutz kontaktieren Sie mich bitte unter:",
     "EMAIL": "andikiss500@gmail.com",
     "DATE": "Datum",
-    "DATE_VALUE": "25. Januar 2026"
+    "DATE_VALUE": "6. Oktober 2026"
   }
 }
