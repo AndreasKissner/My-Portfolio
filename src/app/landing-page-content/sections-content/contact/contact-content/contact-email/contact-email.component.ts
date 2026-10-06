@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { InputFieldsEmailComponent } from './input-fields-email/input-fields-email.component';
 import { CommonModule } from '@angular/common';
 import { BtnPrimaerComponent } from '../../../../../shared/components/layout/btn-primaer/btn-primaer.component';
@@ -25,6 +25,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ContactEmailComponent {
   private http = inject(HttpClient);
+  private cdr = inject(ChangeDetectorRef);
 
   contactData = {
     name: '',
@@ -83,7 +84,11 @@ export class ContactEmailComponent {
     this.mailError = true;
     this.isSending = false;
     this.errorMessage = error.status === 429 ? 'CONTACT.ERROR_RATE_LIMIT' : 'CONTACT.ERROR_MESSAGE';
-    setTimeout(() => (this.mailError = false), 3000);
+    this.cdr.markForCheck();
+    setTimeout(() => {
+      this.mailError = false;
+      this.cdr.markForCheck();
+    }, 3000);
   }
 
   /**
@@ -118,7 +123,11 @@ export class ContactEmailComponent {
     this.errorMessage = '';
     form.resetForm();
     this.contactData = { name: '', email: '', message: '', privacy: false, hp_extra: '' };
-    setTimeout(() => (this.mailSuccess = false), 3000);
+    this.cdr.markForCheck();
+    setTimeout(() => {
+      this.mailSuccess = false;
+      this.cdr.markForCheck();
+    }, 3000);
   }
 
   /**
