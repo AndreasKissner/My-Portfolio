@@ -9,14 +9,14 @@ Personal portfolio website built with Angular 21. Showcases projects, skills, an
 - Responsive, mobile-first layout
 - German / English localization (`@ngx-translate`)
 - AI chat widget answering questions about the developer and the projects (n8n + DeepSeek)
-- Contact form with email delivery and localized autoresponder (Brevo API)
+- Contact form with email delivery and a localized confirmation mail, sent by a self-written PHP script over SMTP, with spam protection (honeypot, rate limit) and no CAPTCHA
 - WCAG-compliant markup and accessible components
 - 3D elements via Three.js
 
 ## Tech Stack
 
 - **Frontend:** Angular 21, TypeScript, SCSS, RxJS
-- **Backend/Integrations:** PHP (mail relay), Brevo (transactional email), n8n (chat automation)
+- **Backend/Integrations:** PHP (contact form, SMTP), n8n (chat automation)
 - **Testing:** Vitest
 
 ## Development
