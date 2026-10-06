@@ -36,3 +36,23 @@
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
+
+# Zugangsdaten, Rate-Limit-Datei und Notizen sind von aussen nicht abrufbar.
+# Greift nur, wenn die Datei existiert. Fehlende Dateien beantwortet die SPA-Regel
+# oben mit der index.html (Status 200), das ist kein Leck.
+<FilesMatch "^(smtp-config(\.example)?\.php|\.contact-rate-limit\.json|.*\.md)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>

@@ -64,7 +64,8 @@
     "POLICY_ERROR": "Bitte akzeptieren!!",
     "CONTACT_BTN": "SENDEN",
     "EMAIL_OK": "Deine Nachricht wurde erfolgreich gesendet!",
-    "ERROR_MESSAGE": "Fehler beim Senden."
+    "ERROR_MESSAGE": "Fehler beim Senden.",
+    "ERROR_RATE_LIMIT": "Zu viele Anfragen. Bitte versuche es später noch einmal."
   },
   "IMPRINT": {
     "TITLE": "Impressum",

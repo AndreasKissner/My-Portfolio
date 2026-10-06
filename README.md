@@ -45,4 +45,4 @@ ng test
 ## Author
 
 **Andreas Kissner**
-[developer.andreas-kissner.cloud](https://developer.andreas-kissner.cloud) · [LinkedIn](https://www.linkedin.com/in/andreas-kissner-53557b347)
+[andreas-kissner.cloud](https://andreas-kissner.cloud) · [LinkedIn](https://www.linkedin.com/in/andreas-kissner-53557b347)

@@ -50,6 +50,11 @@
         </div>
     </div>
 
+    <div class="hp-field" aria-hidden="true">
+        <input type="text" name="hp_extra" [(ngModel)]="contactData.hp_extra" tabindex="-1" autocomplete="off"
+            aria-label="Extra">
+    </div>
+
     <div class="btn-flash-content">
         <app-btn-primaer>
             <div (click)="onInvalidSubmitAttempt(contactForm)">

@@ -64,7 +64,8 @@
     "POLICY_ERROR": "Accept the privacy policy",
     "CONTACT_BTN": "Send this",
     "EMAIL_OK": "Your message has been sent successfully!",
-    "ERROR_MESSAGE": "Error while sending."
+    "ERROR_MESSAGE": "Error while sending.",
+    "ERROR_RATE_LIMIT": "Too many requests. Please try again later."
   },
   "IMPRINT": {
     "TITLE": "Legal Notice",

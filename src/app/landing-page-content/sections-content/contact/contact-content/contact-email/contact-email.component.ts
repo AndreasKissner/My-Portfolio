@@ -31,9 +31,13 @@ export class ContactEmailComponent {
     email: '',
     message: '',
     privacy: false,
+    hp_extra: '',
   };
 
-  private mailApiUrl = 'https://andreas-kissner.cloud/send_mail.php';
+  private mailApiUrl = '/contact.php';
+
+  /** Zeitpunkt des Seitenaufrufs. Der Server wertet zu schnelle Absendungen als Bot. */
+  private formLoadedAt = Date.now();
 
   mailSuccess = false;
   mailError = false;
@@ -61,13 +65,13 @@ export class ContactEmailComponent {
    */
   private sendMail(form: NgForm) {
     const lang = localStorage.getItem('lang') || 'en';
-    const payload = { ...this.contactData, lang };
+    const payload = { ...this.contactData, lang, elapsed: Date.now() - this.formLoadedAt };
     this.http.post(this.mailApiUrl, payload).subscribe({
       next: () => {
         this.processSuccess(form);
       },
       error: (error) => {
-        this.handleError(error, form);
+        this.handleError(error);
       },
     });
   }
@@ -75,15 +79,11 @@ export class ContactEmailComponent {
   /**
    * Handles errors occurring during the HTTP request.
    */
-  private handleError(error: any, form: NgForm) {
-    if (error.status === 200) {
-      this.processSuccess(form);
-    } else {
-      this.mailError = true;
-      this.isSending = false;
-      this.errorMessage = 'CONTACT.ERROR_MESSAGE';
-      setTimeout(() => (this.mailError = false), 3000);
-    }
+  private handleError(error: any) {
+    this.mailError = true;
+    this.isSending = false;
+    this.errorMessage = error.status === 429 ? 'CONTACT.ERROR_RATE_LIMIT' : 'CONTACT.ERROR_MESSAGE';
+    setTimeout(() => (this.mailError = false), 3000);
   }
 
   /**
@@ -117,7 +117,7 @@ export class ContactEmailComponent {
     this.isSending = false;
     this.errorMessage = '';
     form.resetForm();
-    this.contactData = { name: '', email: '', message: '', privacy: false };
+    this.contactData = { name: '', email: '', message: '', privacy: false, hp_extra: '' };
     setTimeout(() => (this.mailSuccess = false), 3000);
   }
 

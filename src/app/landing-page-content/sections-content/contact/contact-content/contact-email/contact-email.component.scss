@@ -285,3 +285,12 @@ input:-webkit-autofill {
     font-family: f.$font-second;
     min-height: 16px; 
 }
+/* Honeypot: ausserhalb des Bildschirms statt display:none, damit Bots es nicht erkennen.
+   Fuer Menschen und Screenreader ist es unsichtbar (aria-hidden, tabindex=-1). */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
